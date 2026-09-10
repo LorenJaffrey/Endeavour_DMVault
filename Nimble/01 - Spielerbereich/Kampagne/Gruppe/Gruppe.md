@@ -22,6 +22,3 @@ SORT file.name
 | Sancho  | Mönch                     | DD      |
 | Tobi    | ??                        | ??      |
 | Michi   | Fluchwirker               |         |
-
-
-Paladin
