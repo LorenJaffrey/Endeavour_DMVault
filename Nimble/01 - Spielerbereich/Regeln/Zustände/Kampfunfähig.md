@@ -1,6 +1,7 @@
 ---
 tags:
-- Zustand
+  - Regeln/Nimble
+  - Zustand
 ---
 # `=this.file.name`
 Eine [[Kampfunfähig|kampfunfähige]] Kreatur:

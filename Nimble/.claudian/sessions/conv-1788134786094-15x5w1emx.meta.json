@@ -1,0 +1,24 @@
+{
+  "id": "conv-1788134786094-15x5w1emx",
+  "providerId": "claude",
+  "title": "Formatiere Buchkapitel neu",
+  "titleGenerationStatus": "success",
+  "createdAt": 1788134786104,
+  "updatedAt": 1788135186217,
+  "lastResponseAt": 1788134933959,
+  "sessionId": "195b1273-453b-4299-9035-8c4a46adc089",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "195b1273-453b-4299-9035-8c4a46adc089"
+  },
+  "currentNote": "02 - Spielleiterbereich/Systeme/So you want to be a Game Master/Running a dungeon.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 16133,
+    "cacheReadInputTokens": 37179,
+    "contextWindow": 1000000,
+    "contextTokens": 53314,
+    "percentage": 5
+  }
+}

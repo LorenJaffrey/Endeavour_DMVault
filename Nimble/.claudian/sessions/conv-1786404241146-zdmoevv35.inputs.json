@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786404241146-zdmoevv35",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786404241285-1zns2p0",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786404241143-8v5cja8",
+      "timestamp": 1786404241143,
+      "rawDisplayText": "Das hier sind die Grundregeln für Daggerheart.\nFormatiere das File, lösche unnötige Teile die keine Regeln enthalten (wie die beteiligten Entwickler, etc.) und bringe es in eine für Obsidian und Markdown passende Form. Teile es dabei in saubere einzelne Files auf wie wir das schon bei den Draw Steel Regeln getan haben.",
+      "canonicalText": "Das hier sind die Grundregeln für Daggerheart.\nFormatiere das File, lösche unnötige Teile die keine Regeln enthalten (wie die beteiligten Entwickler, etc.) und bringe es in eine für Obsidian und Markdown passende Form. Teile es dabei in saubere einzelne Files auf wie wir das schon bei den Draw Steel Regeln getan haben.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/Systeme/Daggerheart/Daggerheart_Grundregelwerk_Download.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "fa876d9ba1a7fe49c7914a03f666ac55400ff376699392f9a397354ae03d4e70",
+      "providerUserMessageId": "086c75d7-8f0b-4920-92f3-84e4724b8749",
+      "providerAssistantMessageId": "00292da3-a76c-4381-bbd8-ec18a61a5d15"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786405556318-x74qqkb",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786405556314-w1vw6tc",
+      "timestamp": 1786405556314,
+      "rawDisplayText": "Die Agenten sind wohl alle mit Error geendet. War die Aufteilung und Formatierung erfolgreich?",
+      "canonicalText": "Die Agenten sind wohl alle mit Error geendet. War die Aufteilung und Formatierung erfolgreich?",
+      "images": [],
+      "contentDigest": "b1af8b68b07e2604546edb191e257a1caf87568d59e1c1670afa6afae6e683d0",
+      "providerUserMessageId": "ceececc1-3d20-4d17-a6df-1266717421c6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786405725622-3gfqf64",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786405725456-qogvopp",
+      "timestamp": 1786405725456,
+      "rawDisplayText": "War die Aufteilung und Formatierung der Daggerheart Regeln erfolgreich?",
+      "canonicalText": "War die Aufteilung und Formatierung der Daggerheart Regeln erfolgreich?",
+      "images": [],
+      "contentDigest": "91393cfdb8a168fd43f3cfb2519f8f394ebfe33582fabcdc2516301279551c00",
+      "providerUserMessageId": "86c25bb5-595e-4d55-ae26-b8be926a3893"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787439806548-8se1dez",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1787439806414-sjyu0k0",
+      "timestamp": 1787439806414,
+      "rawDisplayText": "Ziel beim letzten Mal war es die Daggerheart Grundregeln sauber aufzuteilen. Der Auftrag wurde aber wohl nicht vollständig ausgeführt. Bitte überprüfe das und führe die Aufgabe fort.",
+      "canonicalText": "Ziel beim letzten Mal war es die Daggerheart Grundregeln sauber aufzuteilen. Der Auftrag wurde aber wohl nicht vollständig ausgeführt. Bitte überprüfe das und führe die Aufgabe fort.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/Systeme/Daggerheart/Daggerheart_Grundregelwerk_Download.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "34c770680104108b11a001aecd9293810d98b4c14774118299b8e8a6c9224c87",
+      "providerUserMessageId": "c2e129c5-25be-4a38-b798-21187dc860c9",
+      "providerAssistantMessageId": "bda2235a-26d1-4839-8b5c-d2d5f95b3bc8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787441330930-lcegoi2",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1787441330927-dc2g3rj",
+      "timestamp": 1787441330927,
+      "rawDisplayText": "Sehr gut. Weiter mit Kapitel 3 nach dem selben Schema.",
+      "canonicalText": "Sehr gut. Weiter mit Kapitel 3 nach dem selben Schema.",
+      "images": [],
+      "contentDigest": "a90e2ee5675b5443a314ccae1469b82fc5498d1a6dcd0917b1f5ff3d8ce85491",
+      "providerUserMessageId": "6815ef38-a748-44a9-83d2-d7d22c301054",
+      "providerAssistantMessageId": "ec6cc4ae-2539-40fc-b079-8ae856feb6fd"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787442234303-20x81dm",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1787442234300-gesurub",
+      "timestamp": 1787442234300,
+      "rawDisplayText": "Weiter mit den Klassen.",
+      "canonicalText": "Weiter mit den Klassen.",
+      "images": [],
+      "contentDigest": "f9eeb4d5f60f0ac9715099cd8688096f5246462da522e17e0be319c84f612647",
+      "providerUserMessageId": "793937bc-be6a-4260-8a60-84a5674c23b2",
+      "providerAssistantMessageId": "1385afa0-e96f-4c20-8ae7-464a338c78d2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787608768796-tbte78l",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1787608768782-yvl81od",
+      "timestamp": 1787608768782,
+      "rawDisplayText": "Weiter mit Kapitel 4",
+      "canonicalText": "Weiter mit Kapitel 4",
+      "images": [],
+      "contentDigest": "5e063e1c9e121b673d0da8e6e95a1cf23813b42867c7f6611599a7d58bc1cef3",
+      "providerUserMessageId": "aca1f7df-5979-47b8-a6d3-a3fb880f3586",
+      "providerAssistantMessageId": "ea2d8e27-994a-49d5-afdb-bf560a7f1b31"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787610905898-z9a5dbc",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1787610905894-8pkig0g",
+      "timestamp": 1787610905894,
+      "rawDisplayText": "Mach mit den Kampagnenrahmen weiter",
+      "canonicalText": "Mach mit den Kampagnenrahmen weiter",
+      "images": [],
+      "contentDigest": "2dbddbfcda6ce917570e6e47b06fd48625d15274a4a745453fb3776ce4f586d8",
+      "providerUserMessageId": "91e4eae5-7d40-46a1-9b15-c3ee1b96fa98"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787612096254-qsq2x73",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1787612096250-wci3f4x",
+      "timestamp": 1787612096250,
+      "rawDisplayText": "Mach mit den Kampagnenrahmen weiter",
+      "canonicalText": "Mach mit den Kampagnenrahmen weiter",
+      "images": [],
+      "contentDigest": "2dbddbfcda6ce917570e6e47b06fd48625d15274a4a745453fb3776ce4f586d8",
+      "providerUserMessageId": "2072c561-29b1-4031-a044-a33edd77bf4e"
+    }
+  ]
+}

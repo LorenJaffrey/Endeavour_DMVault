@@ -1,5 +1,6 @@
 ---
 tags:
+  - Regeln/Nimble
   - Zustand
 ---
 # `=this.file.name`

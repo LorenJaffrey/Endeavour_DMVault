@@ -6,5 +6,5 @@ tags:
 # `=this.file.name`
 Ein Ziel ist [[Abgelenkt]], wenn es:
   - an einen Verbündeten angrenzt
-  - von einem Verbündeten [[verspottet]] ist 
+  - von einem Verbündeten [[Provoziert|verspottet]] ist 
   - oder dich nicht sehen kann

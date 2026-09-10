@@ -5,6 +5,8 @@ tags:
 aliases:
 Beschreibung: "Den Platz und Schaden eines Verbündeten übernehmen."
 Kosten: "1 [[Aktionspunkte|AP]]"
+Voraussetzung: "Verbündeter innerhalb von 2 Feldern"
+Auslöser: "Der Verbündete würde von einem Angriff getroffen werden."
 ---
 # `=this.file.name`
 Wenn eine Kreatur innerhalb von 2 Feldern getroffen werden würde, kannst du sie beiseiteschubsen und selbst das Ziel des Angriffs werden. 

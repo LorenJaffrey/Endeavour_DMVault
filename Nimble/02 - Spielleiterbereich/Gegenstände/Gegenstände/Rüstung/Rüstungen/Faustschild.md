@@ -4,10 +4,9 @@ tags:
 Klasse: "[[Schilde|Schild]]"
 RK: 0
 Stärke:
-Dex_cap:
+BW_cap:
 Eigenschaften:
   - "[[Parade]]"
-  - "[[Freihändig]]"
 Gewicht: 2 Pfund
 Kosten: 10 GM
 ---

@@ -1,0 +1,24 @@
+{
+  "id": "conv-1788819172986-3jvxn7uk9",
+  "providerId": "claude",
+  "title": "Slot-basiertes Inventarsystem überarbeiten",
+  "titleGenerationStatus": "success",
+  "createdAt": 1788819172994,
+  "updatedAt": 1788996358374,
+  "lastResponseAt": 1788996358374,
+  "sessionId": "56467fbf-f272-4760-b635-e59cac4381cd",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "56467fbf-f272-4760-b635-e59cac4381cd"
+  },
+  "currentNote": "02 - Spielleiterbereich/Regeln/Inventar/Inventar.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 4501,
+    "cacheReadInputTokens": 111132,
+    "contextWindow": 1000000,
+    "contextTokens": 115635,
+    "percentage": 12
+  }
+}

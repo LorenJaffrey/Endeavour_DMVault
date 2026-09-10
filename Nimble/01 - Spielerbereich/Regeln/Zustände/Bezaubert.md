@@ -1,6 +1,7 @@
 ---
 tags:
-- Zustand
+  - Regeln/Nimble
+  - Zustand
 ---
 # `=this.file.name`
 - Eine bezauberte Kreatur kann den Bezauberer weder angreifen noch als Ziel für schädigende Fähigkeiten oder magische Effekte auswählen.

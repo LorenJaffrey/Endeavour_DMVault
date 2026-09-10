@@ -4,7 +4,7 @@ tags:
 Klasse: "[[Schwere Rüstung|Schwer]]"
 RK: 7
 Stärke: 3
-Dex_cap: 1
+BW_cap: 1
 Heimlichkeit: -4
 Eigenschaften: 
 

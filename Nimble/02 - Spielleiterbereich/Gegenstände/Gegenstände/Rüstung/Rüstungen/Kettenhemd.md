@@ -3,13 +3,13 @@ tags:
 - Gegenstand/Rüstung/Mittel
 Klasse: "[[Mittelschwere Rüstung|Mittel]]"
 RK: 3
-Stärke: 0
-Dex_cap: 4
+Stärke: 1
+BW_cap: 4
 Heimlichkeit: -3
 Eigenschaften: 
 
 Gewicht: 30 Pfund
-Kosten: 50 GM
+Kosten: 120 GM
 ---
 # `=this.file.name`
 

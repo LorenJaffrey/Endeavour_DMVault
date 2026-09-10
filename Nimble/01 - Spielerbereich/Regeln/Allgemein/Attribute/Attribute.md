@@ -33,21 +33,21 @@ Ist der Ausgang ungewiss und für die Geschichte interessant, so bestimmen die W
 
 ### Kombinierte Würfe
 Kombinieren von mehreren [[Fertigkeiten]] oder [[Attribute|Attributen]] um eine Aufgabe zu ermöglichen bzw. zu vereinfachen
-	- herausfinden wie ein Schloss, eine Falle, etc. funktioniert bevor man sich daran macht zu knacken oder entschärfen
-	- schwächste Stelle in einer Wand finden bevor man versucht sie einzuschlagen
+  - herausfinden wie ein Schloss, eine Falle, etc. funktioniert bevor man sich daran macht zu knacken oder entschärfen
+  - schwächste Stelle in einer Wand finden bevor man versucht sie einzuschlagen
 
 ### Zeitfaktor
-Bei gewissen [[Attribute#Attributswurf]] oder [[Fertigkeiten#Fertigkeitswurf]] kann Zeit einen Einfluss haben
-	- ein Buch überfliegen oder es gründlich studieren
-	- einen Raum kurz absuchen oder gründlich durchsuchen
-	- eine Hängebrücke vorsichtig überqueren oder drüber rennen
-- kann den Wurf erleichtern bzw. erschweren und oder [[Vorteil und Nachteil|Vorteil]]/[[Vorteil und Nachteil|Nachteil]] verleihen
+Bei gewissen [[Attribute#Attributswurf|Attributswürfen]] oder [[Fertigkeiten#Fertigkeitswurf|Fertigkeitswürfen]] kann Zeit einen Einfluss haben:
+  - ein Buch überfliegen oder es gründlich studieren
+  - einen Raum kurz absuchen oder gründlich durchsuchen
+  - eine Hängebrücke vorsichtig überqueren oder drüber rennen
+Dies kann den Wurf erleichtern bzw. erschweren und oder [[Vorteil und Nachteil|Vorteil]]/[[Vorteil und Nachteil|Nachteil]] verleihen.
 
 ### Passiver Attributswurf 
-10 + [[Attribute#Attributsmodifikator]] + [[Vorteil und Nachteil|Vorteil]] (+5) + [[Vorteil und Nachteil|Nachteil]] (-5)
+10 + [[Attribute|Attribut]] + [[Vorteil und Nachteil|Vorteil]] (+5) + [[Vorteil und Nachteil|Nachteil]] (-5)
 
 ### Wettstreit
-Gegeneinander gerichtete Attributswürfe (inkl Bonus/Malus und [[Attribute|Attributsmodifikator]])
+Gegeneinander gerichtete [[Attribute#Attributswurf|Attributswürfe]] (inkl Bonus/Malus)
 
 ### Zusammenarbeit
 Verleiht [[Vorteil und Nachteil|Vorteil]] bei [[Attribute#Attributswurf]] wenn ein Charakter einen anderen unterstützt.

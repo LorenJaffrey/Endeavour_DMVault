@@ -14,5 +14,3 @@ Wenn dieser misslingt, wird anhand der [[Größenkategorie]] entschieden:
 - hat das Ziel die gleiche [[Größenkategorie|Größe]] oder maximal eine [[Größenkategorie|Kategorie]] kleiner, wird es [[Festgesetzt]].
 - ist das Ziel mehr als eine [[Größenkategorie|Kategorie]] kleiner, wird es [[Gepackt]].
 - ist das Ziel größer als du, erhältst du stattdessen den Zustand [[Reitend]]
-
-[[Greifen]] zählt als [[Angriff]] und ist damit ebenso von [[Angriff#Überhastete Angriffe]] betroffen.

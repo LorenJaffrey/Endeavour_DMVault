@@ -4,7 +4,7 @@ tags:
 Klasse: "[[Schilde|Schild]]"
 RK: 1
 Stärke: 0
-Dex_cap:
+BW_cap:
 Heimlichkeit: -1
 Eigenschaften: 
 

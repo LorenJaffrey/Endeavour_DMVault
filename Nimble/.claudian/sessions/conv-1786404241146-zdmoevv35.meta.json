@@ -1,0 +1,21 @@
+{
+  "id": "conv-1786404241146-zdmoevv35",
+  "providerId": "claude",
+  "title": "Vervollständige Daggerheart Regelaufteilung",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786404241149,
+  "updatedAt": 1787700198447,
+  "lastResponseAt": 1787612097098,
+  "sessionId": null,
+  "selectedModel": "sonnet",
+  "currentNote": "02 - Spielleiterbereich/Systeme/Daggerheart/05-Kampagnenrahmen/Fuenf-Brennende-Banner.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 12899,
+    "cacheReadInputTokens": 114627,
+    "contextWindow": 1000000,
+    "contextTokens": 127528,
+    "percentage": 13
+  }
+}

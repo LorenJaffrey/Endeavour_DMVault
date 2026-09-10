@@ -3,8 +3,8 @@ tags:
 - Gegenstand/Rüstung/Leicht
 Klasse: "[[Leichte Rüstung|Leicht]]"
 RK: 2
-Stärke:
-Dex_cap: 5
+Stärke: -1
+BW_cap: 5
 Heimlichkeit: -1
 Eigenschaften:
 

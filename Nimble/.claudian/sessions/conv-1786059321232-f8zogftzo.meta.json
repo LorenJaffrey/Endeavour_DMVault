@@ -1,0 +1,24 @@
+{
+  "id": "conv-1786059321232-f8zogftzo",
+  "providerId": "claude",
+  "title": "Verhandlungsregeln finalisieren",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786059321235,
+  "updatedAt": 1787700211447,
+  "lastResponseAt": 1786061997243,
+  "sessionId": "10944226-4456-45a2-9ebd-f47f8ea3669e",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "10944226-4456-45a2-9ebd-f47f8ea3669e"
+  },
+  "currentNote": "02 - Spielleiterbereich/Systeme/Draw Steel/04-Gameplay-Systems/Negotiation.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 528,
+    "cacheReadInputTokens": 128970,
+    "contextWindow": 1000000,
+    "contextTokens": 129500,
+    "percentage": 13
+  }
+}

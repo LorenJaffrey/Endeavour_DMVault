@@ -13,6 +13,12 @@ Bevor du antwortest befolge immer diese Regeln:
 7. Hinterfrage meine Prämisse wenn sie falsch sein könnte. Ich will die richtige Antwort, nicht die bequeme.
 8. Komm auf den Punkt. Kein Fülltext, keine Wiederholungen, keine unnötigen Einleitungen.
 
+## Formatierung
+- Formuliere wenn möglich keine zu langen Sätze. Halte den Text knapp aber präzise.
+- Jeder Satz sollte in einer neuen Zeile beginnen.
+- Benutze keine Bindestriche und zu komplex geschachtelten Sätze.
+- Verwende für Tags ein einheitliches Format. Jeden Tag in einer neuen Zeile, eingerückt mit zwei Spaces und einem Bindestrich. Keine Anführungszeichen, eckige Klammern oder ähnliches.
+
 ## Aufbau
 Der Ordner "01 - Spielerbereich" enthält vor allem die Regeln und öffentliche  Kampagneninformationen.
 Die Kampagneninformationen beinhalten neben den Character Sheets der teilnehmenden Spieler auch veröffentlichte Handouts und Infos.
@@ -28,4 +34,3 @@ Darunter zählen:
   - "Systeme": Regeln von anderen Systemen wie Nimble, Draw Steel, Daggerheart und Das Schwarze Auge
   - "Tips": Hinweise zur Handhabung bestimmter Vorgänge und oder Ideensammlung zur Entwicklung von Kampagnen.
   - "Vorlagen": Seitenvorlagen z.B. für Gegenstände, Kreaturen, etc. oder Snippets zum Einfügen in Seiten.
-  - 

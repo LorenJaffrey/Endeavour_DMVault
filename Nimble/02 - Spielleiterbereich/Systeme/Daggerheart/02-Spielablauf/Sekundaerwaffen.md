@@ -1,0 +1,66 @@
+---
+tags: ["#Regeln/Daggerheart"]
+---
+
+# Sekundärwaffen
+
+Bei der Charaktererschaffung könnt ihr eine Sekundärwaffe aus Rang 1 wählen.
+Im Laufe der Kampagne kann die SL weitere Waffen zugänglich machen, wenn die SC höhere Stufen erreichen.
+Die Erklärung der einzelnen Werte findet ihr unter [[Ausruestung#Waffenwerte]].
+
+## Rang 1 (Stufe 1)
+
+| NAME          | ATTRIBUT | DISTANZ     | SCHADEN  | FÜHRUNG   | MERKMAL                                                                                                                                                                          |
+| ------------- | -------- | ----------- | -------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kurzschwert   | Agilität | unmittelbar | W8 phy   | einhändig | Gepaart: +2 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                              |
+| Rundschild    | Stärke   | unmittelbar | W4 phy   | einhändig | Schützend: +1 auf Rüstungswert                                                                                                                                                   |
+| Langschild    | Stärke   | unmittelbar | W6 phy   | einhändig | Barriere: +2 auf Rüstungswert, −1 auf Ausweichen                                                                                                                                 |
+| Kleiner Dolch | Geschick | unmittelbar | W8 phy   | einhändig | Gepaart: +2 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                              |
+| Peitsche      | Präsenz  | sehr kurz   | W6 phy   | einhändig | Aufschreckend: Markiere 1 Stress, um die Peitsche knallen zu lassen und alle gegnerischen Personen innerhalb unmittelbarer Distanz zu zwingen, in kurze Distanz zurückzuweichen. |
+| Enterhaken    | Geschick | kurz        | W6 phy   | einhändig | Haken: Bei einem erfolgreichen Angriff kannst du das Ziel in unmittelbare Distanz ziehen.                                                                                        |
+| Hand-Armbrust | Geschick | weit        | W6+1 phy | einhändig | –                                                                                                                                                                                |
+
+## Rang 2 (Stufen 2–4)
+
+| NAME                       | ATTRIBUT | DISTANZ     | SCHADEN  | FÜHRUNG   | MERKMAL                                                                                                                                                                                                                                                           |
+| -------------------------- | -------- | ----------- | -------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verbessertes Kurzschwert   | Agilität | unmittelbar | W8+2 phy | einhändig | Gepaart: +3 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                                                                                               |
+| Verbesserter Rundschild    | Stärke   | unmittelbar | W4+2 phy | einhändig | Schützend: +2 auf Rüstungswert                                                                                                                                                                                                                                    |
+| Verbessertes Langschild    | Stärke   | unmittelbar | W6+2 phy | einhändig | Barriere: +3 auf Rüstungswert, −1 auf Ausweichen                                                                                                                                                                                                                  |
+| Verbesserter Kleiner Dolch | Geschick | unmittelbar | W8+2 phy | einhändig | Gepaart: +3 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                                                                                               |
+| Verbesserte Peitsche       | Präsenz  | sehr kurz   | W6+2 phy | einhändig | Aufschreckend: Markiere 1 Stress, um die Peitsche knallen zu lassen und alle gegnerischen Personen innerhalb unmittelbarer Distanz zu zwingen, in kurze Distanz zurückzuweichen.                                                                                  |
+| Verbesserter Enterhaken    | Geschick | kurz        | W6+2 phy | einhändig | Haken: Bei einem erfolgreichen Angriff kannst du das Ziel in unmittelbare Distanz ziehen.                                                                                                                                                                         |
+| Verbesserte Hand-Armbrust  | Geschick | weit        | W6+3 phy | einhändig | –                                                                                                                                                                                                                                                                 |
+| Stachelschild              | Stärke   | unmittelbar | W6+2 phy | einhändig | Doppelwirkung: +1 auf Rüstungswert; +1 auf Schaden der Primärwaffe innerhalb unmittelbarer Distanz                                                                                                                                                                |
+| Parierdolch                | Geschick | unmittelbar | W6+2 phy | einhändig | Parade: Wenn du angegriffen wirst, würfle den Schadenswürfel dieser Waffe. Zeigt einer oder mehrere Schadenswürfel des angreifenden Charakters den gleichen Wert wie dein Würfel, werden die passenden Würfel nicht beim Schaden, den du erleidest, mitgerechnet. |
+| Wiederkehrende Axt         | Agilität | kurz        | W6+4 phy | einhändig | Wiederkehrend: Wenn diese Waffe innerhalb ihrer Distanz geworfen wird, erscheint sie nach dem Angriff sofort wieder in deiner Hand.                                                                                                                               |
+
+## Rang 3 (Stufen 5–7)
+
+| NAME                        | ATTRIBUT | DISTANZ     | SCHADEN  | FÜHRUNG   | MERKMAL                                                                                                                                                                                      |
+| --------------------------- | -------- | ----------- | -------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Meisterliches Kurzschwert   | Agilität | unmittelbar | W8+4 phy | einhändig | Gepaart: +4 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                          |
+| Meisterliches Rundschild    | Stärke   | unmittelbar | W4+4 phy | einhändig | Schützend: +3 auf Rüstungswert                                                                                                                                                               |
+| Meisterliches Langschild    | Stärke   | unmittelbar | W6+4 phy | einhändig | Barriere: +4 auf Rüstungswert, −1 auf Ausweichen                                                                                                                                             |
+| Meisterlicher Kleiner Dolch | Geschick | unmittelbar | W8+4 phy | einhändig | Gepaart: +4 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                          |
+| Meisterliche Peitsche       | Präsenz  | sehr kurz   | W6+4 phy | einhändig | Aufschreckend: Markiere 1 Stress, um die Peitsche knallen zu lassen und alle gegnerischen Personen innerhalb unmittelbarer Distanz zu zwingen, in kurze Distanz zurückzuweichen.             |
+| Meisterlicher Enterhaken    | Geschick | kurz        | W6+4 phy | einhändig | Haken: Bei einem erfolgreichen Angriff kannst du das Ziel in unmittelbare Distanz ziehen.                                                                                                    |
+| Meisterliche Hand-Armbrust  | Geschick | weit        | W6+5 phy | einhändig | –                                                                                                                                                                                            |
+| Faustschild                 | Agilität | unmittelbar | W4+4 phy | einhändig | Ablenkend: Wenn du angegriffen wirst, kannst du ein Rüstungsfeld markieren, um gegen den Angriff einen Bonus auf dein Ausweichen in Höhe deiner nicht markierten Rüstungsfelder zu erhalten. |
+| Krafthandschuh              | Wissen   | kurz        | W6+4 phy | einhändig | Aufgeladen: Markiere 1 Stress, um einen +1 Bonus auf deine Übung beim Angriff mit deiner Primärwaffe zu erhalten.                                                                            |
+| Schleuder                   | Geschick | sehr weit   | W6+4 phy | einhändig | Vielseitig: Kann auch mit folgenden Werten verwendet werden: Geschick, kurz, W8+4.                                                                                                           |
+
+## Rang 4 (Stufen 8–10)
+
+| NAME                     | ATTRIBUT | DISTANZ     | SCHADEN  | FÜHRUNG   | MERKMAL                                                                                                                                                                                              |
+| ------------------------ | -------- | ----------- | -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Legendäres Kurzschwert   | Agilität | unmittelbar | W8+6 phy | einhändig | Gepaart: +5 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                                  |
+| Legendärer Rundschild    | Stärke   | unmittelbar | W4+6 phy | einhändig | Schützend: +4 auf Rüstungswert                                                                                                                                                                       |
+| Legendäres Langschild    | Stärke   | unmittelbar | W6+6 phy | einhändig | Barriere: +5 auf Rüstungswert, −1 auf Ausweichen                                                                                                                                                     |
+| Legendärer Kleiner Dolch | Geschick | unmittelbar | W8+6 phy | einhändig | Gepaart: +5 auf Schaden der Primärwaffe gegen Ziele innerhalb unmittelbarer Distanz                                                                                                                  |
+| Legendäre Peitsche       | Präsenz  | sehr kurz   | W6+6 phy | einhändig | Aufschreckend: Markiere 1 Stress, um die Peitsche knallen zu lassen und alle gegnerischen Personen innerhalb unmittelbarer Distanz zu zwingen, in kurze Distanz zurückzuweichen.                     |
+| Legendärer Enterhaken    | Geschick | kurz        | W6+6 phy | einhändig | Haken: Bei einem erfolgreichen Angriff kannst du das Ziel in unmittelbare Distanz ziehen.                                                                                                            |
+| Legendäre Hand-Armbrust  | Geschick | weit        | W6+7 phy | einhändig | –                                                                                                                                                                                                    |
+| Schild der Kühnen        | Agilität | unmittelbar | W4+6 phy | einhändig | Abschirmend: Wenn du ein Rüstungsfeld markierst, reduziert das den Schaden für dich und alle verbündeten Charaktere innerhalb unmittelbarer Distanz zu dir, die den gleichen Schaden erlitten haben. |
+| Knöchelsporne            | Stärke   | unmittelbar | W6+8 phy | einhändig | Doppelangriff: Wenn du einen Angriff mit deiner Primärwaffe ausführst, kannst du hiermit einem anderen Ziel innerhalb unmittelbarer Distanz Schaden zufügen.                                         |
+| Zielsplitter             | Instinkt | sehr kurz   | W4 phy   | einhändig | Erfasst: Bei einem erfolgreichen Angriff ist dein nächster Angriff mit deiner Primärwaffe gegen das gleiche Ziel automatisch erfolgreich.                                                            |

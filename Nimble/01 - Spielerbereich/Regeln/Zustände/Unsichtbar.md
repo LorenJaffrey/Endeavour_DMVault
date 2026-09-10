@@ -10,4 +10,4 @@ Geräusche, die sie verursacht, oder Spuren, die sie hinterlässt, können ihre 
 
 Unsichtbare Kreaturen können sich auch in direkter Sichtlinie eines Gegners [[Verstecken]].
 
-﻿﻿Ein [[Angriffswurf]] gegen eine [[Unsichtbar|unsichtbare]] Kreatur ist im [[Vorteil und Nachteil|Nachteil]], die Kreatur ist bei ihrem [[Angriffswurf]] hingegen im [[Vorteil und Nachteil|Vorteil]].
+Ein [[Angriffswurf]] gegen eine [[Unsichtbar|unsichtbare]] Kreatur ist im [[Vorteil und Nachteil|Nachteil]], die Kreatur ist bei ihrem [[Angriffswurf]] hingegen im [[Vorteil und Nachteil|Vorteil]].

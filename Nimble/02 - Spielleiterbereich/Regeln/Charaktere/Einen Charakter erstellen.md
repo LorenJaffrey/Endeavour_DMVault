@@ -67,7 +67,7 @@ Auf Stufe 1 überträgst du deine [[Attribute|Attributsboni]] auf die jeweil
 
 ## 3. Sekundäre Werte
 Trage deine sekundären Werte ein:
-- [[Initiative|Initiativebonus]] (Standard: [[Beweglichkeit|GE]])
+- [[Initiative#Instinktwurf|Initiativebonus]] (Standard: [[Instinkt|IN]], bestimmt die Zugreihenfolge; [[Beweglichkeit|GE]] bestimmt separat die Start-AP in der ersten Runde, siehe [[Initiative]])
 - [[Größenkategorie]]
 - [[Bewegungsrate]] (abhängig von der [[Abstammungen|Abstammung]])
 - maximale [[Erschöpfung]] (Standard: 6) 

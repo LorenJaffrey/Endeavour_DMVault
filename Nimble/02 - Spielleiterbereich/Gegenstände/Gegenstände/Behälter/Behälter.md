@@ -2,7 +2,7 @@
 ```dataview
 TABLE WITHOUT ID
 
-file.link AS "Behälter", Gewicht, Kosten
+file.link AS "Behälter", Plätze, MaxGröße, Gewicht, Kosten
 
 FROM #Gegenstand/Behälter 
 

@@ -1,0 +1,33 @@
+---
+tags:
+  - Regeln/Nimble/WIP
+  - Regeln/Nimble/Inventar
+---
+# `=this.file.name`
+
+## Größenkategorien
+Jeder Gegenstand hat eine Größenkategorie.
+  - Klein, 1 Platz: Einhandwaffe, Kurzschwert, Werkzeugset, Ersatzkleidung, Trank, gebündelte Rationen für mehrere Tage, gebündelte Campingausrüstung
+  - Groß, 2 Plätze: Zweihandwaffe, nicht getragene Rüstung, Zelt, größerer Werkzeugkasten
+  - Sehr groß, 3 Plätze: Leiter, Truhe, tragbarer Amboss, sperrige Beutestücke
+
+## Gewichtsklassen
+Zusätzlich zur Größenkategorie hat jeder Gegenstand eine Gewichtsklasse.
+Sie gibt einen Platz-Zuschlag, unabhängig von der Größe.
+  - Normal: kein Zuschlag
+  - Schwer: +1 Platz
+  - Sehr schwer: +2 Plätze
+
+Beispiel Vorschlaghammer: klein vom Volumen, aber schwer. 1 Platz Größe plus 1 Platz Gewicht, macht 2 Plätze gesamt.
+
+Die Gewichtsklasse wird außerdem für die [[Belastung]] des Charakters gezählt.
+
+## Stapelbare Kleinstitems
+Manche Gegenstände sind so klein, dass sie explizit in Stapeln gezählt werden, statt einzeln 1 Platz zu belegen.
+  - Münzen: 200 Stück pro Platz
+  - Pfeile, Armbrustbolzen: kein Platz nötig, siehe Tipp zur Munition unten
+
+> [!tip]- Über Munition  
+> In den meisten Spielen musst du Munition nicht genau verfolgen. 
+> Wenn du einen Köcher hast, hast du genug Pfeile. 
+> Man geht davon aus, dass der Held Pfeile einsammelt, herstellt oder in einer Stadt nachkauft.

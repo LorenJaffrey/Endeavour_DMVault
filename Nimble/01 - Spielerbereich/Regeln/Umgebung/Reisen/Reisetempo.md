@@ -18,6 +18,11 @@ Normales Tempo dient als Standard.
 | Normal     |   90 m | 4,5 km | 36 km | [[Vorteil und Nachteil\|Nachteil]] bei Würfen auf [[Heimlichkeit]]                                          |
 | Langsam    |   60 m |   3 km | 24 km | [[Vorteil und Nachteil\|Vorteil]] bei Würfen auf [[Überlebenskunst]] und [[Wahrnehmung]]                    |
 
+Die Minuten-Spalte gilt für kurze, durchgehende Bewegung (z. B. eine Verfolgungsjagd oder einen kurzen Sprint) und geht von ununterbrochenem Vorankommen aus.
+Die Stunden- und Tages-Spalte gelten für nachhaltiges Reisetempo und schließen unvermeidliche kurze Pausen ein (Karte prüfen, kurz verschnaufen, Ausrüstung richten), weshalb sie pro Stunde etwas weniger weit kommen als die Minuten-Spalte hochgerechnet ergäbe.
+
+Ein Reisetag geht dabei von 8 Stunden tatsächlicher Bewegung aus. Das ergibt zusammen mit den 8 Stunden einer [[Sichere Rast|Sicheren Rast]] einen sauberen 24-Stunden-Tag: 8 Stunden Reisen, 8 Stunden Rast, 8 Stunden für Wachen, Lagerarbeiten oder sonstige Aktivitäten.
+
 ## Reittiere
 Für kurze Zeitspannen (bis zu 1 Stunde) können berittene Charaktere mit wesentlich höherer Geschwindigkeit reisen. 
 Ein Reittier kann bis zu 1 Stunde galoppieren, wobei es das Doppelte der gewöhnlichen Distanz zurücklegt. 

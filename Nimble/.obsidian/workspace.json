@@ -8,60 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "26ddc7bb56a1ed56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Spielleiterbereich/Systeme/Draw Steel/Draw Steel.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": false
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Draw Steel"
-            }
-          },
-          {
-            "id": "58caae3ce8631521",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Spielleiterbereich/Systeme/Draw Steel/Draw Steel.md",
-                "mode": "preview",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Draw Steel"
-            }
-          },
-          {
             "id": "707444274efb5336",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Spielerbereich/Regeln/Kampf/Aktionen/Angreifen.md",
+                "file": "01 - Spielerbereich/Regeln/Allgemein/Attribute/Attribute.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": true,
+                  "unlinkedCollapsed": false
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Attribute"
+            }
+          },
+          {
+            "id": "fbb8bd4c44c7fc83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/Regeln/Charaktere/Stufenaufstieg.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -76,11 +52,179 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Angreifen"
+              "title": "Stufenaufstieg"
+            }
+          },
+          {
+            "id": "0777e4c96946bfea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - Spielerbereich/Kampagne/Gruppe/Gruppe.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gruppe"
+            }
+          },
+          {
+            "id": "b2fbf904711a9076",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - Spielerbereich/Regeln/Kampf/Aktionspunkte.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Aktionspunkte"
+            }
+          },
+          {
+            "id": "759c9ebce1108f1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - Spielerbereich/Regeln/Kampf/Reaktion/Blocken.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Blocken"
+            }
+          },
+          {
+            "id": "eeebd11712c7d67d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - Spielerbereich/Regeln/Kampf/Deckung.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Deckung"
+            }
+          },
+          {
+            "id": "c0a8c6a175de2798",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/Regeln/Charaktere/Klassen/Klassen.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Klassen"
+            }
+          },
+          {
+            "id": "ca1ec6770b687d6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/Regeln/Inventar/Gegenstandsgrößen.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gegenstandsgrößen"
+            }
+          },
+          {
+            "id": "bb90de587b08b26c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/Regeln/_Transition DnD - Nimble.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "_Transition DnD - Nimble"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -114,7 +258,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Zug/Aktion/Angriff",
+                "query": "tag:#Regeln/PHB2024",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -242,7 +386,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "01 - Spielerbereich/Regeln/Kampf/Aktionen/Angreifen.md"
+                "file": "02 - Spielleiterbereich/Gegenstände/Gegenstände/Rüstung/Rüstungslisten/Rüstungen.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -259,7 +403,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -282,44 +426,44 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "464eb4c226d6437a",
+  "active": "263d1a2ac2e2271f",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/Systeme/Draw Steel/01-Basics/Characteristics.md",
-    "02 - Spielleiterbereich/Systeme/Draw Steel/01-Basics/Building-Narrative.md",
-    "02 - Spielleiterbereich/Systeme/Draw Steel/Draw Steel.md",
-    "CLAUDE.md",
-    "02 - Spielleiterbereich/Vorlagen/Vorlage Talent.md",
-    "02 - Spielleiterbereich/Vorlagen/Snippets",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungen führen.md",
-    "02 - Spielleiterbereich/Systeme/Draw Steel",
-    "02 - Spielleiterbereich/Systeme",
-    "DM Bereich/Regeln/Soziale Interaktion/Verhandlungen/Untitled.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Verhandlungsattribute.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Einstellungen/Einstellungen.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Motivationen und Fallstricke.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Entdeckung.md",
-    "01 - Spielerbereich/zHidden/_Embeds/embed Einstellung.md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Behälter.md.tmp.11719.d0bf549024ac",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Gewaltig).md.tmp.11719.14229313c00d",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Sehr Groß).md.tmp.11719.fe2b1c6a8b4e",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Groß).md.tmp.11719.71b19ff37eda",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Klein).md.tmp.11719.29fe9eb1e916",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack.md.tmp.11719.95fb1ffc8c62",
+    "02 - Spielleiterbereich/Regeln/Inventar/Behälterregeln.md.tmp.11719.4abfd604397e",
+    "02 - Spielleiterbereich/Regeln/Inventar/Körperausrüstung.md.tmp.11719.af4166c41e4c",
+    "02 - Spielleiterbereich/Regeln/Inventar/Gegenstandsgrößen.md.tmp.11719.b65283ebd5d3",
+    "02 - Spielleiterbereich/Regeln/Inventar/Inventar.md.tmp.11719.dee95240dcf4",
+    "02 - Spielleiterbereich/Regeln/Inventar/Behälterregeln.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Belastung.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Equipment Rules.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Container.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Gegenstandsgrößen.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Körperausrüstung.md",
+    "02 - Spielleiterbereich/Regeln/Inventar/Inventar.md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Gewaltig).md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Sehr Groß).md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Groß).md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack.md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Klein).md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Behälter.md.tmp.11719.6083657f501d",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Trinkschlauch.md",
+    "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Behälter.md",
+    "02 - Spielleiterbereich/Regeln/Variant Rules.md",
+    "02 - Spielleiterbereich/Regeln/Charaktere/Klassen/Klassen.md",
+    "01 - Spielerbereich/Regeln/Kampf/Deckung.md",
+    "01 - Spielerbereich/Kampagne/Gruppe/Gruppe.md",
     "01 - Spielerbereich/Kampagne/Neue Kampagne Session 0.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Vermächtnis.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Schutz.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Rache.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Macht.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Höhere Autorität.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Habgier.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Gerechtigkeit.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Frieden.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Freiheit.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke/Ausgelassenheit.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Einstellungen/Vertrauensvoll.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Einstellungen/Misstrauisch.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Einstellungen/Gleichgültig.md",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Einstellungen",
-    "DM Bereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Untitled",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute/Motivationen und Fallstricke",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen",
-    "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungsattribute",
-    "01 - Spielerbereich/Regeln/Umgebung/Rasten/Rastaktionen",
-    "02 - Spielleiterbereich/Regeln/Reisen",
+    "01 - Spielerbereich/Kampagne/Timeline Kampagne.md",
+    "01 - Spielerbereich/Kampagne/Gruppe/Konzept Tobi.md",
+    "01 - Spielerbereich/Kampagne/Gruppe/Sancho.md",
+    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Angreifen.md",
+    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Befreien.md",
+    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Beeinflussen.md",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Tiefling 1.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Halbling.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Gnom.png",

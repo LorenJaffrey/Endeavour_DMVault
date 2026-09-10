@@ -4,9 +4,7 @@ tags:
 ---
 # `=this.file.name`
 Ein Kampf beginnt, wenn der SL ruft: „[[Initiative]] würfeln!“.
-Zu Beginn eines Kampfes würfelt jede Kreatur einmal auf [[Instinkt]] und einmal auf [[Beweglichkeit]]. 
-Der [[Instinkt|Instinktwurf]] bestimmt die Zugreihenfolge. 
-Der [[Beweglichkeit|Beweglichkeitswurf]] bestimmt die Anzahl der [[Aktionspunkte]] bei der ersten Aktivierung im Kampf.
+Details zur Ermittlung von Zugreihenfolge und Start-[[Aktionspunkte|AP]] siehe [[Initiative]].
 
 > [!faq]- Freie Aktionen  
 > Diese kosten keine Aktion und verbrauchen keine anderen Ressourcen (z. B. Mana), sofern nicht anders angegeben. 
@@ -16,18 +14,5 @@ Der [[Beweglichkeit|Beweglichkeitswurf]] bestimmt die Anzahl der [[Aktionspunkte
 Die Zugreihenfolge wird durch den [[Initiative#Instinktwurf]] zu Beginn des Kampfes bestimmt.
 
 ## Aktionen
-Während deines [[Zug|Zuges]] hat ein Charakter 3 [[Aktionspunkte|AP]] um anzugreifen, sich auf dem Schlachtfeld zu bewegen, Zauber zu wirken usw. 
-Im ersten Zug werden die verfügbaren [[Aktionspunkte|AP]] mit dem [[Initiative#Beweglichkeitswurf]] der [[Initiative]] ermittelt.
-Im Allgemeinen kostet jede einzelne Handlung im Kampf 1 [[Aktionspunkte|AP]].
-Manche besonders mächtigen Zauber oder Spezialfähigkeiten benötigen mehr Zeit und somit mehr [[[[Aktionspunkte|AP]].
-
-**Alle 3 [[Aktionspunkte|AP]] werden am Ende deines [[Zug|Zuges]] wieder aufgefüllt** – du musst sie also nicht aufsparen. 
-Gib sie alle in deinem [[Zug]] aus, und sobald du fertig bist, bekommst du sie alle zurück!
-
-### Handlungen über mehrere Züge
-Für Aktivitäten, die mehr als 1 [[Aktionspunkte|AP]] kosten, können [[Aktionen]] über mehrere [[Zug|Züge]] hinweg ausgeführt werden, solange [[Konzentration]] aufrechterhalten wird und du in der Zwischenzeit keine anderen [[Aktionen]] oder [[Reaktionen]] ausführst (außer kostenlose).
-
-> [!example]- Beispiel  
-> Book, der [[Arkanist]], möchte [[Gletscherstoß]] wirken, der 3 [[Aktionspunkte|AP]] kostet, hat aber nur noch 1 [[Aktionspunkte|AP]] übrig. 
-> Er gibt in diesem [[Zug]] 1 [[Aktionspunkte|AP]] aus, um den Zauber zu beginnen, und in seinem nächsten Zug 2 weitere [[Aktionspunkte|AP]], um ihn zu beenden. 
-> Das ist riskant, da er sich nicht Verteidigen kann und auf den Schutz seiner Gefährten angewiesen ist.
+Während deines [[Zug|Zuges]] hast du [[Aktionspunkte|AP]] zur Verfügung, um anzugreifen, dich auf dem Schlachtfeld zu bewegen, Zauber zu wirken usw. 
+Details zum AP-Pool, dem Auffüllen pro Zug und der Wechselwirkung mit Reaktionen siehe [[Aktionspunkte]].

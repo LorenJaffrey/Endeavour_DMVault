@@ -15,6 +15,10 @@ Zu Beginn eines Kampfes würfelt jede Kreatur einmal auf [[Instinkt]] und einmal
 Der [[Instinkt|Instinktwurf]] drückt aus wie schnell sich eine Kreatur ihrer Umstände bewusst ist und wie früh sie in Zugreihenfolge handeln kann.
 Wenn ein Charakter [[Überraschung|überrascht]] ist oder seine Gegner überrascht, kann ihm dies [[Vorteil und Nachteil|Vorteil]] bzw. [[Vorteil und Nachteil|Nachteil]] auf den [[Initiative|Initiativewurf]] geben.
 
+### Gleichstand
+Zeigen zwei oder mehr Kreaturen denselben Instinktwurf, handelt zuerst wer den höheren [[Initiative#Beweglichkeitswurf|Beweglichkeitswurf]] hat.
+Besteht auch dabei Gleichstand, entscheidet der SL.
+
 ## Beweglichkeitswurf
 Der [[Beweglichkeit|Beweglichkeitswurf]] repräsentiert wie schnell eine Kreatur handelt NACHDEM ihr ihre Umstände bewusst geworden sind.
 Eine einstellige Zahl bedeutet, dass der Charakter den Kampf mit 1 [[Aktionspunkte|Aktionspunkt]] beginnt. 

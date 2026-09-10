@@ -1,4 +1,6 @@
 ---
+tags:
+  - Regeln/Nimble
 aliases:
   - Fertigkeit
 ---
@@ -16,9 +18,9 @@ SORT Attribut, file.name
 
 ## Fertigkeitswurf
 >[!info]
->W20 + [[Attribute|Attributswert]] + Bonus/Malus
+>W20 + [[Attribute|Attributswert]] + [[Fertigkeiten|Fertigkeitswert]] + Bonus/Malus
 
 Für [[Fertigkeiten#Fertigkeitswurf|Fertigkeitswürfe]] gelten ansonsten die selben Regeln wie für [[Attribute#Attributswurf|Attributswürfe]].
 
 ## Maximaler Fertigkeitsbonus
-Der maximale Bonus einer [[Fertigkeiten|Fertigkeit]] beträgt +12.
+Der maximale Bonus einer [[Fertigkeiten|Fertigkeit]] beträgt +10.

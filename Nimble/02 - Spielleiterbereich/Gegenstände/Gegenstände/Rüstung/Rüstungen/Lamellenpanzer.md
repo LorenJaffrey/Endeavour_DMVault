@@ -3,8 +3,8 @@ tags:
 - Gegenstand/Rüstung/Mittel
 Klasse: "[[Mittelschwere Rüstung|Mittel]]"
 RK: 4
-Stärke: 1
-Dex_cap: 3
+Stärke: 2
+BW_cap: 3
 Heimlichkeit: -2
 Eigenschaften: 
 

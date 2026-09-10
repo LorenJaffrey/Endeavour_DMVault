@@ -10,13 +10,13 @@ tags:
 TABLE  WITHOUT ID 
 file.link AS "Title",
 Klasse, 
-RP, 
-SR, 
+RK, 
 Stärke, 
-Dex_cap AS "GES Cap", 
+BW_cap AS "BW Cap", 
+Heimlichkeit,
 Eigenschaften, 
 Gewicht, 
 Kosten
 FROM #Gegenstand/Rüstung/Mittel
-SORT RP, SR
+SORT RK
 ```

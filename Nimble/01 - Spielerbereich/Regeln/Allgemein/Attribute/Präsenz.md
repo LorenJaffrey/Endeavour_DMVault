@@ -2,6 +2,7 @@
 aliases: 
   - Präsenzwurf
   - Präsenzwürfe
+  - Präsenzprobe
   - PR
   - PRÄ
 tags:

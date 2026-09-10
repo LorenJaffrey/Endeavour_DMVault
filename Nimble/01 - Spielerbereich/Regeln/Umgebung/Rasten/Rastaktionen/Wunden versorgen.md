@@ -16,7 +16,6 @@ Bei einem einfachen [[Erfolg]] regeneriert jedes behandelte Ziel zusätzlich **5
 
 ### Intensiv versorgen
 Dabei behandelt der Charakter ein einzelnes Ziel besonders gründlich. 
-Bei einem einfachen [[Erfolg]] regeneriert das Ziel zusätzlich **10%** seiner maximalen [[Trefferpunkte|TP]], bei großem [[Erfolg]] **20%** und bei kritischem [[Erfolg]] **30%**, jeweils abgerundet.
+Bei einem [[Erfolg#Deutlicher Erfolg|deutlichen Erfolg]] regeneriert das Ziel zusätzlich **10%** seiner maximalen [[Trefferpunkte|TP]], bei [[Erfolg#Erheblicher Erfolg|erheblichem Erfolg]] **20%** und bei [[Erfolg#Kritischer Erfolg|Kritischem Erfolg]] **30%**, jeweils abgerundet.
 
 Bei einem **kritischen [[Erfolg]]** heilt das Ziel zusätzlich **1 Stufe [[Erschöpfung]]**.
-Bei einem **kritischen [[Fehlschlag]]** erleidet das Ziel **1 Stufe [[Erschöpfung]]**.

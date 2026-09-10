@@ -26,9 +26,7 @@ Verteidigung:
   Natürliche_SR: 0
   Resistenzen:
     Schadensresistenz:
-      - "[[Hiebschaden]]"
-      - "[[Stichschaden]]"
-      - "[[Wuchtschaden]]"
+      - "[[Physischer Schaden]]"
     Schadensimmunität:
     Schadensanfälligkeit:
     Zustandsimmunität:

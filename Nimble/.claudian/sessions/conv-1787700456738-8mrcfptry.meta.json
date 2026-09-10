@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787700456738-8mrcfptry",
+  "providerId": "claude",
+  "title": "Überprüfe Attribute, Fertigkeiten, Rettungswürfe",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787700456741,
+  "updatedAt": 1788394592488,
+  "lastResponseAt": 1788394501579,
+  "sessionId": "e787368a-c7fc-434b-9f4b-ec69bec661fe",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "e787368a-c7fc-434b-9f4b-ec69bec661fe"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 1805,
+    "cacheReadInputTokens": 658716,
+    "contextWindow": 1000000,
+    "contextTokens": 660523,
+    "percentage": 66
+  }
+}

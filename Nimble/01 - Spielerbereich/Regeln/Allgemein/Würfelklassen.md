@@ -5,6 +5,18 @@ aliases:
   - Würfelklasse
 ---
 # `=this.file.name`
+Die [[Würfelklassen|Würfelklasse]] eines Wurfs entspricht dem Maximum des möglichen Ergebnisses (z.B. hat sowohl 1W4 als auch 2W2 die Würfelklasse 4, weil beide maximal 4 erzielen können). 
+Sie dient als gemeinsamer Vergleichsmaßstab um Schadenswürfe unterschiedlicher Würfelanzahl und -größe einzuordnen und gezielt eine Stufe höher oder niedriger zu greifen, etwa bei der Waffeneigenschaft [[Vielseitig]].
+
+Ungewöhnliche Würfel wie 1W3 oder 1W5 existieren nicht als physische Würfel und werden durch einen größeren, durch zwei geteilten und aufgerundeten Standardwürfel ersetzt (z.B. 1W3 = 1W6 halbiert, aufgerundet). 
+Bei mehreren Würfeln (z.B. 2W3) wird jeder Würfel einzeln ersetzt und aufgerundet, nicht die Summe aller Würfel.
+
+Die Spalte "Durchschnitt mit Vorteil" gibt den Erwartungswert an, wenn der gesamte Wurf mit [[Vorteil und Nachteil|Vorteil]] ausgeführt wird (der Wurf wird zweimal ausgeführt, das höhere Ergebnis zählt). 
+Das ist relevant für Effekte die Vorteil auf Schadenswürfe gewähren, etwa besondere Waffenqualität.
+
+Zwei Würfelkombinationen derselben Klasse haben nicht zwangsläufig denselben Durchschnitt (1W4 hat Ø2.5, 2W2 hat Ø3.0, trotz gleicher Klasse 4). 
+Die Klasse ist ein Einstufungswerkzeug, keine Garantie für identische statistische Ergebnisse.
+
 | Wurf | Klasse | Würfel                       | Durchschnitt | Durchschnitt mit Vorteil | Differenz |
 | ---- | ------ | ---------------------------- | ------------ | ------------------------ | --------- |
 | 1W2  | 2      | 1W4 (halbiert, aufgerundet)  | 1.50         | 1.75                     | 0.25      |

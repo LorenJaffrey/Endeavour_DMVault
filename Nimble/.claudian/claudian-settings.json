@@ -1,15 +1,15 @@
 {
   "userName": "Christian",
-  "permissionMode": "yolo",
-  "model": "haiku",
+  "permissionMode": "normal",
+  "model": "sonnet",
   "thinkingBudget": "off",
-  "effortLevel": "max",
+  "effortLevel": "medium",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationLocale": "de",
   "titleGenerationModel": "",
   "excludedTags": [],
-  "mediaFolder": "",
+  "mediaFolder": "_Attachments",
   "systemPrompt": "",
   "persistentExternalContextPaths": [],
   "sharedEnvironmentVariables": "",
@@ -96,15 +96,15 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "haiku"
+    "claude": "sonnet"
   },
   "savedProviderEffort": {
-    "claude": "max"
+    "claude": "medium"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "normal"
   },
   "pendingProviderSessionInvalidations": {},
   "lastCustomModel": "",

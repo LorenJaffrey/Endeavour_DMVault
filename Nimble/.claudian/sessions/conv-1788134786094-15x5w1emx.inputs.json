@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788134786094-15x5w1emx",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788134786141-617a1r3",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788134786091-ap5wmwz",
+      "timestamp": 1788134786091,
+      "rawDisplayText": "Bitte formatiere dieses Kapitel aus dem Buch \"So you want to be a game master\" von Justin Alexander. Beim Kopieren aus dem Ebook wurden keine Formatierungen übernommen.",
+      "canonicalText": "Bitte formatiere dieses Kapitel aus dem Buch \"So you want to be a game master\" von Justin Alexander. Beim Kopieren aus dem Ebook wurden keine Formatierungen übernommen.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/Regeln/Dungeon Crawl/Untitled.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "9c75dc1eadf6b86c51e06ea9604517cd9f986f6ad69c9cfdf666ae24691149ff",
+      "providerUserMessageId": "4b59bc71-e476-48dc-8cd2-f1834da4aae2",
+      "providerAssistantMessageId": "98a90b10-883b-4927-b52d-9091e54c4bc3"
+    }
+  ]
+}

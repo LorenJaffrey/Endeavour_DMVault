@@ -14,3 +14,13 @@ FROM #Charakter/GORN
 
 SORT file.name
 ```
+
+
+
+| Spieler | Klasse      | Rolle   |
+| ------- | ----------- | ------- |
+| Frank   | Arkanist    | Heiler  |
+| Deekay  |             | (Tank?) |
+| Sancho  | Mönch       | DD      |
+| Tobi    |             |         |
+| Michi   | Fluchwirker |         |

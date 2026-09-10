@@ -1,0 +1,23 @@
+{
+  "id": "conv-1788649657062-n2xkq4qqf",
+  "providerId": "claude",
+  "title": "Vergleiche Mehrfachaktionen zwischen Systemen",
+  "titleGenerationStatus": "success",
+  "createdAt": 1788649657066,
+  "updatedAt": 1788738489356,
+  "lastResponseAt": 1788738386079,
+  "sessionId": "18cf0030-9e6f-4fbb-89ee-2c5c0d69b2e7",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "18cf0030-9e6f-4fbb-89ee-2c5c0d69b2e7"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 7129,
+    "cacheReadInputTokens": 156318,
+    "contextWindow": 1000000,
+    "contextTokens": 163449,
+    "percentage": 16
+  }
+}

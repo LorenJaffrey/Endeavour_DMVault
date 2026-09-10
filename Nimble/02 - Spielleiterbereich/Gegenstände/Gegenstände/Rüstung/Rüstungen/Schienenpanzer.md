@@ -2,14 +2,14 @@
 tags:
 - Gegenstand/Rüstung/Schwer
 Klasse: "[[Schwere Rüstung|Schwer]]"
-RK: 6
+RK: 7
 Stärke: 3
-Dex_cap: 1
+BW_cap: 0
 Heimlichkeit: -3
 Eigenschaften: 
 
-Gewicht: 50 Pfund
-Kosten: 500 GM
+Gewicht: 55 Pfund
+Kosten: 400 GM
 ---
 # `=this.file.name`
 

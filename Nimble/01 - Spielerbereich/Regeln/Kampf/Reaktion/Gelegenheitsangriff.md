@@ -6,6 +6,8 @@ tags:
   - Regeln/Nimble
 Beschreibung: "Einen Feind angreifen der deine Reichweite verlässt."
 Kosten: "1 [[Aktionspunkte|AP]]"
+Voraussetzung: "[[Nahkampfangriff]] oder [[Waffenloser Angriff]] verfügbar"
+Auslöser: "Eine sichtbare Kreatur verlässt deine Angriffsreichweite."
 ---
 # `=this.file.name`
 > [!info]- TL;DR

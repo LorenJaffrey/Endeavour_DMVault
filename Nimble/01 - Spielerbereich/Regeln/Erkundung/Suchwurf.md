@@ -1,3 +1,7 @@
+---
+tags:
+  - Regeln/Nimble
+---
 # `=this.file.name`
 Ein [[Suchwurf]] ist ein Wurf auf [[Wahrnehmung]].
 Dieser repräsentiert das oberflächliche Erfassen von Informationen in einem [[Auffällige Bereiche|auffälligen Bereich]].
@@ -8,6 +12,10 @@ Spieler erkennen sichtbare Hinweise, Anomalien oder Auffälligkeiten, ohne deren
 >    - **Misserfolg:** Spieler bemerken nichts Ungewöhnliches oder werden abgelenkt – dies könnte auch dazu führen, dass sie eine Falle auslösen oder Hinweise übersehen.
 
 ## Suchmodifikatoren
+Diese Modifikatoren wirken auf den effektiven [[Schwierigkeitsgrad]] der Suche, nicht auf den Wurf selbst. Ein positiver Modifikator macht die Suche schwerer (höherer SG), ein negativer leichter (niedrigerer SG).
+
+Die Zeitspalte gibt Vielfache einer Basiszeit von 6 Sekunden (einer [[Runde|Runde]]/Aktion) pro Suchversuch an. Gelten mehrere Zeitfaktoren gleichzeitig (z. B. Gründlichkeit und Größe), werden ihre Multiplikatoren miteinander multipliziert.
+
 | **Faktor**                  | **Beschreibung**                                  | **Modifikator** | **Zeit** | **Notizen**                                                                       |
 | --------------------------- | ------------------------------------------------- | --------------- | -------- | --------------------------------------------------------------------------------- |
 | **Gründlichkeit der Suche** |                                                   |                 |          |                                                                                   |
@@ -17,7 +25,7 @@ Spieler erkennen sichtbare Hinweise, Anomalien oder Auffälligkeiten, ohne deren
 |                             |                                                   |                 |          |                                                                                   |
 | **Größe des Suchbereichs**  |                                                   |                 |          |                                                                                   |
 | Kleiner Bereich             | Ein kleiner Bereich (z. B. eine Truhe, ein Regal) | -2              | ×1       | Gut definierte und überschaubare Suchziele.                                       |
-| Mittlerer Bereich           | Ein mittelgroßer Bereich (z. B. ein Raum)         | Keine Änderung  | ×3       | Typische Suchbereiche in einem D&D-Abenteuer.                                     |
+| Mittlerer Bereich           | Ein mittelgroßer Bereich (z. B. ein Raum)         | Keine Änderung  | ×3       | Typische Suchbereiche in einem Abenteuer.                                     |
 | Großer Bereich              | Ein großer Bereich (z. B. ein Lagerraum)          | +5              | ×10      | Spieler sollten gezielt Bereiche priorisieren, um Zeit zu sparen.                 |
 |                             |                                                   |                 |          |                                                                                   |
 | **Art der Suche**           |                                                   |                 |          |                                                                                   |
@@ -35,7 +43,7 @@ Spieler erkennen sichtbare Hinweise, Anomalien oder Auffälligkeiten, ohne deren
 | <0                 | Fallen werden unbeabsichtigt ausgelöst, oder es passieren Missgeschicke. [[Informationen]] können beschädigt oder zerstört werden.           |                                   |
 | 1–4                | Oberflächliche Details. Die Spieler interpretieren Hinweise falsch. Fallen werden unbeabsichtigt ausgelöst, oder es passieren Missgeschicke. | [[Offensichtliche Informationen]] |
 | 5–9                | Einige offensichtliche und leicht zugängliche Hinweise werden gefunden.                                                                      | [[Offensichtliche Informationen]] |
-| 10–14              | Spieler entdecken versteckte Details und wertvolle Hinweise, aber nicht unbedingt alles.                                                     | [[Verborgene Informationen]]      |
+| 10–14              | Spieler entdecken versteckte Details und wertvolle Hinweise, aber nicht unbedingt alles.                                                     | [[Unauffällige Informationen]]      |
 | 15–19              | Spieler entdecken auch gut verborgene Hinweise, wie geheime Mechanismen oder kleine Details.                                                 | [[Versteckte Information]]        |
 | 20+                | Sie decken fast alles auf, aber du hältst immer eine Information für gezielte Aktionen oder spätere Durchsuchung zurück.                     | [[Geheime Informationen]]         |
 

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786059321232-f8zogftzo",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786059321399-9shlayk",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786059321228-52r23mn",
+      "timestamp": 1786059321228,
+      "rawDisplayText": "Lass uns die Regeln für Verhandlungen finalisieren. Die Basis stammt aus Draw Steel angepasst auf mein neues System.",
+      "canonicalText": "Lass uns die Regeln für Verhandlungen finalisieren. Die Basis stammt aus Draw Steel angepasst auf mein neues System.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/Systeme/Draw Steel/04-Gameplay-Systems/Negotiation.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "783431ffd111ca9f88ad54caae5ba95046507cb0504ac6bf1788e894eddb5dd7",
+      "providerUserMessageId": "497a4e8c-98b9-4ff5-b27c-015cf8ca0321",
+      "providerAssistantMessageId": "aa754f5e-d80f-40c3-b047-c822080d78db"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786061638528-a164mpm",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786061638524-1og5be2",
+      "timestamp": 1786061638524,
+      "rawDisplayText": "Sollten wir \"Verhandlungen führen\" noch etwas weiter auftrennen? Beispielsweise  \"Argument\" auch noch als eigene Seite ausgliedern, etc. ?\nAußerdem wollte ich noch die Unterscheidung unserer drei sozialen Fertigkeiten Überzeugung, Täuschung und Einschüchterung beleuchten. Mein Plan war Überzeugen als Standard, Täuschung ist bereits definiert, aber für Einschüchterung fehlt mir noch etwas. Wie sollte das am besten behandelt werden?",
+      "canonicalText": "Sollten wir \"Verhandlungen führen\" noch etwas weiter auftrennen? Beispielsweise  \"Argument\" auch noch als eigene Seite ausgliedern, etc. ?\nAußerdem wollte ich noch die Unterscheidung unserer drei sozialen Fertigkeiten Überzeugung, Täuschung und Einschüchterung beleuchten. Mein Plan war Überzeugen als Standard, Täuschung ist bereits definiert, aber für Einschüchterung fehlt mir noch etwas. Wie sollte das am besten behandelt werden?",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/Regeln/Soziale Interaktion/Verhandlungen/Verhandlungen führen.md",
+          "mode": "selection",
+          "selectedText": "\n## Weitermachen oder Aufhören",
+          "lineCount": 2,
+          "startLine": 81
+        }
+      },
+      "images": [],
+      "contentDigest": "7fcf72f8b6f42f30ce300fab77b96ff6a8cc729a06d2d54a87ce6c11944bc4ac",
+      "providerUserMessageId": "ae1f29e1-12f2-4f23-afa7-2c4e6b613e0d",
+      "providerAssistantMessageId": "84135b7b-73a6-4d77-9af6-2a74d6e4a22d"
+    }
+  ]
+}

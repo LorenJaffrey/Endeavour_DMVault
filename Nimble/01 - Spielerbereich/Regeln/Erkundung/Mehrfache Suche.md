@@ -1,3 +1,7 @@
+---
+tags:
+  - Regeln/Nimble
+---
 # `=this.file.name`
 Ein Raum oder ein Objekt kann nur dann erneut untersucht werden kann, wenn:
 - **Neue Umstände** vorliegen: Z. B. bessere Lichtverhältnisse, neues Werkzeug oder ein anderer Ansatz.
