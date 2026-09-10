@@ -111,4 +111,4 @@ These revenants are rare. Many are hunted by ignorant villagers who see only the
 
 Zurück zu: [[Ancestries-Overview]]
 
-Siehe auch: [[Orc]], [[Revenant]], [[Time-Raider]]
+Siehe auch: [[02 - Spielleiterbereich/Systeme/Draw Steel/02-Character-Creation/Ancestries/Orc]], [[Revenant]], [[Time-Raider]]

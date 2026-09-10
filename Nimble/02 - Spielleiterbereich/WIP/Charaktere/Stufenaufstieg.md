@@ -12,9 +12,9 @@ Wenn ein Held eine Stufe erhält:
 - **Mehr Ausdauer.** Deine maximalen [[Trefferwürfel]] erhöhen sich um 1 (sie entsprechen in der Regel deiner [[Stufe]]).
 - **Mehr Expertise.** Erhalte 2 [[Fertigkeiten|Fertigkeitspunkte]].
   Diese Punkte müssen auf unterschiedliche [[Fertigkeiten]] verteilt werden.
-  Es sollte sich um Fertigkeiten handeln die seit dem letzten [[Stufenaufstieg]] benutzt wurden oder anderweitig Sinn ergeben (spricht mit dem [[Spielleiter]]).
+  Es sollte sich um Fertigkeiten handeln die seit dem letzten [[02 - Spielleiterbereich/WIP/Charaktere/Stufenaufstieg]] benutzt wurden oder anderweitig Sinn ergeben (spricht mit dem [[Spielleiter]]).
 - **Klassenmerkmale.** Erhalte neue Klassenmerkmale für deine Stufe. 
-  Das kann bedeuten, dass sich dein [[Mana|Manapool]] vergrößert, du neue [[02 - Spielleiterbereich/Regeln/Magie/Zauber/Zaubersprüche/Zaubersprüche|Zaubersprüche]] erhältst oder sogar eine Unterklasse wählst!
+  Das kann bedeuten, dass sich dein [[Mana|Manapool]] vergrößert, du neue [[02 - Spielleiterbereich/WIP/Magie/Zauber/Zaubersprüche/Zaubersprüche|Zaubersprüche]] erhältst oder sogar eine Unterklasse wählst!
 - **Weitere Anpassungen.** Wenn sich einige deiner Basiswerte erhöhen, denke daran, bei Bedarf andere Teile des Charakterbogens anzupassen ([[Fertigkeiten]], Schaden, [[Initiative]], [[Rüstungsklasse]], [[Mana]], [[Sprachen]] usw.).
 
 **Hinweis**  

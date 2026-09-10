@@ -6,7 +6,7 @@
 - [[Wind Spells]]. Aid in moving friend and foe alike around the battlefield. They can also slice and cut through entire groups of foes and viciously deal extra damage on critical hits.
 
 ## Magieschulen
-| Magieschule      | [[Arkanist]] | [[Paladin]] | [[Fluchwirker]] | [[Priester]] | [[Klangweber]] | [[Druide]] | [[Windläufer]] | [[Gauner]] | [[Berserker]] | [[Taktiker]] | [[Jäger]] |
+| Magieschule      | [[Arkanist]] | [[Paladin]] | [[Fluchwirker]] | [[Priester]] | [[Klangweber]] | [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]] | [[Windläufer]] | [[Gauner]] | [[Berserker]] | [[Taktiker]] | [[Jäger]] |
 | ---------------- |:------------:|:-----------:|:-----------------:|:------------:|:--------------:|:----------:|:--------------:|:----------:|:-------------:|:--------------:|:---------:|
 | [[Arkanzauber]]  |      X       |             |                   |              |                |            |                |            |               |                |           |
 | [[Pyromantie]]   |      X       |             |        (X)        |              |      (X)       |            |      (X)       |            |               |                |           |
@@ -27,6 +27,6 @@
 | [[Fluchwirker]] |      (X)       |      (X)      |                 |                |        X        |                 |
 | [[Priester]]      |                |               |                 |                |        X        |        X        |
 | [[Klangweber]]    |      (X)       |      (X)      |       (X)       |       X        |       (X)       |       (X)       |
-| [[Druide]]        |                |               |        X        |       X        |                 |                 |
+| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]        |                |               |        X        |       X        |                 |                 |
 
 

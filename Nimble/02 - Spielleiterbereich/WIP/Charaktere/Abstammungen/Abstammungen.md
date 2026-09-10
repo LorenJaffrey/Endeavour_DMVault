@@ -42,9 +42,9 @@ SORT file.name
 # Exotic Ancestries
 Your setting may or may not support these choices—check with your GM first before selecting one.
 - [[Bunbun]]
-- [[02 - Spielleiterbereich/Regeln/Charaktere/Abstammungen/Selten/Goblin|Goblin]]
-- [[02 - Spielleiterbereich/Regeln/Charaktere/Abstammungen/Selten/Kobold|Kobold]]
-- [[Orc]]
+- [[02 - Spielleiterbereich/WIP/Charaktere/Abstammungen/Selten/Goblin|Goblin]]
+- [[02 - Spielleiterbereich/WIP/Charaktere/Abstammungen/Selten/Kobold|Kobold]]
+- [[02 - Spielleiterbereich/WIP/Charaktere/Abstammungen/Selten/Orc]]
 - [[Birdfolk]]
 - [[Changeling]]
 - [[Crystalborn]]

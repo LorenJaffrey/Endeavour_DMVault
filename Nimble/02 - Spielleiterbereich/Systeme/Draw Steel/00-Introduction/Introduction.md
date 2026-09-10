@@ -552,4 +552,4 @@ Chapter 1
 
 
 
-Siehe auch: [[Glossary]]
+Siehe auch: [[02 - Spielleiterbereich/Systeme/Draw Steel/00-Introduction/Glossary]]

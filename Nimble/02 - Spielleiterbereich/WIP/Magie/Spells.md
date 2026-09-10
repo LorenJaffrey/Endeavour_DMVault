@@ -1,6 +1,6 @@
 # Fire Spells
 
-![[02 - Spielleiterbereich/Regeln/Magie/Zaubersprüche/Pyromantie/Feuerpfeil]]
+![[02 - Spielleiterbereich/WIP/Magie/Zaubersprüche/Pyromantie/Feuerpfeil]]
 
 ---
 

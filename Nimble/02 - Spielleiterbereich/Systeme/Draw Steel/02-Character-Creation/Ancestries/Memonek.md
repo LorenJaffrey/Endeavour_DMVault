@@ -117,4 +117,4 @@ Each orc has within them a fire that causes their veins to glow once blood is dr
 
 Zurück zu: [[Ancestries-Overview]]
 
-Siehe auch: [[High-Elf]], [[Human]], [[Orc]]
+Siehe auch: [[High-Elf]], [[Human]], [[02 - Spielleiterbereich/Systeme/Draw Steel/02-Character-Creation/Ancestries/Orc]]

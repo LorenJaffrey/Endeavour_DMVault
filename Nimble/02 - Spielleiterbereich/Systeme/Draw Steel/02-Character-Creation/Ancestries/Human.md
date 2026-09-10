@@ -101,4 +101,4 @@ Your human physiology allows you to fight, run, and stay awake longer than other
 
 Zurück zu: [[Ancestries-Overview]]
 
-Siehe auch: [[Hakaan]], [[Memonek]], [[Orc]]
+Siehe auch: [[Hakaan]], [[Memonek]], [[02 - Spielleiterbereich/Systeme/Draw Steel/02-Character-Creation/Ancestries/Orc]]

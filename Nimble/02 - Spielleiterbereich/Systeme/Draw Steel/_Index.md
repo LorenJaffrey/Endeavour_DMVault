@@ -11,7 +11,7 @@ Vollständiger Index aller Draw Steel Regeldateien. Diese Struktur wurde aufgete
 Übersicht und Grundlagen des Draw Steel Systems.
 
 - [[Introduction]] - Was ist Draw Steel?
-- [[Glossary]] - Glossar aller Spielbegriffe
+- [[02 - Spielleiterbereich/Systeme/Draw Steel/00-Introduction/Glossary]] - Glossar aller Spielbegriffe
 
 ## 01-Basics
 
@@ -35,7 +35,7 @@ Charakter-Erstellung und Hintergründe.
   - [[Hakaan]]
   - [[Human]]
   - [[Memonek]]
-  - [[Orc]]
+  - [[02 - Spielleiterbereich/Systeme/Draw Steel/02-Character-Creation/Ancestries/Orc]]
   - [[Polder]]
   - [[Revenant]]
   - [[Time-Raider]]

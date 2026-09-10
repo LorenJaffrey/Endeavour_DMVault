@@ -9,6 +9,6 @@
 | [[Gauner]]        |            |              |    X     |           |     X     |        |
 | [[Fluchwirker]] |            |              |    X     |     X     |           |        |
 | [[Jäger]]         |            |              |    X     |     X     |           |        |
-| [[Druide]]        |            |      X       |    X     |           |           |   X    |
+| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]        |            |      X       |    X     |           |           |   X    |
 | [[Arkanist]]      |            |              |          |     X     |           |   X    |
 | [[Klangweber]]    |            |              |          |           |           |        |

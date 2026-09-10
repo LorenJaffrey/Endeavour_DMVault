@@ -2,14 +2,19 @@
 tags:
   - Regeln/Nimble/WIP
   - Regeln/Nimble/Inventar
+aliases:
+  - Gegenstandsgröße
 ---
 # `=this.file.name`
+Die [[Gegenstandsgrößen|Gegenstandsgröße]] eines Gegenstandes gibt an wie viel Platz ein Gegenstand in einem Behälter benötigt.
+Sie ist als Näherungswert eine Kombination aus Größe, Gewicht und Sperrigkeit.
 
 ## Größenkategorien
-Jeder Gegenstand hat eine Größenkategorie.
-  - Klein, 1 Platz: Einhandwaffe, Kurzschwert, Werkzeugset, Ersatzkleidung, Trank, gebündelte Rationen für mehrere Tage, gebündelte Campingausrüstung
-  - Groß, 2 Plätze: Zweihandwaffe, nicht getragene Rüstung, Zelt, größerer Werkzeugkasten
-  - Sehr groß, 3 Plätze: Leiter, Truhe, tragbarer Amboss, sperrige Beutestücke
+Als Ausgangspunkt dient die Größenkategorie:
+  - Klein, 1 Platz: kleine Einhandwaffe (Dolch, Kurzschwert, Sichel, etc.), Werkzeugset, Ersatzkleidung, Trank, gebündelte Rationen für mehrere Tage
+  - Mittel: 2 Plätze: größere Einhandwaffe (Langschwert, )
+  - Groß: 3 Plätze: Zweihandwaffe, nicht getragene Rüstung, Zelt
+  - Sehr groß, 4 Plätze: Leiter, Truhe, tragbarer Amboss, sperrige Beutestücke
 
 ## Gewichtsklassen
 Zusätzlich zur Größenkategorie hat jeder Gegenstand eine Gewichtsklasse.

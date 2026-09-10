@@ -16,7 +16,6 @@ Whenever a hero does something memorable (role-plays a great moment, makes every
 ### Retreat
 The world is dangerous, and some fights may be unwinnable. Any hero may call for a retreat on their turn. If the party agrees—unless there is a good reason story-wise that a party can’t escape (e.g., they are trapped in nets and completely surrounded by a band of nasty kobolds)—the GM allows them to flee. Each hero describes their escape (e.g., casting a spell, using equipment, or making a skill check). Consequences may follow, such as taking damage, suffering a Wound, or failing a quest. If the escape is particularly clever, the GM may allow the party to escape without additional consequence. After all, the shame of retreating is often punishment enough!
 
-
 ### Unarmed Strikes
 To attack with your bare hands or feet, roll 1d4; on hit: deal 1+STR damage.
 

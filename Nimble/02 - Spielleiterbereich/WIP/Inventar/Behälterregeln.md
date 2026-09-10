@@ -5,16 +5,6 @@ tags:
 ---
 # Behälter
 
-## Grundprinzip
-Behälter haben feste, fest definierte Größen, wie jeder andere Gegenstand auch.
-Ein Rucksack ist ein Ausrüstungsgegenstand mit einer festen Platzanzahl, keine Formel.
-Attribute bestimmen ausschließlich, welche Behältergröße ein Charakter überhaupt ausrüsten darf.
-
-Jeder Behältertyp hat vier Eigenschaften:
-  - Platzanzahl, eine feste Zahl
-  - Maximale Gegenstandsgröße, welche Größenkategorie aus [[Gegenstandsgrößen]] maximal hineinpasst
-  - Getragen, ja oder nein. Nur getragene Behälter unterliegen einem Attributs-Maximum und Sperrigkeit
-  - Schnellzugriff, ja oder nein. Nur im Kampf relevant, nur bei getragenen Behältern sinnvoll
 
 ## Rucksack
 Genau ein Rucksack pro Charakter, im Rücken-Platz.

@@ -18,6 +18,7 @@ Bevor du antwortest befolge immer diese Regeln:
 - Jeder Satz sollte in einer neuen Zeile beginnen.
 - Benutze keine Bindestriche und zu komplex geschachtelten Sätze.
 - Verwende für Tags ein einheitliches Format. Jeden Tag in einer neuen Zeile, eingerückt mit zwei Spaces und einem Bindestrich. Keine Anführungszeichen, eckige Klammern oder ähnliches.
+- Ergänze keine Annahmen, Verweise auf andere Systeme, Teile des Denkprozesses, mögliche Ausnahmen die womöglich an anderer Stelle ergänzt werden oder ähnliches. Eine Regelseite soll genau ihre Regeln enthalten und nicht mehr.
 
 ## Aufbau
 Der Ordner "01 - Spielerbereich" enthält vor allem die Regeln und öffentliche  Kampagneninformationen.

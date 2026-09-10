@@ -28,7 +28,7 @@ SORT file.name
 - **[[Fluchwirker]].** Beschwöre Horden entbehrlicher Diener.
 - **[[Priester]].** Meistre Leben und Tod. Führe einen treuen Begleiter.
 - **[[Klangweber]].** Inspirierende Präsenz, scharfer Verstand, schärfere Zunge.
-- **[[Druide]].** Gebieter über Wetter, Bestien und Natur.
+- **[[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]].** Gebieter über Wetter, Bestien und Natur.
 - **[[Windläufer]].** Disziplinierter Kampfkünstler mit schnellen Händen und Füßen.
 
 ## Schritt 2: Wähle deine Herkunft

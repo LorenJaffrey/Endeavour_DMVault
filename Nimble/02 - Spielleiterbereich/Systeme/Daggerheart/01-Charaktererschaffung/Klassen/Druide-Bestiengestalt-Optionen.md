@@ -2,7 +2,7 @@
 tags: ["#Regeln/Daggerheart"]
 ---
 
-Siehe auch: [[Druide]]
+Siehe auch: [[02 - Spielleiterbereich/Systeme/Daggerheart/01-Charaktererschaffung/Klassen/Druide]]
 
 # Druide*in – Optionen der Bestiengestalt
 

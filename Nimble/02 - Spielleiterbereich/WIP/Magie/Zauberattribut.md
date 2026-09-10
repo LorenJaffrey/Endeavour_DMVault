@@ -17,7 +17,7 @@ Welches Attribut du nutzt, hängt von deiner Klasse ab:
 | ----------------- | ------------------------- |
 | [[Klangweber]]    | [[Verstand]]           |
 | [[Priester]]      | [[Entschlossenheit]]              |
-| [[Druide]]        | [[Entschlossenheit]]              |
+| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]        | [[Entschlossenheit]]              |
 | [[Fluchwirker]] | [[Verstand]]           |
 | [[Arkanist]]      | [[Verstand]]           |
 | [[Paladin]]       | [[Präsenz]]              |

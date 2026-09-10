@@ -10,7 +10,7 @@ Currency is made up of Silver (sp) and Gold pieces (gp). 10 silver = 1 gold. 1 s
 This table outlines the average amount of gold each hero will typically gain per level. A quest for a noble cause or from a poor villager might pay modestly (one or two levels below average), while one from a wealthy noble with questionable motives may offer a more extravagant reward (one or two levels above average).
 
 > [!tip]- Gold Gain Per Level
-> 
+
 | LEVEL | GOLD    |
 | ----- | ------- |
 | 1     | 25      |
@@ -33,8 +33,10 @@ This table outlines the average amount of gold each hero will typically gain per
 | 18    | 90,000  |
 | 19    | 130,000 |
 | 20    | 200,000 |
+
 ### On Buying Magical Items
 Most adventurers can save up enough to purchase uncommon or rare magical items, often found in specialty shops in large cities. However, very rare or legendary items are typically far too expensive to buy and must be earned through adventuring.
+
 ### Too Much Gold?
 An overabundance of gold has its challenges and it may attract unwanted attention:
 * **It’s Cumbersome.** You can only carry so much gold before your pockets and bags are full. Large amounts must be transported via caravan or ship and safely stored somewhere while adventuring.

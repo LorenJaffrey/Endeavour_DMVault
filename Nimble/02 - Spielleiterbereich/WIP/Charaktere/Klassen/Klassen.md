@@ -19,7 +19,7 @@ SORT file.name
 | --------------- | --------------------------------------------------------------------------------- | --------------------------------- | ------------- | ----------------- | ---------- |:---:|:---:|
 | [[Taktiker]]    | Melee DD, Melee Tank, Kommandant (Support)                                        | Kämpfer, Support                  | Mittel/Schwer | Fokus (Flow)      |            | +2  |  -  |
 | [[Paladin]]     | Melee DD, Melee Tank, Inquisitor/Interrogator                                     | Kämpfer/Caster Hybrid, Auren      | Mittel/Schwer | Heilige Macht     |            | +2  |  -  |
-| [[Druide]]      | Melee DD/Tank, Heiler, Caster DD                                                  | Allrounder                        | Leicht        | Mana (Pool)       | Natur      | +1  |  -  |
+| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]      | Melee DD/Tank, Heiler, Caster DD                                                  | Allrounder                        | Leicht        | Mana (Pool)       | Natur      | +1  |  -  |
 | [[Gauner]]      | Assassine , Duellant, Strippenzieher                                              |                                   | Leicht        |                   |            | +1  |  -  |
 | [[Arkanist]]    | Pyromant (Caster DD, Crits), Glaciomant (Caster DD, Control), Chronomant (Heiler) |                                   | -             | Mana (Pool)       | Arkan      |  -  |  -  |
 | [[Fluchwirker]] | Caster DD (DoTs), Beschwörer, Melee/Caster Hybrid DD                              | Caster                            | -             | Fluchkraft        | Fluchkraft |  -  |  -  |
@@ -47,7 +47,7 @@ Heiliger Krieger, Auren, Heilige Fähigkeiten (keine Zauber!)
 | ???       | Heiliger Ritter (defensiv) | Nahkampf Tank            | schwer        |
 | ???       | Inquisitor/Interrogator    | Nahkampf/Support/Debuffs | mittel/schwer |
 
-### [[Druide]]
+### [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]
 Naturmagie, Gestaltwandlung, Gestirne, etc.
 
 | Subklasse | Identität       | Rolle            | Rüstung      |
