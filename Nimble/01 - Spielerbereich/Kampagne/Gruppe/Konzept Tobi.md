@@ -1,1 +1,2 @@
-Im Grunde Lucian aber eher mit stärkerer Integration in die Story
+- Im Grunde Lucian aber eher mit stärkerer Integration in die Story
+- Klasse noch unklar
