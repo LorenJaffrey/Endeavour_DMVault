@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/Gegenstände/Gegenstände/Behälter/Behälter.md",
+                "file": "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Behälter"
+              "title": "Charaktere erstellen"
             }
           },
           {
@@ -426,11 +426,13 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ca1ec6770b687d6b",
+  "active": "b95fee904e023541",
   "lastOpenFiles": [
+    "02 - Spielleiterbereich/DM Tips/Charaktere",
+    "02 - Spielleiterbereich/WIP/Gegenstände/Gegenstände/Behälter/Behälter.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
     "02 - Spielleiterbereich/WIP/Inventar/Behälterregeln.md",
     "02 - Spielleiterbereich/WIP/Inventar/Gegenstandsgrößen.md",
-    "02 - Spielleiterbereich/WIP/Gegenstände/Gegenstände/Behälter/Behälter.md",
     "02 - Spielleiterbereich/WIP/Inventar/Körperausrüstung.md",
     "02 - Spielleiterbereich/WIP/Inventar/Equipment Rules.md",
     "02 - Spielleiterbereich/WIP/Inventar/Belastung.md",
@@ -453,8 +455,6 @@
     "02 - Spielleiterbereich/WIP",
     "02 - Spielleiterbereich/DM Tips/Allgemein/Improvisieren.md",
     "02 - Spielleiterbereich/DM Tips/Allgemein/Kämpfe designen.md",
-    "02 - Spielleiterbereich/DM Tips/Allgemein/Mysterien leiten.md",
-    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Encounter.md",
     "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Behälter.md.tmp.11719.d0bf549024ac",
     "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Gewaltig).md.tmp.11719.14229313c00d",
     "02 - Spielleiterbereich/Gegenstände/Gegenstände/Behälter/Rucksack (Sehr Groß).md.tmp.11719.fe2b1c6a8b4e",
