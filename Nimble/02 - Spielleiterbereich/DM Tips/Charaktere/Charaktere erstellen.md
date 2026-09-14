@@ -2,49 +2,70 @@
 
 ## An Introduction
 
-Welcome! This guide is designed to help you through the process of coming up with a character. This guide has been designed to be system agnostic, which means it can be used for any game that asks you to create a character in order to play, including 5e. This guide, therefore, does not instruct you on how to pick classes, abilities, weapons, spells or other aspects of gameplay, but rather centers on the character itself: their motivations, their backstory, and their central conflict, among others.
+Welcome! This guide is designed to help you through the process of coming up with a character. 
+This guide has been designed to be system agnostic, which means it can be used for any game that asks you to create a character in order to play, including 5e. 
+This guide, therefore, does not instruct you on how to pick classes, abilities, weapons, spells or other aspects of gameplay, but rather centers on the character itself: their motivations, their backstory, and their central conflict, among others.
 
-This guide has also been written to help you set the groundwork for your character to undergo a character arc through play, as well as give you a visual motif for your character. You may choose to use these aspects of this guide or ignore them as you see fit.
-
-You can save this document to your own google drive and send it to your players to fill before making a character.
+This guide has also been written to help you set the groundwork for your character to undergo a character arc through play, as well as give you a visual motif for your character. 
+You may choose to use these aspects of this guide or ignore them as you see fit.
 
 ## First Pillar: Gimmick
+A character’s Gimmick is the most recognizable and the most shallow aspect of who they are. 
+This is the groundwork upon which we will build our character. 
+Choosing a Gimmick not only allows us to create a foundation from which to build a more three-dimensional and deeper character, but also to make an easy-to-understand character concept with a clear point of view that makes an instant impression at the table.
 
-A character’s Gimmick is the most recognizable and the most shallow aspect of who they are. This is the groundwork upon which we will build our character. Choosing a Gimmick not only allows us to create a foundation from which to build a more three-dimensional and deeper character, but also to make an easy-to-understand character concept with a clear point of view that makes an instant impression at the table.
-
-Examples of Gimmicks: Quick to Anger, Scaredy-Cat, Jokester, Absolute Idiot, Know-it-All, Excessively Naive, Prissy Noble, Morbid and Creepy, Compulsive Liar.
-
-Your Character’s Gimmick:  
-____________________________________________________________________________
+Examples of Gimmicks: 
+  - Quick to Anger
+  - Scaredy-Cat
+  - Jokester
+  - Absolute Idiot
+  - Know-it-All
+  - Excessively Naive
+  - Prissy Noble
+  - Morbid and Creepy
+  - Compulsive Liar.
 
 ## Second Pillar: Conflict
+A character’s Conflict is the main issue they are facing. 
+This, along with your character’s Want, will allow you to set the groundwork for a character arc by giving your character a direction to grow in. 
+Conflict should be personal to your character, rather than vaguely related to them. 
+Choosing a Conflict is the start of building your character’s main motivation. 
+It allows you to start thinking of a backstory that is specifically made to facilitate the growth of your character through the campaign, as well as give your character something to do during play.
 
-A character’s Conflict is the main issue they are facing. This, along with your character’s Want, will allow you to set the groundwork for a character arc by giving your character a direction to grow in. Conflict should be personal to your character, rather than vaguely related to them. Choosing a Conflict is the start of building your character’s main motivation. It allows you to start thinking of a backstory that is specifically made to facilitate the growth of your character through the campaign, as well as give your character something to do during play.
-
-Examples of Conflicts: Being persecuted for a crime they did not commit; evading the authorities; being disowned by their family; Losing a loved one; Suffering a great injustice; Being the object of a prophecy; Discovering a mystery.
-
-Your Character’s Conflict:
-
-____________________________________________________________________________
+Examples of Conflicts: 
+  - Being persecuted for a crime they did not commit
+  - evading the authorities
+  - being disowned by their family
+  - Losing a loved one
+  - Suffering a great injustice
+  - Being the object of a prophecy
+  - Discovering a mystery.
 
 ## Third Pillar: Want
+Your character’s Want is the second piece to build your character’s arc. 
+A Want is your character’s deepest desire at the start of their story. 
+A character that wants something is the key to making a dynamic and highly motivated character who seeks out and has agency in their own story, rather than a character that passively has the story happen to them. 
+A Want can also set up a character arc in which that want is replaced by a need, which is related to the original Want but is informed by the story the character has gone through. 
+A character could start their story with the Want to change so that their parents accept them as their heir, and through the story they grow and change to find they need to love themselves as they are.
 
-Your character’s Want is the second piece to build your character’s arc. A Want is your character’s deepest desire at the start of their story. A character that wants something is the key to making a dynamic and highly motivated character who seeks out and has agency in their own story, rather than a character that passively has the story happen to them. A Want can also set up a character arc in which that want is replaced by a need, which is related to the original Want but is informed by the story the character has gone through. A character could start their story with the Want to change so that their parents accept them as their heir, and through the story they grow and change to find they need to love themselves as they are.
-
-Examples of Wants: I want to find out who my parents are; I want to be accepted by my family; I want to become strong enough that I don’t need to rely on anyone else again; I want those who wronged me to suffer; I want to rule my father’s kingdom; I want to be rich; I want to bring a loved one back from the dead.
-
-Your Character’s Want:
-
-____________________________________________________________________________
-
+Examples of Wants: 
+  - I want to find out who my parents are
+  - I want to be accepted by my family
+  - I want to become strong enough that I don’t need to rely on anyone else again
+  - I want those who wronged me to suffer
+  - I want to rule my father’s kingdom
+  - I want to be rich
+  - I want to bring a loved one back from the dead.
 
 # Giving Yourself a Malus:
-
 Adding a malus to your character can give you tools to challenge yourself further when playing,  manifest backstory-only details through mechanical effects, deepen PC’s characterization, and drive home important backstory details about them to the other table.
 
-However, when implemented thoughtlessly, maluses can also be a detriment to other party members! It is vital that you get your GM’s permission before choosing a malus and work with them to choose one that is appropriate for your campaign. Your malus must come up in game, but it cannot be a constant source of conflict at the table.
+However, when implemented thoughtlessly, maluses can also be a detriment to other party members! 
+It is vital that you get your GM’s permission before choosing a malus and work with them to choose one that is appropriate for your campaign. 
+Your malus must come up in game, but it cannot be a constant source of conflict at the table.
 
-It’s also important to ask yourself whether you are taking on a malus with the expectation that your PC will overcome it at one point or another over the course of the campaign. If so, make sure to communicate this to your GM, so that they may create opportunities for that to happen in-game when they feel the time is right.
+It’s also important to ask yourself whether you are taking on a malus with the expectation that your PC will overcome it at one point or another over the course of the campaign. 
+If so, make sure to communicate this to your GM, so that they may create opportunities for that to happen in-game when they feel the time is right.
 
 # General Maluses
 - Bad Liar. Either by in-character choice or despite yourself, you make all Charisma (Deception) checks at disadvantage.
@@ -62,7 +83,6 @@ It’s also important to ask yourself whether you are taking on a malus with the
 - Stage Fright. You have disadvantage on all Charisma checks when more than 5 creatures are looking at you.
 
 # Class-Specific Maluses
-
 - Blind Fury. (Prerequisite: Barbarian Class) When you are brought to the limits of your physical body, you are liable to lose control of your own actions. When you expend your last available use of your Rage feature, make a Wisdom saving throw (DC 10 + your Proficiency Bonus). On a failure, you attack the nearest creature to you, be it friend or foe, and you cannot willingly end your rage. You can repeat this saving throw at the end of each of your turns to end this effect.
 - Uninspired. (Prerequisite: Bard Class) A past event impedes you from inspiring others when you fear for your own life. You cannot give your Bardic Inspiration to another creature when your current hit points are less than half of your hit point maximum.
 - Divine Awe. (Prerequisite: Cleric Class) A crisis of faith in the past--or, perhaps, what some may deem too fervent a belief--makes you liable to be awestruck by the undeniable presence of the object of your worship. Choose a specific effect of your Channel Divinity feature. When you use this Channel Divinity effect, you must make a Wisdom saving throw against your own Spell Save DC or be stunned until the end of your next turn.

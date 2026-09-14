@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Nimble
   - Regeln/Nimble/Inventar
 aliases:
   - Gegenstandsgröße
@@ -19,13 +19,12 @@ Als Ausgangspunkt dient die Größenkategorie:
 ## Gewichtsklassen
 Zusätzlich zur Größenkategorie hat jeder Gegenstand eine Gewichtsklasse.
 Sie gibt einen Platz-Zuschlag, unabhängig von der Größe.
-  - Normal: kein Zuschlag
   - Schwer: +1 Platz
   - Sehr schwer: +2 Plätze
 
-Beispiel Vorschlaghammer: klein vom Volumen, aber schwer. 1 Platz Größe plus 1 Platz Gewicht, macht 2 Plätze gesamt.
-
-Die Gewichtsklasse wird außerdem für die [[Belastung]] des Charakters gezählt.
+>[!example] Beispiel
+>Vorschlaghammer: klein vom Volumen, aber schwer. 
+>1 Platz Größe plus 1 Platz Gewicht, macht 2 Plätze gesamt.
 
 ## Stapelbare Kleinstitems
 Manche Gegenstände sind so klein, dass sie explizit in Stapeln gezählt werden, statt einzeln 1 Platz zu belegen.

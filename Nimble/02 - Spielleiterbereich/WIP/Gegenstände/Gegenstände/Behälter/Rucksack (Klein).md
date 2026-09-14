@@ -16,6 +16,3 @@ MaxGröße: Groß
 > | Maximale Gegenstandsgröße | `=this.MaxGröße` |
 
 Ein kleiner, wenig sperriger Rucksack.
-Fasst weniger als ein [[Rucksack|Standardrucksack]], dafür nie eine Sperrigkeits-Nachteil, siehe [[Behälterregeln#Sperrigkeit|Behälter#Sperrigkeit]].
-
-Siehe [[Behälterregeln|Behälter]] für die genauen Inventarregeln.

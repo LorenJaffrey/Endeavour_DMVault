@@ -35,7 +35,12 @@
       "Bash(cd /home/lorenjaffrey/Dokumente/Repositories/Nimble_Obsidian/Nimble\nfor f in Gambeson Lederrüstung \"Beschlagene Lederrüstung\" Fellrüstung Brigantine Kettenhemd Schuppenpanzer; do\necho \"--- $f ---\"\ngrep -n \"^Stärke:\" \"02 - Spielleiterbereich/Gegenstände/Gegenstände/Rüstung/Rüstungen/$f.md\"\ndone)",
       "Bash(cd \"01 - Spielerbereich/Regeln/Kampf/Aktionen\" && sed -i '17,18d' Greifen.md && tail -5 Greifen.md)",
       "Bash(grep -rl \"^RK:\" \"02 - Spielleiterbereich/Gegenstände/Gegenstände/Rüstung/Rüstungen/\" | head -20; echo ---; for f in \"02 - Spielleiterbereich/Gegenstände/Gegenstände/Rüstung/Rüstungen/\"*.md; do grep -H \"^RK:\" \"$f\"; done)",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(mkdir -p \"01 - Spielerbereich/Regeln/Inventar\")",
+      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Inventar.md\" \"01 - Spielerbereich/Regeln/Inventar/Inventar.md\")",
+      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Gepäck.md\" \"01 - Spielerbereich/Regeln/Inventar/Gepäck.md\")",
+      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Schnellzugriff.md\" \"01 - Spielerbereich/Regeln/Inventar/Schnellzugriff.md\")",
+      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Gegenstandsgrößen.md\" \"01 - Spielerbereich/Regeln/Inventar/Gegenstandsgrößen.md\")"
     ]
   }
 }
