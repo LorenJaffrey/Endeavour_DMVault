@@ -2,9 +2,9 @@
 aliases:
 tags:
   - Gegenstand/Behälter
-Kosten: 
-Plätze: 
-MaxGröße: 
+Kosten: 5 SM
+Plätze: 1
+MaxGröße: Klein
 ---
 # `=this.file.name`
 > [!infobox]
@@ -15,4 +15,6 @@ MaxGröße:
 > | Plätze | `=this.Plätze` |
 > | Maximale Gegenstandsgröße | `=this.MaxGröße` |
 
-Beschreibung
+Eine kleine Tasche am Gürtel oder an der Ausrüstung befestigt, für Gegenstände die schnell griffbereit sein müssen.
+
+Siehe [[Schnellzugriff]] für die genauen Inventarregeln.

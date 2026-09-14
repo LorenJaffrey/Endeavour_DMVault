@@ -2,10 +2,9 @@
 aliases:
   - Trinkschläuche
 tags:
-  - Gegenstand/Behälter
+  - Gegenstand/Ausrüstung
 Kosten: 2 SM
 Gewicht: 4
-Kapazität: 2 Liter
 ---
 # `=this.file.name`
 > [!infobox]
@@ -14,4 +13,5 @@ Kapazität: 2 Liter
 > | ---- | ---- |
 > | Kosten | `=this.Kosten` |
 > | Gewicht | `=this.Gewicht` Pfund |
-> | Kapazität | `=this.Kapazität`  |
+
+Fasst 2 Liter Flüssigkeit.

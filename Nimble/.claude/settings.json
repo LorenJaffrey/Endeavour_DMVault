@@ -40,7 +40,11 @@
       "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Inventar.md\" \"01 - Spielerbereich/Regeln/Inventar/Inventar.md\")",
       "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Gepäck.md\" \"01 - Spielerbereich/Regeln/Inventar/Gepäck.md\")",
       "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Schnellzugriff.md\" \"01 - Spielerbereich/Regeln/Inventar/Schnellzugriff.md\")",
-      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Gegenstandsgrößen.md\" \"01 - Spielerbereich/Regeln/Inventar/Gegenstandsgrößen.md\")"
+      "Bash(mv \"02 - Spielleiterbereich/WIP/Inventar/Gegenstandsgrößen.md\" \"01 - Spielerbereich/Regeln/Inventar/Gegenstandsgrößen.md\")",
+      "Read(//home/lorenjaffrey/Dokumente/02 - Spielleiterbereich/WIP/Gegenstände/Gegenstände/**)",
+      "Read(//home/lorenjaffrey/Dokumente/02 - Spielleiterbereich/Vorlagen/Ausrüstung/**)",
+      "Read(//home/lorenjaffrey/Dokumente/02 - Spielleiterbereich/WIP/Charaktere/Character Sheet Vorlage/**)",
+      "Read(//home/lorenjaffrey/Dokumente/02 - Spielleiterbereich/WIP/**)"
     ]
   }
 }

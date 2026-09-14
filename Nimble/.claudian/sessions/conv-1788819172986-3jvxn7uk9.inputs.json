@@ -328,6 +328,47 @@
       "contentDigest": "484b9142ff3f71a9a25e31ec9d5bca2c23cf881c9166cf89f9c3e1aed788c7b2",
       "providerUserMessageId": "b866f581-d5c5-4458-95e2-961deb05a85e",
       "providerAssistantMessageId": "371c9c1b-11c0-48f9-bc13-e51dd89315e6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789425362041-sjux72v",
+      "userTurnOrdinal": 24,
+      "state": "accepted",
+      "localMessageId": "msg-1789425362025-fz68mbs",
+      "timestamp": 1789425362025,
+      "rawDisplayText": "Womit sollten wir als nächstes weitermachen?",
+      "canonicalText": "Womit sollten wir als nächstes weitermachen?",
+      "images": [],
+      "contentDigest": "89b141f6371aa38d8d884af45dcc9b03e2e39f4b1961213b1a42bd5aff6bd887",
+      "providerUserMessageId": "7a9a33fc-a30c-4a71-af0b-e25771589f27",
+      "providerAssistantMessageId": "d645eee4-7773-4635-b7f1-e0314d057057"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789425941091-0afxgay",
+      "userTurnOrdinal": 25,
+      "state": "accepted",
+      "localMessageId": "msg-1789425941087-c402skh",
+      "timestamp": 1789425941087,
+      "rawDisplayText": "Das Charakter Sheet machen wir zuletzt.\nAktualisiere die Vorlage Behälter.\nDer Trinkschlauch wird kein Behälter in diesem Sinne im neuen System. Er bleibt ein normaler Gegenstand.\nErzeuge die Gürteltasche als neuen Behälter.",
+      "canonicalText": "Das Charakter Sheet machen wir zuletzt.\nAktualisiere die Vorlage Behälter.\nDer Trinkschlauch wird kein Behälter in diesem Sinne im neuen System. Er bleibt ein normaler Gegenstand.\nErzeuge die Gürteltasche als neuen Behälter.",
+      "images": [],
+      "contentDigest": "11fae43faff0087083d97461b6f1da808caf63ad2e90325107797b3b15ff0ec9",
+      "providerUserMessageId": "3a608aa5-7e65-4ad3-9bf2-b5ad29e45395",
+      "providerAssistantMessageId": "fed46fab-6d7e-45e4-b886-2e26f93165ee"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789426420400-laidhcr",
+      "userTurnOrdinal": 26,
+      "state": "accepted",
+      "localMessageId": "msg-1789426420397-6sxufab",
+      "timestamp": 1789426420397,
+      "rawDisplayText": "Bitte korrigiere auch die Vorlage Gegenstand",
+      "canonicalText": "Bitte korrigiere auch die Vorlage Gegenstand",
+      "images": [],
+      "contentDigest": "252baa4aece4e1ce874ff2def899ee05ce99a52952a252352b14933ce8f20838",
+      "providerUserMessageId": "729c26bc-2f6a-49be-a7c2-84d2a45384ec"
     }
   ]
 }

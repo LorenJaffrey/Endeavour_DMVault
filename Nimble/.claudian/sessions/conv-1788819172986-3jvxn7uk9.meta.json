@@ -4,8 +4,8 @@
   "title": "Slot-basiertes Inventarsystem überarbeiten",
   "titleGenerationStatus": "success",
   "createdAt": 1788819172994,
-  "updatedAt": 1789345058196,
-  "lastResponseAt": 1789345058196,
+  "updatedAt": 1789426422574,
+  "lastResponseAt": 1789425993261,
   "sessionId": "56467fbf-f272-4760-b635-e59cac4381cd",
   "selectedModel": "sonnet",
   "providerState": {
@@ -15,10 +15,10 @@
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 531,
-    "cacheReadInputTokens": 189876,
+    "cacheCreationInputTokens": 534,
+    "cacheReadInputTokens": 200778,
     "contextWindow": 1000000,
-    "contextTokens": 190409,
-    "percentage": 19
+    "contextTokens": 201314,
+    "percentage": 20
   }
 }
