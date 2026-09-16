@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Endeavour/Merkmal/Klasse/Windläufer/Geschwindigkeitsschub
+  - Regeln/Endeavour/Merkmal/Klasse/Mönch/Geschwindigkeitsschub
 aliases:
 Einsatz: "1 [[Fokuspunkte|Fokuspunkt]]"
 ---

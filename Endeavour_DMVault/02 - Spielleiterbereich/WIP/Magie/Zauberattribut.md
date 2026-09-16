@@ -16,8 +16,8 @@ Welches Attribut du nutzt, hängt von deiner Klasse ab:
 | Klasse            | Attribut zum Zauberwirken |
 | ----------------- | ------------------------- |
 | [[Klangweber]]    | [[Verstand]]           |
-| [[Priester]]      | [[Entschlossenheit]]              |
-| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]        | [[Entschlossenheit]]              |
+| [[Kleriker]]      | [[Entschlossenheit]]              |
+| [[Naturalist]]        | [[Entschlossenheit]]              |
 | [[Fluchwirker]] | [[Verstand]]           |
 | [[Arkanist]]      | [[Verstand]]           |
 | [[Paladin]]       | [[Präsenz]]              |

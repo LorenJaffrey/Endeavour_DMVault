@@ -1,0 +1,24 @@
+{
+  "id": "conv-1789598151346-i2f99gm70",
+  "providerId": "claude",
+  "title": "Entwerfe Klassensystem",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789598151348,
+  "updatedAt": 1789602414460,
+  "lastResponseAt": 1789602414460,
+  "sessionId": "dcf3f2d0-5771-484f-813b-bd006950ebaa",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "dcf3f2d0-5771-484f-813b-bd006950ebaa"
+  },
+  "currentNote": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 1135,
+    "cacheReadInputTokens": 149943,
+    "contextWindow": 1000000,
+    "contextTokens": 151080,
+    "percentage": 15
+  }
+}

@@ -22,14 +22,14 @@ SORT file.name
 - **[[Berserker]].** Unaufhaltsame Kraft aus Zorn und Zerstörung.
 - **[[Gauner]].** Heimtückischer, hinterhältiger, schmutzig kämpfender Schurke.
 - **[[Taktiker]].** Meisterstratege, Anführer und Waffenexperte.
-- **[[Jäger]].** Findiger Überlebenskünstler, Bogenschütze und erfahrener Fährtenleser.
+- **[[Waldläufer]].** Findiger Überlebenskünstler, Bogenschütze und erfahrener Fährtenleser.
 - **[[Arkanist]].** Beherrsche Feuer, Eis und Blitze.
 - **[[Paladin]].** Treuer Wächter, Beschützer und Rächer der Schwachen.
 - **[[Fluchwirker]].** Beschwöre Horden entbehrlicher Diener.
-- **[[Priester]].** Meistre Leben und Tod. Führe einen treuen Begleiter.
+- **[[Kleriker]].** Meistre Leben und Tod. Führe einen treuen Begleiter.
 - **[[Klangweber]].** Inspirierende Präsenz, scharfer Verstand, schärfere Zunge.
-- **[[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]].** Gebieter über Wetter, Bestien und Natur.
-- **[[Windläufer]].** Disziplinierter Kampfkünstler mit schnellen Händen und Füßen.
+- **[[Naturalist]].** Gebieter über Wetter, Bestien und Natur.
+- **[[Mönch]].** Disziplinierter Kampfkünstler mit schnellen Händen und Füßen.
 
 ## Schritt 2: Wähle deine Herkunft
 Wähle eine [[Abstammungen|Abstammung]].

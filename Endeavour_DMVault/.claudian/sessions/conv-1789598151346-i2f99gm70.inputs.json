@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789598151346-i2f99gm70",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789598151480-hviu6vv",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789598151343-vvkul6u",
+      "timestamp": 1789598151343,
+      "rawDisplayText": "Lass uns anfangen die Klassen zu designen.",
+      "canonicalText": "Lass uns anfangen die Klassen zu designen.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "d29c698bb4f62ae8677c6241932cf0e29dd07742ecdf1eddba0943860fed522e",
+      "providerUserMessageId": "842f259b-81de-4a66-b59e-0d31e5adcb16",
+      "providerAssistantMessageId": "e9a38fc0-e06a-4cac-9360-e2f51d76de95"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789599366253-1r8s6ze",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1789599366250-0pfrucs",
+      "timestamp": 1789599366250,
+      "rawDisplayText": "Lass uns zunächst noch ein paar Namen klären die mir noch nicht gefallen.\nÄndern wir Priester wieder zu Kleriker. Weiterhin hadere ich noch mit Jäger, Paladin und vor allem Windläufer.",
+      "canonicalText": "Lass uns zunächst noch ein paar Namen klären die mir noch nicht gefallen.\nÄndern wir Priester wieder zu Kleriker. Weiterhin hadere ich noch mit Jäger, Paladin und vor allem Windläufer.",
+      "images": [],
+      "contentDigest": "3b2200e29b7ccfb54f6f6f9000d10575b7d42367019afd7ab9304a23a525857d",
+      "providerUserMessageId": "dfdc880f-9dd3-49ce-8b9c-cedb8226200e",
+      "providerAssistantMessageId": "f1943549-fa8f-4c98-b9c6-935ac5b2bfed"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789599894752-kshaagu",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789599894750-54xmf43",
+      "timestamp": 1789599894750,
+      "rawDisplayText": "Unter den bisherigen Bezeichnungen mag ich besonders den Arkanisten, den Naturalisten und den Kleriker.\nEs handelt sich um generische Begriffe die die jeweilige Klasse gut beschreiben ohne einen Standardnamen zu verwenden. Bevorzugt soll es etwas ähnliches sein.",
+      "canonicalText": "Unter den bisherigen Bezeichnungen mag ich besonders den Arkanisten, den Naturalisten und den Kleriker.\nEs handelt sich um generische Begriffe die die jeweilige Klasse gut beschreiben ohne einen Standardnamen zu verwenden. Bevorzugt soll es etwas ähnliches sein.",
+      "images": [],
+      "contentDigest": "51e4e09c5f827177ce9f71bfed809f806a812c9a60930e96bdfc42954d5c3f97",
+      "providerUserMessageId": "f34aa732-3de7-4591-aca3-a70bbae8d524",
+      "providerAssistantMessageId": "3e23d2a8-aa23-4d83-af2c-95a73e91b6aa"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789600157673-u4h2umw",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1789600157670-slwjpdp",
+      "timestamp": 1789600157670,
+      "rawDisplayText": "Die Grundidentität der drei Klassen ist klar:\n- Windläufer -> Mönch\n- Paladin \n- Jäger -> Waldläufer\n\nBevor sich kein wirklich passender Name finden lässt würde ich trotzdem lieber wieder die DnD Standardnamen verwenden.",
+      "canonicalText": "Die Grundidentität der drei Klassen ist klar:\n- Windläufer -> Mönch\n- Paladin \n- Jäger -> Waldläufer\n\nBevor sich kein wirklich passender Name finden lässt würde ich trotzdem lieber wieder die DnD Standardnamen verwenden.",
+      "images": [],
+      "contentDigest": "1d9333439aca7029d6a2dab9bd0a3aff18a4e3fd029258bb706af40bad5798bb",
+      "providerUserMessageId": "ac3ecf2f-dde2-4b24-99ca-e70226b8c0d1",
+      "providerAssistantMessageId": "b8f1bbe5-fef5-4177-88db-1d760bbead9a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789601416054-a5xc04p",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1789601416050-pafb334",
+      "timestamp": 1789601416050,
+      "rawDisplayText": "Lass uns kurz das Grundkonzept für das Klassendesign festlegen.\nJede Klasse soll eine Kernidentität haben. Die Subklassen sollen diese Kernidentität dann erweitern oder abändern. \nJede Klasse soll außerdem eine besondere Ressource haben. Siehe @02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md . Die Ressourcen sollen sich möglichst unterscheiden und sich einzigartig anfühlen.\nDie Frage ist noch ab welcher Stufe die Subklasse ausgewählt wird?",
+      "canonicalText": "Lass uns kurz das Grundkonzept für das Klassendesign festlegen.\nJede Klasse soll eine Kernidentität haben. Die Subklassen sollen diese Kernidentität dann erweitern oder abändern. \nJede Klasse soll außerdem eine besondere Ressource haben. Siehe @02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md . Die Ressourcen sollen sich möglichst unterscheiden und sich einzigartig anfühlen.\nDie Frage ist noch ab welcher Stufe die Subklasse ausgewählt wird?",
+      "images": [],
+      "contentDigest": "0d2c318759a02d9ea847d77451c5fdccdebc8fd17a3d13e1afdde0b06cfe107b",
+      "providerUserMessageId": "0c406bb4-dda7-442f-9435-3fe7223c4a25"
+    }
+  ]
+}

@@ -7,26 +7,26 @@
 | [[Taktiker]]    |  A  |  B  |     |     |     |     |     |  B  |      |
 | [[Paladin]]     |  A  |  B  |     |     |     |     |  B  |  A  |      |
 | [[Berserker]]   |  A  |  B  |  A  |  B  |     |     |  B  |     |      |
-| [[Windläufer]]  |  B  |  B  |  A  |     |     |     |  A  |     |      |
+| [[Mönch]]  |  B  |  B  |  A  |     |     |     |  A  |     |      |
 | [[Gauner]]      |     |     |  B  |  A  |  A  |  B  |     |  B  |      |
-| [[Jäger]]       |  B  |     |  B  |  A  |     |  A  |     |     |      |
+| [[Waldläufer]]       |  B  |     |  B  |  A  |     |  A  |     |     |      |
 |                 |     |     |     |     |     |     |     |     |      |
-| [[02 - Spielleiterbereich/WIP/Charaktere/Klassen/Druide/Druide]]      |  B  |  B  |  B  |     |     |  A  |  A  |     |      |
+| [[Naturalist]]      |  B  |  B  |  B  |     |     |  A  |  A  |     |      |
 | [[Fluchwirker]] |     |  B  |     |     |     |     |  A  |  A  |      |
-| [[Priester]]    |     |     |     |     |     |     |  A  |     |      |
+| [[Kleriker]]    |     |     |     |     |     |     |  A  |     |      |
 | [[Arkanist]]    |     |     |     |     |  A  |     |  A  |     |      |
 
 #### Key Stats
 | Klasse          | STR | KON | GES | INT | WEI | CHA | Done |
 | --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:----:|
 | [[Berserker]]   |  A  |     |  A  |     |     |     |  X   |
-| [[Windläufer]]  |     |     |  A  |     |  A  |     |  X   |
+| [[Mönch]]  |     |     |  A  |     |  A  |     |  X   |
 | [[Taktiker]]  |  A  |     |     |     |     |  A  |  X   |
-| [[Priester]]    |  A  |     |     |     |  A  |     |  X   |
+| [[Kleriker]]    |  A  |     |     |     |  A  |     |  X   |
 | [[Paladin]]     |  A  |     |     |     |     |  A  |  X   |
 | [[Gauner]]      |     |     |  A  |  A  |     |     |  X   |
 | [[Fluchwirker]] |     |     |     |  A  |     |  A  |  X   |
-| [[Jäger]]       |     |     |  A  |     |  A  |     |  X   |
+| [[Waldläufer]]       |     |     |  A  |     |  A  |     |  X   |
 | Stormshifter    |     |     |  A  |     |  A  |     |  X   |
 | [[Arkanist]]    |     |     |     |  A  |  A  |     |  X   |
 | [[Klangweber]]  |     |     |     |  A  |     |  A  |  X   |

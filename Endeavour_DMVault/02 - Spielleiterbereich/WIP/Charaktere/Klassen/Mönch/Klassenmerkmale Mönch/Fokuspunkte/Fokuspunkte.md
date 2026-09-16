@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Endeavour/Merkmal/Klasse/Windläufer
+  - Regeln/Endeavour/Merkmal/Klasse/Mönch
 aliases:
   - Fokuspunkt
 Einsatz: Passiv
@@ -15,7 +15,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Windläufer/Geschwindigkeitsschub  
+FROM #Regeln/Nimble/Merkmal/Klasse/Mönch/Geschwindigkeitsschub  
 
 SORT file.name
 ```

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Endeavour/Merkmal/Klasse/Windläufer
+  - Regeln/Endeavour/Merkmal/Klasse/Mönch
 aliases:
 Einsatz: Passiv
 ---
