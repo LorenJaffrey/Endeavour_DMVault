@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Klasse/WIP
+  - Regeln/Endeavour/Charakter/Klasse/WIP
 Trefferwürfel: 8
 Kernattribute:
   - "[[Beweglichkeit]]"

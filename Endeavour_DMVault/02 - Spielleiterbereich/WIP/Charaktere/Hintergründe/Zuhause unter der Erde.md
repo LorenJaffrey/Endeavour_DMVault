@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Du kannst doppelt so schnell graben wie andere.  

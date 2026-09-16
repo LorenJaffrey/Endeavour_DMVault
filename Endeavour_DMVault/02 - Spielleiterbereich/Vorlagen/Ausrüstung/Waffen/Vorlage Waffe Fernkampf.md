@@ -12,10 +12,10 @@ Range2:
 Range3:
 EigenschaftenFern:
 
-Kategorie:
 Hände:
 Größe:
-Gewicht:
+Plaetze:
+Stapelgroesse:
 Kosten:
 Verfügbarkeit:
 ---
@@ -23,10 +23,10 @@ Verfügbarkeit:
 
 | Waffe             | Schaden            | Art                     |       Hände       | Größe         | Min RW | Gnd RW | Max RW | Eigenschaften             |
 | ----------------- | ------------------ | ----------------------- |:-----------------:| :-------------: | ------ | ------ | ------ | ------------------------- |
-| `=this.file.name` | `=this.SchadenFern` | `=this.SchadensartFern` | `=this.HändeFern` | `=this.Größe` | `=this.Range1` | `=this.Range2`   | `=this.Range3` | `=this.EigenschaftenFern` |
+| `=this.file.name` | `=this.SchadenFern` | `=this.SchadensartFern` | `=this.Hände` | `=this.Größe` | `=this.Range1` | `=this.Range2`   | `=this.Range3` | `=this.EigenschaftenFern` |
 
 ## Handel
 
-| Waffe             |         Gewicht |         Kosten | Kategorie         | Verfügbarkeit         |
-| ----------------- | ---------------:| --------------:| ----------------- | --------------------- |
-| `=this.file.name` | `=this.Gewicht` | `=this.Kosten` | `=this.Kategorie` | `=this.Verfügbarkeit` |
+| Waffe             | Plätze              | Stapelgröße                | Kosten         | Verfügbarkeit         |
+| ----------------- | -------------------:| ---------------------------:| --------------:| --------------------- |
+| `=this.file.name` | `=this.Plaetze` | `=this.Stapelgroesse` | `=this.Kosten` | `=this.Verfügbarkeit` |

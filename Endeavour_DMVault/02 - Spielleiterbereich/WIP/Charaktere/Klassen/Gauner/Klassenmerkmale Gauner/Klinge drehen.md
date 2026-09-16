@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Gauner
+  - Regeln/Endeavour/Merkmal/Klasse/Gauner
 aliases:
 Einsatz: "1 [[Aktionspunkte|Aktionspunkt]]"
 ---

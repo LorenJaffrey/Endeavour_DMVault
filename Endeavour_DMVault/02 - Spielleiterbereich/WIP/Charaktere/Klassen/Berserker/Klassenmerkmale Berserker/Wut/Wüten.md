@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Berserker
+  - Regeln/Endeavour/Merkmal/Klasse/Berserker
 aliases:
 Einsatz: "1 [[Aktionspunkte|AP]]"
 ---

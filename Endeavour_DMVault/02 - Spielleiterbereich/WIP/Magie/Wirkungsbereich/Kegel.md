@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Ein [[Kegel]] ist ein [[Wirkungsbereich]], der von einem Ursprung in geraden Linien in einer Richtung nach Wahl des Wirkers ausgeht. 

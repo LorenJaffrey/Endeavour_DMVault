@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 In den Beschreibungen vieler Zauber und anderer Merkmale ist ein [[Wirkungsbereich]] angegeben, der üblicherweise eine von sechs Formen annimmt:

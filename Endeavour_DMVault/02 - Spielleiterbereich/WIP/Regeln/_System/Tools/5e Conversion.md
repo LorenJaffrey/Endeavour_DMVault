@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 ### Adventures
 You can run any 5e compatible adventure right out of the book with no additional prep and minimal changes. For the skills, saves, and conditions that were combined or changed, just use the updated name.

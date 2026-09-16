@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Einmal pro [[Sichere Rast]] kannst du dich dafür entscheiden, automatisch bei einem [[Fertigkeiten#Fertigkeitswurf]] mit katastrophalen Folgen zu scheitern.

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 **Start Easy.** 
 Creating perfectly balanced encounters takes practice. It’s better to err on the side of "too easy" than "too hard." As a GM, you have many ways to increase difficulty during play, but few ways to lower it without breaking immersion.

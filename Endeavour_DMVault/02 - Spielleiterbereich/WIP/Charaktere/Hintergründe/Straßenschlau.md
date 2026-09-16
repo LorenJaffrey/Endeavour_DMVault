@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Vielleicht hast du nicht viel Wissen aus Büchern, aber du weißt, wie man Dinge erledigt. 

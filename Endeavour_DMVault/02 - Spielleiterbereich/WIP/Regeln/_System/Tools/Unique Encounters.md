@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 Most encounters start with heroes and bad guys aware of each other, within one or two moves apart, and feature 1–4 level-appropriate enemies per hero who fight to the death. While this formula works, changing it up from time to time can make for a more memorable encounter. Here are some ways to spice things up:
 

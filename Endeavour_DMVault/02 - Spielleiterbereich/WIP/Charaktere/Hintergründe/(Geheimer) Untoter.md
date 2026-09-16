@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Unnatürliche Widerstandskraft: Du bist immun gegen [[_Krankheiten]] und musst weder essen, trinken noch atmen. 

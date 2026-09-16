@@ -4,21 +4,23 @@
   "title": "Slot-basiertes Inventarsystem überarbeiten",
   "titleGenerationStatus": "success",
   "createdAt": 1788819172994,
-  "updatedAt": 1789426422574,
-  "lastResponseAt": 1789425993261,
-  "sessionId": "56467fbf-f272-4760-b635-e59cac4381cd",
+  "updatedAt": 1789517423784,
+  "lastResponseAt": 1789517423784,
+  "sessionId": "cab32c88-909c-4aa5-87ea-f8bb66543b32",
   "selectedModel": "sonnet",
   "providerState": {
-    "providerSessionId": "56467fbf-f272-4760-b635-e59cac4381cd"
+    "previousProviderSessionIds": [
+      "56467fbf-f272-4760-b635-e59cac4381cd"
+    ],
+    "providerSessionId": "cab32c88-909c-4aa5-87ea-f8bb66543b32"
   },
-  "currentNote": "02 - Spielleiterbereich/Regeln/Inventar/Inventar.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 534,
-    "cacheReadInputTokens": 200778,
+    "cacheCreationInputTokens": 824,
+    "cacheReadInputTokens": 354057,
     "contextWindow": 1000000,
-    "contextTokens": 201314,
-    "percentage": 20
+    "contextTokens": 354883,
+    "percentage": 35
   }
 }

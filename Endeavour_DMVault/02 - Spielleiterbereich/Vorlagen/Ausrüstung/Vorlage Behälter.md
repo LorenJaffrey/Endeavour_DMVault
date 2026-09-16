@@ -3,8 +3,8 @@ aliases:
 tags:
   - Gegenstand/Behälter
 Kosten: 
-Plätze: 
-MaxGröße: 
+Plaetze: 
+MaxGroesse: 
 ---
 # `=this.file.name`
 > [!infobox]
@@ -12,7 +12,7 @@ MaxGröße:
 > |  |  |
 > | ---- | ---- |
 > | Kosten | `=this.Kosten` |
-> | Plätze | `=this.Plätze` |
-> | Maximale Gegenstandsgröße | `=this.MaxGröße` |
+> | Plätze | `=this.Plaetze` |
+> | Maximale Gegenstandsgröße | `=this.MaxGroesse` |
 
 Beschreibung

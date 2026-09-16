@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Windläufer
+  - Regeln/Endeavour/Merkmal/Klasse/Windläufer
 aliases:
 Einsatz: "1 [[Aktionspunkte|Aktionspunkt]]"
 ---

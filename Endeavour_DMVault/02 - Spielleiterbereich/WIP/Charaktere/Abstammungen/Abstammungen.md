@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 aliases:
   - Abstammung
 ---

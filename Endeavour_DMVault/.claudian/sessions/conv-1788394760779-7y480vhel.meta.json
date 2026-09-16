@@ -4,12 +4,14 @@
   "title": "Waffen und Rüstungsregeln ausarbeiten",
   "titleGenerationStatus": "success",
   "createdAt": 1788394760782,
-  "updatedAt": 1788738678636,
+  "updatedAt": 1789513376783,
   "lastResponseAt": 1788738678636,
-  "sessionId": "d56a796d-53f6-4b60-bd74-f8e2ee906fa5",
+  "sessionId": null,
   "selectedModel": "sonnet",
   "providerState": {
-    "providerSessionId": "d56a796d-53f6-4b60-bd74-f8e2ee906fa5"
+    "previousProviderSessionIds": [
+      "d56a796d-53f6-4b60-bd74-f8e2ee906fa5"
+    ]
   },
   "usage": {
     "model": "sonnet",

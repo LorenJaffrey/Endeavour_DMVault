@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 | Monster<br>Level | HP<br>No Armor | HP<br>M Armor | HP<br>H Armor | Damage<br>Per Round | Attack<br>Sample Dice | Save<br>DC | CR<br>Equiv. |
 |:----------------:|:--------------:|:-------------:|:-------------:|:-------------------:|:---------------------:|:----------:|:------------:|

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 # `=this.file.name`
 Dein Held ist das Mittel, mit dem du deinen Abdruck in der Welt hinterlassen wirst. 

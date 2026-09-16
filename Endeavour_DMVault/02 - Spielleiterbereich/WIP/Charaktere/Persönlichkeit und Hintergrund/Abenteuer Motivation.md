@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Die Welt ist ein gefährlicher Ort – niemand zieht ohne triftigen Grund einfach „auf Abenteuer“ aus. 

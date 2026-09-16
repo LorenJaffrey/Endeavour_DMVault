@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Erhalte einen Bonus von 1 auf deine [[Bewegungsrate]] und deine [[Initiative]]. 

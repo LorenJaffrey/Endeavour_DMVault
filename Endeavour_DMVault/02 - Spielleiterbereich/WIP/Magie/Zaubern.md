@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Jede Zauberbeschreibung hat mehrere Einträge mit den Details, die zum Wirken des Zaubers erforderlich sind  

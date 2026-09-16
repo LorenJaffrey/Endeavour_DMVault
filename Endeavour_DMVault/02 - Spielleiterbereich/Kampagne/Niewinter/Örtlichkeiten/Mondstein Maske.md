@@ -46,16 +46,16 @@ Mitte des 15. Jahrhunderts DR (Jahr des Wandels) trieb die Herberge nach dem Aus
 | [[Apfelschaumwein (Humpen)]]          |  4 KM |
 | [[Durchschnittlicher Wein (Glas)]]    |  3 SM |
 | [[Durchschnittlicher Wein (Flasche)]] |  9 SM |
-| Glas [[Guter Wein]]                   |  2 GM |
-| Flasche [[Guter Wein]]                |  6 GM |
-| Glas [[Feuerwein]]                    |  3 GM |
-| Flasche [[Feuerwein]]                 |  9 GM |
-| Glas [[Elverquisst]]                  |  1 GM |
-| Flasche [[Elverquisst]]               | 20 GM |
-| Glas [[Feywein]]                      |  2 GM |
-| Flasche [[Feywein]]                   |  6 GM |
-| Glas [[Feuersaat]]                    |  1 GM |
-| Flasche [[Feuersaat]]                 |  5 GM |
+| Glas [[Guter Wein (Glas)\|Guter Wein]]                   |  2 GM |
+| Flasche [[Guter Wein (Flasche)\|Guter Wein]]                |  6 GM |
+| Glas [[Feuerwein (Glas)\|Feuerwein]]                    |  3 GM |
+| Flasche [[Feuerwein (Flasche)\|Feuerwein]]                 |  9 GM |
+| Glas [[Elverquisst (Becher)\|Elverquisst]]                  |  1 GM |
+| Flasche [[Elverquisst (Flasche)\|Elverquisst]]               | 20 GM |
+| Glas [[Feywein (Glas)\|Feywein]]                      |  2 GM |
+| Flasche [[Feywein (Flasche)\|Feywein]]                   |  6 GM |
+| Glas [[Feuersaat (Becher)\|Feuersaat]]                    |  1 GM |
+| Flasche [[Feuersaat (Flasche)\|Feuersaat]]                 |  5 GM |
 
 ### Appetithäppchen
 - [[Oktopusbouillon]]

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Du hast schon eine gehörige Anzahl Duelle bestritten und weißt, wie man das Publikum anheizt. 

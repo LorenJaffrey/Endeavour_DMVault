@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 Once you have the base stats for the encounter, you can optionally add a cool flavorful ability to make these monsters feel and play differently. Abilities can be passive or trigger "On Movement," "On Attack," "On Miss," "On Hit," "On Damage," "On Crit," "On Death," and more. 
 

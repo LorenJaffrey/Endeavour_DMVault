@@ -3,7 +3,8 @@ aliases:
 tags:
   - Gegenstand/Ausrüstung
 Kosten: 
-Gewicht:
+Plaetze: 
+Stapelgroesse: 1
 ---
 # `=this.file.name`
 > [!infobox]
@@ -11,6 +12,7 @@ Gewicht:
 > |  |  |
 > | ---- | ---- |
 > | Kosten | `=this.Kosten` |
-> | Gewicht | `=this.Gewicht` Pfund |
+> | Plätze | `=this.Plaetze` |
+> | Stapelgröße | `=this.Stapelgroesse` |
 
 Beschreibung

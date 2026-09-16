@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Ein [[Würfel]] ist ein [[Wirkungsbereich]], der in geraden Linien von einem Ursprung ausgeht, der sich an einer beliebigen Stelle auf einer der Würfelseiten befindet. 

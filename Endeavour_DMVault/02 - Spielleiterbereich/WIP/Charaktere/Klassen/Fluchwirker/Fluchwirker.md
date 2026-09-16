@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Klasse
+  - Regeln/Endeavour/Charakter/Klasse
 Trefferwürfel: 8
 Kernattribute:
   - "[[Verstand]]"

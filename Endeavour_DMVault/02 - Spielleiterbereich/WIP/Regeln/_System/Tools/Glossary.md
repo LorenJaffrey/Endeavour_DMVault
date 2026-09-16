@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 * **Advantage X.** Roll X additional dice and drop the X lowest dice (removing dice from the left to right in the case of a tie).
 * **Ally.** A friendly creature, not yourself.

@@ -1,6 +1,6 @@
 ---
 tags: 
-  - Regeln/Nimble/Merkmal/Klasse/Gauner/Schmutzige_Tricks
+  - Regeln/Endeavour/Merkmal/Klasse/Gauner/Schmutzige_Tricks
 Einsatz: Passiv
 ---
 # `=this.file.name` 
