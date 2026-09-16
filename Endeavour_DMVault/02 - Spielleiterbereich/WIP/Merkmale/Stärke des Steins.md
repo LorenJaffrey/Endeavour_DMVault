@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Abstammung
+  - Regeln/Endeavour/Merkmal/Abstammung
 aliases:
 Einsatz: Passiv
 ---

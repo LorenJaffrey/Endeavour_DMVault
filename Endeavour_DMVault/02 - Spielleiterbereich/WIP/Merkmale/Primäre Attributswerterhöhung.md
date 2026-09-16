@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse
+  - Regeln/Endeavour/Merkmal/Klasse
 aliases:
 Einsatz: Passiv
 ---

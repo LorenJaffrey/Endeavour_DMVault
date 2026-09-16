@@ -35,5 +35,5 @@ Wenn die Charaktere mehr als eine Nacht in dieser Taverne verbringen, bemerken s
 | [[Einfaches Bier (Humpen)]]   |  4 KM |
 | Becher [[Einfacher Rum (Becher)]]      |  1 SM |
 | Becher [[Einfacher Grog]]     |  5 KM |
-| Becher [[Höhlenatem Whiskey]] |  1 SM |
+| Becher [[Höhlenatem Whiskey (Becher)|Höhlenatem Whiskey]] |  1 SM |
 | [[Einfacher Wein (Flasche)]]  |  5 SM |

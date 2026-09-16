@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Berserker/Wildes_Arsenal
+  - Regeln/Endeavour/Merkmal/Klasse/Berserker/Wildes_Arsenal
 Einsatz: "1 [[Aktionspunkte|AP]]"
 ---
 # `=this.file.name`

@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Eine [[Linie]] ist ein [[Wirkungsbereich]], der geradlinig von einem Ursprung ausgeht. 

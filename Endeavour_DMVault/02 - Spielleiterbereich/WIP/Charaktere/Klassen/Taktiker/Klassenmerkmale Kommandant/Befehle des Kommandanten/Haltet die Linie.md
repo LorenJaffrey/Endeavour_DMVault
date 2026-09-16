@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Kommandant/Befehl
+  - Regeln/Endeavour/Merkmal/Klasse/Kommandant/Befehl
 aliases:
 Einsatz: "[[Reaktion]]"
 ---

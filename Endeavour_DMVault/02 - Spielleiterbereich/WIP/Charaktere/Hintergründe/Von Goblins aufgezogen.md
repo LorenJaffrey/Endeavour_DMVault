@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Du sprichst [[Goblinisch]] als Muttersprache (viel besser als jemand, der es später gelernt hat).  

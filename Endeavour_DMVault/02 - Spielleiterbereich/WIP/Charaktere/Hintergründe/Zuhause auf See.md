@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Du regenerierst doppelt so viele [[Erschöpfung]] und [[Trefferpunkte]] beim [[Rasten]] auf einem Schiff oder in Wassernähe.  

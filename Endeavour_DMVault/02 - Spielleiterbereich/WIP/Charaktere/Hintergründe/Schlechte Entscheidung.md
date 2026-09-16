@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Beginne mit 500 oder 1000 extra Gold oder einem ungewöhnlichen/seltenen magischen Gegenstand (falls dein SL es erlaubt).  

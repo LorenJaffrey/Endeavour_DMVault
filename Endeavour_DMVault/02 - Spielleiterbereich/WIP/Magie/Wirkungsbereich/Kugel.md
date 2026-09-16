@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Eine [[Kugel]] ist ein [[Wirkungsbereich]], der von einem Ursprung in geraden Linien in alle Richtungen ausgeht.

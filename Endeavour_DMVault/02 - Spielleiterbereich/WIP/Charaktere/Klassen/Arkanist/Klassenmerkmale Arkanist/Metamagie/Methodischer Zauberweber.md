@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Arkanist/Metamagie
+  - Regeln/Endeavour/Merkmal/Klasse/Arkanist/Metamagie
 aliases:
 Einsatz: "-2 [[Mana]]"
 ---

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 | Party<br>Level | HP<br>Med Armor | HP<br>Hev Armor | HP<br>Last Stand | Save<br>DC | Attack Dmg<br>Small | Attack Dmg<br>Big |
 |:--------------:|:---------------:|:---------------:|:----------------:|:----------:|:-------------------:|:-----------------:|

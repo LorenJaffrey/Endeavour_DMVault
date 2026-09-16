@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Der [[Spielleiter]] kann dir erlauben, eine [[Stufe]]  aufzusteigen, sobald du eine angemessen anspruchsvolle Aufgabe oder ein Abenteuer abschließt. 

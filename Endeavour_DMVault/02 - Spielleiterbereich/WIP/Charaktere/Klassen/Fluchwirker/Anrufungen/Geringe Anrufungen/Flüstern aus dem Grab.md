@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Schattenrufer/Anrufung/Gering
+  - Regeln/Endeavour/Merkmal/Klasse/Schattenrufer/Anrufung/Gering
 aliases:
 Einsatz: Passiv
 ---

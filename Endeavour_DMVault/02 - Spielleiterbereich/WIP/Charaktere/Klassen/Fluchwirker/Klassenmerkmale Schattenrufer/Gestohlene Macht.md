@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Schattenrufer
+  - Regeln/Endeavour/Merkmal/Klasse/Schattenrufer
 aliases:
 Einsatz: Passiv
 ---

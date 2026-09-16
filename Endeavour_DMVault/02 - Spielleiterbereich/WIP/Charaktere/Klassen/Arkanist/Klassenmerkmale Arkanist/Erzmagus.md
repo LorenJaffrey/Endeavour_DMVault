@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Arkanist
+  - Regeln/Endeavour/Merkmal/Klasse/Arkanist
 aliases:
 Einsatz: Passiv
 ---

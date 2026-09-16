@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Ob Stöcke oder Blumen im Haar, dein Geruch oder dein Auftreten: wilde Kreaturen fürchten dich weniger und helfen dir lieber.

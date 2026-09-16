@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Windläufer
+  - Regeln/Endeavour/Merkmal/Klasse/Windläufer
 aliases:
   - Betäubenden Schlag
 Einsatz: "1 [[Fokuspunkte|Fokuspunkt]]"

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/WIP
+  - Regeln/Endeavour/WIP
 ---
 ### Equipment Proficiency
 Heroes can use any equipment they like; however, each class has a list of weapons and armor types they are most skilled with. 

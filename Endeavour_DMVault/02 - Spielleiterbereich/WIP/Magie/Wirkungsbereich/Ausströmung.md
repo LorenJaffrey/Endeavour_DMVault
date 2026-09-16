@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Eine [[Ausströmung]] ist ein [[Wirkungsbereich]], der von einer Kreatur oder einem Gegenstand in geraden Linien in alle Richtungen ausgeht. 

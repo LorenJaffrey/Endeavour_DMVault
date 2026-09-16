@@ -12,10 +12,10 @@ Range2:
 Range3:
 EigenschaftenFern:
 
-Kategorie:
 Hände:
 Größe:
-Gewicht:
+Plaetze:
+Stapelgroesse:
 Kosten:
 Verfügbarkeit:
 ---
@@ -27,6 +27,6 @@ Verfügbarkeit:
 
 ## Handel
 
-| Waffe             |         Gewicht |         Kosten | Kategorie         | Verfügbarkeit         |
-| ----------------- | ---------------:| --------------:| ----------------- | --------------------- |
-| `=this.file.name` | `=this.Gewicht` | `=this.Kosten` | `=this.Kategorie` | `=this.Verfügbarkeit` |
+| Waffe             | Plätze              | Stapelgröße                | Kosten         | Verfügbarkeit         |
+| ----------------- | -------------------:| ---------------------------:| --------------:| --------------------- |
+| `=this.file.name` | `=this.Plaetze` | `=this.Stapelgroesse` | `=this.Kosten` | `=this.Verfügbarkeit` |

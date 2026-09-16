@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Abstammung
+  - Regeln/Endeavour/Charakter/Abstammung
 Kreaturtyp: "[[Humanoide]]"
 Größenkategorie: "[[Mittelgroß]] (150 - 200 cm)"
 Bewegungsrate: 6

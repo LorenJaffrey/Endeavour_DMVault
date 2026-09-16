@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Wähle einen Beruf (Bäcker/Koch, Schmied, Steinmetz, Weber, Gerber usw.).  

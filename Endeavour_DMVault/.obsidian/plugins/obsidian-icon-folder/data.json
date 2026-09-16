@@ -60,8 +60,8 @@
   },
   "01 - Spielerbereich/Kampagne": "RaBladeBite",
   "01 - Spielerbereich/Regeln": "RaPerspectiveDiceOne",
-  "02 - Spielleiterbereich/Bestiarium": "RaEyeMonster",
   "02 - Spielleiterbereich/Kampagne": "CoMap",
   "02 - Spielleiterbereich/Homebrew": "RaPotion",
-  "02 - Spielleiterbereich/Bestiarium/Bestiarium": "RaEyeMonster"
+  "02 - Spielleiterbereich/WIP/Bestiarium": "RaEyeMonster",
+  "02 - Spielleiterbereich/WIP/Bestiarium/Bestiarium": "RaEyeMonster"
 }

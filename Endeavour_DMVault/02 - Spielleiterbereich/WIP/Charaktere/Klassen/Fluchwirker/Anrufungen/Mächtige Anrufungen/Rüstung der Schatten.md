@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Merkmal/Klasse/Schattenrufer/Anrufung/Mächtig
+  - Regeln/Endeavour/Merkmal/Klasse/Schattenrufer/Anrufung/Mächtig
 aliases:
 Einsatz: Passiv
 ---

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Nimble/Charakter/Hintergrund
+  - Regeln/Endeavour/Charakter/Hintergrund
 ---
 # `=this.file.name`
 Du solltest einen Arzt aufsuchen, denn was du hast, scheint nicht natürlich – oder du bist einfach ein Kobold. 

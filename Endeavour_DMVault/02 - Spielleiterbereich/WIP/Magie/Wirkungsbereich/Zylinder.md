@@ -1,7 +1,7 @@
 ---
 tags:
   - Wirkungsbereich
-  - Regeln/Nimble
+  - Regeln/Endeavour
 ---
 # `=this.file.name`
 Ein [[Zylinder]] ist ein [[Wirkungsbereich]], der in geraden Linien von einem Ursprung ausgeht, der sich in der Mitte einer der kreisförmigen Stirnseiten des Zylinders befindet.
