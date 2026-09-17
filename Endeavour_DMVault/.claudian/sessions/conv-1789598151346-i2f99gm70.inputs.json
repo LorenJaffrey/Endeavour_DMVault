@@ -74,7 +74,22 @@
       "canonicalText": "Lass uns kurz das Grundkonzept für das Klassendesign festlegen.\nJede Klasse soll eine Kernidentität haben. Die Subklassen sollen diese Kernidentität dann erweitern oder abändern. \nJede Klasse soll außerdem eine besondere Ressource haben. Siehe @02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md . Die Ressourcen sollen sich möglichst unterscheiden und sich einzigartig anfühlen.\nDie Frage ist noch ab welcher Stufe die Subklasse ausgewählt wird?",
       "images": [],
       "contentDigest": "0d2c318759a02d9ea847d77451c5fdccdebc8fd17a3d13e1afdde0b06cfe107b",
-      "providerUserMessageId": "0c406bb4-dda7-442f-9435-3fe7223c4a25"
+      "providerUserMessageId": "0c406bb4-dda7-442f-9435-3fe7223c4a25",
+      "providerAssistantMessageId": "0ed5a92c-891d-4a12-9e15-aeda3f1a64c4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789687291031-kul4p5m",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1789687291014-v0e0d2r",
+      "timestamp": 1789687291014,
+      "rawDisplayText": "Konzentrieren wir uns erstmal auf folgende Klassen (da sie für dei kommende Kampagne am relevantesten sind):\n- Arkanist\n- Paladin\n- Mönch\n- Fluchwirker\n\nBleiben wir vorerst bei den Klassenressourcen.",
+      "canonicalText": "Konzentrieren wir uns erstmal auf folgende Klassen (da sie für dei kommende Kampagne am relevantesten sind):\n- Arkanist\n- Paladin\n- Mönch\n- Fluchwirker\n\nBleiben wir vorerst bei den Klassenressourcen.",
+      "images": [],
+      "contentDigest": "7b7c334c2948ac2a60d9400d5f96e79d944c9cf09cfecd7a27fb4c93f2265e62",
+      "providerUserMessageId": "129c234b-6990-4fc3-a608-42a0c333ce3f",
+      "providerAssistantMessageId": "fa8d49de-b114-4466-a60a-412a632704db"
     }
   ]
 }

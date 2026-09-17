@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/_Ideensammlung Arkanist.md",
+                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/_Ideensammlung Paladin.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "_Ideensammlung Arkanist"
+              "title": "_Ideensammlung Paladin"
             }
           },
           {
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
+                "file": "02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Charaktere erstellen"
+              "title": "_Ressourcen"
             }
           },
           {
@@ -109,8 +109,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md",
-                "mode": "preview",
+                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -124,11 +124,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Aktionen"
+              "title": "Klassen"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -331,13 +331,17 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "fae89ee51996d2dd",
+  "active": "1ea115ec5059672b",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/Arkanist.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/_Ideensammlung Arkanist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Berserker/_Ideensammlung Berserker.md",
     "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/_Ideensammlung Paladin.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/_Ideensammlung Arkanist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/Arkanist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/Paladin.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Berserker/_Ideensammlung Berserker.md",
     "01 - Spielerbereich/Regeln/Kampf/Bewegung/Bewegungsarten/Aufstehen.md",
     "01 - Spielerbereich/Regeln/Kampf/Bewegung/Bewegungsarten/Bewegungsarten.md",
     "01 - Spielerbereich/Regeln/Kampf/Bewegung/Bewegung.md",
@@ -357,11 +361,7 @@
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Beastmaster.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Thrill of the Hunt.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Jäger.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Hunter Levels.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Subklassen Mönch/Way of the Dancer.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Subklassen Mönch/Way of Shadows.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Subklassen Mönch",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Kampfkunst",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Fokuspunkte",

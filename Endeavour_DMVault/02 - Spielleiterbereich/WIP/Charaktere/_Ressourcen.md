@@ -20,7 +20,7 @@
 | Ressource    | Art             |
 | ------------ | --------------- |
 | Mana         | Pool            |
-| Wut          | Flow  |
+| Wut          | Flow            |
 | Combopunkte  | Aktiv wachsend  |
 | Chi          | Pool            |
 | Fluchenergie |                 |
