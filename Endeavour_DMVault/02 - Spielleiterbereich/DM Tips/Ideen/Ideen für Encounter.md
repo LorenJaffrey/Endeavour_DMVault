@@ -5,25 +5,29 @@
 - beginnt als einfache Katze
 - taucht nach Tod wieder auf und wird stärker
 
-## Eingeschläfertes Dorf
+## Eingeschläfertes Dorf (Frieren)
 - Gruppe findet Dorf in dem alle Einwohner schlafen
 - Einwohner wurden alle durch Fluch/Sporen/etc. eingeschläfert
 - BBEG konsumiert Lebensenergie der Schlafenden
 - Gruppe muss BBEG vernichten bevor auch sie einschlafen
 
-## Diplomatie
+## Diplomatie (Frieren)
 - Gegner schleichen sich als Diplomaten in Stadt/etc. ein
 - wollen die Verteidigung von innen heraus brechen
 
-## Gefäß
+## Gefäß (JJK)
 - menschliches Gefäß wird für einen mächtigen Magier (oder ähnliches) benötigt
 - muss beschützt werden während Gegner versuchen es zu töten
 
-## Erinnerungen
+## Erinnerungen (Frieren)
 - geisterhaftes Wesen welches Gedanken liest und Erinnerungen projiziert
 - [[Verstand]] benutzen um Illusion zu durchschauen
-- [[Willenskraft]] nutzen um sie zu besiegen 
+- [[Entschlossenheit]] nutzen um sie zu besiegen 
 
 ## Mama (Frieren)
 - Gruppe erreicht Siedlung in der ein menschliches Monster sein Unwesen treibt
 - Siedlung nimmt verwaistes kindliches feindliches Wesen auf
+
+## Traum (Demon Slayer)
+- Gruppe wird irgendwie eingeschläfert und in einen Traum versetzt
+- Muss sich aus dem Traum freikämpfen um aufzuwachen
