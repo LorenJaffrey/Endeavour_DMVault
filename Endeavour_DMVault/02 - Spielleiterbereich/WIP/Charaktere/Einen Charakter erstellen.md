@@ -14,7 +14,7 @@ TABLE WITHOUT ID
 file.link AS "Klasse",
 Beschreibung
 
-FROM #Regeln/Nimble/Charakter/Klasse 
+FROM #Regeln/Endeavour/Charakter/Klasse 
 
 SORT file.name
 ```
@@ -27,7 +27,6 @@ SORT file.name
 - **[[Paladin]].** Treuer Wächter, Beschützer und Rächer der Schwachen.
 - **[[Fluchwirker]].** Beschwöre Horden entbehrlicher Diener.
 - **[[Kleriker]].** Meistre Leben und Tod. Führe einen treuen Begleiter.
-- **[[Klangweber]].** Inspirierende Präsenz, scharfer Verstand, schärfere Zunge.
 - **[[Naturalist]].** Gebieter über Wetter, Bestien und Natur.
 - **[[Mönch]].** Disziplinierter Kampfkünstler mit schnellen Händen und Füßen.
 
@@ -48,26 +47,28 @@ Trage Charakterdetails ein: Name, [[Abstammung]], [[Klasse]], Stufe, Größe und
 Markiere [[Vorteil und Nachteil|Vorteil]]  und [[Vorteil und Nachteil|Nachteil]] bei [[Rettungswürfe|Rettungswürfen]] und wähle eine Werteverteilung. 
 (Tipp: Setze die höchsten Zahlen in die Kernattribute deiner Klasse).
 
-- **Standard:** +2, +2, +1, +0, +0, -1
-- **Ausgeglichen:** +2, +1, +1, +1, +0, +0
-- **Extrem (Min–Max):** +3, +1, +1, +1, -1, -1
+- **Standard:** +2, +2, +1, +1, +0, +0, +0, -1
+- **Ausgeglichen:** +2, +1, +1, +1, +1, +1, +0, -1
+- **Extrem (Min–Max):** +3, +1, +1, +1, +1, +0, -1, -1
+
+Die Reihenfolge folgt deiner eigenen Priorität: zuerst deine 3 Kernattribute (höchste zuerst), danach deine 5 sekundären Attribute (höchste zuerst).
 
 > [!example]- Beispiel  
-> Der [[Gauner]] hat [[Beweglichkeit|GE]] und [[Verstand|IN]] als seine Hauptwerte. 
-> Mit der Min–Max-Verteilung könntest du +3 auf  [[Beweglichkeit|GE]], +1 auf  [[Verstand|IN]], [[Präsenz|CH]] und [[Konstitution|KO]]  und –1 auf  [[Stärke|ST]] und [[Entschlossenheit|WE]]  setzen. 
-> Markiere [[Vorteil und Nachteil|Vorteil]] für [[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]  und [[Vorteil und Nachteil|Nachteil]] für [[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]].
+> Der [[Berserker]] hat [[Stärke|ST]], [[Beweglichkeit|BW]] und [[Konstitution|KO]] als Kernattribute, in dieser Prioritätsreihenfolge, und [[Entschlossenheit|EN]] als wichtigsten sekundären Wert. 
+> Mit der Extrem-Verteilung (Min–Max) setzt du +3 auf [[Stärke|ST]], +1 auf [[Beweglichkeit|BW]], +1 auf [[Konstitution|KO]], +1 auf [[Entschlossenheit|EN]], +1 auf [[Geschick|GE]], +0 auf [[Instinkt|IN]], –1 auf [[Verstand|VS]] und –1 auf [[Präsenz|PR]]. 
+> Markiere [[Vorteil und Nachteil|Vorteil]] für [[Stärkerettungswürfe|ST-Rettungswürfe]] und [[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]], [[Vorteil und Nachteil|Nachteil]] für [[Verstandsrettungswürfe|VS-Rettungswürfe]], [[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]] und [[Präsenzrettungswürfe|PR-Rettungswürfe]].
 
 ## 2. Fertigkeitspunkte
-Auf Stufe 1 überträgst du deine [[Attribute|Attributsboni]] auf die jeweiligen [[Fertigkeiten]] (z. B. ein Held mit +2 [[Beweglichkeit|GE]]  trägt +2 bei [[Akrobatik]], [[Fingerfertigkeit]] und [[Heimlichkeit]] ein) und darf 6 weitere Punkte frei verteilen.
+Auf Stufe 1 überträgst du deine [[Attribute|Attributsboni]] auf die jeweiligen [[Fertigkeiten]] (z. B. ein Held mit +2 [[Geschick|GE]] trägt +2 bei [[Fingerfertigkeit]] und [[Heimlichkeit]] ein) und darf 6 weitere Punkte frei verteilen.
 
 > [!example]- Beispiel  
-> Wenn du –1 [[Verstand|IN]] hast, markiere  -1 bei [[Magiekunde]], [[Geschichte]], [[Nachforschung]], [[Naturkunde]] und [[Religion]]. 
+> Wenn du –1 [[Verstand|VS]] hast, markiere -1 bei [[Magiekunde]], [[Geschichte]], [[Heilkunde]], [[Nachforschung]], [[Naturkunde]] und [[Religion]]. 
 > Wiederhole das für deine anderen Attribute. 
 > Mit den 6 Extrapunkten kannst du z. B. [[Heimlichkeit]] und [[Fingerfertigkeit]] je +3 erhöhen, 6 verschiedene Fertigkeiten  je +1 oder alle 6 Punkte in deine Lieblingsfertigkeit setzen.
 
 ## 3. Sekundäre Werte
 Trage deine sekundären Werte ein:
-- [[Initiative#Instinktwurf|Initiativebonus]] (Standard: [[Instinkt|IN]], bestimmt die Zugreihenfolge; [[Beweglichkeit|GE]] bestimmt separat die Start-AP in der ersten Runde, siehe [[Initiative]])
+- [[Initiative#Instinktwurf|Initiativebonus]] (Standard: [[Instinkt|IN]], bestimmt die Zugreihenfolge; [[Beweglichkeit|BW]] bestimmt separat die Start-AP in der ersten Runde, siehe [[Initiative]])
 - [[Größenkategorie]]
 - [[Bewegungsrate]] (abhängig von der [[Abstammungen|Abstammung]])
 - maximale [[Erschöpfung]] (Standard: 6) 
@@ -97,7 +98,7 @@ Wenn du auf höherer Stufe beginnst, multipliziere den Betrag 
 
 ## 5. Sprachen
 Alle Helden sprechen [[Gemeinsprache]] (Standard). 
-Jeder Punkt in [[Verstand|IN]] gewährt eine weitere bekannte [[Sprachen|Sprache]]. 
+Jeder Punkt in [[Verstand|VS]] gewährt eine weitere bekannte [[Sprachen|Sprache]]. 
 
 > [!tip]- GROFWINT DRAZLON!  
 > Die Sprache einer anderen Kreatur zu sprechen kann Türen öffnen, die Waffen nicht können – wer bewaffnet ist, aber nicht kommunizieren kann, führt oft zum Kampf.

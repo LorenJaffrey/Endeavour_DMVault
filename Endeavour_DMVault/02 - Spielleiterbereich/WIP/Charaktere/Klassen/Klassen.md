@@ -32,37 +32,37 @@ SORT file.name
 ### [[Taktiker]]
 Klassischer Kämpfer-Archetyp
 
-| Subklasse  | Identität               | Rolle            | Rüstung       |
-| ---------- | ----------------------- | ---------------- | ------------- |
+| Subklasse      | Identität               | Rolle            | Rüstung       |
+| -------------- | ----------------------- | ---------------- | ------------- |
 | Klingenmeister | Kämpfer (Waffenfokus)   | Nahkampf DD      | mittel/schwer |
 | Bollwerk       | Kämpfer (Rüstungsfokus) | Nahkampf Tank    | schwer        |
-| Kommandant | Befehle, Ansporn        | Nahkampf Support | mittel/schwer |
+| Kommandant     | Befehle, Ansporn        | Nahkampf Support | mittel/schwer |
 
 ### [[Paladin]]
 Heiliger Krieger, Auren, Heilige Fähigkeiten (keine Zauber!)
 
-| Subklasse | Identität                  | Rolle                    | Rüstung       |
-| --------- | -------------------------- | ------------------------ | ------------- |
-| Vergelter | Heiliger Ritter (offensiv) | Nahkampf DD              | schwer        |
+| Subklasse   | Identität                  | Rolle                    | Rüstung       |
+| ----------- | -------------------------- | ------------------------ | ------------- |
+| Vergelter   | Heiliger Ritter (offensiv) | Nahkampf DD              | schwer        |
 | Schildwache | Heiliger Ritter (defensiv) | Nahkampf Tank            | schwer        |
-| Inquisitor | Inquisitor/Interrogator    | Nahkampf/Support/Debuffs | mittel/schwer |
+| Inquisitor  | Inquisitor/Interrogator    | Nahkampf/Support/Debuffs | mittel/schwer |
 
 ### [[Naturalist]]
 Naturmagie, Gestaltwandlung, Gestirne, etc.
 
-| Subklasse | Identität       | Rolle            | Rüstung      |
-| --------- | --------------- | ---------------- | ------------ |
-| Beastshifter | Tiergestalten   | Nahkampf DD/Tank | keine/leicht |
+| Subklasse       | Identität       | Rolle            | Rüstung      |
+| --------------- | --------------- | ---------------- | ------------ |
+| Beastshifter    | Tiergestalten   | Nahkampf DD/Tank | keine/leicht |
 | Hüter des Hains | Heilung/Natur   | Heiler/Support   | keine/leicht |
-| Stormshifter | Caster/Gestirne | Caster DD        | keine/leicht |
+| Stormshifter    | Caster/Gestirne | Caster DD        | keine/leicht |
 
 ### [[Gauner]]
 Gauner, Schurke, Attentäter, etc.
 
-| Subklasse  | Identität             | Rolle               | Rüstung |
-| ---------- | --------------------- | ------------------- | ------- |
-| Attentäter | Verstohlenheit, Gifte | Nahkampf DD         | leicht  |
-| Duellant   | Mantel und Degen      | Nahkampf DD/Control | leicht  |
+| Subklasse      | Identität               | Rolle               | Rüstung |
+| -------------- | ----------------------- | ------------------- | ------- |
+| Attentäter     | Verstohlenheit, Gifte   | Nahkampf DD         | leicht  |
+| Duellant       | Mantel und Degen        | Nahkampf DD/Control | leicht  |
 | Strippenzieher | Manipulation, Kontrolle | Support/Debuffs     | leicht  |
 
 ### [[Arkanist]]
@@ -77,38 +77,38 @@ Arkaner Magiewirker, Gelehrter, etc.
 ### [[Fluchwirker]]
 Kanalisiert negative Energien, nicht unbedingt böse, aber eher verpönt im Vergleich zum Arkanisten.
 
-| Subklasse | Identität              | Rolle                  | Rüstung      |
-| --------- | ---------------------- | ---------------------- | ------------ |
-| Verderber | Flüche, Debuffs        | Caster DD/Debuffs      | keine/leicht |
+| Subklasse     | Identität              | Rolle                  | Rüstung      |
+| ------------- | ---------------------- | ---------------------- | ------------ |
+| Verderber     | Flüche, Debuffs        | Caster DD/Debuffs      | keine/leicht |
 | Dämonenbinder | Beschwörung            | Caster DD/Pets         | keine/leicht |
-| Blutgestalt | Metamorphose/Blutmagie | Caster/Melee DD Hybrid | keine/leicht |
+| Blutgestalt   | Metamorphose/Blutmagie | Caster/Melee DD Hybrid | keine/leicht |
 
 ### [[Kleriker]]
 Nutzt Primordiale Magiequellen Licht/Schatten bzw. eine Neutralform.
 
-| Subklasse | Identität                   | Rolle             | Rüstung |
-| --------- | --------------------------- | ----------------- | ------- |
-| Lichtbringer | Lichtmagie/Stärkung/Heilung | Heiler/Support    | keine   |
-| Aschgrauer | Schattenmagie/Chaos/Entzug  | Caster DD/Debuffs | keine   |
-| Mittler   | Gleichgewicht               | Hybrid Heiler/Caster DD | keine   |
+| Subklasse    | Identität                   | Rolle                   | Rüstung |
+| ------------ | --------------------------- | ----------------------- | ------- |
+| Lichtbringer | Lichtmagie/Stärkung/Heilung | Heiler/Support          | keine   |
+| Aschgrauer   | Schattenmagie/Chaos/Entzug  | Caster DD/Debuffs       | keine   |
+| Mittler      | Gleichgewicht               | Hybrid Heiler/Caster DD | keine   |
 
 ### [[Berserker]]
 Wut, Mobilität, Hoher Schaden.
 
-| Subklasse | Identität                    | Rolle                 | Rüstung      |
-| --------- | ---------------------------- | --------------------- | ------------ |
-| Verwüster | Nahkampf/hoher Einzelschaden | Nahkampf DD           | keine/leicht |
+| Subklasse   | Identität                    | Rolle                 | Rüstung      |
+| ----------- | ---------------------------- | --------------------- | ------------ |
+| Verwüster   | Nahkampf/hoher Einzelschaden | Nahkampf DD           | keine/leicht |
 | Unbeugsamer | Zähigkeit, Schadensreduktion | Nahkampf Tank         | keine/leicht |
-| Kopfjäger | Nahkampf/Wurfwaffen          | Nahkampf/Fernkampf DD | keine/leicht |
+| Kopfjäger   | Nahkampf/Wurfwaffen          | Nahkampf/Fernkampf DD | keine/leicht |
 
 ### [[Mönch]]
 Mönch-Style, Waffenloser Kampf/Mönchswaffen, Beweglichkeit, Mobilität
 
-| Subklasse | Identität      | Rolle               | Rüstung      |
-| --------- | -------------- | ------------------- | ------------ |
-| Elementweber | Elemente       | Nahkampf DD/Control | keine/leicht |
+| Subklasse         | Identität      | Rolle               | Rüstung      |
+| ----------------- | -------------- | ------------------- | ------------ |
+| Elementweber      | Elemente       | Nahkampf DD/Control | keine/leicht |
 | Trunkener Meister | Drunken Master | Nahkampf Tank       | keine/leicht |
-| Eisenfaust | Combos         | Nahkampf DD         | keine/leicht |
+| Eisenfaust        | Combos         | Nahkampf DD         | keine/leicht |
 
 ### [[Waldläufer]]
 Fährtenleser, Bogenschütze, Naturverbunden.

@@ -85,30 +85,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "_Ressourcen"
-            }
-          },
-          {
-            "id": "1ea115ec5059672b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
                 "mode": "source",
                 "source": true,
@@ -125,6 +101,54 @@
               },
               "icon": "lucide-file",
               "title": "Klassen"
+            }
+          },
+          {
+            "id": "1ea115ec5059672b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "_Key Stats"
+            }
+          },
+          {
+            "id": "9086a4bde48ad1a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/Systeme/Daggerheart/01-Charaktererschaffung/Klassen/Magier.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Magier"
             }
           }
         ],
@@ -311,8 +335,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 673.00390625,
-    "collapsed": true
+    "width": 673.00390625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -333,13 +356,22 @@
   },
   "active": "1ea115ec5059672b",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
-    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/charaktererstellung-anleitung.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/charaktererstellung-anleitung (copy).md",
     "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/_Ideensammlung Paladin.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/_Ideensammlung Arkanist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Einen Charakter erstellen.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Einen Charakter erstellen.md.tmp.19904.9477fa623834",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/Arkanist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Arkanist/_Ideensammlung Arkanist.md",
+    "02 - Spielleiterbereich/Systeme/Draw Steel/03-Classes-and-Abilities/Elementalist.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/_Ressourcen.md",
+    "02 - Spielleiterbereich/Systeme/Daggerheart/01-Charaktererschaffung/Klassen/Magier.md",
+    "02 - Spielleiterbereich/Systeme/Daggerheart/01-Charaktererschaffung/Klassen/Druide-Bestiengestalt-Optionen.md",
+    "02 - Spielleiterbereich/Systeme/Draw Steel/03-Classes-and-Abilities/Classes-Overview.md",
+    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/_Ideensammlung Paladin.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Paladin/Paladin.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Berserker/_Ideensammlung Berserker.md",
     "01 - Spielerbereich/Regeln/Kampf/Bewegung/Bewegungsarten/Aufstehen.md",
@@ -351,15 +383,7 @@
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Taktiker/_Ideensammlung Taktiker.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Waldläufer.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Taktiker/Taktiker.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Mönch.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Taktiker/Commander Levels.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md.tmp.23419.b9be83f8498e",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Keeper of the Wild Heart.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Keeper of the Shadowpath.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Keeper of the Pack.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Keeper of the Balance.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses/Beastmaster.md",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Thrill of the Hunt.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer/Subclasses",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Waldläufer",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Subklassen Mönch",
@@ -368,7 +392,6 @@
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Klassenmerkmale Windläufer/Kampfkunst",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Klassenmerkmale Windläufer/Fokuspunkte",
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Mönch/Subklassen Windläufer",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Tiefling 1.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Halbling.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Gnom.png",

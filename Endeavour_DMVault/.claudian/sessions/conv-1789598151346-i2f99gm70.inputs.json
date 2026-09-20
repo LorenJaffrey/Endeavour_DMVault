@@ -90,6 +90,76 @@
       "contentDigest": "7b7c334c2948ac2a60d9400d5f96e79d944c9cf09cfecd7a27fb4c93f2265e62",
       "providerUserMessageId": "129c234b-6990-4fc3-a608-42a0c333ce3f",
       "providerAssistantMessageId": "fa8d49de-b114-4466-a60a-412a632704db"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789859003909-2mbr9jo",
+      "userTurnOrdinal": 7,
+      "state": "accepted",
+      "localMessageId": "msg-1789859003892-w84jqq0",
+      "timestamp": 1789859003892,
+      "rawDisplayText": "Lass uns zuerst noch @02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md mit den erarbeiteten Regeln aus @02 - Spielleiterbereich/WIP/Regeln/_Transition DnD - Nimble.md aktualisieren",
+      "canonicalText": "Lass uns zuerst noch @02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md mit den erarbeiteten Regeln aus @02 - Spielleiterbereich/WIP/Regeln/_Transition DnD - Nimble.md aktualisieren",
+      "images": [],
+      "contentDigest": "2053b47436d08884368fe41f4921a9fb565972f8398649707122f741a16ac392",
+      "providerUserMessageId": "4aa52bf0-752e-416a-9f62-2043148add01",
+      "providerAssistantMessageId": "6ce56b9a-9c02-46d1-a044-e1cebd50149f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789860426519-60w5eup",
+      "userTurnOrdinal": 8,
+      "state": "accepted",
+      "localMessageId": "msg-1789860426515-4ryoj42",
+      "timestamp": 1789860426515,
+      "rawDisplayText": "Das war mein Fehler. Ich meinte natürlich @02 - Spielleiterbereich/WIP/Charaktere/Einen Charakter erstellen.md. \nDas soll aktualisiert werden mit dem neuen Regelsystem vor alelm anhand von @02 - Spielleiterbereich/WIP/Regeln/_Transition DnD - Nimble.md",
+      "canonicalText": "Das war mein Fehler. Ich meinte natürlich @02 - Spielleiterbereich/WIP/Charaktere/Einen Charakter erstellen.md. \nDas soll aktualisiert werden mit dem neuen Regelsystem vor alelm anhand von @02 - Spielleiterbereich/WIP/Regeln/_Transition DnD - Nimble.md",
+      "images": [],
+      "contentDigest": "2bcfffee13df999a668d17dd3c846c89dfbf539fe8593c829b2a1141b063de33",
+      "providerUserMessageId": "acc96d46-0d81-4a5f-8d2a-5cf94a266202",
+      "providerAssistantMessageId": "65816cb4-80d9-433e-9ca0-62c426bdd81a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789939261967-q6ws1qz",
+      "userTurnOrdinal": 9,
+      "state": "accepted",
+      "localMessageId": "msg-1789939261950-wjxvibr",
+      "timestamp": 1789939261950,
+      "rawDisplayText": "Lass uns kurz über die @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md schauen. Ich habe schon mal mögliche Key Stats in der Tabelle im Abschnitt ####Key Stat NEU ausgemacht.\nLass uns das finalisieren.",
+      "canonicalText": "Lass uns kurz über die @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md schauen. Ich habe schon mal mögliche Key Stats in der Tabelle im Abschnitt ####Key Stat NEU ausgemacht.\nLass uns das finalisieren.",
+      "images": [],
+      "contentDigest": "1417200ad8242cef1118ae9d620109f7f01f77fcc57ffc63c04cc1c01cc48a35",
+      "providerUserMessageId": "ee98815e-4ea8-498b-9c97-644b71033d2c",
+      "providerAssistantMessageId": "adf76074-c51e-4c59-b8a9-948c10da8b6d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789939601630-6ykcsig",
+      "userTurnOrdinal": 10,
+      "state": "accepted",
+      "localMessageId": "msg-1789939601626-p14i2z5",
+      "timestamp": 1789939601626,
+      "rawDisplayText": "So waren die Markierungen nicht gemeint. A bezeichnet einen sicheren Key Stat, B einen möglichen. Die Tabelle war zur Ideenfindung.\nMach mir einen Vorschlag für Key Stats unabhängig von meiner Vorarbeit und vergleiche es mit meinen Notizen.",
+      "canonicalText": "So waren die Markierungen nicht gemeint. A bezeichnet einen sicheren Key Stat, B einen möglichen. Die Tabelle war zur Ideenfindung.\nMach mir einen Vorschlag für Key Stats unabhängig von meiner Vorarbeit und vergleiche es mit meinen Notizen.",
+      "images": [],
+      "contentDigest": "ead597a95e2aa3c62241412991ce48b3fca8aa49363d5703ec0e73125c011947",
+      "providerUserMessageId": "e4fefc69-e9f5-4fca-8e30-2b7e06e0d463",
+      "providerAssistantMessageId": "bad3d121-2c05-4971-84c5-ef3eff409eae"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789940906305-fk23r9g",
+      "userTurnOrdinal": 11,
+      "state": "accepted",
+      "localMessageId": "msg-1789940906301-mml9gy7",
+      "timestamp": 1789940906301,
+      "rawDisplayText": "Ich überlege zwei Kernattribute für die Klasse allgemein zu machen und das dritte an der Subklasse zu orientieren. Was hältst du davon?",
+      "canonicalText": "Ich überlege zwei Kernattribute für die Klasse allgemein zu machen und das dritte an der Subklasse zu orientieren. Was hältst du davon?",
+      "images": [],
+      "contentDigest": "c0d4dccd78ac29171fc8f9a1656f7d2c5f5061d233104aa450e744e7a9118dd0",
+      "providerUserMessageId": "a48ba413-d7d2-4425-937e-af16fc2eb04e",
+      "providerAssistantMessageId": "010a00cb-e572-4e0a-9b9b-2c3b748d81a6"
     }
   ]
 }

@@ -2,31 +2,30 @@
 ## Zusammenfassung
 
 #### Key Stats NEU
-| Klasse          | STÄ | KON | BEW | GES | VS  | INS | ENT | PRÄ | Done |
-| --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
-| [[Taktiker]]    |  A  |  B  |     |     |     |     |     |  B  |      |
-| [[Paladin]]     |  A  |  B  |     |     |     |     |  B  |  A  |      |
-| [[Berserker]]   |  A  |  B  |  A  |  B  |     |     |  B  |     |      |
-| [[Mönch]]  |  B  |  B  |  A  |     |     |     |  A  |     |      |
-| [[Gauner]]      |     |     |  B  |  A  |  A  |  B  |     |  B  |      |
-| [[Waldläufer]]       |  B  |     |  B  |  A  |     |  A  |     |     |      |
-|                 |     |     |     |     |     |     |     |     |      |
-| [[Naturalist]]      |  B  |  B  |  B  |     |     |  A  |  A  |     |      |
-| [[Fluchwirker]] |     |  B  |     |     |     |     |  A  |  A  |      |
-| [[Kleriker]]    |     |     |     |     |     |     |  A  |     |      |
-| [[Arkanist]]    |     |     |     |     |  A  |     |  A  |     |      |
+| Klasse          | ST  | KO  | BW  | GE  | VS  | IN  | EN  | PR  |
+| --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [[Taktiker]]    |  X  |  X  |  A  |     |     |     |  B  |  C  |
+| [[Paladin]]     |  X  |  X  |  A  |     |     |     |  B  |  C  |
+| [[Berserker]]   |  X  |  B  |  X  |     |     |     |     |     |
+| [[Mönch]]       |     |  B  |  X  |     |     | A,C |  X  |     |
+| [[Gauner]]      |     |     | A,B |  X  |  X  |     |     |  C  |
+| [[Waldläufer]]  |     |     |  B   |  X  |     |  X  |     |     |
+| [[Naturalist]]  |     |     |     |     |     |  X  |     |     |
+| [[Fluchwirker]] |     |     |     |     |  X  |     |     |  X  |
+| [[Kleriker]]    |     |     |     |     |     |     |  X  |     |
+| [[Arkanist]]    |     |     |     |     |  X  |     |  X  |     |
 
 #### Key Stats
 | Klasse          | STR | KON | GES | INT | WEI | CHA | Done |
 | --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:----:|
 | [[Berserker]]   |  A  |     |  A  |     |     |     |  X   |
-| [[Mönch]]  |     |     |  A  |     |  A  |     |  X   |
-| [[Taktiker]]  |  A  |     |     |     |     |  A  |  X   |
+| [[Mönch]]       |     |     |  A  |     |  A  |     |  X   |
+| [[Taktiker]]    |  A  |     |     |     |     |  A  |  X   |
 | [[Kleriker]]    |  A  |     |     |     |  A  |     |  X   |
 | [[Paladin]]     |  A  |     |     |     |     |  A  |  X   |
 | [[Gauner]]      |     |     |  A  |  A  |     |     |  X   |
 | [[Fluchwirker]] |     |     |     |  A  |     |  A  |  X   |
-| [[Waldläufer]]       |     |     |  A  |     |  A  |     |  X   |
+| [[Waldläufer]]  |     |     |  A  |     |  A  |     |  X   |
 | Stormshifter    |     |     |  A  |     |  A  |     |  X   |
 | [[Arkanist]]    |     |     |     |  A  |  A  |     |  X   |
 | [[Klangweber]]  |     |     |     |  A  |     |  A  |  X   |
@@ -36,7 +35,7 @@
 | --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:----:|
 | [[Berserker]]   |  A  |     |  B  |  -  |  -  |  -  |      |
 | Zephyr          |  -  |     |  A  |  -  |  B  |  -  |      |
-| [[Taktiker]]  |  A  |     |  -  |  -  |  -  |  B  |      |
+| [[Taktiker]]    |  A  |     |  -  |  -  |  -  |  B  |      |
 | Shepherd        |  B  |     |  -  |  -  |  A  |  -  |      |
 | Oathsworn       |  A  |     |  -  |  -  |  -  |  B  |      |
 | [[Gauner]]      |  -  |  -  |  A  |  B  |  -  |     |      |
@@ -48,19 +47,19 @@
 
 ## Ideensammlung
 ### Core Stats DnD
-| Klasse            | STR | KON | GES | INT | WEI | CHA |
-| ----------------- |:---:|:---:|:---:|:---:|:---:|:---:|
-| [[Berserker]]     |  X  |     |     |     |     |     |
-| Zephyr            |     |     |  X  |     |  X  |     |
+| Klasse          | STR | KON | GES | INT | WEI | CHA |
+| --------------- |:---:|:---:|:---:|:---:|:---:|:---:|
+| [[Berserker]]   |  X  |     |     |     |     |     |
+| Zephyr          |     |     |  X  |     |  X  |     |
 | [[Taktiker]]    |  X  |     |  X  |     |     |     |
-| Shepherd          |     |     |     |     |  X  |     |
-| Oathsworn         |  X  |     |     |     |     |  X  |
-| [[Gauner]]        |     |     |  X  |     |     |     |
+| Shepherd        |     |     |     |     |  X  |     |
+| Oathsworn       |  X  |     |     |     |     |  X  |
+| [[Gauner]]      |     |     |  X  |     |     |     |
 | [[Fluchwirker]] |     |     |     |     |     |  X  |
-| Hunter            |     |     |  X  |     |  X  |     |
-| Stormshifter      |     |     |     |     |  X  |     |
-| [[Arkanist]]      |     |     |     |  X  |     |     |
-| Songweaver        |     |     |     |     |     |  X  |
+| Hunter          |     |     |  X  |     |  X  |     |
+| Stormshifter    |     |     |     |     |  X  |     |
+| [[Arkanist]]    |     |     |     |  X  |     |     |
+| Songweaver      |     |     |     |     |     |  X  |
 
 ### Rettungswürfe D&D
 | Klasse            | STR | KON | GES | INT | WEI | CHA |
@@ -93,16 +92,16 @@
 | Songweaver        |     |     |     |  X  |  X  | (X) |
 
 ### Nimble
-| Klasse            |   STR   |       DEX        |        INT        |       WIL        |
-| ----------------- |:-------:|:----------------:|:-----------------:|:----------------:|
-| [[Berserker]]     | Schaden |     Bewegung     |                   |                  |
-| Zephyr            | Schaden | Klassenressource |                   |                  |
+| Klasse          |   STR   |       DEX        |        INT        |       WIL        |
+| --------------- |:-------:|:----------------:|:-----------------:|:----------------:|
+| [[Berserker]]   | Schaden |     Bewegung     |                   |                  |
+| Zephyr          | Schaden | Klassenressource |                   |                  |
 | [[Taktiker]]    | Schaden |                  | Klassenressource  |                  |
-| Shepherd          | Schaden |                  |                   |  Zauberattribut  |
-| Oathsworn         | Schaden |                  |                   |  Zauberattribut  |
-| [[Gauner]]        |         |     Schaden      | Klassenressource  |                  |
+| Shepherd        | Schaden |                  |                   |  Zauberattribut  |
+| Oathsworn       | Schaden |                  |                   |  Zauberattribut  |
+| [[Gauner]]      |         |     Schaden      | Klassenressource  |                  |
 | [[Fluchwirker]] |         | Klassenressource |  Zauberattribut   |                  |
-| Hunter            |         |     Schaden      |                   | Klassenressource |
-| Stormshifter      |         | Klassenressource |                   |  Zauberattribut  |
-| [[Arkanist]]      |         |                  | 1. Zauberattribut | 2.Zauberattribut |
-| Songweaver        |         |                  |  Zauberattribut   | Klassenressource |
+| Hunter          |         |     Schaden      |                   | Klassenressource |
+| Stormshifter    |         | Klassenressource |                   |  Zauberattribut  |
+| [[Arkanist]]    |         |                  | 1. Zauberattribut | 2.Zauberattribut |
+| Songweaver      |         |                  |  Zauberattribut   | Klassenressource |

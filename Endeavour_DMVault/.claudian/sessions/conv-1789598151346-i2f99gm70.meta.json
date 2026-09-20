@@ -4,21 +4,20 @@
   "title": "Entwerfe Klassensystem",
   "titleGenerationStatus": "success",
   "createdAt": 1789598151348,
-  "updatedAt": 1789687458081,
-  "lastResponseAt": 1789687458081,
+  "updatedAt": 1789940988389,
+  "lastResponseAt": 1789940988389,
   "sessionId": "dcf3f2d0-5771-484f-813b-bd006950ebaa",
   "selectedModel": "sonnet",
   "providerState": {
     "providerSessionId": "dcf3f2d0-5771-484f-813b-bd006950ebaa"
   },
-  "currentNote": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 2645,
-    "cacheReadInputTokens": 167422,
+    "cacheCreationInputTokens": 8402,
+    "cacheReadInputTokens": 262592,
     "contextWindow": 1000000,
-    "contextTokens": 170069,
-    "percentage": 17
+    "contextTokens": 270996,
+    "percentage": 27
   }
 }
