@@ -160,6 +160,48 @@
       "contentDigest": "c0d4dccd78ac29171fc8f9a1656f7d2c5f5061d233104aa450e744e7a9118dd0",
       "providerUserMessageId": "a48ba413-d7d2-4425-937e-af16fc2eb04e",
       "providerAssistantMessageId": "010a00cb-e572-4e0a-9b9b-2c3b748d81a6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790027676221-orqdpvs",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1790027676204-lmpajc7",
+      "timestamp": 1790027676204,
+      "rawDisplayText": "Welche Core Stats sollten Tanks haben wie der Taktiker (Bollwerk) oder der Paladin (Schildwache)? \nMacht es Sinn ihnen sowohl KO als auch EN zu geben? Ich denke bei der Steigerung könnte eine Klasse höhere Werte erzielen wenn eines der beiden ein Sekundärattribut wäre oder?",
+      "canonicalText": "Welche Core Stats sollten Tanks haben wie der Taktiker (Bollwerk) oder der Paladin (Schildwache)? \nMacht es Sinn ihnen sowohl KO als auch EN zu geben? Ich denke bei der Steigerung könnte eine Klasse höhere Werte erzielen wenn eines der beiden ein Sekundärattribut wäre oder?",
+      "images": [],
+      "contentDigest": "5cd114aa2198a52f6d8ec1d0ff6782ef39dea2fcc445de136725f1710c76fd5c",
+      "providerUserMessageId": "7dadc979-4efd-48ec-ab9f-d7b07140a520",
+      "providerAssistantMessageId": "ee3c7a09-3f75-45fb-b30e-ebe73ca96b2a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790029016345-xwz18fu",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1790029016341-no9y3sg",
+      "timestamp": 1790029016341,
+      "rawDisplayText": "Sollte dann KO für die möglichen Tankklassen Taktiker, Paladin, Mönch und Berserker zum Standard Core Stat werden oder nur jeweils für die Tank Subklasse?",
+      "canonicalText": "Sollte dann KO für die möglichen Tankklassen Taktiker, Paladin, Mönch und Berserker zum Standard Core Stat werden oder nur jeweils für die Tank Subklasse?",
+      "images": [],
+      "contentDigest": "6179d6cd86c20ded87e5ded75f6667f5a615e116a159f93f1792307d199c6cb3",
+      "providerUserMessageId": "d3b37fce-0167-4523-b962-fa8483ea5ad6",
+      "providerAssistantMessageId": "79a7d2c9-fe68-45cc-8338-97b2a0f2e128"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790030326609-r6fydmk",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1790030326604-pq8x34b",
+      "timestamp": 1790030326604,
+      "rawDisplayText": "Vom Konzept her sollen Taktiker und Paladin Rüstungstanks sein, wobei die Rüstung durch die Subklasse noch verstärkt wird.\nMönch soll vor allem über Ausweichen und Parade tanken, bzw. über seine Klassenressource.\nBerserker über eine Kombination aus Ausweichen, Lebenspunkten und Klassenressource.",
+      "canonicalText": "Vom Konzept her sollen Taktiker und Paladin Rüstungstanks sein, wobei die Rüstung durch die Subklasse noch verstärkt wird.\nMönch soll vor allem über Ausweichen und Parade tanken, bzw. über seine Klassenressource.\nBerserker über eine Kombination aus Ausweichen, Lebenspunkten und Klassenressource.",
+      "images": [],
+      "contentDigest": "7be5c34ef245c2f2fc1d31725d20ae6f2b58793c12bb07f72651d45ec7cf7f10",
+      "providerUserMessageId": "760f7a02-bc3e-4688-9ac5-9b8711f2a3eb",
+      "providerAssistantMessageId": "58996090-2bd4-4bfd-9405-bbbf2b8a0ef3"
     }
   ]
 }

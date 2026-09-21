@@ -6,6 +6,7 @@
       {
         "id": "74b2fee43fcec094",
         "type": "tabs",
+        "dimension": 44.4299674267101,
         "children": [
           {
             "id": "fbb8bd4c44c7fc83",
@@ -80,30 +81,6 @@
             }
           },
           {
-            "id": "8fc3378435c6e9b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Klassen"
-            }
-          },
-          {
             "id": "1ea115ec5059672b",
             "type": "leaf",
             "state": {
@@ -152,7 +129,38 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
+      },
+      {
+        "id": "0c4e0cbe222eaf4b",
+        "type": "tabs",
+        "dimension": 55.57003257328991,
+        "children": [
+          {
+            "id": "8fc3378435c6e9b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Klassen"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -354,10 +362,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "1ea115ec5059672b",
+  "active": "8fc3378435c6e9b2",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
     "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+    "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
     "02 - Spielleiterbereich/DM Tips/Charaktere/charaktererstellung-anleitung.md",
     "02 - Spielleiterbereich/DM Tips/Charaktere/charaktererstellung-anleitung (copy).md",
     "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
