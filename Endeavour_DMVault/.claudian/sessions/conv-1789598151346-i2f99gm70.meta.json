@@ -4,8 +4,8 @@
   "title": "Entwerfe Klassensystem",
   "titleGenerationStatus": "success",
   "createdAt": 1789598151348,
-  "updatedAt": 1789940988389,
-  "lastResponseAt": 1789940988389,
+  "updatedAt": 1790030384450,
+  "lastResponseAt": 1790030384450,
   "sessionId": "dcf3f2d0-5771-484f-813b-bd006950ebaa",
   "selectedModel": "sonnet",
   "providerState": {
@@ -14,10 +14,10 @@
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 8402,
-    "cacheReadInputTokens": 262592,
+    "cacheCreationInputTokens": 5721,
+    "cacheReadInputTokens": 288292,
     "contextWindow": 1000000,
-    "contextTokens": 270996,
-    "percentage": 27
+    "contextTokens": 294015,
+    "percentage": 29
   }
 }

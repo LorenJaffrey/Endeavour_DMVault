@@ -6,7 +6,11 @@
       {
         "id": "74b2fee43fcec094",
         "type": "tabs",
+<<<<<<< HEAD
         "dimension": 34.5945945945946,
+=======
+        "dimension": 44.4299674267101,
+>>>>>>> a4cfbfc2f784510bab4f9048fc8e2d5c5f43cebb
         "children": [
           {
             "id": "fbb8bd4c44c7fc83",
@@ -132,9 +136,15 @@
         "currentTab": 3
       },
       {
+<<<<<<< HEAD
         "id": "3e5feba25dab3d20",
         "type": "tabs",
         "dimension": 65.4054054054054,
+=======
+        "id": "0c4e0cbe222eaf4b",
+        "type": "tabs",
+        "dimension": 55.57003257328991,
+>>>>>>> a4cfbfc2f784510bab4f9048fc8e2d5c5f43cebb
         "children": [
           {
             "id": "8fc3378435c6e9b2",
@@ -143,7 +153,11 @@
               "type": "markdown",
               "state": {
                 "file": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md",
+<<<<<<< HEAD
                 "mode": "source",
+=======
+                "mode": "preview",
+>>>>>>> a4cfbfc2f784510bab4f9048fc8e2d5c5f43cebb
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
