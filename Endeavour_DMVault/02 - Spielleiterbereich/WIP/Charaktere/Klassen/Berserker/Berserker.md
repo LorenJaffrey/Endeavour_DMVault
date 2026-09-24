@@ -4,7 +4,7 @@ tags:
 Trefferwürfel: 12
 Kernattribute:
   - "[[Stärke]]"
-  - "[[Beweglichkeit]]"
+  - "[[Instinkt]]"
 Übung:
   Waffen:
     - "[[Einfache Waffen]]"
@@ -13,7 +13,7 @@ Kernattribute:
 Rettungswürfe:
   Vorteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
-    - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
+    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
   Nachteil:
     - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
     - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"

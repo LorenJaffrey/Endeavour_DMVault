@@ -3,7 +3,7 @@ tags:
   - Regeln/Endeavour/Charakter/Klasse
 Trefferwürfel: 6
 Kernattribute:
-  - "[[Beweglichkeit]]"
+  - "[[Geschick]]"
   - "[[Verstand]]"
 Übung:
   Waffen:

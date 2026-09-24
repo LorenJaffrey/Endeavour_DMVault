@@ -1,3 +1,19 @@
+---
+tags:
+  - Regeln/Endeavour/Charakter/Klasse
+Kernattribute:
+  - "[[Entschlossenheit]]"
+  - "[[Instinkt]]"
+Rettungswürfe:
+  Vorteil:
+    - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"
+    - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
+  Nachteil:
+    - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
+    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
+    - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
+---
+# `=this.file.name`
 ## Nimble
 Let all who are afflicted come. I will mend thy bones and soothe thy wounds. Thou shalt revere the gifts of life and death, neither of which is ever given or taken. Rather, we are all souls merely journeying between this realm and that of the beyond. But alas, often do these wandering souls find themselves bereft of guidance. Thus falls upon the Shepherd the solemn duty—to be a beacon of light to those ensnared in darkness, and darkness to those who, in hubris, deem themselves to be the light.
 

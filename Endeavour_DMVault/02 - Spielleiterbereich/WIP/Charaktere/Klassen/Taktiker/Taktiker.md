@@ -4,7 +4,7 @@ tags:
 Trefferwürfel: 10
 Kernattribute:
   - "[[Stärke]]"
-  - "[[Präsenz]]"
+  - "[[Konstitution]]"
 Übung:
   Waffen:
     - "[[Einfache Waffen]]"
@@ -15,11 +15,9 @@ Kernattribute:
 Rettungswürfe:
   Vorteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
-    - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
+    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
   Nachteil:
-    - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
     - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
-    - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"
 Beschreibung: Ein Taktiker, Anführer und Waffenmeister.
 ---
 # `=this.file.name`

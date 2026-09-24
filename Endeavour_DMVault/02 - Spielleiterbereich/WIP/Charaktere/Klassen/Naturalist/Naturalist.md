@@ -1,3 +1,19 @@
+---
+tags:
+  - Regeln/Endeavour/Charakter/Klasse
+Kernattribute:
+  - "[[Konstitution]]"
+  - "[[Instinkt]]"
+Rettungswürfe:
+  Vorteil:
+    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
+    - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"
+  Nachteil:
+    - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
+    - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
+    - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
+---
+# `=this.file.name`
 The trees whisper their excitement, the clouds sing with glee. Rejoice! The Master of Storm & Fang arrives. All who would seek passage through the ancient grove, heed this warning: Do not provoke the forest or its inhabitants. Beseech for passage humbly, even if its guardian is unseen, rest assured that you… are not.
 
 Those who traverse the woodlands may feel the vigilant gaze of a Stormshifter upon them. Legend speaks of an ancient union between mortal and dryad, birthing beings capable of wielding lightning and tempests as others wield blade and shield. This is but half the tale.

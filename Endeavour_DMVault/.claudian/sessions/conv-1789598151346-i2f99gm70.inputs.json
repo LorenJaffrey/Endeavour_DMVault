@@ -267,6 +267,127 @@
       "contentDigest": "d8811be710486be7a2bcbf1984d7e8e2eb692b381751b55c1cdc4167976a55e8",
       "providerUserMessageId": "c6e875c4-9336-4db7-8d35-c02625b54259",
       "providerAssistantMessageId": "8a63f263-6b07-4662-9958-5d34aae1e2c5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790288999968-3s31eav",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1790288999953-axthk79",
+      "timestamp": 1790288999953,
+      "rawDisplayText": "Damit sind die Kernattribute festgelegt. Trage die Kernattribute bei den jeweiligen Klassen in der Frontmatter ein.\nKorrigiere auch wo nötig die Rettungswürfe bzw. erzeuge den entsprechenden Abschnitt.",
+      "canonicalText": "Damit sind die Kernattribute festgelegt. Trage die Kernattribute bei den jeweiligen Klassen in der Frontmatter ein.\nKorrigiere auch wo nötig die Rettungswürfe bzw. erzeuge den entsprechenden Abschnitt.",
+      "images": [],
+      "contentDigest": "ca6329cecee69011d0dbfb3970fdd29ccf7f0768ce3c20c3324fe5aaee752cfa",
+      "providerUserMessageId": "465e8d86-b6b4-4f91-8661-1edf9253e531",
+      "providerAssistantMessageId": "f7685467-dfe6-41b2-8e23-1005289ccbdc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790291764454-ynt8ice",
+      "userTurnOrdinal": 20,
+      "state": "accepted",
+      "localMessageId": "msg-1790291764451-x0fzoj9",
+      "timestamp": 1790291764451,
+      "rawDisplayText": "Wieviel Vor- und Nachteile auf Rettunsgwürfe sollte ein Charakter haben? Bei Nimble sind es jeweils 1, aber dort gibt es auch nur vier Attribute...",
+      "canonicalText": "Wieviel Vor- und Nachteile auf Rettunsgwürfe sollte ein Charakter haben? Bei Nimble sind es jeweils 1, aber dort gibt es auch nur vier Attribute...",
+      "images": [],
+      "contentDigest": "a491121c1e2d1cc9a99520f1c9a50e01dc69f27aed8732730d3488aff2c58866",
+      "providerUserMessageId": "d1e1bfb2-61a5-4d56-b6ff-ce1258a58180",
+      "providerAssistantMessageId": "0f8e9abc-2671-48cf-96fb-f2cf5e0e4a70"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790292012032-uhwu4xx",
+      "userTurnOrdinal": 21,
+      "state": "accepted",
+      "localMessageId": "msg-1790292012029-qe3lvpx",
+      "timestamp": 1790292012029,
+      "rawDisplayText": "Meine Idee war zweimal Vorteil und zweimal Nachteil (ausgewählt aus den drei aufgeführten).\nIch würde das aber heute lieber fixieren glaube ich und immer zweimal Vor- und Nachteil gewähren.",
+      "canonicalText": "Meine Idee war zweimal Vorteil und zweimal Nachteil (ausgewählt aus den drei aufgeführten).\nIch würde das aber heute lieber fixieren glaube ich und immer zweimal Vor- und Nachteil gewähren.",
+      "images": [],
+      "contentDigest": "17e317cd0605c73099eb32bd8568c1000b98badf0bdcab8365d9f7f6af8d83ba",
+      "providerUserMessageId": "7dcc0eb1-76a5-4281-b8e3-459d2dad0370",
+      "providerAssistantMessageId": "4ec63c93-232d-415b-9264-e5ce098b918d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790292297095-v108mcr",
+      "userTurnOrdinal": 22,
+      "state": "accepted",
+      "localMessageId": "msg-1790292297091-fr1gp2v",
+      "timestamp": 1790292297091,
+      "rawDisplayText": "Lass uns vorher noch zwei Änderungen durchgehen. Ich hätte gerne eine Unterscheidung zwischen Taktiker und Paladin. So sind sie mir zu ähnlich.\nAußerdem hab ich den Waldläufer nochmal geändert. \nSiehe @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+      "canonicalText": "Lass uns vorher noch zwei Änderungen durchgehen. Ich hätte gerne eine Unterscheidung zwischen Taktiker und Paladin. So sind sie mir zu ähnlich.\nAußerdem hab ich den Waldläufer nochmal geändert. \nSiehe @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+          "mode": "selection",
+          "selectedText": "C",
+          "lineCount": 1,
+          "startLine": 9
+        }
+      },
+      "images": [],
+      "contentDigest": "06e6ea17e8d08d65a7fc23e4f8379002a2e15fb5f42a7138c42f2694c11b5b0e",
+      "providerUserMessageId": "00b136d3-defe-4851-a702-40a8bfe27a5b",
+      "providerAssistantMessageId": "9c8475af-e034-4d99-971a-722e6bcd8b20"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790292845759-ra84uzo",
+      "userTurnOrdinal": 23,
+      "state": "accepted",
+      "localMessageId": "msg-1790292845755-9psi67j",
+      "timestamp": 1790292845755,
+      "rawDisplayText": "Die Änderungen am Paladin übernehmen wir wie beschrieben.\n\nIch würde dem Fährtenleser noch BW als Kernattribut geben und aus ihm einen Nahkämpfer machen.\nDann würde ich BW auch als Vorteil nehmen. Passt irgendwie zum Waldläufer.",
+      "canonicalText": "Die Änderungen am Paladin übernehmen wir wie beschrieben.\n\nIch würde dem Fährtenleser noch BW als Kernattribut geben und aus ihm einen Nahkämpfer machen.\nDann würde ich BW auch als Vorteil nehmen. Passt irgendwie zum Waldläufer.",
+      "images": [],
+      "contentDigest": "9968bae39c9a233df5def3eee29073a3c8174e3536cee8b1e65643429cc2adf8",
+      "providerUserMessageId": "04f3d6e6-f50f-4b4f-b31f-34d04bc46a82",
+      "providerAssistantMessageId": "b3d3be9e-cde0-4435-bb88-68683e634774"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790292972902-1uzvhh5",
+      "userTurnOrdinal": 24,
+      "state": "accepted",
+      "localMessageId": "msg-1790292972898-zo6uqeu",
+      "timestamp": 1790292972898,
+      "rawDisplayText": "Waldläufer nehmen wir wie beschrieben.\nBeim Vergelter bin ich mir unsicher ob BW das richtige ist.",
+      "canonicalText": "Waldläufer nehmen wir wie beschrieben.\nBeim Vergelter bin ich mir unsicher ob BW das richtige ist.",
+      "images": [],
+      "contentDigest": "59124cfb4b9309c4fb0c1db7d2258eedc367eeaac9f030f3845fa0c785c8ec97",
+      "providerUserMessageId": "add094ab-2425-476f-b72c-3cf26ca398cf",
+      "providerAssistantMessageId": "586966ea-0be1-4395-9eb0-cb969cdb550a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790293292657-an2niiz",
+      "userTurnOrdinal": 25,
+      "state": "accepted",
+      "localMessageId": "msg-1790293292654-o1it7xy",
+      "timestamp": 1790293292654,
+      "rawDisplayText": "GE gefällt mir nicht besonders. Vielleicht IN?",
+      "canonicalText": "GE gefällt mir nicht besonders. Vielleicht IN?",
+      "images": [],
+      "contentDigest": "0bef062b429ccd80c9cfdfc7f3f1f2042cdd5dc7a2361e478a88308a899dd2b4",
+      "providerUserMessageId": "48c47428-e4e6-4009-91ab-3213909c399c",
+      "providerAssistantMessageId": "c8c27ae1-1319-4795-ab71-9facfe699826"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790293435080-1fjmxjf",
+      "userTurnOrdinal": 26,
+      "state": "accepted",
+      "localMessageId": "msg-1790293435077-9z2mig5",
+      "timestamp": 1790293435077,
+      "rawDisplayText": "Passt so übernehmen wir es",
+      "canonicalText": "Passt so übernehmen wir es",
+      "images": [],
+      "contentDigest": "d88877367ea58d23acaf729c430906c3e500708959323a9f56edd8a54ba40ece",
+      "providerUserMessageId": "3cebf7c9-aff8-4c37-8184-d956c3342f74",
+      "providerAssistantMessageId": "41651b30-fa7c-412d-a741-a99148b15c6c"
     }
   ]
 }
