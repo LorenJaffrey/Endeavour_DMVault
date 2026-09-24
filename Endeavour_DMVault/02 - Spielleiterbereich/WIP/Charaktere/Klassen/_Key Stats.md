@@ -2,7 +2,6 @@
 ## Zusammenfassung
 
 #### Key Stats NEU
-
 | Klasse          | ST  | KO  | BW  | GE  | VS  | IN  | EN  | PR  | Done |
 | --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
 | [[Taktiker]]    |  X  |  X  |  A  |     |     |     |  B  |  C  |  X   |

@@ -1,5 +1,5 @@
 ## Allgemein
-- keine Zauber per se, aber göttlich, magische Fähigkeiten
+- keine Zauber per se, aber göttliche, magische Fähigkeiten
 - Auren die Verbündete stärken
 - Ressource
 

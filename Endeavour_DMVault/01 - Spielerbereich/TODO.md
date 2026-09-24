@@ -43,5 +43,5 @@ show tree
 ```
 
 ## Sonstiges
-- [ ] Vorlagen mit korrekter Syntax versehen [priority:: medium]
-- [ ] Warlock Patron Template YouTube [priority:: high]
+- Loottable je Kreatur hinterlegen
+- Einordnung Belohnungen (wieviel Gold Beute auf welcher Stufe)
