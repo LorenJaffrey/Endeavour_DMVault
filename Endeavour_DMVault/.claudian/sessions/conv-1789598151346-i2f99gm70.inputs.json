@@ -202,6 +202,71 @@
       "contentDigest": "7be5c34ef245c2f2fc1d31725d20ae6f2b58793c12bb07f72651d45ec7cf7f10",
       "providerUserMessageId": "760f7a02-bc3e-4688-9ac5-9b8711f2a3eb",
       "providerAssistantMessageId": "58996090-2bd4-4bfd-9405-bbbf2b8a0ef3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790206370578-f2d3icd",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1790206370561-xtrqh8u",
+      "timestamp": 1790206370561,
+      "rawDisplayText": "Ich habe die Tabelle in @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md nochmal aktualisiert.\n- X bedeutet Key Stat für die Klassen\n- A,B,C bedeutet Key Stat für die Unterklassen aus @02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md \n- Klammern bedeuten mehrere Alternativen\n\nLass uns die Lücken und Unsicherheiten durchgehen",
+      "canonicalText": "Ich habe die Tabelle in @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md nochmal aktualisiert.\n- X bedeutet Key Stat für die Klassen\n- A,B,C bedeutet Key Stat für die Unterklassen aus @02 - Spielleiterbereich/WIP/Charaktere/Klassen/Klassen.md \n- Klammern bedeuten mehrere Alternativen\n\nLass uns die Lücken und Unsicherheiten durchgehen",
+      "images": [],
+      "contentDigest": "880d189d984461788c2dc0429f0bc8251e05454b1f401ae1725e0e30f14ca274",
+      "providerUserMessageId": "2625903a-5cff-4a15-9c3f-dee51a0f4cf2",
+      "providerAssistantMessageId": "194efa40-17d5-431a-8238-f505be423153"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790208010742-p6y6q2h",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1790208010738-u83c0pu",
+      "timestamp": 1790208010738,
+      "rawDisplayText": "Ok ich habe anhand deiner Vorschläge einige Klassen finalisiert. Lass uns den Rest bearbeiten. \nFür die Zauberklassen wie Kleriker und Arkanist möchte ich keine körperlichen Attribute (ST,KO,BW). Wie würdest du GE für Caster begründen?",
+      "canonicalText": "Ok ich habe anhand deiner Vorschläge einige Klassen finalisiert. Lass uns den Rest bearbeiten. \nFür die Zauberklassen wie Kleriker und Arkanist möchte ich keine körperlichen Attribute (ST,KO,BW). Wie würdest du GE für Caster begründen?",
+      "images": [],
+      "contentDigest": "80c1229c18cd56102865325d4ba86894a7df5b2308285c869625e9e73e0ed099",
+      "providerUserMessageId": "758b64f2-7a1b-4cea-a25a-b963b106a0f7",
+      "providerAssistantMessageId": "cc23b8ae-61f5-49d1-953b-e277ed5e18ca"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790208316763-2fdb5bl",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1790208316759-jjx83zm",
+      "timestamp": 1790208316759,
+      "rawDisplayText": "Ok verstehe, das macht durchaus Sinn.\nLass uns mit den unfertigen Klassen fortfahren.",
+      "canonicalText": "Ok verstehe, das macht durchaus Sinn.\nLass uns mit den unfertigen Klassen fortfahren.",
+      "images": [],
+      "contentDigest": "effdffe4ccc20d3f178237253bd2860e4a3d2f116a2d31d9ed8fce859a051dda",
+      "providerUserMessageId": "c075a00a-5f71-4e19-bdbe-819c6c759050",
+      "providerAssistantMessageId": "1f3e1b20-f972-40a0-b2d6-6c433a776c3e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790208584736-egptop8",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1790208584733-zolrn99",
+      "timestamp": 1790208584733,
+      "rawDisplayText": "Ich denke ich würde für den Kleriker andere Standardattribute als für den Arkanisten nehmen. Vielleicht EN und IN?",
+      "canonicalText": "Ich denke ich würde für den Kleriker andere Standardattribute als für den Arkanisten nehmen. Vielleicht EN und IN?",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+          "mode": "selection",
+          "selectedText": "X",
+          "lineCount": 1,
+          "startLine": 16
+        }
+      },
+      "images": [],
+      "contentDigest": "d8811be710486be7a2bcbf1984d7e8e2eb692b381751b55c1cdc4167976a55e8",
+      "providerUserMessageId": "c6e875c4-9336-4db7-8d35-c02625b54259",
+      "providerAssistantMessageId": "8a63f263-6b07-4662-9958-5d34aae1e2c5"
     }
   ]
 }

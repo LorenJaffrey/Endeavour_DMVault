@@ -2,33 +2,19 @@
 ## Zusammenfassung
 
 #### Key Stats NEU
-<<<<<<< HEAD
-| Klasse          | ST  | KO  |  BW   | GE  | VS  | IN  |  EN   | PR  | Done |
-| --------------- |:---:|:---:|:-----:|:---:|:---:|:---:|:-----:|:---:|:----:|
-| [[Taktiker]]    |  X  |  X  |  (A)  |     |     | (A) |   B   |  C  |      |
-| [[Paladin]]     |  X  |  X  |   A   |     |     |     |   B   |  C  |  X   |
-| [[Berserker]]   |  X  |  B  |   A   |  C  |     |  X  |       |     |  X   |
-| [[Mönch]]       |     |  B  |   X   |     |     | A,C |   X   |     |      |
-| [[Gauner]]      |     |     | (A),B |  X  |  X  | (A) |       |  C  |      |
-| [[Waldläufer]]  |     |     |   X   |  X  |     |  A  |   C   |  B  |  X   |
-| [[Naturalist]]  |     |  X  |   A   |     | (C) |  X  | B,(C) |     |      |
-| [[Fluchwirker]] |     |     |   C   |     |  X  |     |   B   |  X  |      |
-| [[Kleriker]]    |     |     |       |     |     |     |   X   |     |      |
-| [[Arkanist]]    |     |     |       |     |  X  |     |   X   |     |      |
-=======
-| Klasse          | ST  | KO  | BW  | GE  | VS  | IN  | EN  | PR  |
-| --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [[Taktiker]]    |  X  |  X  |  A  |     |     |     |  B  |  C  |
-| [[Paladin]]     |  X  |  X  |  A  |     |     |     |  B  |  C  |
-| [[Berserker]]   |  X  |  B  |  A  |     |     |  X  |     |     |
-| [[Mönch]]       |     |  B  |  X  |     |     | A,C |  X  |     |
-| [[Gauner]]      |     |     | A,B |  X  |  X  |     |     |  C  |
-| [[Waldläufer]]  |     |     |  B  |  X  |     |  X  |     |     |
-| [[Naturalist]]  |     |     |     |     |     |  X  |     |     |
-| [[Fluchwirker]] |     |     |     |     |  X  |     |     |  X  |
-| [[Kleriker]]    |     |     |     |     |     |     |  X  |     |
-| [[Arkanist]]    |     |     |     |     |  X  |     |  X  |     |
->>>>>>> a4cfbfc2f784510bab4f9048fc8e2d5c5f43cebb
+
+| Klasse          | ST  | KO  | BW  | GE  | VS  | IN  | EN  | PR  | Done |
+| --------------- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
+| [[Taktiker]]    |  X  |  X  |  A  |     |     |     |  B  |  C  |  X   |
+| [[Paladin]]     |  X  |  X  |  A  |     |     |     |  B  |  C  |  X   |
+| [[Berserker]]   |  X  |  B  |  A  |  C  |     |  X  |     |     |  X   |
+| [[Mönch]]       |     |  B  |  X  |  C  |     |  A  |  X  |     |  X   |
+| [[Gauner]]      |     |     |  B  |  X  |  X  |  A  |     |  C  |  X   |
+| [[Waldläufer]]  |     |     |  X  |  X  |     |  A  |  C  |  B  |  X   |
+| [[Naturalist]]  |     |  X  |  A  |     |  C  |  X  |  B  |     |  X   |
+| [[Fluchwirker]] |     |     |  C  |     |  X  |  A  |  B  |  X  |  X   |
+| [[Kleriker]]    |     |     |     | B,C | B,C |  X  |  X  |  A  |      |
+| [[Arkanist]]    |     |     |     |  A  |  X  |  B  |  X  |  C  |  X   |
 
 #### Key Stats
 | Klasse          | STR | KON | GES | INT | WEI | CHA | Done |
