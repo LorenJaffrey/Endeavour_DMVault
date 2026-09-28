@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sprache/Standard
+  - Regeln/Endeavour/Sprache/Standard
 Ursprung: "[[DM Bereich/Nimble/Charaktere/Abstammungen/Spezies/Gnome/Gnome]]"
 Schrift: Zwergisch
 ---

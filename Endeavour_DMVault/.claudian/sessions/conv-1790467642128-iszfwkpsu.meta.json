@@ -4,8 +4,8 @@
   "title": "Test",
   "titleGenerationStatus": "failed",
   "createdAt": 1790467642131,
-  "updatedAt": 1790591000192,
-  "lastResponseAt": 1790554698149,
+  "updatedAt": 1790634468704,
+  "lastResponseAt": 1790633231379,
   "sessionId": "9f082eae-a778-4fcf-9bf8-31ddc15d69bf",
   "selectedModel": "sonnet",
   "providerState": {
@@ -14,10 +14,10 @@
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 4619,
-    "cacheReadInputTokens": 142427,
+    "cacheCreationInputTokens": 1082,
+    "cacheReadInputTokens": 211272,
     "contextWindow": 1000000,
-    "contextTokens": 147048,
-    "percentage": 15
+    "contextTokens": 212356,
+    "percentage": 21
   }
 }

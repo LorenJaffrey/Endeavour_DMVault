@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md",
-                "mode": "preview",
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Sacred Decrees.md",
+                "mode": "source",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -28,17 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Stufenaufstieg"
-            }
-          },
-          {
-            "id": "7c6b91815b042c1c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Sacred Decrees"
             }
           }
         ]
@@ -75,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Regeln/Nimble",
+                "query": "tag:#Zustand",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,7 +193,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "02 - Spielleiterbereich/Gegenstände/Gegenstände/Rüstung/Rüstungslisten/Rüstungen.md"
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Sacred Decrees.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -224,8 +214,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 648.5,
-    "collapsed": true
+    "width": 648.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -246,42 +235,42 @@
   },
   "active": "fbb8bd4c44c7fc83",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md",
-    "02 - Spielleiterbereich/Systeme/Daggerheart/02-Spielablauf/Daggerheart - Stufenaufstieg.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Charakter Konzepte.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Arkanist/_Arkanist.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Rettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Beweglichkeitsrettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Konstitutionsrettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Präsenzrettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Stärkerettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Verstandsrettungswürfe.md",
-    "01 - Spielerbereich/Regeln/Allgemein/Rettungswürfe/Entschlossenheitsrettungswürfe.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/Einen Charakter erstellen.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Klassen.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Arkanist/Arkanist.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Berserker/_Berserker.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Klassen.md",
-    "broken links output.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Taktiker/_Ideensammlung Taktiker.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/_Ideensammlung Paladin.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Ideensammlung Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Berserker/_Ideensammlung Berserker.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Arkanist/_Ideensammlung Arkanist.md",
-    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten/Schilde.md",
-    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten",
-    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen",
-    "01 - Spielerbereich/Gegenstände/Rüstung",
-    "01 - Spielerbereich/Gegenstände/Waffen/Waffenlisten",
-    "01 - Spielerbereich/Gegenstände/Waffen/Waffeneigenschaften",
-    "01 - Spielerbereich/Gegenstände/Waffen/Waffen",
-    "01 - Spielerbereich/Gegenstände/Waffen",
-    "01 - Spielerbereich/Gegenstände/Nahrungsmittel/Speisen",
-    "01 - Spielerbereich/Gegenstände/Nahrungsmittel/Getränke",
-    "01 - Spielerbereich/Gegenstände/Nahrungsmittel",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Oathsworn Levels.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Vengeance.md.tmp.18390.39a7f7c2476e",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Vengeance.md.tmp.18390.8c9ec2e949b1",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Valor.md.tmp.18390.4387b6400a83",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Refuge.md.tmp.18390.01029fb26906",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Purification.md.tmp.18390.45a7eb5a0d9e",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Purification.md.tmp.18390.bc8572348a94",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oathbreaker.md.tmp.18390.0c99e673fea3",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Sacred Decrees.md.tmp.18390.354e9d3f32ef",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Sacred Decrees.md.tmp.18390.ce056666191f",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/_Paladin.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Oathsworn Levels.md.tmp.18390.9eb2b25e941d",
+    "02 - Spielleiterbereich/WIP/Regeln/_Allgemein/_Attribute.md",
+    "02 - Spielleiterbereich/WIP/Regeln/_Allgemein/_Fertigkeiten.md",
+    "02 - Spielleiterbereich/WIP/Equipment Rules.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/charaktererstellung-anleitung.md",
+    "02 - Spielleiterbereich/DM Tips/Charaktere/Charaktere erstellen.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/_Zustände/Brennend.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/_Zustände/Bluten.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/_Zustände/Nekrotisiert.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/_Zustände/Tiefe Wunden.md",
+    "01 - Spielerbereich/Regeln/Zustände/Taub.md",
+    "01 - Spielerbereich/Regeln/Zustände/Versteinert.md",
+    "01 - Spielerbereich/Regeln/Zustände/Verlangsamt.md",
+    "01 - Spielerbereich/Regeln/Zustände/Verborgen.md",
+    "01 - Spielerbereich/Regeln/Zustände/Verängstigt.md",
+    "01 - Spielerbereich/Regeln/Zustände/Unsichtbar.md",
+    "01 - Spielerbereich/Regeln/Zustände/Sterbend.md",
+    "01 - Spielerbereich/Regeln/Zustände/Reitend.md",
+    "01 - Spielerbereich/Regeln/Zustände/Liegend.md",
+    "01 - Spielerbereich/Regeln/Zustände/Provoziert.md",
+    "01 - Spielerbereich/Regeln/Zustände/Kampfunfähig.md",
+    "01 - Spielerbereich/Regeln/Zustände/Gepackt.md",
+    "01 - Spielerbereich/Regeln/Zustände/Gelähmt.md",
+    "01 - Spielerbereich/Regeln/Zustände/Festgesetzt.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/_Zustände/Elektrifiziert.md",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Tiefling 1.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Halbling.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Gnom.png",

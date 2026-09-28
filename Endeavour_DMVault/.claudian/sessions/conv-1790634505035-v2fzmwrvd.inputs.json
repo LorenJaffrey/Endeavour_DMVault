@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790634505035-v2fzmwrvd",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790634505077-31bt3ul",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790634505032-qfpw0oa",
+      "timestamp": 1790634505032,
+      "rawDisplayText": "Übersetze die englischen Texte in den Files unter @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/",
+      "canonicalText": "Übersetze die englischen Texte in den Files unter @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/_Paladin.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "9b8b9567420d6b3c6fbaa2ecc0705053e716a3b5096f39ddcc47cae574bd06ea",
+      "providerUserMessageId": "f074030c-83ec-4729-8536-a0cfafd894df",
+      "providerAssistantMessageId": "79e4682d-be16-4e19-91fa-7e896f161a11"
+    }
+  ]
+}

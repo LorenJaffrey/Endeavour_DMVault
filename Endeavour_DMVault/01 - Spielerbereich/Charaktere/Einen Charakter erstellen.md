@@ -46,7 +46,7 @@ Markiere [[Vorteil und Nachteil|Vorteil]]  und [[Vorteil und Nachteil|Nachteil
 > Markiere [[Vorteil und Nachteil|Vorteil]] für [[Stärkerettungswürfe|ST-Rettungswürfe]] und [[Konstitutionsrettungswürfe|KO-Rettungswürfe]], [[Vorteil und Nachteil|Nachteil]] für [[Verstandsrettungswürfe|VS-Rettungswürfe]] und [[Präsenzrettungswürfe|PR-Rettungswürfe]].
 
 ## 2. Fertigkeitspunkte
-Auf Stufe 1 überträgst du deine [[Attribute|Attributsboni]] auf die jeweiligen [[Fertigkeiten]] (z. B. ein Held mit +2 [[Geschick|GE]] trägt +2 bei [[Fingerfertigkeit]] und [[Heimlichkeit]] ein) und darf 6 weitere Punkte frei verteilen.
+Auf Stufe 1 überträgst du deine [[Attribute|Attributsboni]] auf die jeweiligen [[Fertigkeiten]] (z. B. ein Held mit +2 [[Geschick|GE]] trägt +2 bei [[Fingerfertigkeit]] und [[Heimlichkeit]] ein) und darf **6 weitere Punkte frei verteilen**.
 
 > [!example]- Beispiel  
 > Wenn du –1 [[Verstand|VS]] hast, markiere -1 bei [[Magiekunde]], [[Geschichte]], [[Heilkunde]], [[Nachforschung]], [[Naturkunde]] und [[Religion]]. 
@@ -59,24 +59,22 @@ Trage deine sekundären Werte ein:
 - [[Größenkategorie]]
 - [[Bewegungsrate]] (abhängig von der [[Abstammungen|Abstammung]])
 - maximale [[Erschöpfung]] (Standard: 6) 
-- Inventarplätze (10 + [[Stärke]]) 
+- [[Gepäck]] (15 + [[Stärke|ST]] x 2 Plätze) und [[Schnellzugriff]] (bis zu 6 Behälter)
 
 ### [[Trefferpunkte]]  pro Stufe
-Diese errechnen sich aus dem Basiswert 3 plus eventueller Boni aus [[Abstammungen|Abstammung]], [[_Klassen|Klasse]], [[Subklassen|Subklasse]], [[Konstitution]], etc. 
+Diese errechnen sich aus dem Basiswert der [[Klassen|Klasse]] plus eventueller Boni aus [[Abstammungen|Abstammung]], [[Subklassen|Subklasse]], [[Konstitution]], etc. 
 
 ### Maximale [[Trefferpunkte]] 
 Auf Stufe 1 erhältst du maximale [[Trefferpunkte]] in Höhe der [[Trefferpunkte]] pro Stufe mal zwei.
  
 ### [[Resilienzpunkte]] pro Stufe
-Diese errechnen sich aus dem Basiswert 3 plus eventueller Boni aus [[Abstammungen|Abstammung]], [[_Klassen|Klasse]], [[Subklassen|Subklasse]], [[Entschlossenheit]], etc.
+Diese errechnen sich aus dem Basiswert der [[Klassen|Klasse]] plus eventueller Boni aus [[Abstammungen|Abstammung]], [[Subklassen|Subklasse]], [[Entschlossenheit]] geteilt durch 2 (abgerundet), etc.
 
 ### Maximale [[Resilienzpunkte]] 
 Auf Stufe 1 erhältst du maximale [[Resilienzpunkte]] in Höhe der [[Resilienzpunkte]] pro Stufe mal zwei.
 
-
-
 ## 4. Ausrüstung & Geld
-Helden beginnen auf Stufe 1 mit der für ihre [[Klasse]] und ihren [[Hintergründe|Hintergrund]] vorgeschriebenen Ausrüstung oder mit **50 GM**, um ihre Startausrüstung zu kaufen. 
+Helden beginnen auf Stufe 1 mit der für ihre [[Klassen|Klasse]] und ihren [[Hintergründe|Hintergrund]] vorgeschriebenen Ausrüstung oder mit **50 GM**, um ihre Startausrüstung zu kaufen. 
 Wenn du auf höherer Stufe beginnst, multipliziere den Betrag mit deiner Startstufe.
 
 > [!faq]- Aber mein Charakter ist ein wohlhabender Adliger!  
@@ -91,18 +89,15 @@ Jeder Punkt in [[Verstand|VS]] gewährt eine weitere bekannte [[
 > Die Sprache einer anderen Kreatur zu sprechen kann Türen öffnen, die Waffen nicht können – wer bewaffnet ist, aber nicht kommunizieren kann, führt oft zum Kampf.
 
 ## 6. Weitere Fähigkeiten
-Trage besondere Fähigkeiten ein, die du durch [[Klasse]], [[Abstammungen|Abstammung]], [[Hintergründe|Hintergrund]] oder ähnliche Quellen erhältst.
+Trage besondere Fähigkeiten ein, die du durch [[Klassen|Klasse]], [[Abstammungen|Abstammung]], [[Hintergründe|Hintergrund]] oder ähnliche Quellen erhältst.
 
-## 7. Inventarplätze
-Jeder Held hat **10 + [[Stärke|ST]]** [[Inventarplätze]] für Ausrüstung und Beute (getragen, angelegt oder verpackt).  
-* 1 Platz fasst eine einhändige Waffe, Schild, getragene Rüstung, Speerbündel, 500 GM oder 2 Tränke.  
-* 2 Plätze fassen eine zweihändige Waffe, nicht getragene Rüstung oder ähnlich große Gegenstände.  
-* Kleine zusammengehörige Dinge können in einem Slot gebündelt werden (z. B. Campingausrüstung: Seife, Decke, Bürste, Rationen).
+## 7. Inventar
+Jeder Held trägt ein [[Gepäck]] und bis zu 6 [[Schnellzugriff|Schnellzugriffsbehälter]].
+[[Gepäck]] fasst 15 + [[Stärke|ST]] x 2 Plätze. Werden mehr Plätze belegt, ist der Charakter [[Belastet]].
+Jeder [[Schnellzugriff|Schnellzugriffsbehälter]] fasst 1 Platz der [[Gegenstandsgrößen|Gegenstandsgröße]] Klein.
+Wie viele Plätze ein Gegenstand braucht, bestimmt seine [[Gegenstandsgrößen|Gegenstandsgröße]].
 
 > [!tip]- Über Munition  
 > In den meisten Spielen musst du Munition nicht genau verfolgen. 
 > Wenn du einen Köcher hast, hast du genug Pfeile. 
 > Man geht davon aus, dass der Held Pfeile einsammelt, herstellt oder in einer Stadt nachkauft.
-
-Alternativ kann der SL dir erlauben, alles zu tragen, was plausibel ist, ohne das genaue Buchführen.
-- [ ] Inventar auslösen  [priority:: medium]

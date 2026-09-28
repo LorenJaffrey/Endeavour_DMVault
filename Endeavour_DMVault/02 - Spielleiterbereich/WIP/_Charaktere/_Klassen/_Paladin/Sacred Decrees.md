@@ -1,32 +1,32 @@
-**Blinding Aura**
-(1/Safe Rest) Action: Enemies in your aura are Blinded until the end of their next turn.
+**Blendende Aura**
+(1/Sichere Rast) Aktion: Gegner in deiner Aura sind bis zum Ende ihres nächsten Zugs Blind.
 
-**Courage!**
-(1/encounter) When you or an ally in your aura would drop to 0 HP, set their HP to 1 instead.
+**Mut!**
+(1/Kampf) Wenn du oder ein Verbündeter in deiner Aura auf 0 TP fallen würde, setze die TP stattdessen auf 1.
 
-**Explosive Judgment**
-(1/encounter) 2 actions: Expend your Judgment Dice, deal that much radiant damage to all enemies in your aura.
+**Explosives Urteil**
+(1/Kampf) 2 Aktionen: Verbrauche deine Urteilswürfel und verursache so viel Lichtschaden an allen Gegnern in deiner Aura.
 
-**Improved Aura**
-+2 aura Reach.
+**Verbesserte Aura**
++2 Reichweite der Aura.
 
-**Radiant Aura**
-Action: End any single harmful condition or effect on yourself or another willing creature within your aura. You may use this ability WIL times/Safe Rest.
+**Lichtaura**
+Aktion: Beende einen einzelnen schädlichen Zustand oder Effekt bei dir selbst oder einer anderen willigen Kreatur innerhalb deiner Aura. Du kannst diese Fähigkeit WIL mal pro Sicherer Rast einsetzen.
 
-> [!tip]- Harmful Conditions
-> Ending “Dying” grants 1 HP, ending “Dazed” grants 1 action, etc.
+> [!tip]- Schädliche Zustände
+> Das Beenden von „Sterbend“ gewährt 1 TP, das Beenden von „Benommen“ gewährt 1 Aktion, usw.
 
-**Reliable Justice**
-Whenever you roll Judgment Dice, roll with advantage (roll one extra and drop the lowest).
+**Zuverlässige Gerechtigkeit**
+Wenn du Urteilswürfel wirfst, wirf mit Vorteil (wirf einen zusätzlichen Würfel und verwerfe den niedrigsten).
 
-**Shining Mandate**
-The first time each round you are attacked while you already have Judgment Dice, select an ally within your aura to roll one and apply it to their next attack. You have advantage on skill checks to see through illusions.
+**Strahlendes Mandat**
+Das erste Mal in jeder Runde, in der du angegriffen wirst, während du bereits Urteilswürfel hast, wähle einen Verbündeten innerhalb deiner Aura, der einen davon wirft und auf seinen nächsten Angriff anwendet. Du hast Vorteil auf Fertigkeitsproben, um Illusionen zu durchschauen.
 
-**Stand Fast, Friends!**
-When you roll Initiative, grant allies temp HP equal to your STR+WIL. You and allies within your aura have advantage against fear and effects that would move or knock Prone.
+**Steht fest, Freunde!**
+Wenn du Initiative würfelst, gewähre Verbündeten temporäre TP in Höhe von STR+WIL. Du und Verbündete in deiner Aura haben Vorteil gegen Furcht und Effekte, die euch bewegen oder Liegend zu Boden werfen würden.
 
-**Unstoppable Protector**
-Gain +1 speed. You may Interpose even if you are restrained, stunned, or otherwise incapacitated. If you Interpose for a non-combatant NPC, you may Interpose again this round.
+**Unaufhaltsamer Schützer**
+Erhalte +1 Bewegung. Du kannst Einschreiten, selbst wenn du Festgesetzt, Betäubt oder anderweitig Kampfunfähig bist. Wenn du für einen am Kampf unbeteiligten NSC einschreitest, kannst du in dieser Runde erneut Einschreiten.
 
-**Well Armored**
-Whenever you Interpose, gain temp HP equal to your STR.
+**Gut gerüstet**
+Wenn du Einschreitest, erhalte temporäre TP in Höhe deiner STR.

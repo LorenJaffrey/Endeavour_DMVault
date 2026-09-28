@@ -13,7 +13,8 @@
       "canonicalText": "Als nächstes müssen wir die Kern TP und RP für die einzelnen Klassen definieren.",
       "images": [],
       "contentDigest": "84dc40b6f2dcd7471a9d7bd515e767488e540e388cb12f148ff163e19a648bf7",
-      "providerUserMessageId": "4b4d60e5-7d69-41e4-a97c-f28e6477442e"
+      "providerUserMessageId": "4b4d60e5-7d69-41e4-a97c-f28e6477442e",
+      "providerAssistantMessageId": "bbbcd503-ada4-4121-972c-1a602e63e108"
     },
     {
       "schemaVersion": 1,
@@ -154,6 +155,76 @@
       "contentDigest": "ed330e4a6b98cfbd621b12c5eec63f500bb2481337a05ef4e3b4cc8b69f52ee0",
       "providerUserMessageId": "d3cfb5e7-083c-42ef-8805-bddd37519744",
       "providerAssistantMessageId": "e9ff1f42-37fa-468d-9931-0cc2fc44bc0c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790631055492-a858jba",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1790631055478-aj228t0",
+      "timestamp": 1790631055478,
+      "rawDisplayText": "Ja bitte auch @02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md auf das neue System bringen",
+      "canonicalText": "Ja bitte auch @02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md auf das neue System bringen",
+      "images": [],
+      "contentDigest": "f0976e8abbb6e5a0bae7fa8e37dca9a257a3aadb5c8137fe67b52205d2eabd0b",
+      "providerUserMessageId": "c3aa32bf-2112-4db5-93f0-fe0f190316f2",
+      "providerAssistantMessageId": "f9498a1e-8104-4ca6-b443-86cabffe8972"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790631758588-ouabf2m",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1790631758585-md0vnnz",
+      "timestamp": 1790631758585,
+      "rawDisplayText": "Übersetze bitte die englischen Texte in den Files der einzelnen Klassen in @01 - Spielerbereich/Charaktere/Klassen/",
+      "canonicalText": "Übersetze bitte die englischen Texte in den Files der einzelnen Klassen in @01 - Spielerbereich/Charaktere/Klassen/",
+      "images": [],
+      "contentDigest": "bb3474933189dc68e3620c6febb76b288b24361125be288b2c1f12726731ca7c",
+      "providerUserMessageId": "e6acd7d2-22c9-4775-aae9-fb2e4452373c",
+      "providerAssistantMessageId": "18e08ed5-9c53-4278-a043-a8ceaa1ab514"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790632532158-63f7q85",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1790632532155-k7xhskd",
+      "timestamp": 1790632532155,
+      "rawDisplayText": "Checke ob die Infos aus @02 - Spielleiterbereich/WIP/_Charaktere/Einen Charakter erstellen.md noch zu unseren Regeln passen und korrigiere nach Bedarf",
+      "canonicalText": "Checke ob die Infos aus @02 - Spielleiterbereich/WIP/_Charaktere/Einen Charakter erstellen.md noch zu unseren Regeln passen und korrigiere nach Bedarf",
+      "images": [],
+      "contentDigest": "fb4594c847b98c3afdfd1d68e80801af00e23fad1bef239e8393b92f9efa6dc2",
+      "providerUserMessageId": "6432a419-59d2-44aa-b92f-63e34b43df4c",
+      "providerAssistantMessageId": "e947f165-33bc-4b1a-b847-a1a42bea47b1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790632723729-o2wxv3n",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1790632723726-ejsdib3",
+      "timestamp": 1790632723726,
+      "rawDisplayText": "Passen die Inventarregeln auch mit den neuen Regeln zusammen?",
+      "canonicalText": "Passen die Inventarregeln auch mit den neuen Regeln zusammen?",
+      "images": [],
+      "contentDigest": "030ecfc2f6bd8be58466a2f74bacc838984c66859ccf96f602d270b25bd9ea6a",
+      "providerUserMessageId": "3847f877-ce81-464a-98e0-5681257ee6e7",
+      "providerAssistantMessageId": "6703dc99-51aa-4114-a656-e9f928cc893a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790633094721-hetuetc",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1790633094717-5st2qtq",
+      "timestamp": 1790633094717,
+      "rawDisplayText": "Checke den Ordner @02 - Spielleiterbereich/WIP/_Charaktere/Sprachen/ \nGibt es irgendwas, das unserem neuen System entgegenwirkt oder widerspricht?",
+      "canonicalText": "Checke den Ordner @02 - Spielleiterbereich/WIP/_Charaktere/Sprachen/ \nGibt es irgendwas, das unserem neuen System entgegenwirkt oder widerspricht?",
+      "images": [],
+      "contentDigest": "540a3306839e33e1220610fbb4ebb34820d62ab7c13e18fc8748137a7cc2f10a",
+      "providerUserMessageId": "3920f9d1-38ab-4eae-8b45-2eb954ac65a3",
+      "providerAssistantMessageId": "a88a91b7-a02f-4164-bd90-56c4a60a5da2"
     }
   ]
 }

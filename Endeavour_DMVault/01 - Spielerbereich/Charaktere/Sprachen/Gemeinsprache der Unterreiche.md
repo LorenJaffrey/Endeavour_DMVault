@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sprache/Exotisch
+  - Regeln/Endeavour/Sprache/Exotisch
 Ursprung: Das Unterreich
 Schrift: "[[Elfisch]]"
 ---

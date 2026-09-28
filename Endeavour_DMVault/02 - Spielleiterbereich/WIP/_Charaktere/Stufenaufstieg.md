@@ -8,8 +8,8 @@ Auf Stufe 1 kann das so einfach sein wie das Säubern eines Kellers von wütende
 Jede folgende Stufe erfordert in der Regel mehr Aufwand (und daher mehr Zeit). 
 
 Wenn ein Held eine Stufe erhält:
-- **TP‑Erhöhung.** Würfle deinen [[Trefferwürfel]] mit [[Vorteil und Nachteil|Vorteil]] und erhöhe deine maximalen [[Trefferpunkte|TP]] um diesen Wert.
-- **Mehr Ausdauer.** Deine maximalen [[Trefferwürfel]] erhöhen sich um 1 (sie entsprechen in der Regel deiner [[Stufe]]).
+- **TP‑Erhöhung.** Erhöhe deine maximalen [[Trefferpunkte|TP]] um deine BasisTP aus Klasse und Subklasse plus deinen [[Konstitution]]-Wert.
+- **RP‑Erhöhung.** Erhöhe deine maximalen [[Resilienzpunkte|RP]] um deine BasisRP aus Klasse und Subklasse plus deinen [[Entschlossenheit]]-Wert geteilt durch 2, abgerundet.
 - **Mehr Expertise.** Erhalte 2 [[Fertigkeiten|Fertigkeitspunkte]].
   Diese Punkte müssen auf unterschiedliche [[Fertigkeiten]] verteilt werden.
   Es sollte sich um Fertigkeiten handeln die seit dem letzten [[Stufenaufstieg]] benutzt wurden oder anderweitig Sinn ergeben (spricht mit dem [[Spielleiter]]).

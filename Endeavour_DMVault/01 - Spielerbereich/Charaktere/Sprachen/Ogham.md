@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sprache/Sonstige
+  - Regeln/Endeavour/Sprache/Sonstige
 Ursprung: "[[Druide DnD|Druiden]]"
 ---
 # `=this.file.name`

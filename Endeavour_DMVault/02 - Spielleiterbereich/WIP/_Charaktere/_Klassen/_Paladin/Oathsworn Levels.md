@@ -1,147 +1,147 @@
-**Key Stats:** STR, WIL
-**Hit Die:** 1d10
-**Starting HP:** 17
-**Saves:** STR+, DEX-
-**Armor:** All Armor
-**Weapons:** STR Weapons
-**Starting Gear:** Mace, Rusty Mail, Wooden Buckler, Manacles
+**Schlüsselwerte:** STR, WIL
+**Trefferwürfel:** 1d10
+**Start-TP:** 17
+**Rettungswürfe:** STR+, DEX-
+**Rüstung:** Alle Rüstungen
+**Waffen:** STR-Waffen
+**Startausrüstung:** Streitkolben, Rostiges Kettenhemd, Holzschild, Fesseln
 
 ---
-# Levels
-### Level 1
-**Radiant Judgment**
-Whenever an enemy attacks you, if you have no Judgment Dice, roll your Judgment dice (2d6). On your next melee attack this encounter, if you hit, deal that much additional radiant damage. The dice are expended whether you hit or miss.
+# Stufen
+### Stufe 1
+**Lichturteil**
+Wenn dich ein Gegner angreift und du keine Urteilswürfel hast, wirf deine Urteilswürfel (2W6). Wenn dein nächster Nahkampfangriff in diesem Kampf trifft, verursache zusätzlich so viel Lichtschaden. Die Würfel werden verbraucht, egal ob du triffst oder verfehlst.
 
-**Lay on Hands**
-Gain a magical pool of healing power. This pool’s maximum is always equal to 5×LVL and recharges on a Safe Rest. Action: Touch a target and spend any amount of remaining healing power to restore that many HP.
-### Level 2
-**Mana and Radiant Spellcasting**
-You know Radiant cantrips, tier 1 Radiant spells, and gain a mana pool. Your mana pool is equal to WIL + LVL and recharges on a Safe Rest.
+**Handauflegen**
+Erhalte einen magischen Vorrat an Heilkraft. Das Maximum dieses Vorrats entspricht immer 5×STU und regeneriert sich bei einer Sicheren Rast. Aktion: Berühre ein Ziel und gib eine beliebige Menge deiner verbleibenden Heilkraft aus, um so viele TP wiederherzustellen.
+### Stufe 2
+**Mana und Lichtzauberei**
+Du kennst Lichtzaubertricks und Grad-1-Lichtzauber und erhältst einen Manavorrat. Dein Manavorrat entspricht WIL + STU und regeneriert sich bei einer Sicheren Rast.
 
-**Zealot**
-Whenever you attack with a melee weapon, you may spend mana (up to your highest unlocked spell tier) to choose one for each mana spent:
-* **Condemning Strike.** Deal +5 radiant damage.
-* **Blessed Aim.** Decrease your target's armor by 1 step for this attack.
+**Fanatiker**
+Wenn du mit einer Nahkampfwaffe angreifst, kannst du Mana ausgeben (bis zu deinem höchsten freigeschalteten Zaubergrad), um pro ausgegebenem Mana eine der folgenden Optionen zu wählen:
+* **Verurteilender Schlag.** Verursache +5 Lichtschaden.
+* **Gesegnetes Zielen.** Verringere die Rüstung deines Ziels für diesen Angriff um 1 Stufe.
 
-**Paragon of Virtue**
-Advantage on Influence checks to convince someone when you are forthrightly telling the truth, disadvantage when misleading.
-### Level 3
-**Subclass**
-Commit yourself to an Oath and gain its benefits.
+**Musterbild der Tugend**
+Vorteil auf Einflussproben, um jemanden zu überzeugen, wenn du dabei aufrichtig die Wahrheit sagst. Nachteil, wenn du dabei täuschst.
+### Stufe 3
+**Unterklasse**
+Verpflichte dich einem Eid und erhalte dessen Vorteile.
 
-**Radiant Judgment (2)**
-Your Judgment Dice are d8s.
+**Lichturteil (2)**
+Deine Urteilswürfel sind W8.
 
-**Sacred Decree**
-Learn 1 Sacred Decree.
+**Heiliges Dekret**
+Lerne 1 Heiliges Dekret.
 
-> [!tip]- Serve Selflessly
-> Whenever you perform a notable selfless act during a Safe Rest, you may choose different Oathsworn options available to you.
-### Level 4
-**My Life, for My Friends**
-You can Interpose for free.
+> [!tip]- Selbstlos dienen
+> Wenn du während einer Sicheren Rast eine bemerkenswert selbstlose Tat vollbringst, kannst du andere dir zur Verfügung stehende Eidgebunden-Optionen wählen.
+### Stufe 4
+**Mein Leben für meine Freunde**
+Du kannst kostenlos Einschreiten.
 
-**Tier 2 Spells**
-You may now cast tier 2 spells and upcast spells at tier 2.
+**Grad-2-Zauber**
+Du kannst nun Grad-2-Zauber wirken und Zauber auf Grad 2 hochstufen.
 
-**Key Stat Increase**
-+1 STR or WIL.
-### Level 5
-**Radiant Judgment (3)**
-Your Judgment Dice are d10s.
+**Schlüsselwert-Erhöhung**
++1 STR oder WIL.
+### Stufe 5
+**Lichturteil (3)**
+Deine Urteilswürfel sind W10.
 
-**Upgraded Cantrips**
-Your cantrips grow stronger.
+**Verbesserte Zaubertricks**
+Deine Zaubertricks werden stärker.
 
-**Secondary Stat Increase**
-+1 DEX or INT.
-### Level 6
-**Tier 3 Spells**
-You may now cast tier 3 spells and upcast spells at tier 3.
+**Sekundärwert-Erhöhung**
++1 DEX oder INT.
+### Stufe 6
+**Grad-3-Zauber**
+Du kannst nun Grad-3-Zauber wirken und Zauber auf Grad 3 hochstufen.
 
-**Sacred Decree (2)**
-Learn a 2nd Sacred Decree.
-### Level 7
-**Subclass**
-Gain your Oathsworn subclass feature.
+**Heiliges Dekret (2)**
+Lerne ein 2. Heiliges Dekret.
+### Stufe 7
+**Unterklasse**
+Erhalte dein Eidgebunden-Unterklassenmerkmal.
 
-**Master of Radiance**
-Choose 1 Radiant Utility Spell.
-### Level 8
-**Tier 4 Spells**
-You may now cast tier 4 spells and upcast spells at tier 4.
+**Meister des Lichts**
+Wähle 1 Licht-Utility-Zauber.
+### Stufe 8
+**Grad-4-Zauber**
+Du kannst nun Grad-4-Zauber wirken und Zauber auf Grad 4 hochstufen.
 
-**Radiant Judgment (4)**
-Your Judgment Dice are d12s.
+**Lichturteil (4)**
+Deine Urteilswürfel sind W12.
 
-**Key Stat Increase**
-+1 STR or WIL.
-### Level 9
-**Sacred Decree (3)**
-Learn a 3rd Sacred Decree.
+**Schlüsselwert-Erhöhung**
++1 STR oder WIL.
+### Stufe 9
+**Heiliges Dekret (3)**
+Lerne ein 3. Heiliges Dekret.
 
-**Secondary Stat Increase**
-+1 DEX or INT.
-### Level 10
-**Tier 5 Spells**
-You may now cast tier 5 spells and upcast spells at tier 5.
+**Sekundärwert-Erhöhung**
++1 DEX oder INT.
+### Stufe 10
+**Grad-5-Zauber**
+Du kannst nun Grad-5-Zauber wirken und Zauber auf Grad 5 hochstufen.
 
-**Upgraded Cantrips**
-Your cantrips grow stronger.
+**Verbesserte Zaubertricks**
+Deine Zaubertricks werden stärker.
 
-**Radiant Judgment (5)**
-Your Judgment Dice are d20s.
-### Level 11
-**Subclass**
-Gain your Oathsworn subclass feature.
+**Lichturteil (5)**
+Deine Urteilswürfel sind W20.
+### Stufe 11
+**Unterklasse**
+Erhalte dein Eidgebunden-Unterklassenmerkmal.
 
-**Master of Radiance (2)**
-Choose a 2nd Radiant Utility Spell.
-### Level 12
-**Sacred Decree (4)**
-Learn a 4th Sacred Decree.
+**Meister des Lichts (2)**
+Wähle einen 2. Licht-Utility-Zauber.
+### Stufe 12
+**Heiliges Dekret (4)**
+Lerne ein 4. Heiliges Dekret.
 
-**Key Stat Increase**
-+1 STR or WIL.
-### Level 13
-**Tier 6 Spells**
-You may now cast tier 6 spells and upcast spells at tier 6.
+**Schlüsselwert-Erhöhung**
++1 STR oder WIL.
+### Stufe 13
+**Grad-6-Zauber**
+Du kannst nun Grad-6-Zauber wirken und Zauber auf Grad 6 hochstufen.
 
-**Secondary Stat Increase**
-+1 DEX or INT.
-### Level 14
-**Sacred Decree (5)**
-Learn a 5th Sacred Decree.
+**Sekundärwert-Erhöhung**
++1 DEX oder INT.
+### Stufe 14
+**Heiliges Dekret (5)**
+Lerne ein 5. Heiliges Dekret.
 
-**Radiant Judgment (6)**
-Whenever you roll Judgment Dice, roll 1 more.
-### Level 15
-**Subclass**
-Gain your Oathsworn subclass feature.
+**Lichturteil (6)**
+Wenn du Urteilswürfel wirfst, wirf 1 zusätzlichen.
+### Stufe 15
+**Unterklasse**
+Erhalte dein Eidgebunden-Unterklassenmerkmal.
 
-**Upgraded Cantrips**
-Your cantrips grow stronger.
-### Level 16
-**Sacred Decree (6)**
-Learn a 6th Sacred Decree.
+**Verbesserte Zaubertricks**
+Deine Zaubertricks werden stärker.
+### Stufe 16
+**Heiliges Dekret (6)**
+Lerne ein 6. Heiliges Dekret.
 
-**Key Stat Increase**
-+1 STR or WIL.
-### Level 17
-**Tier 7 Spells**
-You may now cast tier 7 spells and upcast spells at tier 7.
+**Schlüsselwert-Erhöhung**
++1 STR oder WIL.
+### Stufe 17
+**Grad-7-Zauber**
+Du kannst nun Grad-7-Zauber wirken und Zauber auf Grad 7 hochstufen.
 
-**Secondary Stat Increase**
-+1 DEX or INT.
-### Level 18
-**Unending Judgment**
-While you have no Judgment Dice, gain +5 damage to melee attacks.
-### Level 19
-**Epic Boon**
-Choose an Epic Boon.
-### Level 20
-**Glorious Paragon**
-+1 to any 2 of your stats. Defend for free whenever you Interpose.
+**Sekundärwert-Erhöhung**
++1 DEX oder INT.
+### Stufe 18
+**Endloses Urteil**
+Solange du keine Urteilswürfel hast, erhältst du +5 Schaden auf Nahkampfangriffe.
+### Stufe 19
+**Epischer Segen**
+Wähle einen Epischen Segen.
+### Stufe 20
+**Ruhmreiches Musterbild**
++1 auf 2 beliebige deiner Werte. Verteidige kostenlos, wann immer du Einschreitest.
 
-**Upgraded Cantrips**
-Your cantrips grow stronger.
+**Verbesserte Zaubertricks**
+Deine Zaubertricks werden stärker.

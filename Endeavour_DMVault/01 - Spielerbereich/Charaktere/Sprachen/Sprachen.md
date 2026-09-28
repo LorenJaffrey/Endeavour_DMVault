@@ -1,6 +1,6 @@
 ---
 tags:
-  - Regeln/Endeavour/WIP
+  - Regeln/Endeavour
 aliases:
   - Sprache
 ---

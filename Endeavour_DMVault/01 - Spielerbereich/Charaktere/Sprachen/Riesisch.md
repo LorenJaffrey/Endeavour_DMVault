@@ -2,7 +2,7 @@
 aliases:
   - Jotun
 tags:
-  - Sprache/Standard
+  - Regeln/Endeavour/Sprache/Standard
 Ursprung: "[[Riesen]]"
 Schrift: Zwergisch
 ---

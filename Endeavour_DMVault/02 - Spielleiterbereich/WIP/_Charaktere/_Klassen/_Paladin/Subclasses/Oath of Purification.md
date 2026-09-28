@@ -1,19 +1,19 @@
-*The purity of flame is akin to divinity,*
-*purging sin and sinners alike.*
+*Die Reinheit der Flamme kommt der Göttlichkeit gleich,*
+*sie reinigt Sünde und Sünder gleichermaßen.*
 
 ---
-### Level 3
-**Aura of Purity**
-Gain an aura with a Reach of 4. When an enemy within your aura crits you or an ally, that enemy gains Smoldering.
+### Stufe 3
+**Aura der Reinheit**
+Erhalte eine Aura mit einer Reichweite von 4. Wenn ein Gegner innerhalb deiner Aura dich oder einen Verbündeten kritisch trifft, erhält dieser Gegner Schwelend.
 
-**Holy Brand**
-You may change your radiant damage to fire at will, and vice versa. Your weapon counts as your spellcasting focus. Your melee attacks against Smoldering targets automatically crit, ending the condition.
-### Level 7
-**Scorching Defenses**
-When you Defend against a melee attack, the attacker takes KEY fire damage (ignoring armor).
-### Level 11
-**Blazing Vitality**
-When you heal with a spell or Lay on Hands, all enemies adjacent the healed target suffer fire damage equal to the amount healed (ignoring armor).
-### Level 15
-**Burning Crusade**
-(1/Safe Rest) Until the end of combat, you and all allies within your aura gain +KEY fire damage.
+**Heiliges Brandmal**
+Du kannst deinen Lichtschaden nach Belieben in Feuerschaden umwandeln und umgekehrt. Deine Waffe zählt als dein Zauberfokus. Deine Nahkampfangriffe gegen Schwelende Ziele sind automatisch Krits und beenden den Zustand.
+### Stufe 7
+**Sengende Verteidigung**
+Wenn du gegen einen Nahkampfangriff Verteidigst, erleidet der Angreifer KEY Feuerschaden (ignoriert Rüstung).
+### Stufe 11
+**Lodernde Vitalität**
+Wenn du mit einem Zauber oder Handauflegen heilst, erleiden alle Gegner neben dem geheilten Ziel Feuerschaden in Höhe der Heilung (ignoriert Rüstung).
+### Stufe 15
+**Brennender Kreuzzug**
+(1/Sichere Rast) Bis zum Ende des Kampfes erhalten du und alle Verbündeten innerhalb deiner Aura +KEY Feuerschaden.

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sprache/Selten
+  - Regeln/Endeavour/Sprache/Selten
 Ursprung: "[[Elementare]]"
 Schrift: Zwergisch
 ---

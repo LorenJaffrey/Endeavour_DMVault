@@ -47,7 +47,9 @@ Als [[Fluchwirker]] erwarten dich:
 ---
 
 ## Startausrüstung
-**Starting Gear:** Adventurer's Garb, Sickle, Shovel
+- Abenteurerkleidung
+- Sichel
+- [[Schaufel]]
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Sprache/Standard
+  - Regeln/Endeavour/Sprache/Standard
 Ursprung: "[[Goblinoide]]"
 Schrift: Zwergisch
 ---
