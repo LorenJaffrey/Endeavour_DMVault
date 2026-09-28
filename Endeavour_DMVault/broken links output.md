@@ -287,7 +287,6 @@ Don't forget that creating the file from here may create the file in the wrong d
 - [[Inspiration]] in [[Unsicher]]
 - [[Tiefe Wut]] in [[Berserker]]
 - [[Wunde]] in [[Unsterbliche Wut]]
-- [[Lyrical Weaponry & A “People” Person]] in [[Klassen]]
 - [[Meriähti]] in [[Monster Groups List (Nim+)]]
 - [[Sand Meriähti]] in [[Meria╠êhti]]
 - [[Burrowing Meriähti]] in [[Meria╠êhti]]
