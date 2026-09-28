@@ -1,6 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
+BasisTP: 4
+BasisRP: 2
 Kernattribute:
   - "[[Stärke]]"
   - "[[Entschlossenheit]]"
@@ -20,3 +22,11 @@ The mark of a true Oathsworn, however, is their willingness to lay down their li
 * **Defend with Devotion.** Shield your allies from harm and channel righteous judgment. The more you face evil, the more potent your strikes become.
 * **Divinely Protect.** Stand as a bastion of defense, safeguarding allies even from afar. Your presence brings justice to every corner of the realm.
 * **Shine as a Beacon of Virtue.** Mend wounds, discern truth from ill intent, and inspire others to embrace your noble cause with unwavering conviction.
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet

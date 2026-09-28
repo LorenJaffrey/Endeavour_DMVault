@@ -1,7 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
-Trefferwürfel: 6
+BasisTP: 2
+BasisRP: 2
 Kernattribute:
   - "[[Geschick]]"
   - "[[Verstand]]"
@@ -18,7 +19,6 @@ Rettungswürfe:
   Nachteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
     - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
-    - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"
 Beschreibung: Heimlicher, hinterhältiger, schmutzig kämpfender Schurke.
 ---
 # `=this.file.name`
@@ -42,9 +42,12 @@ Als [[Gauner]] kannst du:
 `$=dv.list(dv.current().Kernattribute)`
 
 ## Trefferpunkte
-[[Trefferwürfel]]: 1`="W" + this.Trefferwürfel` pro Stufe
-[[Trefferpunkte]] auf Stufe 1: `=this.Trefferwürfel` + [[Konstitution]]
-[[Trefferpunkte]] pro Stufenaufstieg: `$="```dice:1d" + dv.current().Trefferwürfel + "```"` (min. `=this.Trefferwürfel/2`) + [[Konstitution]]
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
 
 ## Waffen
 `$=dv.list(dv.current().Übung.Waffen)`

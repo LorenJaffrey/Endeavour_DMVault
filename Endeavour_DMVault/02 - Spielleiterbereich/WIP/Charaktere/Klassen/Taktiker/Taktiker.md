@@ -1,7 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
-Trefferwürfel: 10
+BasisTP: 2
+BasisRP: 2
 Kernattribute:
   - "[[Stärke]]"
   - "[[Konstitution]]"
@@ -18,6 +19,7 @@ Rettungswürfe:
     - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
   Nachteil:
     - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
+    - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
 Beschreibung: Ein Taktiker, Anführer und Waffenmeister.
 ---
 # `=this.file.name`
@@ -36,9 +38,12 @@ Kommandanten zeichnen sich aus durch:
 `$=dv.list(dv.current().Kernattribute)`
 
 ## Trefferpunkte
-[[Trefferwürfel]]: 1`="W" + this.Trefferwürfel` pro Stufe
-[[Trefferpunkte]] auf Stufe 1: `=this.Trefferwürfel` + [[Konstitution]]
-[[Trefferpunkte]] pro Stufenaufstieg: `$="```dice:1d" + dv.current().Trefferwürfel + "```"` (min. `=this.Trefferwürfel/2`) + [[Konstitution]]
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
 
 ## Waffen
 `$=dv.list(dv.current().Übung.Waffen)`

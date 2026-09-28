@@ -5,7 +5,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Kommandant/Befehl
+FROM #Regeln/Endeavour/Merkmal/Klasse/Kommandant/Befehl
 
 SORT file.name
 ```

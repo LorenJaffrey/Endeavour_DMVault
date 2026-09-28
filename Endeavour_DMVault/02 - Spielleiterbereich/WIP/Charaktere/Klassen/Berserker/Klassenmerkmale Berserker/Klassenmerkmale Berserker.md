@@ -9,7 +9,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Berserker
+FROM #Regeln/Endeavour/Merkmal/Klasse/Berserker
 
 SORT file.name
 ```

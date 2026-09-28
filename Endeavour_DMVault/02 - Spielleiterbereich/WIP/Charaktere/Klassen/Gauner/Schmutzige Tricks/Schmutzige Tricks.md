@@ -10,7 +10,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Gauner/Schmutzige_Tricks
+FROM #Regeln/Endeavour/Merkmal/Klasse/Gauner/Schmutzige_Tricks
 
 SORT file.name
 ```

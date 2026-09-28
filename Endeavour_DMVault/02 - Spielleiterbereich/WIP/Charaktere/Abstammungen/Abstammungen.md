@@ -34,7 +34,7 @@ Größenkategorie,
 Bewegungsrate,
 Vorkommen
 
-FROM #Regeln/Nimble/Charakter/Abstammung
+FROM #Regeln/Endeavour/Charakter/Abstammung
 
 SORT file.name
 ```

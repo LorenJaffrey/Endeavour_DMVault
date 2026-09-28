@@ -1,7 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse/WIP
-Trefferwürfel: 8
+BasisTP: 2
+BasisRP: 1
 Kernattribute:
   - "[[Beweglichkeit]]"
   - "[[Entschlossenheit]]"
@@ -14,8 +15,7 @@ Rettungswürfe:
     - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
     - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"
   Nachteil:
-    - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
-    - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
+    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
     - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
 Beschreibung: Ein disziplinierter Kampfkünstler mit schnellen Händen und schnellen Füßen.
 ---
@@ -36,31 +36,39 @@ Der [[Mönch]] ist:
 [[embed Klasse]]
 ```
 
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
+
 ---
 
 ## Klassentabelle
 | Stufe |                 Schnelle Fäuste | Flinke Füße | Initiative | Entschlossenheit | Merkmale                                                                           |
 | -----:| -------------------------------:| -----------:| ----------:| ----------------:| ---------------------------------------------------------------------------------- |
-|     1 |  1W4 + [[Beweglichkeit\|GE]] |           - |          - |                1 | [[Schnelle Fäuste]], [[Instinktives Ausweichen]]                                   |
-|     2 |  1W4 + [[Beweglichkeit\|GE]] |          +1 |          1 |                1 | [[Ungerüstete Bewegung]], [[Fokuspunkte]], [[Schnelle Reflexe]]                    |
-|     3 |  1W4 + [[Beweglichkeit\|GE]] |          +1 |          2 |                1 | [[Subklassen Mönch\|Mönch Subklasse]]    [[Kinetischer Schwung]]         |
-|     4 |  1W4 + [[Beweglichkeit\|GE]] |          +1 |          2 |                1 | [[Primäre Attributswerterhöhung]], [[Kampfkunst]], [[Unbeugsame Entschlossenheit]] |
-|     5 |  1W4 + [[Beweglichkeit\|GE]] |          +1 |          3 |                1 | [[Sekundäre Attributswerterhöhung]], [[Betäubender Schlag]]                        |
-|     6 |  1W6 + [[Beweglichkeit\|GE]] |          +2 |          3 |                1 | [[Kampfkunst]], [[Sturz abfedern]]                                                 |
-|     7 |  1W6 + [[Beweglichkeit\|GE]] |          +2 |          4 |                1 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
-|     8 |  1W6 + [[Beweglichkeit\|GE]] |          +2 |          4 |                1 | [[Primäre Attributswerterhöhung]],[[Kampfkunst]]                                   |
-|     9 |  1W6 + [[Beweglichkeit\|GE]] |          +2 |          5 |                1 | [[Sekundäre Attributswerterhöhung]], [[Ki-verstärkte Schläge]]                     |
-|    10 |  1W8 + [[Beweglichkeit\|GE]] |          +2 |          5 |                2 | [[Kampfkunst]]                                                                    |
-|    11 |  1W8 + [[Beweglichkeit\|GE]] |          +3 |          6 |                2 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
-|    12 |  1W8 + [[Beweglichkeit\|GE]] |          +3 |          6 |                2 | [[Primäre Attributswerterhöhung]],[[Kampfkunst]]                                   |
-|    13 |  1W8 + [[Beweglichkeit\|GE]] |          +3 |          7 |                2 | [[Sekundäre Attributswerterhöhung]]                                                |
-|    14 | 1W10 + [[Beweglichkeit\|GE]] |          +3 |          7 |                2 | [[Kampfkunst]]                                                                     |
-|    15 | 1W10 + [[Beweglichkeit\|GE]] |          +3 |          8 |                2 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
-|    16 | 1W10 + [[Beweglichkeit\|GE]] |          +4 |          8 |                2 | [[Primäre Attributswerterhöhung]], [[Kampfkunst]]                                  |
-|    17 | 1W10 + [[Beweglichkeit\|GE]] |          +4 |          9 |                2 | [[Sekundäre Attributswerterhöhung]]                                                |
-|    18 | 1W12 + [[Beweglichkeit\|GE]] |          +4 |          9 |                2 | [[Kampfkunst]]                                                                     |
-|    19 | 1W12 + [[Beweglichkeit\|GE]] |          +4 |         10 |                2 | [[_Boons#EPIC Boons]]                                                               |
-|    20 | 1W12 + [[Beweglichkeit\|GE]] |          +4 |         10 |                2 | [[Windgeboren]]                                                                    |
+|     1 |  1W4 + [[Geschick\|GE]] |           - |          - |                1 | [[Schnelle Fäuste]], [[Instinktives Ausweichen]]                                   |
+|     2 |  1W4 + [[Geschick\|GE]] |          +1 |          1 |                1 | [[Ungerüstete Bewegung]], [[Fokuspunkte]], [[Schnelle Reflexe]]                    |
+|     3 |  1W4 + [[Geschick\|GE]] |          +1 |          2 |                1 | [[Subklassen Mönch\|Mönch Subklasse]]    [[Kinetischer Schwung]]         |
+|     4 |  1W4 + [[Geschick\|GE]] |          +1 |          2 |                1 | [[Primäre Attributswerterhöhung]], [[Kampfkunst]], [[Unbeugsame Entschlossenheit]] |
+|     5 |  1W4 + [[Geschick\|GE]] |          +1 |          3 |                1 | [[Sekundäre Attributswerterhöhung]], [[Betäubender Schlag]]                        |
+|     6 |  1W6 + [[Geschick\|GE]] |          +2 |          3 |                1 | [[Kampfkunst]], [[Sturz abfedern]]                                                 |
+|     7 |  1W6 + [[Geschick\|GE]] |          +2 |          4 |                1 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
+|     8 |  1W6 + [[Geschick\|GE]] |          +2 |          4 |                1 | [[Primäre Attributswerterhöhung]],[[Kampfkunst]]                                   |
+|     9 |  1W6 + [[Geschick\|GE]] |          +2 |          5 |                1 | [[Sekundäre Attributswerterhöhung]], [[Ki-verstärkte Schläge]]                     |
+|    10 |  1W8 + [[Geschick\|GE]] |          +2 |          5 |                2 | [[Kampfkunst]]                                                                    |
+|    11 |  1W8 + [[Geschick\|GE]] |          +3 |          6 |                2 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
+|    12 |  1W8 + [[Geschick\|GE]] |          +3 |          6 |                2 | [[Primäre Attributswerterhöhung]],[[Kampfkunst]]                                   |
+|    13 |  1W8 + [[Geschick\|GE]] |          +3 |          7 |                2 | [[Sekundäre Attributswerterhöhung]]                                                |
+|    14 | 1W10 + [[Geschick\|GE]] |          +3 |          7 |                2 | [[Kampfkunst]]                                                                     |
+|    15 | 1W10 + [[Geschick\|GE]] |          +3 |          8 |                2 | [[Subklassen Mönch\|Subklassen Merkmal]]                                      |
+|    16 | 1W10 + [[Geschick\|GE]] |          +4 |          8 |                2 | [[Primäre Attributswerterhöhung]], [[Kampfkunst]]                                  |
+|    17 | 1W10 + [[Geschick\|GE]] |          +4 |          9 |                2 | [[Sekundäre Attributswerterhöhung]]                                                |
+|    18 | 1W12 + [[Geschick\|GE]] |          +4 |          9 |                2 | [[Kampfkunst]]                                                                     |
+|    19 | 1W12 + [[Geschick\|GE]] |          +4 |         10 |                2 | [[_Boons#EPIC Boons]]                                                               |
+|    20 | 1W12 + [[Geschick\|GE]] |          +4 |         10 |                2 | [[Windgeboren]]                                                                    |
 
 
 **Waffen:** Nahkampf  

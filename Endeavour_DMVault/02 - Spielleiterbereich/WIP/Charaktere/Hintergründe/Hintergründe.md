@@ -27,7 +27,7 @@ TABLE WITHOUT ID
 
 file.link AS "Hintergrund"
 
-FROM #Regeln/Nimble/Charakter/Hintergrund
+FROM #Regeln/Endeavour/Charakter/Hintergrund
 
 SORT file.name
 ```

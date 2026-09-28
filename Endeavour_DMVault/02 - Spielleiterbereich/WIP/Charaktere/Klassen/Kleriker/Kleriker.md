@@ -1,6 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
+BasisTP: 2
+BasisRP: 0
 Kernattribute:
   - "[[Entschlossenheit]]"
   - "[[Instinkt]]"
@@ -10,7 +12,6 @@ Rettungswürfe:
     - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
   Nachteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
-    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
     - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
 ---
 # `=this.file.name`
@@ -21,6 +22,14 @@ For many, the journey of service is a difficult path—yet, in this task we are 
 
 * **Embrace the Balance.** Embody the forces of Life and Death, wielding spells from your chosen domains. As you walk the path of balance, ponder which way the scales shall tip: towards healing or harm?
 * **Lead a Faithful Companion.** Summon a Lifebinding spirit to your side, providing invaluable support in battle. Whether bolstering allies with healing or smiting foes with righteous fury, your spirit companion stands ready to aid in the struggle.
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
 
 ## Meins
 ### Einleitung

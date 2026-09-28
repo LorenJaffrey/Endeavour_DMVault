@@ -1,0 +1,23 @@
+{
+  "id": "conv-1790467642128-iszfwkpsu",
+  "providerId": "claude",
+  "title": "Definiere Kern TP und RP pro Klasse",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790467642131,
+  "updatedAt": 1790554698149,
+  "lastResponseAt": 1790554698149,
+  "sessionId": "9f082eae-a778-4fcf-9bf8-31ddc15d69bf",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "9f082eae-a778-4fcf-9bf8-31ddc15d69bf"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 4619,
+    "cacheReadInputTokens": 142427,
+    "contextWindow": 1000000,
+    "contextTokens": 147048,
+    "percentage": 15
+  }
+}

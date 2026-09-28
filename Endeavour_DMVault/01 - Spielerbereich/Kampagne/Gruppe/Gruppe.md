@@ -17,8 +17,8 @@ SORT file.name
 
 | Spieler | Klasse                    | Rolle   |
 | ------- | ------------------------- | ------- |
-| Frank   | Arkanist                  | Heiler  |
+| Frank   | [[Arkanist]]              | Heiler  |
 | Deekay  | Paladin/Krieger/Berserker | Tank/DD |
-| Sancho  | Mönch                     | DD      |
-| Tobi    | ??                        | ??      |
-| Michi   | Fluchwirker               |         |
+| Sancho  | [[Mönch]]                 | DD      |
+| Tobi    | [[Gauner]]                | DD      |
+| Michi   | [[Fluchwirker]]           | DD      |

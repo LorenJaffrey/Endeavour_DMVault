@@ -1,6 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
+BasisTP: 2
+BasisRP: 1
 Kernattribute:
   - "[[Konstitution]]"
   - "[[Instinkt]]"
@@ -11,7 +13,6 @@ Rettungswürfe:
   Nachteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
     - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
-    - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"
 ---
 # `=this.file.name`
 The trees whisper their excitement, the clouds sing with glee. Rejoice! The Master of Storm & Fang arrives. All who would seek passage through the ancient grove, heed this warning: Do not provoke the forest or its inhabitants. Beseech for passage humbly, even if its guardian is unseen, rest assured that you… are not.
@@ -23,3 +24,11 @@ Wanderers recount encounters with beings, some wise and benevolent, others fears
 * **Aid your allies** in whatever role is most needed.
 * **Wade into the fray** as a shapeshifted beast ranging from friendly to vicious, indomitable, or HORRIBLE.
 * **Cast powerful spells** from a distance to strike down, control, mend, and more.
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet

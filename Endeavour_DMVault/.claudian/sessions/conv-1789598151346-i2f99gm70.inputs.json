@@ -388,6 +388,215 @@
       "contentDigest": "d88877367ea58d23acaf729c430906c3e500708959323a9f56edd8a54ba40ece",
       "providerUserMessageId": "3cebf7c9-aff8-4c37-8184-d956c3342f74",
       "providerAssistantMessageId": "41651b30-fa7c-412d-a741-a99148b15c6c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790376762508-6ffeiqf",
+      "userTurnOrdinal": 27,
+      "state": "accepted",
+      "localMessageId": "msg-1790376762491-zvnx07f",
+      "timestamp": 1790376762491,
+      "rawDisplayText": "Taktiker bekommt Nachteil in Präsenz. Nun bitte alle Klassen entsprechend aktualisieren.",
+      "canonicalText": "Taktiker bekommt Nachteil in Präsenz. Nun bitte alle Klassen entsprechend aktualisieren.",
+      "images": [],
+      "contentDigest": "1c4f67f4d6b43da5d67bde8b8cf3a2ad2202edf8ce179408d5f31a9ea997e8a5",
+      "providerUserMessageId": "a35b9645-9eb3-4200-a4d0-c2f44caa921c",
+      "providerAssistantMessageId": "d96d3f92-0ffb-4559-9fbe-0c8b864afcf0"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790377474552-dtgm9wy",
+      "userTurnOrdinal": 28,
+      "state": "accepted",
+      "localMessageId": "msg-1790377474548-b6zpi4o",
+      "timestamp": 1790377474548,
+      "rawDisplayText": "Ein Problem sehe ich noch: Der Mönch hat als Nahkämpfer weder ST, noch GE als Kernattribut . Alle anderen Nahkämpfer haben ein passendes Attribut.",
+      "canonicalText": "Ein Problem sehe ich noch: Der Mönch hat als Nahkämpfer weder ST, noch GE als Kernattribut . Alle anderen Nahkämpfer haben ein passendes Attribut.",
+      "images": [],
+      "contentDigest": "4a530da5be03d4d98614a7c1d865ad759da1b5c80183f83f614f9e5ba5a2bc65",
+      "providerUserMessageId": "46a29ca9-6bb2-470b-854a-3dae6c771115",
+      "providerAssistantMessageId": "ab76122a-035b-413d-a52d-f83b62184b3b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790432852237-dnlai9s",
+      "userTurnOrdinal": 29,
+      "state": "accepted",
+      "localMessageId": "msg-1790432852232-telg3bz",
+      "timestamp": 1790432852232,
+      "rawDisplayText": "Die Änderung der Kernattribute auf BW und GE finde ich gut.\nIch überlege dem Trunkenen Meister dann lieber EN zu geben. Nach dem Motto \"Geist über Körper\". Ich finde die Kombination aus Ausweichen und Resilienzpunkten ganz spannend hier für einen Tank.\nBlieben die anderen beiden Subklassen noch offen.\n\nODER \n\nWir belassen die Kernattribute bei BW und EN, Trunkener Meister bekommen ST und GE als Kampfattribut dazu. Elementweber verursacht den Schaden und seine Effekte eher durch seine Fertigkeiten.\n\nWas findest du besser?",
+      "canonicalText": "Die Änderung der Kernattribute auf BW und GE finde ich gut.\nIch überlege dem Trunkenen Meister dann lieber EN zu geben. Nach dem Motto \"Geist über Körper\". Ich finde die Kombination aus Ausweichen und Resilienzpunkten ganz spannend hier für einen Tank.\nBlieben die anderen beiden Subklassen noch offen.\n\nODER \n\nWir belassen die Kernattribute bei BW und EN, Trunkener Meister bekommen ST und GE als Kampfattribut dazu. Elementweber verursacht den Schaden und seine Effekte eher durch seine Fertigkeiten.\n\nWas findest du besser?",
+      "images": [],
+      "contentDigest": "95012518898a7ad3440e53d9584640fc8dd70cf868095c18456f172260a515ba",
+      "providerUserMessageId": "be86e17a-f425-43f5-a2af-31c8d39ad997",
+      "providerAssistantMessageId": "fc10ffba-a776-4780-acae-215ceaced8e8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790436100235-yds60si",
+      "userTurnOrdinal": 30,
+      "state": "accepted",
+      "localMessageId": "msg-1790436100230-goovd38",
+      "timestamp": 1790436100230,
+      "rawDisplayText": "Nein das war anders gemeint. Ich korrigiere nochmal: \n\nDie Änderung der Kernattribute auf BW und GE finde ich gut.\nIch überlege dem Trunkenen Meister dann lieber EN zu geben. Nach dem Motto \"Geist über Körper\". Ich finde die Kombination aus Ausweichen und Resilienzpunkten ganz spannend hier für einen Tank.\nBlieben die anderen beiden Subklassen noch offen.\n\nODER\n\nWir belassen die Kernattribute bei BW und EN, Trunkener Meister und Eisenfaust bekommen ST und GE als Kampfattribut dazu. Elementweber verursacht den Schaden und seine Effekte eher durch seine Fertigkeiten.\n\nWas findest du besser?",
+      "canonicalText": "Nein das war anders gemeint. Ich korrigiere nochmal: \n\nDie Änderung der Kernattribute auf BW und GE finde ich gut.\nIch überlege dem Trunkenen Meister dann lieber EN zu geben. Nach dem Motto \"Geist über Körper\". Ich finde die Kombination aus Ausweichen und Resilienzpunkten ganz spannend hier für einen Tank.\nBlieben die anderen beiden Subklassen noch offen.\n\nODER\n\nWir belassen die Kernattribute bei BW und EN, Trunkener Meister und Eisenfaust bekommen ST und GE als Kampfattribut dazu. Elementweber verursacht den Schaden und seine Effekte eher durch seine Fertigkeiten.\n\nWas findest du besser?",
+      "images": [],
+      "contentDigest": "c05b344ff8a4abbebe1c175f69c5a34807b4f5b45d7a00bb0727e605b7aac3f2",
+      "providerUserMessageId": "8d086f23-71d7-4017-9ab0-0034d8fea612",
+      "providerAssistantMessageId": "20085c25-f086-4848-8dd0-3e90f37a7d1d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790439002794-827u8k0",
+      "userTurnOrdinal": 31,
+      "state": "accepted",
+      "localMessageId": "msg-1790439002790-rknquck",
+      "timestamp": 1790439002790,
+      "rawDisplayText": "Neuer Vorschlag: Kern wird BW und EN\nElementweber und Eisenfaust bekommen beide GE, Trunkener Meister bekommt ST.\nMerkmale und Fertigkeiten würden noch entsprechend überarbeitet.",
+      "canonicalText": "Neuer Vorschlag: Kern wird BW und EN\nElementweber und Eisenfaust bekommen beide GE, Trunkener Meister bekommt ST.\nMerkmale und Fertigkeiten würden noch entsprechend überarbeitet.",
+      "images": [],
+      "contentDigest": "b7b0d7e94b9b8f35c0bfdfc127fedb067c3c2c3363c757a5ae5036deee1cd68c",
+      "providerUserMessageId": "e699ab7d-c738-4ce9-9f03-2e58b125cfe3",
+      "providerAssistantMessageId": "4cae1441-4fc2-4a43-915d-808bbe4411cc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790439379691-xybc3fz",
+      "userTurnOrdinal": 32,
+      "state": "accepted",
+      "localMessageId": "msg-1790439379687-knlcnx1",
+      "timestamp": 1790439379687,
+      "rawDisplayText": "Oder machen wir lieber Trunkener Meister GE und Eisenfaust ST. \nIch glaube das würde die Subklassen unterschiedlicher machen. Vielleicht dann auch bewusst Eisenfaust auf Waffenlosen Kampf drillen und den Elementweber mit passenden Mönchswaffen?",
+      "canonicalText": "Oder machen wir lieber Trunkener Meister GE und Eisenfaust ST. \nIch glaube das würde die Subklassen unterschiedlicher machen. Vielleicht dann auch bewusst Eisenfaust auf Waffenlosen Kampf drillen und den Elementweber mit passenden Mönchswaffen?",
+      "images": [],
+      "contentDigest": "0519713978f146a6214210cccb772eb876e5b3ca58303dac6eee96a9d07c20d4",
+      "providerUserMessageId": "08a24fce-b6e3-4711-b3af-c44b47842ea5",
+      "providerAssistantMessageId": "6ac968a3-da27-46d5-8c60-5f2a7dbd9f9d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790461656326-3qlf7ih",
+      "userTurnOrdinal": 33,
+      "state": "accepted",
+      "localMessageId": "msg-1790461656309-qmx4725",
+      "timestamp": 1790461656309,
+      "rawDisplayText": "Ich habe noch ein paar weitere mögliche Optionen in @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md markiert und hätte gerne eine Einschätzung dazu.",
+      "canonicalText": "Ich habe noch ein paar weitere mögliche Optionen in @02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md markiert und hätte gerne eine Einschätzung dazu.",
+      "images": [],
+      "contentDigest": "231edc5afeb2447ca0042eb9f115288bd60d90a1a883105d8117ebd0f9ac1f06",
+      "providerUserMessageId": "6a637280-4cae-429a-a5dd-97c0aeeabe9e",
+      "providerAssistantMessageId": "ea695f21-84d0-4ce3-9d10-3da5ab9be655"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790464093033-sn9d53u",
+      "userTurnOrdinal": 34,
+      "state": "accepted",
+      "localMessageId": "msg-1790464093027-x6fgp91",
+      "timestamp": 1790464093027,
+      "rawDisplayText": "Gauner habe ich geändert. Wir tauschen Attentäter und Duellist. Gefällt mir so besser.\nNaturalist passt.\nFluchwirker hätte ich gerne EN für den Verderber. Er wird mehr Konzentration brauchen. Der Dämonenbinder soll mehr durch seine Pets machen. Was würde da passen?\nDie Blutgestalt sollte eher ein Nahkampf/Fernkampf Hybrid sein. Sollten wir da statt BW eher noch ST oder GE nehmen?\nArkanist behandeln wir im Anschluss separat",
+      "canonicalText": "Gauner habe ich geändert. Wir tauschen Attentäter und Duellist. Gefällt mir so besser.\nNaturalist passt.\nFluchwirker hätte ich gerne EN für den Verderber. Er wird mehr Konzentration brauchen. Der Dämonenbinder soll mehr durch seine Pets machen. Was würde da passen?\nDie Blutgestalt sollte eher ein Nahkampf/Fernkampf Hybrid sein. Sollten wir da statt BW eher noch ST oder GE nehmen?\nArkanist behandeln wir im Anschluss separat",
+      "images": [],
+      "contentDigest": "37c9cfe1dd645ca59015c3ab85404842c65865a6678a4ae12ba607547cfe35c2",
+      "providerUserMessageId": "8911c1f4-fe7f-4414-979f-e43ed8832219",
+      "providerAssistantMessageId": "c3cc7584-a9db-41d5-a93c-d33ea6ee9f11"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790465540957-43ti9ar",
+      "userTurnOrdinal": 35,
+      "state": "accepted",
+      "localMessageId": "msg-1790465540953-g0oqo23",
+      "timestamp": 1790465540953,
+      "rawDisplayText": "Nein das war schon genau das was die Blutgestalt sein soll: Ein Melee/Caster Hybrid.\nIch glaube hier sollte dann ein passendes Schadensattribut als drittes Kernattibut dienen.\nVielleicht wäre für den Beschwörer KO auch eine Option. Man könnte dadurch die Pets stärken oder sowas.",
+      "canonicalText": "Nein das war schon genau das was die Blutgestalt sein soll: Ein Melee/Caster Hybrid.\nIch glaube hier sollte dann ein passendes Schadensattribut als drittes Kernattibut dienen.\nVielleicht wäre für den Beschwörer KO auch eine Option. Man könnte dadurch die Pets stärken oder sowas.",
+      "images": [],
+      "contentDigest": "130277400e498e08c0a3b10a73aa24390952c265982bd1b8a8e835450645a24a",
+      "providerUserMessageId": "dfd4993c-7ea8-46e4-b5f8-ab78baa1261b",
+      "providerAssistantMessageId": "754afbb1-2bc3-4543-8383-c62a3810087f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790466465782-cgu1ilh",
+      "userTurnOrdinal": 36,
+      "state": "accepted",
+      "localMessageId": "msg-1790466465779-pqpe2kc",
+      "timestamp": 1790466465779,
+      "rawDisplayText": "Nein wir nehmen nicht ST für die Blutgestalt. Die Klasse soll durch ihre Fähigkeiten ihre Attribute temporär pushen. Das heißt aber nicht, dass diese durch Kern hoch sein müssen. Aber was würde dann passen?",
+      "canonicalText": "Nein wir nehmen nicht ST für die Blutgestalt. Die Klasse soll durch ihre Fähigkeiten ihre Attribute temporär pushen. Das heißt aber nicht, dass diese durch Kern hoch sein müssen. Aber was würde dann passen?",
+      "images": [],
+      "contentDigest": "9f6c0397489e7f72a1d2a1ef7749d92394c7b8a1112e3c26afb9b63ac29960d0",
+      "providerUserMessageId": "5564d240-c736-447c-a5a8-e20299c6ba1a",
+      "providerAssistantMessageId": "c11db804-d54a-4288-ba12-74d98de0e386"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790466612179-k3uxg3t",
+      "userTurnOrdinal": 37,
+      "state": "accepted",
+      "localMessageId": "msg-1790466612176-4u2ef3t",
+      "timestamp": 1790466612176,
+      "rawDisplayText": "Ja wir nehmen IN für Blutgestalt.\nWeiter mit dem Arkanisten.",
+      "canonicalText": "Ja wir nehmen IN für Blutgestalt.\nWeiter mit dem Arkanisten.",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+          "mode": "selection",
+          "selectedText": "A",
+          "lineCount": 1,
+          "startLine": 14
+        }
+      },
+      "images": [],
+      "contentDigest": "266c5b7cc7c93d268a115ee950b02e7607ed02fdb3ad506974d5f44ba41a4d5b",
+      "providerUserMessageId": "8d3944b0-6de6-478c-a892-f914769a0345",
+      "providerAssistantMessageId": "dc6db9a2-c31d-4c49-ab5b-6e79bf0a70ec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790467139169-vp0lugx",
+      "userTurnOrdinal": 38,
+      "state": "accepted",
+      "localMessageId": "msg-1790467139166-xq8r3ah",
+      "timestamp": 1790467139166,
+      "rawDisplayText": "Mir gefallen die sekundären Attribute irgendwie noch nicht.\nPR für den Chronomanten kann ich noch nachvollziehen.\nDie anderen beiden scheinen mir eher konstruiert.",
+      "canonicalText": "Mir gefallen die sekundären Attribute irgendwie noch nicht.\nPR für den Chronomanten kann ich noch nachvollziehen.\nDie anderen beiden scheinen mir eher konstruiert.",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+          "mode": "selection",
+          "selectedText": "A",
+          "lineCount": 1,
+          "startLine": 14
+        }
+      },
+      "images": [],
+      "contentDigest": "26f69c322a3e2a8fd19af9fe49adc426f5d7d91457860cc3aeeae24cb81fd222",
+      "providerUserMessageId": "0db99b87-0146-4169-9afc-dfc9f1e45ebb",
+      "providerAssistantMessageId": "6e45bd01-8404-46a9-b76f-4649515b081e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790467437308-m602y7s",
+      "userTurnOrdinal": 39,
+      "state": "accepted",
+      "localMessageId": "msg-1790467437305-uth8d7l",
+      "timestamp": 1790467437305,
+      "rawDisplayText": "GE würde ich auslassen. Dann lieber noch IN für beide. Die Subklassen sollen sich eher durch Mechaniken und Spells unterscheiden.",
+      "canonicalText": "GE würde ich auslassen. Dann lieber noch IN für beide. Die Subklassen sollen sich eher durch Mechaniken und Spells unterscheiden.",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/Charaktere/Klassen/_Key Stats.md",
+          "mode": "selection",
+          "selectedText": "A",
+          "lineCount": 1,
+          "startLine": 14
+        }
+      },
+      "images": [],
+      "contentDigest": "d7bf340e8bdb7b54c8bfb75ba5da97e80770ae7a06f3d8cbd601f9aa223c8e13",
+      "providerUserMessageId": "22e62783-2cec-459d-9aad-345c7a753ce2",
+      "providerAssistantMessageId": "459d2f88-866c-45cb-b44a-a2194fd5eea1"
     }
   ]
 }

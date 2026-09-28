@@ -15,7 +15,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Mönch/Geschwindigkeitsschub  
+FROM #Regeln/Endeavour/Merkmal/Klasse/Mönch/Geschwindigkeitsschub  
 
 SORT file.name
 ```

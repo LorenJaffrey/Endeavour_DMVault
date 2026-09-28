@@ -1,7 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
-Trefferwürfel: 6
+BasisTP: 2
+BasisRP: 0
 Kernattribute:
   - "[[Verstand]]"
   - "[[Entschlossenheit]]"
@@ -16,7 +17,6 @@ Rettungswürfe:
   Nachteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
     - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
-    - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
 Beschreibung: Beherrsche und forme die Elemente von Feuer, Eis und Blitz.﻿
 ---
 # `=this.file.name`
@@ -37,6 +37,14 @@ Was einen Arkanisten ausmacht:
 ```dynamic-embed
 [[embed Klasse]]
 ```
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
 
 ## Startausrüstung
 - [[Kampfstab]]

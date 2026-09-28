@@ -1,6 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
+BasisTP: 3
+BasisRP: 1
 Kernattribute:
   - "[[Geschick]]"
   - "[[Instinkt]]"
@@ -22,3 +24,11 @@ Hunters are:
 * **Relentless Trackers.** As an expert survivalist, you mark your prey, becoming a shadow in pursuit, relentless and precise.
 * **Masters of the Wild.** Harness the Thrill of the Hunt to outwit your targets—set decoys, spring traps, and strike with lethal efficiency.
 * **Deadly from Afar or Up Close.** Whether you’re raining arrows from a distance or closing in for a personal takedown, your prey won’t escape your reach.
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet

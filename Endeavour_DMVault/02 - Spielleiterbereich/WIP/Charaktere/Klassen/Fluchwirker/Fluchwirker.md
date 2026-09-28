@@ -1,7 +1,8 @@
 ---
 tags:
   - Regeln/Endeavour/Charakter/Klasse
-Trefferwürfel: 8
+BasisTP: 3
+BasisRP: 1
 Kernattribute:
   - "[[Verstand]]"
   - "[[Präsenz]]"
@@ -15,7 +16,6 @@ Rettungswürfe:
     - "[[Präsenzrettungswürfe|PR-Rettungswürfe]]"
   Nachteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"
-    - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"
     - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"
 Beschreibung: Beschwöre Horden opferbarer Diener.﻿
 ---
@@ -41,6 +41,14 @@ Als [[Fluchwirker]] erwarten dich:
 ```dynamic-embed
 [[embed Klasse]]
 ```
+
+## Trefferpunkte
+[[Trefferpunkte|TP]] auf Stufe 1: (`=this.BasisTP` + [[Konstitution]]) x 2
+[[Trefferpunkte|TP]] pro Stufenaufstieg: `=this.BasisTP` + [[Konstitution]]
+
+## Resilienzpunkte
+[[Resilienzpunkte|RP]] auf Stufe 1: (`=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet) x 2
+[[Resilienzpunkte|RP]] pro Stufenaufstieg: `=this.BasisRP` + [[Entschlossenheit]]/2 abgerundet
 
 **Starting Gear:** Adventurer's Garb, Sickle, Shovel
 

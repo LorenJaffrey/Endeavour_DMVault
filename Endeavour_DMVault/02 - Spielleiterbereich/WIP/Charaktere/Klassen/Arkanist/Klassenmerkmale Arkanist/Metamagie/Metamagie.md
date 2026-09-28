@@ -11,7 +11,7 @@ TABLE WITHOUT ID
 file.link AS "Title",
 Einsatz
 
-FROM #Regeln/Nimble/Merkmal/Klasse/Arkanist/Metamagie 
+FROM #Regeln/Endeavour/Merkmal/Klasse/Arkanist/Metamagie 
 
 SORT file.name
 ```
