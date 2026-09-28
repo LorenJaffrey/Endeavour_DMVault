@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -29,6 +29,16 @@
               },
               "icon": "lucide-file",
               "title": "Stufenaufstieg"
+            }
+          },
+          {
+            "id": "7c6b91815b042c1c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -236,6 +246,8 @@
   },
   "active": "fbb8bd4c44c7fc83",
   "lastOpenFiles": [
+    "02 - Spielleiterbereich/WIP/_Charaktere/Stufenaufstieg.md",
+    "02 - Spielleiterbereich/Systeme/Daggerheart/02-Spielablauf/Daggerheart - Stufenaufstieg.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Charakter Konzepte.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
@@ -260,8 +272,6 @@
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Berserker/_Ideensammlung Berserker.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Arkanist/_Ideensammlung Arkanist.md",
     "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten/Schilde.md",
-    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten/Schwere Rüstung.md",
-    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten/Mittelschwere Rüstung.md",
     "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungslisten",
     "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen",
     "01 - Spielerbereich/Gegenstände/Rüstung",

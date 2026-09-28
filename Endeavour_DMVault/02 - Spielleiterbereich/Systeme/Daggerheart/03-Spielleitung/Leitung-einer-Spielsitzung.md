@@ -325,7 +325,7 @@ Du kannst das Ganze aber auch auf eine dramatischere Weise angehen, überspringe
 
 Du kannst die Gruppe der SC jederzeit hochstufen, allerdings ist es meist am einfachsten, es am Ende einer wichtigen Spielsitzung zu machen, etwa wenn die SC das Ende eines Handlungsbogens erreichen (siehe [[Leitung-einer-Kampagne#Einen Handlungsbogen planen]]).
 Alle Spielenden sollten ihre Charaktere zur gleichen Zeit hochstufen und sich dabei von den Hinweisen auf ihrem Charaktermerkblatt leiten lassen.
-Bitte sie, darüber nachzudenken, was ihr Charakter im gerade beendeten Handlungsbogen gelernt hat und wie es ihn verändert haben könnte, dann sollen sie zwei Hochstufungsoptionen von ihrem Charaktermerkblatt auswählen (siehe [[../02-Spielablauf/Stufenaufstieg]]).
+Bitte sie, darüber nachzudenken, was ihr Charakter im gerade beendeten Handlungsbogen gelernt hat und wie es ihn verändert haben könnte, dann sollen sie zwei Hochstufungsoptionen von ihrem Charaktermerkblatt auswählen (siehe [[Daggerheart - Stufenaufstieg]]).
 
 Wenn die Spielrunde beschließt, dass die Geschichte ihrer Charaktere ihr Ende erreicht hat, aber die Kampagne weiterspielen möchte, dann unterbrecht das Spiel für eine neue Vorbereitungsrunde, um neue Charaktere zu erschaffen und euch zu überlegen, wie ihr diese neue Gruppe auf eine Weise, mit der alle einverstanden sind, in die bestehende Geschichte integrieren könnt.
 
