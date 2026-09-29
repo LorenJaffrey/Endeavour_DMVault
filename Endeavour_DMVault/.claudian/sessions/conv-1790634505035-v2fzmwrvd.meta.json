@@ -4,14 +4,13 @@
   "title": "Englische Paladin-Texte übersetzen",
   "titleGenerationStatus": "success",
   "createdAt": 1790634505037,
-  "updatedAt": 1790634741909,
+  "updatedAt": 1790724764797,
   "lastResponseAt": 1790634741909,
   "sessionId": "ac5cf3eb-5d6c-47cf-a806-a70159612ef5",
   "selectedModel": "sonnet",
   "providerState": {
     "providerSessionId": "ac5cf3eb-5d6c-47cf-a806-a70159612ef5"
   },
-  "currentNote": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/_Paladin.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
