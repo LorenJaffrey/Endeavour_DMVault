@@ -6,6 +6,11 @@ BasisRP: 0
 Kernattribute:
   - "[[Entschlossenheit]]"
   - "[[Instinkt]]"
+Übung:
+  Waffen:
+    - "[[Einfache Waffen]]"
+  Rüstungen:
+    - keine
 Rettungswürfe:
   Vorteil:
     - "[[Entschlossenheitsrettungswürfe|EN-Rettungswürfe]]"

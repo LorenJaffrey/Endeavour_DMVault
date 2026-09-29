@@ -6,6 +6,11 @@ BasisRP: 1
 Kernattribute:
   - "[[Konstitution]]"
   - "[[Instinkt]]"
+Übung:
+  Waffen:
+    - "[[Einfache Waffen]]"
+  Rüstungen:
+    - keine
 Rettungswürfe:
   Vorteil:
     - "[[Konstitutionsrettungswürfe|KO-Rettungswürfe]]"

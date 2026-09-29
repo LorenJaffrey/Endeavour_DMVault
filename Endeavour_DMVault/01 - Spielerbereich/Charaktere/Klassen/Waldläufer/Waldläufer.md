@@ -6,6 +6,11 @@ BasisRP: 1
 Kernattribute:
   - "[[Geschick]]"
   - "[[Instinkt]]"
+Übung:
+  Waffen:
+    - "[[Einfache Waffen]]"
+  Rüstungen:
+    - keine
 Rettungswürfe:
   Vorteil:
     - "[[Beweglichkeitsrettungswürfe|BW-Rettungswürfe]]"

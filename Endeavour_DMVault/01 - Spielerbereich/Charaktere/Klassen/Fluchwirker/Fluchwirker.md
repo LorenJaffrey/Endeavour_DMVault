@@ -10,6 +10,7 @@ Kernattribute:
   Waffen:
     - "[[Einfache Waffen]]"
   Rüstungen:
+    - keine
 Rettungswürfe:
   Vorteil:
     - "[[Verstandsrettungswürfe|VS-Rettungswürfe]]"

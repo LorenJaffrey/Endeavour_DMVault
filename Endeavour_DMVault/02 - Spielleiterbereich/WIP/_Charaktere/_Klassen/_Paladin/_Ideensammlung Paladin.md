@@ -4,7 +4,7 @@
 - Ressource
 
 ## Subklassen
-- ![[_Klassen#Arkanist]]
+- ![[_Klassen#Paladin]]
 
 ### Eid der Vergeltung
 - Nahkampf DD Fokus

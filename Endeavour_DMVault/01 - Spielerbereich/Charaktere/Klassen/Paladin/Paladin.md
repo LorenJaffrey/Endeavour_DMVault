@@ -6,6 +6,11 @@ BasisRP: 2
 Kernattribute:
   - "[[Stärke]]"
   - "[[Entschlossenheit]]"
+Übung:
+  Waffen:
+    - "[[Einfache Waffen]]"
+  Rüstungen:
+    - keine
 Rettungswürfe:
   Vorteil:
     - "[[Stärkerettungswürfe|ST-Rettungswürfe]]"

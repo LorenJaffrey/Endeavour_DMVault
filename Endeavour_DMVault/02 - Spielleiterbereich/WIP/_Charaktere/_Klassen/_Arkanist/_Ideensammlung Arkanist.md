@@ -7,7 +7,7 @@
 - ![[_Klassen#Arkanist]]
 
 ### Pyromant
-- neue Magieschule: Pyromantie (Feruerzauber)
+- neue Magieschule: Pyromantie (Feuerzauber)
 	- Crit-basiert
 	- Hoher Einzelschaden
 	- hauptsächlich Schadenszauber
