@@ -108,7 +108,12 @@
       "Bash(sed -i 's/\\\\[\\\\[Entschlossenheit|WE\\\\]\\\\]/[[Entschlossenheit|EN]]/' \"Klassenmerkmale Mönch/Fokuspunkte/Fokuspunkte.md\")",
       "Bash(git rm *)",
       "Bash(python3 -)",
-      "Bash(cat)"
+      "Bash(cat)",
+      "Read(//home/lorenjaffrey/02 - Spielleiterbereich/Vorlagen/**)",
+      "Bash(cd \"/home/lorenjaffrey/Dokumente/Repositories/Nimble_Obsidian/Endeavour_DMVault\"\ncd \"01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen\"\nset -l data \"Faustschild:1\" \"Holzschild:2\" \"Verstärkter Schild:3\" \"Turmschild:4\" \"Gambeson:3\" \"Lederrüstung:3\" \"Beschlagene Lederrüstung:3\" \"Fellrüstung:3\" \"Lamellenpanzer:4\" \"Schuppenpanzer:4\" \"Kettenhemd:4\" \"Brigantine:4\" \"Kettenrüstung:5\" \"Plattenrüstung:5\" \"Schienenpanzer:5\" \"Plattenharnisch:5\"\nfor d in $data\n  set p \\(string split : $d\\)\n  sed -i \"0,/^Gewicht:.*/s//&\\\\nPlaetze: $p[2]/\" \"$p[1].md\"\nend\ngrep -c \"^Plaetze\" *.md; head -12 Turmschild.md; cat \"../../../../02 - Spielleiterbereich/Vorlagen/Ausrüstung/Vorlage Rüstung.md\" | head -15)",
+      "Bash(cd \"/home/lorenjaffrey/Dokumente/Repositories/Nimble_Obsidian/Endeavour_DMVault/01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen\"\nfor d in \"Faustschild:1\" \"Holzschild:2\" \"Verstärkter Schild:3\" \"Turmschild:4\" \"Gambeson:3\" \"Lederrüstung:3\" \"Beschlagene Lederrüstung:3\" \"Fellrüstung:3\" \"Lamellenpanzer:4\" \"Schuppenpanzer:4\" \"Kettenhemd:4\" \"Brigantine:4\" \"Kettenrüstung:5\" \"Plattenrüstung:5\" \"Schienenpanzer:5\" \"Plattenharnisch:5\"; do\n  n=\"${d%%:*}\"; p=\"${d##*:}\"\n  grep -q \"^Plaetze\" \"$n.md\" || sed -i \"0,/^Gewicht:.*/s//&\\\\nPlaetze: $p/\" \"$n.md\"\ndone\ngrep -c \"^Plaetze\" *.md; head -12 Turmschild.md; grep -n \"Gewicht\" -A2 \"../../../../02 - Spielleiterbereich/Vorlagen/Ausrüstung/Vorlage Rüstung.md\")",
+      "Bash(sed -i 's/^Gewicht: X Pfund/&\\\\nPlaetze: X/' \"02 - Spielleiterbereich/Vorlagen/Ausrüstung/Vorlage Rüstung.md\")",
+      "Bash(sed -i 's/^Gewicht, $/Gewicht, \\\\nPlaetze AS \"Plätze\", /' \"01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen/Rüstungen.md\")"
     ]
   }
 }

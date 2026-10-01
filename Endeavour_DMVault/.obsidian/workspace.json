@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "74b2fee43fcec094",
+        "id": "ac1bf6e1c4ef775c",
         "type": "tabs",
         "children": [
           {
-            "id": "fbb8bd4c44c7fc83",
+            "id": "edcdb0303cd24a9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "_Mönch"
+              "title": "Schnelle Fäuste"
             }
           }
         ]
@@ -193,7 +193,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Sacred Decrees.md"
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -233,40 +233,40 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "fbb8bd4c44c7fc83",
+  "active": "263d1a2ac2e2271f",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Ideensammlung Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Fokuspunkte/Fokuspunkte.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki-verstärkte Schläge.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Kampfkunst/Kampfkunst.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Nachhallende Schläge.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Instinktive Parade.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Subklassen Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/_Kleriker.md",
-    "02 - Spielleiterbereich/Kampagne/Gruppe/Zusammentreffen.md",
-    "02 - Spielleiterbereich/Kampagne/Welt.md",
-    "02 - Spielleiterbereich/Kampagne/Neue Kampagne Session 0.md",
-    "01 - Spielerbereich/Kampagne/Gesinnung Gruppe.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Mercy.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Malice.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Darkness.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Shepherd Levels.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Klassen.md",
-    "02 - Spielleiterbereich/Kampagne/Gruppe/Frank - Tilda de la Cruz.md",
-    "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Story.md",
-    "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Warpstein.md",
-    "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Plot.md",
-    "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Main Story.md",
-    "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Charaktere.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Fokuspunkte/Wirbelnde Verteidigung.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Fokuspunkte/Schnellschlag.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Fokuspunkte/Ausweichschritt.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Fokuspunkte/Windschritt.md",
+    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen/Beschlagene Lederrüstung.md",
+    "02 - Spielleiterbereich/WIP/Bestiarium/Kreaturen/Humanoide/Goblins/Hügelgoblin Alchemist.md",
+    "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen/Rüstungen.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Wurfmesser.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Wurfspeer.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Streitaxt.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Streitflegel.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Streitkolben.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Zweihandaxt.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Zweihandhammer.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Zweihandschwert.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Zweihandstreitkolben.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Speer.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Schwere Armbrust.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Säbel.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Rapier.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Pike.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Leichte Armbrust.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Leichter Hammer.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffen/Kriegsbogen.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Tidings.md.tmp.9573.78f366ccb9e7",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Mercy.md.tmp.9573.b6ec4e2774a3",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Malice.md.tmp.9573.a8d901386135",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Darkness.md.tmp.9573.a046b698a205",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Shepherd Levels.md.tmp.9573.7ed4893c472e",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Sacred Graces.md.tmp.9573.c376ac080dbb",
-    "01 - Spielerbereich/Kampagne/Timeline Kampagne.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Vengeance.md.tmp.18390.39a7f7c2476e",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Vengeance.md.tmp.18390.8c9ec2e949b1",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Paladin/Subclasses/Oath of Valor.md.tmp.18390.4387b6400a83",

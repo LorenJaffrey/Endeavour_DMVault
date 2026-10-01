@@ -1,0 +1,24 @@
+{
+  "id": "conv-1790896637723-se37jsytm",
+  "providerId": "claude",
+  "title": "Ergänze Frontmatter-Felder für Rüstungen",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790896637726,
+  "updatedAt": 1790896760087,
+  "lastResponseAt": 1790896719504,
+  "sessionId": "a1c826cc-f766-4a67-b755-caaff3370cd3",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "a1c826cc-f766-4a67-b755-caaff3370cd3"
+  },
+  "currentNote": "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen/Rüstungen.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 728,
+    "cacheReadInputTokens": 31447,
+    "contextWindow": 1000000,
+    "contextTokens": 32177,
+    "percentage": 3
+  }
+}

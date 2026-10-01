@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790896637723-se37jsytm",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790896637888-n8s73w9",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790896637721-i40d7ia",
+      "timestamp": 1790896637721,
+      "rawDisplayText": "Rüstungen haben noch keine Plaetze im Frontmatter. Bitte ergänzen",
+      "canonicalText": "Rüstungen haben noch keine Plaetze im Frontmatter. Bitte ergänzen",
+      "context": {
+        "currentNote": {
+          "path": "01 - Spielerbereich/Gegenstände/Rüstung/Rüstungen/Rüstungen.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "24a0834d960505937a99990a0a8b25de6645d2a5a6539cf0afc5a2f69ed8d42f",
+      "providerUserMessageId": "febdc21f-2200-4bc0-a0d1-e68c7cc7779e",
+      "providerAssistantMessageId": "b425cadc-7c98-453d-b2ea-6f9afc5f511d"
+    }
+  ]
+}

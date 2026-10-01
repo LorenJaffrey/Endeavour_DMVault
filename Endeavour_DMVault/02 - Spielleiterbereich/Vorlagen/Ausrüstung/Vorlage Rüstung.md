@@ -9,6 +9,7 @@ Heimlichkeit:
 Eigenschaften:
 
 Gewicht: X Pfund
+Plaetze: X
 Kosten: X GM
 ---
 # `=this.file.name`
