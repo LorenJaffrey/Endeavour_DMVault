@@ -1,21 +1,25 @@
-*Come one, come all.*
-*Hear the news of the world.*
+*Kommt alle herbei.*
+*Hört die Neuigkeiten der Welt.*
 
 ---
-### Level 3
-**Breaking News**
-Your Lifebinding Spirit chimes like a bell and deals wind or radiant damage. When your Lifebinding Spirit crits, it gains 1 healing charge. Charges gained this way are lost at the end of the encounter if not used.
+### Stufe 3
+**Eilmeldung**
+Dein Lebensbindender Geist erklingt wie eine Glocke und verursacht Wind oder Strahlenschaden.
+Wenn dein Lebensbindender Geist kritisch trifft, erhält er 1 Heilladung.
+Auf diese Weise erhaltene Ladungen gehen am Ende des Kampfes verloren, wenn sie nicht genutzt wurden.
 
-**Hear Ye! Hear Ye!**
-Your words carry an aura of importance when speaking in public. Spread joy with tidings of delight, or panic with portents of doom.
-### Level 7
-**Toll the Hour**
-(1/encounter) 2 actions: Proclaim tidings of either:
-* **Calamity.** (Reach 6) Enemies within Reach must make a WIL save (DC 10+KEY) or become Dazed. Bloodied creatures always fail.
-* **Jubilation.** (Reach 6) All allies within Reach gain WIL Temp HP and may cleanse a condition or harmful effect.
-### Level 11
-**Raise the Alarm**
-When you roll Initiative, you may spend 1 mana per ally to grant them advantage on Initiative and on their first attack this encounter.
-### Level 15
-**Crier’s Vigilance**
-Gain an extra use per encounter of Toll the Hour. You may choose both options when using Toll the Hour.
+**Hört, hört!**
+Deine Worte tragen eine Aura der Wichtigkeit, wenn du in der Öffentlichkeit sprichst.
+Verbreite Freude mit erfreulichen Nachrichten oder Panik mit Unheilsverkündungen.
+### Stufe 7
+**Die Stunde läuten**
+(1/Kampf) 2 Aktionen: Verkünde eine Botschaft nach Wahl:
+* **Unheil.** (Reichweite 6) Gegner in Reichweite müssen einen WIL-Rettungswurf (SG 10+KEY) bestehen oder werden benommen. Blutige Kreaturen scheitern immer.
+* **Jubel.** (Reichweite 6) Alle Verbündeten in Reichweite erhalten WIL temporäre HP und dürfen einen Zustand oder schädlichen Effekt beseitigen.
+### Stufe 11
+**Alarm schlagen**
+Wenn du die Initiative würfelst, darfst du 1 Mana pro Verbündetem ausgeben um ihm Vorteil auf die Initiative und auf seinen ersten Angriff in diesem Kampf zu gewähren.
+### Stufe 15
+**Wachsamkeit des Ausrufers**
+Erhalte eine zusätzliche Anwendung von Die Stunde läuten pro Kampf.
+Du darfst beide Optionen wählen, wenn du Die Stunde läuten nutzt.

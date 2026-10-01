@@ -6,7 +6,8 @@
 
 ## **Herkunft**
 Aelar wurde in den Wäldern von **Thalanor** geboren, einer abgelegenen Waldregion nahe eines alten Vulkans, der seit Generationen als erloschen galt.
-Als Aelar noch jung war, brach der Vulkan **Varkor** unerwartet aus. Asche verdunkelte den Himmel, Feuerstürme fraßen sich durch die Wälder und das Land wurde unbewohnbar. 
+Als Aelar noch jung war, brach der Vulkan **Varkor** unerwartet aus. 
+Asche verdunkelte den Himmel, Feuerstürme fraßen sich durch die Wälder und das Land wurde unbewohnbar. 
 Ganze Gemeinschaften wurden vertrieben.
 Aelars Familie floh gemeinsam mit vielen anderen aus den brennenden Wäldern.
 

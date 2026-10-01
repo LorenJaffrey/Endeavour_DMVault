@@ -1,15 +1,19 @@
-### Level 3
-**Merciful Healing**
-When an effect caused by you heals a Dying creature, they are healed for twice as much. (1/round) Your Lifebinding Spirit can act for free while you are Dying.
+### Stufe 3
+**Gnädige Heilung**
+Wenn ein von dir verursachter Effekt eine sterbende Kreatur heilt, wird sie um den doppelten Betrag geheilt.
+(1/Runde) Dein Lebensbindender Geist kann kostenlos handeln, während du sterbend bist.
 
-**Life is Beautiful**
-Harmless and lovely creatures such as butterflies and humming birds are attracted to your presence and often follow you. Flowers bloom more vibrantly in your presence.
-### Level 7
-**Conduit of Light**
-When an effect caused by you would heal HP, you may expend 1 use of Searing Light to heal (or damage, ignoring armor) another target within 6 spaces of yourself for the same amount.
-### Level 11
-**Powerful Healer**
-(WIL times/Safe Rest) Whenever you would roll dice to heal damage, you may instead heal the max amount you could roll, or give that many temp HP.
-### Level 15
-**Empowered Conduit**
-Your Conduit of Light may target 1 additional creature. Regain 1 charge of Searing Light when you roll Initiative (this expires if unspent at the end of combat).
+**Das Leben ist schön**
+Harmlose und liebliche Kreaturen wie Schmetterlinge und Kolibris fühlen sich von dir angezogen und folgen dir oft.
+Blumen blühen in deiner Gegenwart lebendiger.
+### Stufe 7
+**Kanal des Lichts**
+Wenn ein von dir verursachter Effekt HP heilen würde, darfst du 1 Anwendung von Gleißendem Licht ausgeben um ein weiteres Ziel in Reichweite 6 um denselben Betrag zu heilen oder ihm Schaden zuzufügen und dabei Rüstung zu ignorieren.
+### Stufe 11
+**Machtvoller Heiler**
+(WIL-mal pro sichere Rast) Immer wenn du Würfel würfeln würdest um Schaden zu heilen, darfst du stattdessen den maximal möglichen Wert heilen oder als temporäre HP vergeben.
+### Stufe 15
+**Gestärkter Kanal**
+Dein Kanal des Lichts darf 1 zusätzliche Kreatur als Ziel wählen.
+Erhalte 1 Ladung von Gleißendem Licht zurück, wenn du die Initiative würfelst.
+Dies verfällt am Ende des Kampfes, wenn sie nicht genutzt wurde.

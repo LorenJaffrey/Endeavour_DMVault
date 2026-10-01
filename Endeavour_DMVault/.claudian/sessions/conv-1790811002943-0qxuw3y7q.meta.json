@@ -1,0 +1,24 @@
+{
+  "id": "conv-1790811002943-0qxuw3y7q",
+  "providerId": "claude",
+  "title": "Mönch vollständig ausarbeiten",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790811002946,
+  "updatedAt": 1790812730676,
+  "lastResponseAt": 1790812730676,
+  "sessionId": "34d343ff-ccac-4b2e-8d31-28ad43e01dd4",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "34d343ff-ccac-4b2e-8d31-28ad43e01dd4"
+  },
+  "currentNote": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 2034,
+    "cacheReadInputTokens": 70421,
+    "contextWindow": 1000000,
+    "contextTokens": 72457,
+    "percentage": 7
+  }
+}

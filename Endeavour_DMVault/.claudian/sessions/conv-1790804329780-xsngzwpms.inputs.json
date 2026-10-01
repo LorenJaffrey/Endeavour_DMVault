@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790804329780-xsngzwpms",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790804329915-qbm8shx",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790804329777-7w5ksah",
+      "timestamp": 1790804329777,
+      "rawDisplayText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "canonicalText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "images": [],
+      "contentDigest": "53317a5dc394c2e61e18f5979b5772f9a983f3ab0711632b62982a98755d31f9",
+      "providerUserMessageId": "e6d623ae-c10e-437b-9f48-762fc1a9bcae"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790805995163-ngbu1bn",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1790805995159-8fvhv28",
+      "timestamp": 1790805995159,
+      "rawDisplayText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "canonicalText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "images": [],
+      "contentDigest": "53317a5dc394c2e61e18f5979b5772f9a983f3ab0711632b62982a98755d31f9",
+      "providerUserMessageId": "25a38a91-fc8f-48ab-b6a1-83e9c34c2c74"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790806171747-qcc3y5o",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1790806171744-xhrbp3h",
+      "timestamp": 1790806171744,
+      "rawDisplayText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "canonicalText": "Übersetze die englischen Texte aus @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/",
+      "images": [],
+      "contentDigest": "53317a5dc394c2e61e18f5979b5772f9a983f3ab0711632b62982a98755d31f9",
+      "providerUserMessageId": "a1c15e49-5c4f-4627-a9f4-483323f56d14",
+      "providerAssistantMessageId": "1e156dc6-33b2-47e4-a59c-cecc2ca85445"
+    }
+  ]
+}

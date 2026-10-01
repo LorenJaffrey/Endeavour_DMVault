@@ -172,5 +172,3 @@ Wähle eine epische Gabe.
 
 **Verstärkte Zaubertricks**  
 Deine Zaubertricks werden stärker.
-
-Wenn du möchtest, kann ich dir das danach noch in **regelsprachlich sauberem Deutsch** glätten, damit es direkt ins Regelwerk passt.

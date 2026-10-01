@@ -1,0 +1,23 @@
+{
+  "id": "conv-1790804329780-xsngzwpms",
+  "providerId": "claude",
+  "title": "Übersetze die englischen Texte aus @02 - Spielleit...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1790804329782,
+  "updatedAt": 1790809839973,
+  "lastResponseAt": 1790806298032,
+  "sessionId": "03f46c1e-a839-4db5-9d83-6fe80f8ab742",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "03f46c1e-a839-4db5-9d83-6fe80f8ab742"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 11755,
+    "cacheReadInputTokens": 41566,
+    "contextWindow": 1000000,
+    "contextTokens": 53323,
+    "percentage": 5
+  }
+}

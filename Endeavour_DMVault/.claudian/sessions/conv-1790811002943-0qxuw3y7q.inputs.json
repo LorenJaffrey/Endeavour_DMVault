@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790811002943-0qxuw3y7q",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790811002985-f0d126a",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790811002941-9r2dj4a",
+      "timestamp": 1790811002941,
+      "rawDisplayText": "Lass uns anfangen den Mönch auszudefinieren. Bisher ist nur der Teil im Spielerbereich fest. Alles andere steht noch zur Diskussion.",
+      "canonicalText": "Lass uns anfangen den Mönch auszudefinieren. Bisher ist nur der Teil im Spielerbereich fest. Alles andere steht noch zur Diskussion.",
+      "context": {
+        "currentNote": {
+          "path": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "a5b2ecc3334b4a88379d751f6e0bf7c4549d52ab588e5c82d9649f434ffa70c7",
+      "providerUserMessageId": "b170db9e-c5a8-4fa2-bf86-b72522afef0b",
+      "providerAssistantMessageId": "4112eb65-c51b-4f8f-951d-43c44ce4ff2e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790812399255-piuo6rj",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1790812399252-x5jxhd7",
+      "timestamp": 1790812399252,
+      "rawDisplayText": "Wir behalten die Fokuspunkte als allgemeine Ressource und koppeln sie an EN.\nDurch BW als Kernattribut hat der Mönch ohnehin gute Ausweichwerte, also fraglich ob es dazu noch ein zusätzliches Merkmal wie Ungerüstete Verteidigung bzw. Instiktives Ausweichen braucht.\nFokuspunkte ab Stufe 2 passt.\nSchnelle Fäuste bzw. das Kampfkunst Merkmal aus den DnD Regeln finde ich auch ganz gut.",
+      "canonicalText": "Wir behalten die Fokuspunkte als allgemeine Ressource und koppeln sie an EN.\nDurch BW als Kernattribut hat der Mönch ohnehin gute Ausweichwerte, also fraglich ob es dazu noch ein zusätzliches Merkmal wie Ungerüstete Verteidigung bzw. Instiktives Ausweichen braucht.\nFokuspunkte ab Stufe 2 passt.\nSchnelle Fäuste bzw. das Kampfkunst Merkmal aus den DnD Regeln finde ich auch ganz gut.",
+      "images": [],
+      "contentDigest": "9cc168b477d1d4cfc228b305ad5bc00b535de0f2d79d282fad45578d81659b83",
+      "providerUserMessageId": "7c640ae9-532b-4e2e-85f8-634826ba4576",
+      "providerAssistantMessageId": "835a9a3b-d5eb-4589-b997-a2c42236e3af"
+    }
+  ]
+}

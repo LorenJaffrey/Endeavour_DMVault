@@ -1,22 +1,26 @@
-*There is peace in the darkness.*
-*Fear not the dark, for I am your guide.*
+*Es gibt Frieden in der Dunkelheit.*
+*Fürchte die Dunkelheit nicht, denn ich bin dein Wegweiser.*
 
 ---
-### Level 3
-**Umbrous Mark**
-Your Lifebrinding Spirit is marked by darkness and deals necrotic damage. When your Lifebinding Spirit damages an enemy, you may spend 1 healing charge to inflict Blinded until the end of their next turn.
+### Stufe 3
+**Zeichen der Finsternis**
+Dein Lebensbindender Geist ist von Dunkelheit gezeichnet und verursacht nekrotischen Schaden.
+Wenn dein Lebensbindender Geist einem Gegner Schaden zufügt, darfst du 1 Heilladung ausgeben um ihn bis zum Ende seines nächsten Zuges zu blenden.
 
-**Snuff Out**
-Light dims nigh imperceptibly in your presence. Nocturnal animals often seem to follow you. (1/day) Action: Extinguish all mundane light sources that you can see.
-### Level 7
-**Lost in Shadow**
-When you or your Lifebinding Spirit hits a Blinded creature, you may forcibly move that creature up to 3 spaces.
- 
-**Guiding Hand**
-You and adjacent allies gain Darkvision 6.
-### Level 11
-**Terror of the Dawn**
-When you hit a Blinded creature with Searing Light, that creature becomes Frightened of you for the rest of the encounter.
-### Level 15
-**Cloak of Darkness**
-Action: Spend a Searing Light charge to don a Cloak of Darkness for up to WIL turns. The Cloak inflicts Blinded on all adjacent enemies.
+**Auslöschen**
+Licht dimmt in deiner Nähe fast unmerklich.
+Nachttiere scheinen dir oft zu folgen.
+(1/Tag) Aktion: Lösche alle gewöhnlichen Lichtquellen die du sehen kannst.
+### Stufe 7
+**Verloren im Schatten**
+Wenn du oder dein Lebensbindender Geist eine geblendete Kreatur trifft, darfst du diese Kreatur um bis zu 3 Felder zwangsweise bewegen.
+
+**Führende Hand**
+Du und angrenzende Verbündete erhalten Dunkelsicht 6.
+### Stufe 11
+**Schrecken der Morgendämmerung**
+Wenn du eine geblendete Kreatur mit Gleißendem Licht triffst, wird diese Kreatur für den Rest des Kampfes von dir verängstigt.
+### Stufe 15
+**Mantel der Dunkelheit**
+Aktion: Gib eine Ladung Gleißendes Licht aus um für bis zu WIL Züge einen Mantel der Dunkelheit anzulegen.
+Der Mantel blendet alle angrenzenden Gegner.

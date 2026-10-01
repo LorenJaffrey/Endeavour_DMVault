@@ -5,4 +5,4 @@ aliases:
 Einsatz: "1 [[Fokuspunkte|Fokuspunkt]]"
 ---
 # `=this.file.name`
-Greife in deinem [[Zug]] an und ignoriere [[Vorteil und Nachteil|Nachteil]] durch [[Angriff#Überhastete Angriffe]].
+Führe den zusätzlichen [[Angriff]] von [[Schnelle Fäuste]] in diesem [[Zug]] ohne [[Aktionspunkte|AP]] Kosten aus.

@@ -11,7 +11,7 @@
 	- Crit-basiert
 	- Hoher Einzelschaden
 	- hauptsächlich Schadenszauber
-	- Überhitzungsmechanik als sekundäre Ressource 
+	- Überhitzungsmechanik als sekundäre Ressource
 
 ### Glaciomant
 - neue Magieschule: Glaciomantie (Frostzauber)

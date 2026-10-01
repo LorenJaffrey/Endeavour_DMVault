@@ -1,23 +1,35 @@
-**Assist Me, My Friend!**
-Whenever you make your first melee attack each round, you may add your Lifebinding Spirit’s damage to the attack.
+**Hilf mir, mein Freund!**
+Wenn du deinen ersten Nahkampfangriff einer Runde machst, darfst du den Schaden deines Lebensbindenden Geists zum Angriff hinzufügen.
 
-**Empowered Companion**
-Whenever you spend mana to call forth your Lifebinding Spirit, you cast it as if you spent 1 additional mana (ignoring the typical spell tier restrictions). The maximum die size is now a d20.
+**Gestärkter Begleiter**
+Wenn du Mana ausgibst um deinen Lebensbindenden Geist zu beschwören, wirkst du ihn als hättest du 1 zusätzliches Mana ausgegeben.
+Die üblichen Graderfordernisse für Zauber werden dabei ignoriert.
+Die maximale Würfelgröße beträgt nun d20.
 
-**Guiding Spirit**
-When your Lifebinding Spirit rolls a 6 or higher on its damage die, the target begins to glow with radiant light. The next attack against that target has advantage.
+**Leitender Geist**
+Wenn dein Lebensbindender Geist bei seinem Schadenswürfel eine 6 oder höher würfelt, beginnt das Ziel strahlend zu leuchten.
+Der nächste Angriff gegen dieses Ziel erfolgt mit Vorteil.
 
-**Hasty Companion**
-+4 Reach for your Lifebinding Spirit. It can also act for free when summoned.
+**Hastiger Begleiter**
++4 Reichweite für deinen Lebensbindenden Geist.
+Er kann außerdem kostenlos handeln, wenn er beschworen wird.
 
-**Illuminate Soul**
-Action: A creature within 6 spaces begins to glow with radiant light. For 1 Round, attacks against them are made with your choice of advantage or disadvantage. You may do this WIL times per Safe Rest.
+**Erleuchtete Seele**
+Aktion: Eine Kreatur in Reichweite 6 beginnt strahlend zu leuchten.
+Für 1 Runde werden Angriffe gegen sie nach deiner Wahl mit Vorteil oder Nachteil ausgeführt.
+Du kannst dies WIL-mal pro sichere Rast tun.
 
-**Light Bearer**
-Regain 1 use of Searing Light when you roll Initiative (this expires if unspent at the end of combat).
+**Lichtträger**
+Erhalte 1 Anwendung von Gleißendem Licht zurück, wenn du die Initiative würfelst.
+Dies verfällt am Ende des Kampfes, wenn es nicht genutzt wurde.
 
-**Not Beyond MY Reach**
-You may target creatures who have been dead less than 1 round for healing. For every 10 HP a dead creature is healed this way, you may have them recover 1 Wound instead (you must heal at least 1 Wound to revive them).
+**Nicht außerhalb MEINER Reichweite**
+Du darfst Kreaturen die seit weniger als 1 Runde tot sind zum Heilen als Ziel wählen.
+Für je 10 geheilte HP darf eine so geheilte tote Kreatur stattdessen 1 Wunde erholen.
+Du musst mindestens 1 Wunde heilen um sie wiederzubeleben.
 
-**Vengeful Spirit**
-Action: Your Lifebinding Spirit sacrifices itself to transform into a swirling vortex of radiant light. At the end of your turn, it damages all enemies within 3 spaces of you, ignoring armor and cover. This lasts for a number of rounds equal to the healing charges left on the Lifebinding Spirit. This effect ends early if you summon your spirit again.
+**Rachsüchtiger Geist**
+Aktion: Dein Lebensbindender Geist opfert sich selbst und verwandelt sich in einen wirbelnden Strudel aus strahlendem Licht.
+Am Ende deines Zuges fügt er allen Gegnern in Reichweite 3 um dich Schaden zu und ignoriert dabei Rüstung und Deckung.
+Dies hält für eine Anzahl an Runden an, die den verbleibenden Heilladungen des Lebensbindenden Geists entspricht.
+Dieser Effekt endet vorzeitig, wenn du deinen Geist erneut beschwörst.
