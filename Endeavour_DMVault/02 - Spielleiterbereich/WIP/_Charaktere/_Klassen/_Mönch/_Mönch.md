@@ -4,8 +4,8 @@
 | Stufe | Schnelle Fäuste | Flinke Füße | Initiative | Merkmale                                                        |
 | -----:| ---------------:| -----------:| ----------:| --------------------------------------------------------------- |
 |     1 |             1W4 |           - |          - | [[Schnelle Fäuste]]                                             |
-|     2 |             1W4 |          +1 |          1 | [[Ungerüstete Bewegung]], [[Fokuspunkte]], [[Schnelle Reflexe]] |
-|     3 |             1W4 |          +1 |          2 | [[Subklassen Mönch\|Mönch Subklasse]], [[Kinetischer Schwung]]  |
+|     2 |             1W4 |          +1 |          1 | [[Ungerüstete Bewegung]], [[Schwung]], [[Schnelle Reflexe]] |
+|     3 |             1W4 |          +1 |          2 | [[Subklassen Mönch\|Mönch Subklasse]]  |
 |     4 |             1W4 |          +1 |          2 | [[Primäre Attributswerterhöhung]]                               |
 |     5 |             1W4 |          +1 |          3 | [[Sekundäre Attributswerterhöhung]], [[Betäubender Schlag]]     |
 |     6 |             1W6 |          +2 |          3 | [[Kampfkunst]], [[Sturz abfedern]]                              |
@@ -32,25 +32,35 @@
 
 ## Allgemein
 - Parieren ohne Nachteil ([[Instinktive Parade]], noch nicht in der Tabelle)
-- Instinktives Ausweichen (+EN auf Ausweichwert) gestrichen: EN wäre dreifach belegt (Fokus, Rettungswürfe, Ausweichwert)
+- Instinktives Ausweichen (+EN auf Ausweichwert) gestrichen: EN wäre dreifach belegt (Schwung, Rettungswürfe, Ausweichwert)
 - Ungerüstete Verteidigung gestrichen: Ausweichwert 10 + BW gilt ohne Rüstung ohnehin voll
-- Fokuspunkte sind eine allgemeine Ressource (Entscheidung)
+- Schwung ist die allgemeine Klassenressource, Start über Initiative (EN Punkte), Nachschub je Subklasse
 
 ## Subklassen
 - ![[_Klassen#Mönch]]
 
+Schwung ist die gemeinsame Ressource. Jede Subklasse definiert eigenen Nachschub und eigene Verwendung.
+
 ### Elementweber
+Verb: Investieren und halten.
+- Gewinn: Bewegung, Positionswechsel
+- Einsatz: Schwungpunkte binden, solange ein Element wirkt (gebunden statt verbraucht)
 - Elemente
 	- Erde -> Bewegung einschränken
 	- Feuer -> Schaden
 	- Wasser -> ?
 	- Luft -> Beweglichkeit erhöhen
+- Attribut: GE
 
 ### Trunkener Meister
-- Fokus auf Ausweichen/Parieren
-- Ausweichen/Parieren von Fernkampfangriffen
+Verb: Reagieren.
+- Gewinn: Wunde erhalten (ehemals Kinetischer Schwung), ausweichen, parieren. Obergrenze pro Runde nötig
+- Einsatz: Konter, Umlenken, Fernkampfangriffe ausweichen oder parieren
+- Attribut: GE
 
 ### Eisenfaust
+Verb: Aufbauen und entladen.
+- Gewinn: Treffer in Folge (Zähler), keine zweite Ressource
+- Einsatz: Finisher, Kombo entladen
 - Waffenloser Kampf
-- ST-basierte Angriffe
-- Kombos (evtl. mit eigener aktiver Flow Ressource Kombopunkte)
+- Attribut: ST

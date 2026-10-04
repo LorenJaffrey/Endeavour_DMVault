@@ -4,8 +4,8 @@
   "title": "Mönch vollständig ausarbeiten",
   "titleGenerationStatus": "success",
   "createdAt": 1790811002946,
-  "updatedAt": 1790812730676,
-  "lastResponseAt": 1790812730676,
+  "updatedAt": 1791155601458,
+  "lastResponseAt": 1791155601458,
   "sessionId": "34d343ff-ccac-4b2e-8d31-28ad43e01dd4",
   "selectedModel": "sonnet",
   "providerState": {
@@ -15,10 +15,10 @@
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 2034,
-    "cacheReadInputTokens": 70421,
+    "cacheCreationInputTokens": 946,
+    "cacheReadInputTokens": 128169,
     "contextWindow": 1000000,
-    "contextTokens": 72457,
-    "percentage": 7
+    "contextTokens": 129117,
+    "percentage": 13
   }
 }
