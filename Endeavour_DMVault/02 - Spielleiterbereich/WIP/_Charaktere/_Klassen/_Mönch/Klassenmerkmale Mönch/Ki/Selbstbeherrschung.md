@@ -1,10 +1,10 @@
 ---
 tags:
-  - Regeln/Endeavour/Merkmal/Klasse/Mönch/Schwungaktion
+  - Regeln/Endeavour/Merkmal/Klasse/Mönch/Ki-Aktion
   - Zug/Reaktion
 aliases:
 Beschreibung: "Wiederhole einen misslungenen [[Rettungswürfe|Rettungswurf]]."
-Einsatz: "1 [[Schwung|Schwungpunkt]]"
+Einsatz: "1 [[Ki|Kipunkt]]"
 Auslöser: "Du scheiterst bei einem [[Rettungswürfe|Rettungswurf]]."
 ---
 # `=this.file.name`

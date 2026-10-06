@@ -1,9 +1,9 @@
 ---
 tags:
-  - Regeln/Endeavour/Merkmal/Klasse/Mönch/Schwungaktion
+  - Regeln/Endeavour/Merkmal/Klasse/Mönch/Ki-Aktion
   - Regeln/Endeavour/Zug/Aktion/Angriff
 aliases:
-Einsatz: "1 [[Aktionspunkte|AP]], 1 [[Schwung|Schwungpunkt]]"
+Einsatz: "1 [[Aktionspunkte|AP]], 1 [[Ki|Kipunkt]]"
 ---
 # `=this.file.name`
 Führe die [[Angreifen|Angriffsaktion]] mit einem [[Waffenloser Angriff|Waffenlosen Angriff]] oder einer [[Mönchswaffen|Mönchswaffe]] aus.

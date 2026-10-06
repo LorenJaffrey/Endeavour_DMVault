@@ -11,7 +11,7 @@ tags:
 | [[Paladin]]     | Melee DD, Melee Tank, Inquisitor/Interrogator                                     | Mittel/Schwer | Heilige Macht (Buffer) |            |  4  |  2  |
 | [[Berserker]]   | Verwüster (Melee DD), Kopfjäger (Melee/Ranged Hybrid DD), Unbeugsamer (Tank)      | -             | Wut (Flow aktiv)       |            |  4  |  2  |
 | [[Naturalist]]  | Melee DD/Tank, Heiler, Caster DD                                                  | Leicht        | Mana (Pool)            | Natur      |  2  |  1  |
-| [[Mönch]]       | Elemente (Control), Drunken Master (Tank), Eisenfaust (Combo-DD)                  | -             | Schwung (Pool+Trigger) |            |  2  |  1  |
+| [[Mönch]]       | Elemente (Control), Drunken Master (Tank), Eisenfaust (Combo-DD)                  | -             | Ki (Pool, Rast)         |            |  2  |  1  |
 | [[Gauner]]      | Assassine , Duellant, Strippenzieher                                              | Leicht        | -                      |            |  2  |  2  |
 | [[Waldläufer]]  | Scharfschütze, Bestienmeister, Fährtenleser                                       | Leicht/Mittel | -                      |            |  3  |  1  |
 | [[Arkanist]]    | Pyromant (Caster DD, Crits), Glaciomant (Caster DD, Control), Chronomant (Heiler) | -             | Mana (Pool)            | Arkan      |  2  |  0  |

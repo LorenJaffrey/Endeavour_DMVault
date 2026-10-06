@@ -8,30 +8,6 @@ Deine Vertrautheit mit Kampfkünsten lässt dich folgende Kampfstile mit waffenl
 	  Dieser Würfel verändert sich auf höheren Mönchsstufen, wie in der Spalte „Kampfkünste" der Tabelle „Mönchsmerkmale" aufgeführt.
 	- Geschickte Angriffe: Du kannst für deine Angriffs-und Schadenswürfe mit waffenlosen Angriffen oder Mönchswaffen deinen Geschicklichkeitsmodifikator statt des Stärkemodifikators verwenden. 
 	  Außerdem kannst du, wenn du die Packen- oder die Stoßen-Option deines waffenlosen Angriffs verwendest, deinen Geschicklichkeitsmodifikator statt des Stärkemodifikators verwenden, um den Rettungswurf-SG zu bestimmen.
- 
-### UNGERÜSTETE VERTEIDIGUNG
-Solange du weder Rüstung noch Schild trägst, entspricht deine Basis-Rüstungsklasse 10 plus deinem Geschicklichkeitsmodifikator plus deinem Weisheitsmodifikator.
-
-### MÖNCHSFOKUS
-Dein Fokus und deine Vertrautheit mit Kampfkünsten gestatten dir, eine Quelle außergewöhnlicher Energie in dir selbst zu nutzen. 
-Diese Energie wird durch Fokuspunkte repräsentiert. 
-Deine Mönchsstufe bestimmt die Anzahl deiner Punkte, die in der Spalte „Fokuspunkte" der Tabelle „Mönchsmerkmale" aufgeführt sind.
-Du kannst diese Punkte verbrauchen, um bestimmte Mönchsmerkmale einzusetzen oder zu verstärken.
-Zu Beginn kennst du drei solche Merkmale: Geduldige Verteidigung, Schlaghagel und Windschritt (jeweils unten beschrieben).
-Wenn du einen Fokuspunkt verbrauchst, ist er nicht mehr verfügbar. Du erhältst verbrauchte Fokuspunkte nach einer kurzen oder langen Rast zurück.
-Manche Merkmale, die Fokuspunkte verwenden, erfordern, dass das Ziel einen Rettungswurf ausführt.
-Der Rettungswurf-SG entspricht 8 plus deinem Weisheitsmodifikator plus deinem Übungsbonus.
-
-#### Geduldige Verteidigung
-Du kannst die Rückzug-Aktion als Bonusaktion ausführen. 
-Alternativ kannst du 1 Fokuspunkt verbrauchen, um sowohl die Rückzug- als auch die Ausweichaktion als Bonusaktion auszuführen.
-
-#### Schlaghagel
-Du kannst 1 Fokuspunkt verbrauchen, um zwei waffenlose Angriffe als Bonusaktion auszuführen.
-
-#### Windschritt
-Du kannst die Spurt-Aktion als Bonusaktion ausführen. Alternativ kannst du 1 Fokuspunkt verbrauchen, um sowohl die Rückzug- als auch die Spurt-Aktion als Bonusaktion auszuführen, und deine Sprungdistanz ist in diesem Zug verdoppelt.
-
 
 ### UNGERÜSTETE BEWEGUNG
 Deine Bewegungsrate erhöht sich um drei Meter, sofern du weder Rüstung noch Schild trägst. 
