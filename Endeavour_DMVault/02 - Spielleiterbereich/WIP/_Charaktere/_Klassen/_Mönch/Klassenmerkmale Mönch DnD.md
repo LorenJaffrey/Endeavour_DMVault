@@ -22,7 +22,6 @@ Wenn du einen Fokuspunkt verbrauchst, ist er nicht mehr verfügbar. Du erhältst
 Manche Merkmale, die Fokuspunkte verwenden, erfordern, dass das Ziel einen Rettungswurf ausführt.
 Der Rettungswurf-SG entspricht 8 plus deinem Weisheitsmodifikator plus deinem Übungsbonus.
 
-  
 #### Geduldige Verteidigung
 Du kannst die Rückzug-Aktion als Bonusaktion ausführen. 
 Alternativ kannst du 1 Fokuspunkt verbrauchen, um sowohl die Rückzug- als auch die Ausweichaktion als Bonusaktion auszuführen.
@@ -30,9 +29,9 @@ Alternativ kannst du 1 Fokuspunkt verbrauchen, um sowohl die Rückzug- als auch 
 #### Schlaghagel
 Du kannst 1 Fokuspunkt verbrauchen, um zwei waffenlose Angriffe als Bonusaktion auszuführen.
 
-
 #### Windschritt
 Du kannst die Spurt-Aktion als Bonusaktion ausführen. Alternativ kannst du 1 Fokuspunkt verbrauchen, um sowohl die Rückzug- als auch die Spurt-Aktion als Bonusaktion auszuführen, und deine Sprungdistanz ist in diesem Zug verdoppelt.
+
 
 ### UNGERÜSTETE BEWEGUNG
 Deine Bewegungsrate erhöht sich um drei Meter, sofern du weder Rüstung noch Schild trägst. 
@@ -52,11 +51,6 @@ Wenn der Angriff ein Nahkampfangriff war, wähle dazu eine Kreatur im Abstand vo
 Wenn der Angriff ein Fernkampfangriff war, wähle eine Kreatur im Abstand von bis zu 18 Metern von dir aus, die du sehen kannst und die nicht über vollständige Deckung verfügt.
 Diese Kreatur muss einen Geschicklichkeitsrettungswurf bestehen, oder sie erleidet Schaden in Höhe von zwei Würfen mit deinem Kampfkünste-Würfel plus deinem Geschicklichkeitsmodifikator. Die Schadensart entspricht der des Angriffs.
 
-MÖNCH-UNTERKLASSE
-Du erhältst eine Mönch-Unterklasse deiner Wahl.
-Die Unterklassen Krieger der Elemente. Krieger der Gnade, Krieger der Offenen Hand und Krieger der Schatten werden nach der Beschreibung dieser Klasse erläutert.
-Unterklassen sind Spezialisierungen, die dir auf bestimmten Mönchsstufen Merkmale gewähren. Du erhältst für den Rest deiner Laufbahn alle Merkmale deiner Unterklasse, die zu deiner aktuellen Mönchsstufe oder den niedrigeren Stufen gehören.
-
 ### STURZ ABFEDERN
 Wenn du stürzt, kannst du eine Reaktion ausführen, um den Sturzschaden um einen Betrag in Höhe des Fünffachen deiner Mönchsstufe zu verringern.
 
@@ -70,7 +64,7 @@ Bei einem erfolgreichen Rettungswurf ist die Bewegungsrate des Ziels bis zum Beg
 Wann immer du mit deinem waffenlosen Angriff Schaden bewirkst, kannst du damit auch Energieschaden oder die normale Schadensart (nach deiner Wahl) bewirken.
 
 ### ENTRINNEN
-Bist du einem Effekt ausgesetzt, der dir einen Geschick-lichkeitsrettungswurf erlaubt, um den Schaden zu halbieren, so erleidest du stattdessen bei einem Erfolg gar keinen und bei einem Misserfolg den halben Schaden.
+Bist du einem Effekt ausgesetzt, der dir einen Geschicklichkeitsrettungswurf erlaubt, um den Schaden zu halbieren, so erleidest du stattdessen bei einem Erfolg gar keinen und bei einem Misserfolg den halben Schaden.
 Du erhältst den Vorzug dieses Merkmals nicht, wenn du kampfunfähig bist.
 
 ### AKROBATISCHE BEWEGUNG
