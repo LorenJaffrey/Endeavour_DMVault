@@ -1,7 +1,6 @@
 ---
 tags: 
-  - Zug/Reaktion
-  - Regeln/Endeavour
+  - Regeln/Endeavour/Zug/Reaktion
 aliases:
 Beschreibung: "Bonus auf [[Ausweichwert]] und [[Rettungswurf#Geschicklichkeitsrettungswurf|Geschicklichkeitsrettungswürfe]]"
 Kosten: "1 [[Aktionspunkte|AP]]"

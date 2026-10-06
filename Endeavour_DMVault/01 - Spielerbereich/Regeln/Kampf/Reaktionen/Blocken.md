@@ -1,7 +1,6 @@
 ---
 tags: 
-  - Zug/Reaktion
-  - Regeln/Endeavour
+  - Regeln/Endeavour/Zug/Reaktion
 Beschreibung: "Erfordert [[Schilde|Schild]]. Erhöht [[Rüstungsklasse]]."
 Kosten: "1 [[Aktionspunkte|AP]]"
 Voraussetzung: "[[Schilde|Schild]]"

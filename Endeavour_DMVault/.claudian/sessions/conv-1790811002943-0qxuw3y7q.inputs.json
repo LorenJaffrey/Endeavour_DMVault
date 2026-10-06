@@ -60,7 +60,8 @@
       "canonicalText": "Vielleicht sollte es für die Basisklasse noch einen weiteren Weg Schwung zu generieren, damit die Klasse in den ersten beiden Stufen ihre Dynamik schon erhält.\nDieser kann ruhig vergleichsweise \"teuer\" (z.B. bzgl Aktionspunkten) sein und durch die Möglichkeiten der Subklasse später überschattet werden.",
       "images": [],
       "contentDigest": "98f89541fc29332f9edd5b2a9a1f70d9036a6b3925db73acef028839bd35a118",
-      "providerUserMessageId": "629e9469-e422-4dd7-bbab-4ead046613fc"
+      "providerUserMessageId": "629e9469-e422-4dd7-bbab-4ead046613fc",
+      "providerAssistantMessageId": "63a39370-536b-4901-9cc8-8c586e938b2c"
     },
     {
       "schemaVersion": 1,
@@ -145,6 +146,62 @@
       "contentDigest": "2cf7ba5600175a08408e0e0881a7de36792027cd7b13794ee789b278c64d58a1",
       "providerUserMessageId": "d2a06b20-d87d-473a-b669-a1f894c93228",
       "providerAssistantMessageId": "7cfef8b2-e5f4-4f45-a39c-87d342189443"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791244881349-jw0fzgz",
+      "userTurnOrdinal": 11,
+      "state": "accepted",
+      "localMessageId": "msg-1791244881337-dahisr7",
+      "timestamp": 1791244881337,
+      "rawDisplayText": "Ok wir verdoppeln einfach den Bonus durch Ausweichen für Ausweichschritt",
+      "canonicalText": "Ok wir verdoppeln einfach den Bonus durch Ausweichen für Ausweichschritt",
+      "images": [],
+      "contentDigest": "0f392dad8d6e9ee0d77447f2512f6c5b6de9883446f17c52971af8fc869e299a",
+      "providerUserMessageId": "7122a267-5489-469e-8a01-0bbf940a745f",
+      "providerAssistantMessageId": "a6bbacc0-b798-467a-81d4-46cc19c3afdb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791245020003-3zhomkl",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1791245020000-rrrf4pn",
+      "timestamp": 1791245020000,
+      "rawDisplayText": "Ändere die Beschreibung und Metadaten von Ausweichschritt.\nEntferne die AP Kosten und ergänze dafür als Bedingung, dass der Charakter Ausweichen einsetzt.",
+      "canonicalText": "Ändere die Beschreibung und Metadaten von Ausweichschritt.\nEntferne die AP Kosten und ergänze dafür als Bedingung, dass der Charakter Ausweichen einsetzt.",
+      "images": [],
+      "contentDigest": "718b39b632546a35865c4069a896e2f7bf6398e49c4cb70d9c7d13a17a44990f",
+      "providerUserMessageId": "579e2d04-7f91-463f-a153-be2a7a48472b",
+      "providerAssistantMessageId": "2e95d10a-afb3-413f-9a83-d1e2cfad85c3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791245128453-v20sw2n",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1791245128450-gw5do7z",
+      "timestamp": 1791245128450,
+      "rawDisplayText": "Selbstbeherrschung sollte nur Vorteil auf einen Rettungswurf geben, nicht automatisch bestehen lassen.",
+      "canonicalText": "Selbstbeherrschung sollte nur Vorteil auf einen Rettungswurf geben, nicht automatisch bestehen lassen.",
+      "images": [],
+      "contentDigest": "5758089b781ef67c81aa9c8ab8af8e04da618e69cb154c000dfa7a65819a55f5",
+      "providerUserMessageId": "53932408-5c33-4607-a70c-3acd0b683454",
+      "providerAssistantMessageId": "bdb093de-1e88-47af-b1f8-a8465bef21c7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791245239397-d18cnkp",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1791245239394-sdrpbf3",
+      "timestamp": 1791245239394,
+      "rawDisplayText": "Nein dann lieber zurück zur alten Version, das finde ich irgendwie besser.",
+      "canonicalText": "Nein dann lieber zurück zur alten Version, das finde ich irgendwie besser.",
+      "images": [],
+      "contentDigest": "97e44ea8c07f1caf0c65436677816c44262b338da16be7dcf48dcb70f033b8e6",
+      "providerUserMessageId": "28a07d1d-91f8-4626-aeb2-33d1f370822d",
+      "providerAssistantMessageId": "e114e202-1fa2-4307-b54c-8d113a1dfa52"
     }
   ]
 }

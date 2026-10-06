@@ -1,7 +1,7 @@
 ---
 tags:
   - Regeln/Endeavour/Merkmal/Klasse/Mönch/Schwungaktion
-  - Zug/Aktion
+  - Regeln/Endeavour/Zug/Aktion
 aliases:
 Einsatz: "1 [[Schwung|Schwungpunkt]]"
 ---

@@ -31,7 +31,7 @@ Typ: "[[Offensivzauber|Angriff]]"
 *Du berufst dich auf die Macht Hadars, des Dunklen Hungers.*
 
 Tentakel aus finsterer Energie brechen aus dir hervor und schlagen auf alle Kreaturen innerhalb von 3 m ein. Jede Kreatur in diesem Bereich muss einen [[Stärkerettungswürfe|ST-Rettungswurf]] ablegen. 
-Bei einem Misserfolg erleidet ein Ziel 2W6 [[Schattenschaden]] und kann bis zu seinem nächsten [[Zug]] keine [[Reaktion]] verwenden. 
+Bei einem Misserfolg erleidet ein Ziel 2W6 [[Schattenschaden]] und kann bis zu seinem nächsten [[Zug]] keine [[Reaktionen]] verwenden. 
 Bei einem erfolgreichen [[Stärkerettungswürfe|ST-Rettungswurf]] nimmt die Kreatur halben Schaden, erleidet aber keine anderen Auswirkungen.
 
 ### Auf höheren Graden

@@ -2,8 +2,7 @@
 aliases: 
   - Gelegenheitsangriffe
 tags: 
-  - Zug/Reaktion
-  - Regeln/Endeavour
+  - Regeln/Endeavour/Zug/Reaktion
 Beschreibung: "Einen Feind angreifen der deine Reichweite verlässt."
 Kosten: "1 [[Aktionspunkte|AP]]"
 Voraussetzung: "[[Nahkampfangriff]] oder [[Waffenloser Angriff]] verfügbar"
@@ -17,7 +16,7 @@ Auslöser: "Eine sichtbare Kreatur verlässt deine Angriffsreichweite."
 Wenn du dich unachtsam an deinen Gegnern vorbeibewegst, bringst du dich in Gefahr und provozierst [[Gelegenheitsangriff|Gelegenheitsangriffe]].*
 
 ## Gelegenheitsangriffe vermeiden
-Wenn du teleportierst oder bewegt wirst, ohne dass du eine [[Aktionen]] oder [[Reaktion]] nutzt, bleiben [[Gelegenheitsangriff|Gelegenheitsangriffe]] aus.
+Wenn du teleportierst oder bewegt wirst, ohne dass du eine [[Aktionen|Aktion]] oder [[Reaktionen|Reaktion]] nutzt, bleiben [[Gelegenheitsangriff|Gelegenheitsangriffe]] aus.
 Du provozierst beispielsweise keinen [[Gelegenheitsangriff]], wenn dich eine Explosion aus der Reichweite des Gegners hinausschleudert oder du an einem Feind vorbeifällst.
 
 ## Einen Gelegenheitsangriff ausführen

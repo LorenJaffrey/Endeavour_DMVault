@@ -3,9 +3,11 @@ tags:
   - Regeln/Endeavour/Merkmal/Klasse/Mönch/Schwungaktion
   - Zug/Reaktion
 aliases:
-Einsatz: "1 [[Aktionspunkte|AP]], 1 [[Schwung|Schwungpunkt]]"
-Auslöser: "Du wirst Ziel eines [[Angriff|Angriffs]] oder eines [[Beweglichkeitsrettungswürfe|BW-Rettungswurfs]], bevor gewürfelt wird."
+Beschreibung: "Verdopple den Bonus von [[Ausweichen]]."
+Einsatz: "1 [[Schwung|Schwungpunkt]]"
+Voraussetzung: "Du setzt [[Ausweichen]] ein."
+Auslöser: "Du wirst Ziel eines [[Angriff|Angriffs]], bevor der [[Angriffswurf]] gewürfelt wird."
 ---
 # `=this.file.name`
-Führe die [[Ausweichen|Ausweichreaktion]] aus.
-Zusätzlich ist der [[Angriffswurf]] des Angreifers im [[Vorteil und Nachteil|Nachteil]], oder dein [[Beweglichkeitsrettungswürfe|BW-Rettungswurf]] ist im [[Vorteil und Nachteil|Vorteil]].
+Du setzt [[Ausweichen]] ein und gibst zusätzlich 1 [[Schwung|Schwungpunkt]] aus.
+Der Bonus von [[Ausweichen]] verdoppelt sich.

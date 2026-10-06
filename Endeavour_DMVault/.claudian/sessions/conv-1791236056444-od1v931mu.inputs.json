@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1791236056444-od1v931mu",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791236056585-1bxkktr",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1791236056442-x9jewye",
+      "timestamp": 1791236056442,
+      "rawDisplayText": "Prüfe in der Beschreibung von @01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md und @01 - Spielerbereich/Regeln/Kampf/Reaktion/Reaktion.md ob dort bereits vermerkt ist, dass jede Aktion und Reaktion nur einmal pro Zug ausgeführt werden kann.",
+      "canonicalText": "Prüfe in der Beschreibung von @01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md und @01 - Spielerbereich/Regeln/Kampf/Reaktion/Reaktion.md ob dort bereits vermerkt ist, dass jede Aktion und Reaktion nur einmal pro Zug ausgeführt werden kann.",
+      "images": [],
+      "contentDigest": "e0c22897d268939147488842bde7161930d695ee56a588996a62ccd122527969",
+      "providerUserMessageId": "479f32f6-ac25-4fa7-973a-e69635f5a2f4",
+      "providerAssistantMessageId": "f959cfb7-9264-4e3e-8c83-4ba1f9a93289"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791236125700-28f6vju",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1791236125697-1qjywav",
+      "timestamp": 1791236125697,
+      "rawDisplayText": "Wortlaut passt. Bitte ergänzen.",
+      "canonicalText": "Wortlaut passt. Bitte ergänzen.",
+      "images": [],
+      "contentDigest": "fa143ff011954d3bc8967c7c049e6ad9707fe44665d4a4fa4ef1830da443954d",
+      "providerUserMessageId": "4b896ed6-b973-4a72-a416-bc32a915c8d3",
+      "providerAssistantMessageId": "e953ac02-82cc-4c36-a0e0-7e7da0d2302f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791236340336-hzr11v1",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1791236340333-wd5mom6",
+      "timestamp": 1791236340333,
+      "rawDisplayText": "Kombiniere die beiden tags von @01 - Spielerbereich/Regeln/Kampf/Aktionen/ und @01 - Spielerbereich/Regeln/Kampf/Reaktion/ zu Regeln/Endeavour/Zug/Aktion",
+      "canonicalText": "Kombiniere die beiden tags von @01 - Spielerbereich/Regeln/Kampf/Aktionen/ und @01 - Spielerbereich/Regeln/Kampf/Reaktion/ zu Regeln/Endeavour/Zug/Aktion",
+      "images": [],
+      "contentDigest": "1e904fe6ab3dd0a3f5210f7e3e58666c072ea36a2c5d9c9748752e0dd190b663",
+      "providerUserMessageId": "036081bf-7f98-4672-b37e-45c4e726f470",
+      "providerAssistantMessageId": "041d1d2f-ee09-48a9-85f7-12cd2e3647b8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791236799286-j02v1tt",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1791236799282-92ylraj",
+      "timestamp": 1791236799282,
+      "rawDisplayText": "@01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md enthält eine Dataview Table für Aktionen. Wie trennen wir am besten allgemeine Aktionen von klassenspezifischen Aktionen?\nZiel ist es hier nur allgemeine Aktionen aufzuführen.\nIm späteren Charactersheet sollen dann sowohl alle allgemeinen Aktionen angezeigt werden als auch eine Liste zusätzlicher Klassenaktionen die in der Frontmatter definiert werden.",
+      "canonicalText": "@01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md enthält eine Dataview Table für Aktionen. Wie trennen wir am besten allgemeine Aktionen von klassenspezifischen Aktionen?\nZiel ist es hier nur allgemeine Aktionen aufzuführen.\nIm späteren Charactersheet sollen dann sowohl alle allgemeinen Aktionen angezeigt werden als auch eine Liste zusätzlicher Klassenaktionen die in der Frontmatter definiert werden.",
+      "images": [],
+      "contentDigest": "55e95cf047902ffd988969ce72e0a0cc92d400359a91deb811cdb8f4eb31eb6b",
+      "providerUserMessageId": "6b7f57a0-f3f8-447b-9f2d-1f0587985f04",
+      "providerAssistantMessageId": "fc29d408-45e3-46f9-a762-4e9dbb07275f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791238419065-nm9sdz5",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1791238419059-unwxqxs",
+      "timestamp": 1791238419059,
+      "rawDisplayText": "Lass uns kurz Merkmale definieren.\nMerkmale haben immer ein \"Einsatz\" Attribut im Frontmatter.\nDieses kann entweder [[Aktion]], [[Reaktion]] oder Passiv sein.\nDazu kann es (wenn es eine [[Aktion]] oder [[Reaktion]] ist) auch Kosten haben.\n\nIm Charactersheet soll es eine Liste von Aktionen (Allgemeine und Klassenaktionen), Reaktionen (Allgemeine und Klassenreaktionen) und Passiver Merkmale geben.\n\nAngriffsaktionen sollen dann nochmal separat in einem eigenen Bereich angezeigt werden. Am besten direkt mit Schaden, etc.",
+      "canonicalText": "Lass uns kurz Merkmale definieren.\nMerkmale haben immer ein \"Einsatz\" Attribut im Frontmatter.\nDieses kann entweder [[Aktion]], [[Reaktion]] oder Passiv sein.\nDazu kann es (wenn es eine [[Aktion]] oder [[Reaktion]] ist) auch Kosten haben.\n\nIm Charactersheet soll es eine Liste von Aktionen (Allgemeine und Klassenaktionen), Reaktionen (Allgemeine und Klassenreaktionen) und Passiver Merkmale geben.\n\nAngriffsaktionen sollen dann nochmal separat in einem eigenen Bereich angezeigt werden. Am besten direkt mit Schaden, etc.",
+      "images": [],
+      "contentDigest": "abc2111f46c459d8fe6a624bdd7e8841edc9b9026e6996bc3b7da03e3d178fc1",
+      "providerUserMessageId": "8eb04a85-342a-4254-a78c-a8c49f657238",
+      "providerAssistantMessageId": "7b3c3cb8-87b8-488c-8484-f518a4192609"
+    }
+  ]
+}

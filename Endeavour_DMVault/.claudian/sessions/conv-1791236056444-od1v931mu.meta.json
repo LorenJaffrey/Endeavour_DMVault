@@ -1,0 +1,23 @@
+{
+  "id": "conv-1791236056444-od1v931mu",
+  "providerId": "claude",
+  "title": "Prüfe Aktion und Reaktion auf Eins-pro-Zug",
+  "titleGenerationStatus": "success",
+  "createdAt": 1791236056447,
+  "updatedAt": 1791238441305,
+  "lastResponseAt": 1791238441305,
+  "sessionId": "c6bcfcd6-4b23-4ccf-a96e-12211fdb4d1f",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "c6bcfcd6-4b23-4ccf-a96e-12211fdb4d1f"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 1706,
+    "cacheReadInputTokens": 43035,
+    "contextWindow": 1000000,
+    "contextTokens": 44743,
+    "percentage": 4
+  }
+}

@@ -1,7 +1,6 @@
 ---
 tags: 
-  - Zug/Reaktion
-  - Regeln/Endeavour
+  - Regeln/Endeavour/Zug/Reaktion
 aliases:
 Beschreibung: "Versuche einen eingehenden [[Nahkampfangriff]] zu parieren."
 Kosten: "1 [[Aktionspunkte|AP]]"

@@ -5,18 +5,18 @@ tags:
   - Zauber
 Grad: 1
 Schule: "[[Bannzauber|Bannmagie]]"
-Zeitaufwand: "[[Reaktion]]"
+Zeitaufwand: "[[Reaktionen]]"
 Reichweite: Selbst
 Verbal: true
 Geste: true
 Material: false
-Materialkosten: 
+Materialkosten:
 Dauer: 1 Runde
 Konzentration: false
 Ritual: false
 Skalierbar: false
-Schaden: 
-Schadensart: 
+Schaden:
+Schadensart:
 Ziel: Einzel
 Klassen:
   - "[[Zauberer]]"

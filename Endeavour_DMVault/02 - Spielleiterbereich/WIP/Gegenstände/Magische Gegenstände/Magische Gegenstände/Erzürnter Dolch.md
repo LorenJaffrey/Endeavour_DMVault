@@ -12,4 +12,4 @@ Verflucht: false
 [[embed Magische Gegenstände Infobox]]
 ```
 
-Einmal pro Tag kann der Träger seine [[Reaktion]] einsetzen, um für 30 Sekunden +1 [[Rüstungsklasse]] und +1 Schaden zu erhalten.
+Einmal pro Tag kann der Träger seine [[Reaktionen]] einsetzen, um für 30 Sekunden +1 [[Rüstungsklasse]] und +1 Schaden zu erhalten.

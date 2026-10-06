@@ -20,7 +20,7 @@ Ziel: Einzelziel
 
 ## Beschreibung
 Gib einem Verbündeten in Reichweite einen zusätzlichen [[Aktionspunkte|Aktionspunkt]].  
-Gib 1 [[Mana]] aus, um dies außerhalb deines [[Zug|Zuges]] als [[Reaktion]] zu wirken.
+Gib 1 [[Mana]] aus, um dies außerhalb deines [[Zug|Zuges]] als [[Reaktionen]] zu wirken.
 
 ### Auf höheren Graden
 Höhere Stufen: +1 Reichweite alle 5 Stufen.

@@ -3,6 +3,7 @@ tags:
   - Regeln/Endeavour/Merkmal/Klasse/Mönch/Schwungaktion
   - Zug/Reaktion
 aliases:
+Beschreibung: "Wiederhole einen misslungenen [[Rettungswürfe|Rettungswurf]]."
 Einsatz: "1 [[Schwung|Schwungpunkt]]"
 Auslöser: "Du scheiterst bei einem [[Rettungswürfe|Rettungswurf]]."
 ---

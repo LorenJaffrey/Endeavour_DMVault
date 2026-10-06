@@ -34,7 +34,7 @@ Typ: "[[Offensivzauber|Angriff]]"
 
 Führe einen [[Nahkampfangriff|Nahkampf]]-Zauberangriff gegen das Ziel durch. 
 Du bist im [[Vorteil und Nachteil|Vorteil]] bei diesem [[Angriffswurf]], wenn das Ziel eine [[Rüstungen|Rüstung]] tragt, die aus Metall besteht. 
-Bei einem Treffer erleidet die Kreatur 1W8 [[Blitzschaden]] und kann bis zum Beginn deines nächsten Zuges keine [[Reaktion]] durchführen
+Bei einem Treffer erleidet die Kreatur 1W8 [[Blitzschaden]] und kann bis zum Beginn deines nächsten Zuges keine [[Reaktionen]] durchführen
 
 ### Auf höheren Graden
 Der Schaden dieses Zaubers steigt jeweils um 1W8 bei Erreichen höherer Stufen:

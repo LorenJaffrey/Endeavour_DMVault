@@ -29,7 +29,7 @@ Es gibt mehrere Möglichkeiten, einen Zauber zu wirken, ohne [[Mana]] zu verbrau
 
 ## Zeitaufwand
 Für die meisten Zauber ist nur die [[Magie wirken|magische Aktion]] erforderlich. 
-Manche Zauber erfordern jedoch eine [[Bonusaktion]], eine [[Reaktion]] oder einen Zeitaufwand von mindestens einer Minute. 
+Manche Zauber erfordern jedoch eine [[Bonusaktion]], eine [[Reaktionen]] oder einen Zeitaufwand von mindestens einer Minute. 
 Der Zeitaufwand gibt an, was davon zum Wirken des Zaubers erforderlich ist.
 
 ## Zaubern in Rüstung

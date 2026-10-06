@@ -1,7 +1,6 @@
 ---
 tags:
-  - Zug/Reaktion
-  - Regeln/Endeavour
+  - Regeln/Endeavour/Zug/Reaktion
 Beschreibung: "Eine vorbereitete [[Aktion]] ausführen."
 Kosten: "1 [[Aktionspunkte|AP]]"
 Voraussetzung: "Zuvor mit [[Vorbereiten]] eine Aktion vorbereitet"
