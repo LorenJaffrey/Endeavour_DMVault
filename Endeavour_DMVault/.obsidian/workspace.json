@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ausweichschritt.md",
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Subklassen Mönch.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -100,11 +100,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ausweichschritt"
+              "title": "Subklassen Mönch"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -305,11 +305,22 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "263d1a2ac2e2271f",
+  "active": "a25d693b6464dfeb",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Sturmwirbel.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Untitled 1.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Untitled 1 1.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Untitled 1 1 1.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Untitled.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Subklassen Mönch.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ausweichschritt.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Standhafter Geist.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Kampfbereitschaft.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Standhafter Geist.md",
+    "02 - Spielleiterbereich/WIP/_Transition DnD - Nimble.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Sturmwirbel.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schlaghagel.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Kampfkunst.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken/Techniken.md",
@@ -317,25 +328,14 @@
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md.tmp.15918.9ff41d05f572",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ausweichschritt.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ki.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Windgeboren.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Windschritt.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Selbstbeherrschung.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Schwung.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Schnellschlag.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Durchdringender Schlag.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki-verstärkte Schläge.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Ideensammlung Mönch.md",
-    "01 - Spielerbereich/Regeln/Kampf/Reaktionen/Vorbereitete Aktion.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Naturalist/Naturalist.md",
-    "02 - Spielleiterbereich/Kampagne/08 - Schatten über Niewinter/Story Schatten über Riva.md",
-    "02 - Spielleiterbereich/Kampagne/08 - Schatten über Niewinter/Riva Namen.md",
-    "02 - Spielleiterbereich/Kampagne/08 - Schatten über Niewinter/Friedhof.md",
     "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md.tmp.22841.20c777353cab",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schwung",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Kleriker/Subclasses/Luminary of Tidings.md.tmp.9573.78f366ccb9e7",

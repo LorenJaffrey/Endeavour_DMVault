@@ -4,21 +4,24 @@
   "title": "Test",
   "titleGenerationStatus": "failed",
   "createdAt": 1790811002946,
-  "updatedAt": 1791330515045,
-  "lastResponseAt": 1791330515045,
-  "sessionId": "34d343ff-ccac-4b2e-8d31-28ad43e01dd4",
+  "updatedAt": 1791414869422,
+  "lastResponseAt": 1791414869422,
+  "sessionId": "abad2aef-4f75-4d41-8f44-87738132d6cd",
   "selectedModel": "sonnet",
   "providerState": {
-    "providerSessionId": "34d343ff-ccac-4b2e-8d31-28ad43e01dd4"
+    "previousProviderSessionIds": [
+      "34d343ff-ccac-4b2e-8d31-28ad43e01dd4"
+    ],
+    "providerSessionId": "abad2aef-4f75-4d41-8f44-87738132d6cd"
   },
   "currentNote": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 4092,
-    "cacheReadInputTokens": 208185,
+    "cacheCreationInputTokens": 2878,
+    "cacheReadInputTokens": 94775,
     "contextWindow": 1000000,
-    "contextTokens": 212279,
-    "percentage": 21
+    "contextTokens": 97655,
+    "percentage": 10
   }
 }

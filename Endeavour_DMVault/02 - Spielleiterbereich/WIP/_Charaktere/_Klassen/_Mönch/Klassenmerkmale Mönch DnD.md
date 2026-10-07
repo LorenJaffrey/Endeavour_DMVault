@@ -27,9 +27,6 @@ Wenn der Angriff ein Nahkampfangriff war, wähle dazu eine Kreatur im Abstand vo
 Wenn der Angriff ein Fernkampfangriff war, wähle eine Kreatur im Abstand von bis zu 18 Metern von dir aus, die du sehen kannst und die nicht über vollständige Deckung verfügt.
 Diese Kreatur muss einen Geschicklichkeitsrettungswurf bestehen, oder sie erleidet Schaden in Höhe von zwei Würfen mit deinem Kampfkünste-Würfel plus deinem Geschicklichkeitsmodifikator. Die Schadensart entspricht der des Angriffs.
 
-### STURZ ABFEDERN
-Wenn du stürzt, kannst du eine Reaktion ausführen, um den Sturzschaden um einen Betrag in Höhe des Fünffachen deiner Mönchsstufe zu verringern.
-
 ### BETÄUBENDER SCHLAG
 Einmal pro Zug kannst du, wenn du eine Kreatur mit einer Mönchswaffe oder einem waffenlesen Angriff triffst 1 Fokuspunkt verbrauchen, um einen Betäubenden Schlag zu versuchen. 
 Das Ziel muss einen Konstitutionsrettungswurf ausführen. 

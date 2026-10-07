@@ -370,6 +370,57 @@
       "contentDigest": "1cbe125cd79c70b0b3f4a91ca45fb0a7ef12d6a0483f0d9ddc8e9c173ee039ff",
       "providerUserMessageId": "bccc205b-845b-46e8-8739-bdf0aec9fd03",
       "providerAssistantMessageId": "c85d3b04-6538-4cb4-a805-f9d0237d79b6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791412417470-695herb",
+      "userTurnOrdinal": 27,
+      "state": "accepted",
+      "localMessageId": "msg-1791412417447-j1l4eqt",
+      "timestamp": 1791412417447,
+      "rawDisplayText": "Wir streichen Ungerüstete Bewegung.\nSchnelle Reflexe sollte nur den BW Teil der Initiative betreffen und deutlich geringer ausfallen (z.B. Stufe/4 oder sowas). Andererseits sollte der Mönch durch BW Kernattribut ohnehin schon einen guten Wert haben.",
+      "canonicalText": "Wir streichen Ungerüstete Bewegung.\nSchnelle Reflexe sollte nur den BW Teil der Initiative betreffen und deutlich geringer ausfallen (z.B. Stufe/4 oder sowas). Andererseits sollte der Mönch durch BW Kernattribut ohnehin schon einen guten Wert haben.",
+      "context": {
+        "editorSelection": {
+          "notePath": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+          "mode": "selection",
+          "selectedText": "\n- Instinktives Ausweichen (+EN auf Ausweichwert) gestrichen: EN wäre dreifach belegt (Ki, Rettungswürfe, Ausweichwert)",
+          "lineCount": 2,
+          "startLine": 34
+        }
+      },
+      "images": [],
+      "contentDigest": "c53891bd3601bf741f1af665c6195b0f392b80c08b045d066039ce7aca61c34c",
+      "providerUserMessageId": "06a152eb-7462-4265-b57c-b0c837fb42ef",
+      "providerAssistantMessageId": "28aff0e3-7b49-43c5-96c5-b6f6edcfb582"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791414281132-tdwwdnf",
+      "userTurnOrdinal": 28,
+      "state": "accepted",
+      "localMessageId": "msg-1791414281126-8tkj4mf",
+      "timestamp": 1791414281126,
+      "rawDisplayText": "Ja streichen wir es ganz. Sturz abfedern bleibt.\nDafür brauchen wir die neuen Ki-generierenden Merkmale.\nEinmal bei Erleiden einer Wunde und einmal bei Auswürfeln von Initiative.",
+      "canonicalText": "Ja streichen wir es ganz. Sturz abfedern bleibt.\nDafür brauchen wir die neuen Ki-generierenden Merkmale.\nEinmal bei Erleiden einer Wunde und einmal bei Auswürfeln von Initiative.",
+      "images": [],
+      "contentDigest": "5d9befdf60b9d4bcfdf36c9a85eb75e8920033bd07d694ee62b223d86aa91747",
+      "providerUserMessageId": "4e689f32-601f-419b-bb9e-cf7c4e809c03",
+      "providerAssistantMessageId": "5404a8aa-d850-4614-87bc-c3ae99356080"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791414749440-9jvk9cl",
+      "userTurnOrdinal": 29,
+      "state": "accepted",
+      "localMessageId": "msg-1791414749435-6b9f1fh",
+      "timestamp": 1791414749435,
+      "rawDisplayText": "Wir nehmen +2 auf Initiative.\n\nAllgemein möchte ich die Basisklasse etwas verschlanken und mehr Merkmale über die Subklasse kommen lassen. Was sollten wir der Basisklasse noch geben weil es in die allgemeine Klassenfantasie passt und was sollte eher zu einer der Subklassen?\nBeziehe auch @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md  mit ein.",
+      "canonicalText": "Wir nehmen +2 auf Initiative.\n\nAllgemein möchte ich die Basisklasse etwas verschlanken und mehr Merkmale über die Subklasse kommen lassen. Was sollten wir der Basisklasse noch geben weil es in die allgemeine Klassenfantasie passt und was sollte eher zu einer der Subklassen?\nBeziehe auch @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md  mit ein.",
+      "images": [],
+      "contentDigest": "ec782e48f6c55b807473e151732441b58a241fe876649783242d42af58971511",
+      "providerUserMessageId": "c2c26dde-bb48-4bba-9454-e3b9e8e5d5ca",
+      "providerAssistantMessageId": "1c842150-5ecf-42a4-9097-a48cb10f54c2"
     }
   ]
 }
