@@ -1,27 +1,27 @@
 {
   "id": "conv-1790811002943-0qxuw3y7q",
   "providerId": "claude",
-  "title": "Test",
+  "title": "test",
   "titleGenerationStatus": "failed",
   "createdAt": 1790811002946,
-  "updatedAt": 1791414869422,
-  "lastResponseAt": 1791414869422,
-  "sessionId": "abad2aef-4f75-4d41-8f44-87738132d6cd",
+  "updatedAt": 1791503059028,
+  "lastResponseAt": 1791503059028,
+  "sessionId": "6c0d2fd2-817c-4337-98d3-fc14c0fd1aab",
   "selectedModel": "sonnet",
   "providerState": {
     "previousProviderSessionIds": [
-      "34d343ff-ccac-4b2e-8d31-28ad43e01dd4"
+      "34d343ff-ccac-4b2e-8d31-28ad43e01dd4",
+      "abad2aef-4f75-4d41-8f44-87738132d6cd"
     ],
-    "providerSessionId": "abad2aef-4f75-4d41-8f44-87738132d6cd"
+    "providerSessionId": "6c0d2fd2-817c-4337-98d3-fc14c0fd1aab"
   },
-  "currentNote": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 2878,
-    "cacheReadInputTokens": 94775,
+    "cacheCreationInputTokens": 3431,
+    "cacheReadInputTokens": 68861,
     "contextWindow": 1000000,
-    "contextTokens": 97655,
-    "percentage": 10
+    "contextTokens": 72294,
+    "percentage": 7
   }
 }

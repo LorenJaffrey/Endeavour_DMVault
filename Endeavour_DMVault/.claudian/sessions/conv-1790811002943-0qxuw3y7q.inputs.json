@@ -421,6 +421,74 @@
       "contentDigest": "ec782e48f6c55b807473e151732441b58a241fe876649783242d42af58971511",
       "providerUserMessageId": "c2c26dde-bb48-4bba-9454-e3b9e8e5d5ca",
       "providerAssistantMessageId": "1c842150-5ecf-42a4-9097-a48cb10f54c2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791441769797-i27b3vc",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1791441769760-0mzexh8",
+      "timestamp": 1791441769760,
+      "rawDisplayText": "test",
+      "canonicalText": "test",
+      "images": [],
+      "contentDigest": "0dd83749a380c4023c563e5cf5f0117e89ea2c9525689c6acd270138135ab55f",
+      "providerUserMessageId": "381a29b1-de19-4c83-a4d4-521ccb489d87"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791441926883-238f8g5",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1791441926863-66o6c4a",
+      "timestamp": 1791441926863,
+      "rawDisplayText": "@02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/ \nübersetze die englischen Dateien inklusive Namen",
+      "canonicalText": "@02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/ \nübersetze die englischen Dateien inklusive Namen",
+      "images": [],
+      "contentDigest": "2291cf0ec6d68808ba44f15a7d4871cc2d0a62761fa98de7d20f94fa22848dfe",
+      "providerUserMessageId": "1fcb5ca5-4b9b-4fe9-bdb2-054df7a51ce3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791443240355-zj7setk",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1791443240345-hw2fn8t",
+      "timestamp": 1791443240345,
+      "rawDisplayText": "test",
+      "canonicalText": "test",
+      "images": [],
+      "contentDigest": "0dd83749a380c4023c563e5cf5f0117e89ea2c9525689c6acd270138135ab55f",
+      "providerUserMessageId": "34dde8b3-d159-4016-9456-45ad4456561a",
+      "providerAssistantMessageId": "f15c902b-319b-44d8-8e5e-af60d291ee8e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791453224234-r5tdyk8",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1791453224206-0bg66s4",
+      "timestamp": 1791453224206,
+      "rawDisplayText": "Bitte übersetze auch @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken/Techniken.md",
+      "canonicalText": "Bitte übersetze auch @02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken/Techniken.md",
+      "images": [],
+      "contentDigest": "bbced0cb961d3f9d5e1b8be90ad23913a54293faee51940f98e0fad9e032f94b",
+      "providerUserMessageId": "43118924-b4ea-47bb-822f-54b849d24705",
+      "providerAssistantMessageId": "76ddfdfe-c897-4dad-abc0-cf543ba184d2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791502973569-f9r99sh",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1791502973556-adh1f5r",
+      "timestamp": 1791502973556,
+      "rawDisplayText": "Gut, jetzt betrachten wir alle noch nicht vergebenen Klassenmerkmale, Techniken und auch die Merkmale aus DnD.\n\nWelche sollten noch für die Basisklasse vergeben werden?\nAus den anderen würde ich dann einen Pool aus Techniken machen. \nDiese sollten ähnlich der Talente in DnD funktionieren. Jedes Mal wenn Technik in der Klassentabelle auftaucht, kann der Charakter sich eine der verfügbaren Techniken aussuchen. Dadurch sollen die Spieler ihre Charaktere nochmal etwas individuell anpassen können.",
+      "canonicalText": "Gut, jetzt betrachten wir alle noch nicht vergebenen Klassenmerkmale, Techniken und auch die Merkmale aus DnD.\n\nWelche sollten noch für die Basisklasse vergeben werden?\nAus den anderen würde ich dann einen Pool aus Techniken machen. \nDiese sollten ähnlich der Talente in DnD funktionieren. Jedes Mal wenn Technik in der Klassentabelle auftaucht, kann der Charakter sich eine der verfügbaren Techniken aussuchen. Dadurch sollen die Spieler ihre Charaktere nochmal etwas individuell anpassen können.",
+      "images": [],
+      "contentDigest": "2c7b7af704e7401a65c26b9f5a1e7bd4a4d89f2a71893af29458a57121ec6e33",
+      "providerUserMessageId": "11e3da1b-663f-4129-b06c-49f7d8ab2f36",
+      "providerAssistantMessageId": "3bfad143-880d-443c-bdc0-f5555d828288"
     }
   ]
 }

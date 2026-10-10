@@ -1,32 +1,39 @@
-**Airshift**
-You cannot be Grappled while conscious. While moving, you may travel across all terrain as normal ground, ignoring all ill effects (e.g., walls/ceilings, water, treetops, lava, spikes, clouds).
+**Luftverschiebung**
+Du kannst bei Bewusstsein nicht Gepackt werden. 
+Während du dich bewegst, kannst du jedes Gelände wie normalen Boden durchqueren und alle negativen Effekte ignorieren (z. B. Wände/Decken, Wasser, Baumkronen, Lava, Stacheln, Wolken).
 
-**Blur**
-(1/encounter) When you Defend, you may first move up to half your speed away, taking no damage if you are now out of range or have Full Cover.
+**Verschwimmen**
+(1/Begegnung) Wenn du Verteidigen nutzt, kannst du dich zuerst bis zur Hälfte deiner Bewegungsrate wegbewegen. 
+Du erleidest keinen Schaden, wenn du dich nun außer Reichweite befindest oder volle Deckung hast.
 
-**Bodily Discipline**
-You may spend 1 action to end any non-Wound condition on yourself.
+**Körperliche Disziplin**
+Du kannst 1 Aktion ausgeben, um einen beliebigen Zustand auf dir zu beenden, der keine Wunde ist.
 
-**Enduring Soul**
-Each time you roll Initiative, gain Hit Dice equal to the actions you get on your first turn. These Hit Dice expire at the end of combat if unused.
+**Standhafte Seele**
+Jedes Mal, wenn du Initiative würfelst, erhältst du Trefferwürfel in Höhe der Aktionen, die du in deinem ersten Zug bekommst. 
+Diese Trefferwürfel verfallen am Ende des Kampfes, falls sie nicht genutzt wurden.
 
-**I Jump On His Back!**
-While moving with your Windstep, if you move into the space of a creature your size or larger, you may jump onto its back. While on a creature this way, gain advantage on melee attacks against it, and any damage you avoid is dealt to it instead.
+**Ich spring auf seinen Rücken!**
+Wenn du dich mit deinem Windschritt bewegst und das Feld einer Kreatur betrittst, die so groß wie du oder größer ist, kannst du auf ihren Rücken springen. 
+Solange du dich so auf einer Kreatur befindest, erhältst du Vorteil auf Nahkampfangriffe gegen sie, und jeder Schaden, den du vermeidest, wird stattdessen ihr zugefügt.
 
-**Kinetic Barrage**
-Whenever you miss an attack, gain a cumulative +STR bonus to all damage you do for the rest of this encounter (a disciplined martial artist does not miss on purpose).
+**Kinetisches Trommelfeuer**
+Immer wenn du einen Angriff verfehlst, erhältst du für den Rest dieser Begegnung einen kumulativen +STR Bonus auf allen Schaden, den du verursachst (ein disziplinierter Kampfkünstler verfehlt nicht absichtlich).
 
-**Mighty Soul**
-You cannot be moved against your will. Whenever you would fail a saving throw, you may gain a Wound in order to add your STR to the result you rolled. You may repeat this any number of times.
+**Mächtige Seele**
+Du kannst nicht gegen deinen Willen bewegt werden. 
+Immer wenn du einen Rettungswurf nicht bestehen würdest, kannst du eine Wunde erhalten, um deine STR zum gewürfelten Ergebnis zu addieren. 
+Du kannst dies beliebig oft wiederholen.
 
-**Quickstrike**
-When you Interpose, you may first make an unarmed strike against the enemy for free.
+**Schnellschlag**
+Wenn du [[Einschreiten]] nutzt, kannst du zuerst kostenlos einen waffenlosen Schlag gegen den Feind ausführen.
 
-**Use Momentum**
-Whenever you avoid all of the damage of a melee attack (whether it misses or you Defend), you may swap places with the attacker and then choose another target that is now within the attack’s reach, and they are hit instead.
+**Schwung nutzen**
+Immer wenn du den gesamten Schaden eines Nahkampfangriffs vermeidest (egal ob er verfehlt oder du Verteidigen nutzt), kannst du den Platz mit dem Angreifer tauschen und dann ein anderes Ziel wählen, das sich nun in der Reichweite des Angriffs befindet. 
+Dieses wird stattdessen getroffen.
 
-**Vital Rejuvenation**
-When you receive healing for the first time on a turn, you may heal another target within 6 spaces HP equal to your STR.
+**Lebenskraft erneuern**
+Wenn du in einem Zug zum ersten Mal Heilung erhältst, kannst du ein anderes Ziel im Umkreis von 6 Feldern um TP in Höhe deiner STR heilen.
 
-**Windstrider**
-If you move through the space of a willing creature while using Windstep, they can move with you and choose any space adjacent to your path of movement to end in.
+**Windläufer**
+Wenn du dich mit Windschritt durch das Feld einer willigen Kreatur bewegst, kann sie sich mit dir bewegen und ein beliebiges Feld neben deinem Bewegungspfad als Endpunkt wählen.
