@@ -1,7 +1,7 @@
-# PFAD DER OFFENEN HAND
+# PFAD DER EISENFAUST
 *Meistere Techniken des waffenlosen Kampfs*
 
-Krieger der Offenen Hand sind Meister des waffenlosen Kampfs. 
+Krieger der Eisenfaust sind Meister des waffenlosen Kampfs. 
 Sie erlernen Techniken, ihre Gegner zu stoßen, sie stolpern zu lassen und ihre eigenen Energien zu manipulieren, um sich vor Schaden zu schützen.
 
 ## Stufe 3
@@ -38,3 +38,15 @@ Wenn du die Vibrationen beendest, muss das Ziel einen Konstitutionsrettungswurf 
 Scheitert der Wurf, so erleidet das Ziel 10W12 Energieschaden, anderenfalls die Hälfte.
 Du kannst dieses Merkmal immer nur auf jeweils eine Kreatur wirken. 
 Du kannst die Vibrationen auch harmlos beenden (keine Aktion erforderlich).
+
+## Ideen
+
+### Nachhallende Schläge
+Du lernst, deine Energie zu konzentrieren und als zusätzliche Wucht in deine Feinde zu übertragen.
+Füge allen deinen [[Nahkampfangriff|Nahkampfangriffen]] Schaden in Höhe deiner [[Stufe]] / 2 (abgerundet) als [[Wuchtschaden]] hinzu.
+Volle Stufe ist zu stark.
+
+### Weitere Ideen
+- Schlaghagel mit 3 Angriffen für 1 Ki (Erhöhter Fokus)
+- Furorfäuste: gebündelter Schlag, 1 Angriffswurf, 3 Würfel + Attribut, RK wirkt nur einmal
+- Kinetisches Trommelfeuer: Verfehlst du einen Angriff, erhältst du für den Rest der Begegnung einen kumulativen Bonus in Höhe deiner ST auf deinen Schaden

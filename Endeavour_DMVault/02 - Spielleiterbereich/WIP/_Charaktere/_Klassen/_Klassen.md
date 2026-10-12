@@ -96,9 +96,9 @@ Mönch-Style, Waffenloser Kampf/Mönchswaffen, Beweglichkeit, Mobilität
 
 | Subklasse         | Identität      | Rolle               | Rüstung      | 3. Kernattribut |
 | ----------------- | -------------- | ------------------- | ------------ | --------------- |
-| Elementweber      | Elemente       | Nahkampf DD/Control | keine/leicht | Geschick        |
-| Trunkener Meister | Drunken Master | Nahkampf Tank       | keine/leicht | Geschick        |
-| Eisenfaust        | Combos         | Nahkampf DD         | keine/leicht | Stärke          |
+| Pfad der Elemente | Elemente       | Nahkampf DD/Control | keine/leicht | Geschick        |
+| Pfad des Trunkenen Meisters | Drunken Master | Nahkampf Tank       | keine/leicht | Geschick        |
+| Pfad der Eisenfaust | Combos         | Nahkampf DD         | keine/leicht | Stärke          |
 
 ### [[Waldläufer]]
 Fährtenleser, Bogenschütze, Naturverbunden.

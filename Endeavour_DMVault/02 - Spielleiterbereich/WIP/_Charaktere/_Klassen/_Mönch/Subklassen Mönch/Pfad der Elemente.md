@@ -44,3 +44,35 @@ Solange Elementare Einstimmung aktiv ist, hast du folgende Vorzüge:
   Während dieser Dauer erleidet eine Kreatur deiner Wahl Schaden in Höhe eines Wurfs mit deinem Kampfkünste-Würfel, wenn du einen Bereich im Abstand von bis zu 1,5 Metern von der Kreatur betrittst.
   Die Schadensart ist Blitz, Feuer, Kälte, Säure oder Schall (nach deiner Wahl). 
   Eine Kreatur kann diesen Schaden nur einmal pro Zug erleiden.
+
+## Ideen aus Pfad der Flamme
+
+#### Stufe 3
+**Explodierende Seele**
+(1/Runde) In deinem Zug kannst du eine Wunde erleiden. 
+Immer wenn du eine Wunde erhältst, verursachst du STR+Wunden Schaden bei beliebigen Kreaturen deiner Wahl im Umkreis von 2 Feldern (Rüstung wird ignoriert) und gibst ihnen den Zustand Schwelend.
+
+#### Stufe 7
+**Lodernde Geschwindigkeit**
+Du erhältst +2 Bewegungsrate, solange du Windschritt nutzt. Nachdem du deine Bewegung mit Windschritt beendet hast, erleiden Feinde, durch die du hindurchgegangen bist, STR+GES Feuerschaden. Schwelende Feinde können doppelten Schaden erleiden, dabei endet der Zustand.
+
+#### Stufe 11
+**Kettenreaktion**
+(1/Zug) Wenn du einen kritischen Treffer erzielst, verursachst du Feuerschaden in Höhe von STR+Wunden bei Kreaturen deiner Wahl im Umkreis von 2 Feldern um dein Ziel. Wiederhole dies beliebig oft gegen Kreaturen, die noch keinen Schaden durch diesen Effekt erlitten haben und sich im Umkreis von 2 Feldern um eine bereits getroffene Kreatur befinden.
+
+#### Stufe 15
+**Brennende Seele**
+Verdopple jeden Feuerschaden, den du verursachst.
+
+## Ideen aus den Techniken
+
+### Luftverschiebung
+Du kannst bei Bewusstsein nicht [[Gepackt]] werden.
+Während du dich bewegst, kannst du jedes Gelände wie normalen Boden durchqueren und alle negativen Effekte ignorieren (z. B. Wände, Decken, Wasser, Baumkronen, Lava, Stacheln, Wolken).
+
+### Windläufer
+Wenn du dich mit [[Windschritt]] durch das Feld einer willigen Kreatur bewegst, kann sie sich mit dir bewegen und ein beliebiges Feld neben deinem Bewegungspfad als Endpunkt wählen.
+
+### Ich spring auf seinen Rücken!
+Wenn du dich mit [[Windschritt]] bewegst und das Feld einer Kreatur betrittst, die so groß wie du oder größer ist, kannst du auf ihren Rücken springen.
+Solange du dich so auf einer Kreatur befindest, erhältst du Vorteil auf Nahkampfangriffe gegen sie, und jeder Schaden, den du vermeidest, wird stattdessen ihr zugefügt.

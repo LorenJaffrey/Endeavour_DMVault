@@ -6,10 +6,12 @@
   "createdAt": 1791236056447,
   "updatedAt": 1791238441305,
   "lastResponseAt": 1791238441305,
-  "sessionId": "c6bcfcd6-4b23-4ccf-a96e-12211fdb4d1f",
+  "sessionId": null,
   "selectedModel": "sonnet",
   "providerState": {
-    "providerSessionId": "c6bcfcd6-4b23-4ccf-a96e-12211fdb4d1f"
+    "previousProviderSessionIds": [
+      "c6bcfcd6-4b23-4ccf-a96e-12211fdb4d1f"
+    ]
   },
   "usage": {
     "model": "sonnet",

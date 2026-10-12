@@ -66,9 +66,6 @@ Außerdem erhältst du keine Erschöpfungsstufen, wenn du keine Nahrung und kein
 Deine körperliche und mentale Disziplin gibt dir Übung in allen Rettungswürfen.
 Außerdem kannst du, wann immer du bei einem Rettungswurf scheiterst, 1 Fokuspunkt verbrauchen, um erneut zu würfeln. In diesem Fall musst du das neue Ergebnis verwenden.
 
-### PERFEKTER FOKUS
-Wenn du die Initiative auswürfelst und nicht Unglaublicher Stoffwechsel verwendest, erhältst du verbrauchte Fokuspunkte zurück, bis du 4 davon hast, sofern du höchstens 3 Punkte hast.
-
 ### ÜBERLEGENE VERTEIDIGUNG
 Zu Beginn deines Zugs kannst du 3 Fokuspunkte verbrauchen, um dich eine Minute lang - oder bis du kampfunfähig wirst - vor Schaden zu schützen.
 In dieser Zeit bist du gegen alle Schadensarten außer Energieschaden resistent.
