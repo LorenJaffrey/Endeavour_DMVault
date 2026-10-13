@@ -1,28 +1,28 @@
 ![[Mönch]]
 
 ## Klassentabelle
-| Stufe | Mönchswürfel | Merkmale                                                       |
-| -----:| ------------:| -------------------------------------------------------------- |
-|     1 |          1W6 | [[Kampfkunst]], [[Schlaghagel]]                                |
-|     2 |          1W6 | [[Ki]]                                                         |
-|     3 |          1W6 | [[Subklassen Mönch\|Mönch Subklasse]]                          |
-|     4 |          1W6 | [[Primäre Attributswerterhöhung]], [[Sturmwirbel]]             |
-|     5 |          1W6 | [[Sekundäre Attributswerterhöhung]], [[Betäubender Schlag]]    |
-|     6 |          1W8 | [[Techniken]], [[Sturz abfedern]]                              |
-|     7 |          1W8 | [[Subklassen Mönch\|Subklassen Merkmal]]                       |
-|     8 |          1W8 | [[Primäre Attributswerterhöhung]], [[Kampfbereitschaft]]       |
-|     9 |          1W8 | [[Sekundäre Attributswerterhöhung]], [[Beseelte Schläge]]      |
-|    10 |         1W10 | [[Techniken]], [[Unbeugsame Entschlossenheit]]                 |
-|    11 |         1W10 | [[Subklassen Mönch\|Subklassen Merkmal]]                       |
-|    12 |         1W10 | [[Primäre Attributswerterhöhung]], [[Entrinnen]]               |
-|    13 |         1W10 | [[Sekundäre Attributswerterhöhung]]                            |
-|    14 |         1W12 | [[Techniken]]                                                  |
-|    15 |         1W12 | [[Subklassen Mönch\|Subklassen Merkmal]]                       |
-|    16 |         1W12 | [[Primäre Attributswerterhöhung]]                              |
-|    17 |         1W12 | [[Sekundäre Attributswerterhöhung]]                            |
-|    18 |          2W6 | [[Techniken]]                                                  |
-|    19 |          2W6 | [[_Boons#EPIC Boons]]                                          |
-|    20 |          2W6 | [[Windgeboren]]                                                |
+| Stufe | Mönchswürfel | Merkmale                                                                 |
+| -----:| ------------:| ------------------------------------------------------------------------ |
+|     1 |          1W6 | [[Kampfkunst]], [[Schlaghagel]]                                          |
+|     2 |          1W6 | [[Ki]]                                                                   |
+|     3 |          1W6 | [[Subklassen Mönch\|Mönch Subklasse]]                                    |
+|     4 |          1W6 | [[Primäre Attributswerterhöhung]], [[Sturmwirbel]]                       |
+|     5 |          1W6 | [[Sekundäre Attributswerterhöhung]], [[Betäubender Schlag]]              |
+|     6 |          1W8 | [[Techniken]], [[Sturz abfedern]]                                        |
+|     7 |          1W8 | [[Subklassen Mönch\|Subklassen Merkmal]]                                 |
+|     8 |          1W8 | [[Primäre Attributswerterhöhung]], [[Kampfbereitschaft]]                 |
+|     9 |          1W8 | [[Sekundäre Attributswerterhöhung]], [[Beseelte Schläge]]                |
+|    10 |         1W10 | [[Techniken]], [[Unbeugsame Entschlossenheit]]                           |
+|    11 |         1W10 | [[Subklassen Mönch\|Subklassen Merkmal]]                                 |
+|    12 |         1W10 | [[Primäre Attributswerterhöhung]], [[Entrinnen]]                         |
+|    13 |         1W10 | [[Sekundäre Attributswerterhöhung]], [[Verbesserter Schlaghagel]]        |
+|    14 |         1W12 | [[Techniken]], [[Verbesserte Kampfbereitschaft]]                         |
+|    15 |         1W12 | [[Subklassen Mönch\|Subklassen Merkmal]]                                 |
+|    16 |         1W12 | [[Primäre Attributswerterhöhung]], [[Verbesserter Sturmwirbel]]          |
+|    17 |         1W12 | [[Sekundäre Attributswerterhöhung]], [[Verbesserter Betäubender Schlag]] |
+|    18 |          2W6 | [[Techniken]]                                                            |
+|    19 |          2W6 | [[Windgeboren]]                                                          |
+|    20 |          2W6 | [[Körper und Geist]]                                                     |
 
 
 **Waffen:** Nahkampf  
@@ -39,7 +39,8 @@
 - Ki ist die allgemeine Klassenressource als Tagespool (Maximum EN)
 - Auffüllung: Sichere Rast voll, Feldrast Hälfte (aufgerundet), Verschnaufen +1
 - Kein Sammeln, kein Start über Initiative. Nachschub im Kampf kommt aus Subklassen und späteren Klassenmerkmalen
-- Ki Nachschub der Basisklasse: [[Kampfbereitschaft]] (Stufe 8, Initiative)
+- Ki Nachschub der Basisklasse: [[Kampfbereitschaft]] (Stufe 8, Initiative), ersetzt durch [[Verbesserte Kampfbereitschaft]] (Stufe 14, 2 Ki)
+- Weiterer Ki Nachschub kommt aus den Subklassen und aus Techniken. Verbesserungen erfolgen durch Ersatzmerkmale
 - Standhafter Geist (Wunde gibt Ki) wandert zum [[Pfad des Trunkenen Meisters]], ist als Nachschub zu selten
 
 ## Subklassen
@@ -75,3 +76,8 @@ Verb: Aufbauen und entladen.
 ### Ideenpools für spätere Subklassen
 - [[_Pfad der Gnade]]
 - [[_Pfad der Schatten]]
+
+### Capstones
+- Stufe 19: [[Windgeboren]], nur +1 AP pro Runde
+- Stufe 20: [[Körper und Geist]], +1 BW und +1 EN (Maximum 6) und mindestens 3 Ki bei Initiative
+- Fließender Körper (erste Ki Aktion pro Runde gratis) ist verworfen, zusammen mit +1 AP zu stark

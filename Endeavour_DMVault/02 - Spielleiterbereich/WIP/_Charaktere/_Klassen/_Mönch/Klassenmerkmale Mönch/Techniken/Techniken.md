@@ -19,3 +19,6 @@ Wenn du [[Einschreiten]] einsetzt, kannst du zuerst kostenlos einen [[Waffenlose
 
 **Lebenskraft erneuern**
 Wenn du in einem Zug zum ersten Mal Heilung erhältst, kannst du eine andere Kreatur im Abstand von bis zu 9 Metern um Trefferpunkte in Höhe deiner [[Entschlossenheit|EN]] heilen.
+
+**Gesammelter Geist**
+Einmal pro [[Begegnung]] kannst du 1 [[Aktionspunkte|AP]] ausgeben, um 1 [[Ki|Ki-Punkt]] zu erhalten.
