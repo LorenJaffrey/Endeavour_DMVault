@@ -1,4 +1,6 @@
 # KRIEGER DER GNADE
+
+
 *Manipuliere Energien des Lebens und des Todes*
 
 Krieger der Gnade manipulieren die Lebenskraft von anderen. 
