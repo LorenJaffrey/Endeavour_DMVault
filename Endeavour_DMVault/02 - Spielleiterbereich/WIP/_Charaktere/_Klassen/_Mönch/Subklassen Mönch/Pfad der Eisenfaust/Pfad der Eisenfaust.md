@@ -4,50 +4,19 @@
 Verb: Aufbauen und entladen.
 Rolle: Nahkampf DD.
 Attribut: ST.
-Ki Gewinn: [[#Kombo]]
+Ki Gewinn: [[Kombo]]
 
-## Stufe 3
+## Merkmale
 
-### Kombo
-Triffst du dasselbe Ziel in einem Zug mit mindestens zwei Angriffen, erhältst du 1 [[Ki|Ki-Punkt]].
-Einmal pro [[Runde]].
-
-### Technik der Eisenfaust
-Triffst du mit dem Angriff von [[Schnellschlag]], wähle einen der folgenden Effekte:
-- **Stoßen:** Das Ziel muss einen [[Stärkerettungswürfe|ST-Rettungswurf]] bestehen, oder du stößt es bis zu 4,5 Meter von dir weg.
-- **Umstoßen:** Das Ziel muss einen [[Beweglichkeitsrettungswürfe|BW-Rettungswurf]] bestehen, oder es hat den Zustand [[Liegend]].
-- **Verdattern:** Das Ziel kann bis zum Beginn seines nächsten Zuges keine [[Gelegenheitsangriff|Gelegenheitsangriffe]] ausführen.
-
-Der [[Schwierigkeitsgrad|SG]] entspricht 10 plus deinem Schadensattribut ([[Stärke|ST]] oder [[Geschick|GE]]).
-
-## Stufe 7
-
-### Furorfaust
-Wenn du [[Schlaghagel]] einsetzt, kannst du zusätzlich 1 [[Ki|Ki-Punkt]] ausgeben.
-Statt mehrerer Angriffe führst du einen einzigen Angriff aus.
-Trifft er, verursacht er den Schaden aller Angriffe des Schlaghagels zusammen.
-Die [[Rüstungsklasse]] des Ziels wird nur einmal abgezogen.
-
-## Stufe 11
-
-### Nachhallende Schläge
-Du lernst, deine Energie zu konzentrieren und als zusätzliche Wucht in deine Feinde zu übertragen.
-Füge allen deinen [[Nahkampfangriff|Nahkampfangriffen]] Schaden in Höhe deiner [[Stufe]] / 2 (abgerundet) als [[Wuchtschaden]] hinzu.
-
-## Stufe 15
-
-### Berührung des Todes
-**Kosten:** 2 [[Aktionspunkte|AP]], 1 [[Ki|Ki-Punkt]]. Einmal pro [[Begegnung]].
-Berühre eine Kreatur in Reichweite.
-Sie muss einen [[Konstitutionsrettungswürfe|KO-Rettungswurf]] ausführen.
-Der [[Schwierigkeitsgrad|SG]] entspricht 10 plus deiner [[Entschlossenheit]].
-Bei einem [[Misserfolg]] erleidet sie Schaden in Höhe deiner maximalen [[Trefferpunkte|TP]].
-Bei einem Erfolg erleidet sie die Hälfte (abgerundet).
-Rüstungsklasse und [[Resilienzpunkte]] werden ignoriert.
+| Stufe | Merkmal |
+| ----: | ------- |
+| 3 | [[Kombo]], [[Technik der Eisenfaust]] |
+| 7 | [[Furorfaust]] |
+| 11 | [[Nachhallende Schläge]] |
+| 15 | [[Berührung des Todes]] |
 
 ## Offen
-- Schadensart der Berührung des Todes
-- Nachhallende Schläge bei [[Sturmwirbel]]
+- Berührung des Todes: Untote sind bei Schattenschaden vermutlich resistent oder immun
 - Furorfaust: Name und Stärke im Playtest prüfen
 - Berührung des Todes: Stärke prüfen, Alternative 2 AP, 1 Ki gegen 3 AP, 2 Ki und doppelte Max TP bei Misserfolg
 
