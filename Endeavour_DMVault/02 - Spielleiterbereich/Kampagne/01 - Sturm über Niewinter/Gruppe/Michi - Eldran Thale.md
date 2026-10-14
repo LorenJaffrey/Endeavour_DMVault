@@ -1,4 +1,5 @@
 ---
+Spieler: Michi
 Name: Eldran Thale
 Klasse: [[Fluchwirker]]
 ---

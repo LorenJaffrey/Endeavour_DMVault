@@ -102,13 +102,13 @@ Die Charakterkonzepte sind vorläufig.
 Nicht jeder Hook muss genutzt werden.
 Mit jedem Spieler findet vor der Kampagne eine Einzelsession statt.
 
-| Charakter | Klasse      | Einstieg                                                                | Sitzung |
-| --------- | ----------- | ----------------------------------------------------------------------- | ------- |
-| Paladin   | Paladin     | Start, Ermittlungsauftrag des Ordens                                    | 1       |
-| Frank     | Kleriker    | Start, Heilerin in der Unterstadt, behandelt Opfer                      | 1       |
-| Tobi      | Schurke     | Eine Verschwundene stammt aus dem Haushalt seines Adelshauses           | 2       |
-| Sancho    | Mönch       | Wird als Söldner angeheuert oder kennt die Unterstadt aus seiner Jugend | 3       |
-| Michi     | Fluchwirker | Spürt das erste Ritual, wird zum Zeugen am Tatort                       | 4       |
+| Spieler | Klasse      | Einstieg                                                                | Sitzung |
+| ------- | ----------- | ----------------------------------------------------------------------- | ------- |
+| Paladin | Paladin     | Start, Ermittlungsauftrag des Ordens                                    | 1       |
+| Frank   | Kleriker    | Start, Heilerin in der Unterstadt, behandelt Opfer                      | 1       |
+| Tobi    | Schurke     | Eine Verschwundene stammt aus dem Haushalt seines Adelshauses           | 2       |
+| Sancho  | Mönch       | Wird als Söldner angeheuert oder kennt die Unterstadt aus seiner Jugend | 3       |
+| Michi   | Fluchwirker | Spürt das erste Ritual, wird zum Zeugen am Tatort                       | 4       |
 
 Alle Charaktere gehören spätestens am Ende von Ebene 1 zur Gruppe.
 Startduo: Paladin und Frank.

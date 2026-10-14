@@ -1,4 +1,5 @@
 ---
+Spieler: Sancho
 Name: Aelar Thalanil
 Klasse: [[Mönch]]
 ---

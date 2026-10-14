@@ -1,4 +1,5 @@
 ---
+Spieler: Frank
 Name: Tilda de la Cruz
 Klasse: [[Kleriker]]
 ---

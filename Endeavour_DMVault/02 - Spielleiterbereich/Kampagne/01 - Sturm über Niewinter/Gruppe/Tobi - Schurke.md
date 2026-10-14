@@ -1,4 +1,5 @@
 ---
+Spieler: Tobi
 Name: 
 Klasse: [[Schurke]]
 ---

@@ -1,4 +1,5 @@
 ---
+Spieler: DeeKay
 Name:
 Klasse: [[Paladin]]
 ---
