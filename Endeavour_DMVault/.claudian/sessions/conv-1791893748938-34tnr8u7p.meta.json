@@ -1,0 +1,24 @@
+{
+  "id": "conv-1791893748938-34tnr8u7p",
+  "providerId": "claude",
+  "title": "Extrahiere Ashmadai-Kapitel und übersetze",
+  "titleGenerationStatus": "success",
+  "createdAt": 1791893748947,
+  "updatedAt": 1791894162181,
+  "lastResponseAt": 1791894162180,
+  "sessionId": "7b839150-13bf-4a07-9763-0ece8dffefe6",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "7b839150-13bf-4a07-9763-0ece8dffefe6"
+  },
+  "currentNote": "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 4907,
+    "cacheReadInputTokens": 47432,
+    "contextWindow": 1000000,
+    "contextTokens": 52342,
+    "percentage": 5
+  }
+}

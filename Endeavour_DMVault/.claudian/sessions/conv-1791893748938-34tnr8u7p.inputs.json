@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1791893748938-34tnr8u7p",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791893749740-h2wbpk0",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1791893748932-2wehvna",
+      "timestamp": 1791893748932,
+      "rawDisplayText": "/defuddle Kannst du das Kapitel über dei Ashmadai ab Seite 98 extrahieren, in Markdown umwandeln und auf deutsch übersetzen?",
+      "canonicalText": "/defuddle Kannst du das Kapitel über dei Ashmadai ab Seite 98 extrahieren, in Markdown umwandeln und auf deutsch übersetzen?",
+      "context": {
+        "currentNote": {
+          "path": "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf"
+        }
+      },
+      "images": [],
+      "contentDigest": "9f33cc0393b461c01245aa06a598f6177f81e47bd9e44b6efd03f283a0754681",
+      "providerUserMessageId": "dee7b829-4271-4ada-9c59-e327fea5bd23",
+      "providerAssistantMessageId": "1537198c-dab7-404a-99e5-e1c48f7eb4ea"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1791893888187-n2wzi47",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1791893888181-6dlk8n8",
+      "timestamp": 1791893888181,
+      "rawDisplayText": "Das Kapitel geht bis Seite 103. Ich habe das PDF gekauft und möchte das Extrakt nur zum persönlichen Gebrauch und als Ideenpool nutzen. Du kannst daher auch Regeltexte weglassen und umschreiben. Das genügt.",
+      "canonicalText": "Das Kapitel geht bis Seite 103. Ich habe das PDF gekauft und möchte das Extrakt nur zum persönlichen Gebrauch und als Ideenpool nutzen. Du kannst daher auch Regeltexte weglassen und umschreiben. Das genügt.",
+      "images": [],
+      "contentDigest": "189a4d14f5f7c06aa2d6b70e16b467f8f83a0eb13433eb9d4e7f4f8d4eb3950d",
+      "providerUserMessageId": "1f4287f7-3b6a-46c2-bd99-efbb56b252de",
+      "providerAssistantMessageId": "6ed51e9b-7233-4e63-bd4f-e93e094cb3f0"
+    }
+  ]
+}
