@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/_Pfad der Gnade.md",
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Furorfaust.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "_Pfad der Gnade"
+              "title": "Furorfaust"
             }
           }
         ]
@@ -234,6 +234,11 @@
   },
   "active": "b468718eae223a6e",
   "lastOpenFiles": [
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Elemente.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/_Pfad der Gnade.md",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/DeeKay - Paladin.md",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Frank - Tilda de la Cruz.md",
@@ -245,9 +250,7 @@
     "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
     "01 - Spielerbereich/Regeln/Kampf/Reaktionen/Parieren.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Technik der Eisenfaust.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Nachhallende Schläge.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Furorfaust.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Berührung des Todes.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust",
@@ -264,9 +267,6 @@
     "_Attachments/Half-Giant.png",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Gruppe.md",
     "02 - Spielleiterbereich/Kampagne/09 - Im Schatten der gehörnten Ratte/Charaktere.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Subklassen Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ki.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md.tmp.15918.9ff41d05f572",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki",
