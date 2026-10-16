@@ -880,6 +880,20 @@
       "contentDigest": "3db01ad19702c4a606ccf3358b2159f28d4d96f8da2bd91cb04e0d1e00ef8a92",
       "providerUserMessageId": "7ac6c0de-452c-40d4-87ec-5e75f2a89ac6",
       "providerAssistantMessageId": "05eac97f-60b9-41e7-aff4-8c0706fca31f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1792109364870-vw6fweb",
+      "userTurnOrdinal": 55,
+      "state": "accepted",
+      "localMessageId": "msg-1792109364853-3unsl6t",
+      "timestamp": 1792109364853,
+      "rawDisplayText": "Lege den Pfad mal an, lass aber den Rest als Ideenpool im Dokument",
+      "canonicalText": "Lege den Pfad mal an, lass aber den Rest als Ideenpool im Dokument",
+      "images": [],
+      "contentDigest": "edffd72283ffac57577ad9d994cc9271fbeed821e7a39212b9e9e9d96990b629",
+      "providerUserMessageId": "0bf51635-c313-493c-b5cc-d60231f6c062",
+      "providerAssistantMessageId": "94e08ea9-4fe3-41f5-9039-ce5858cf8e77"
     }
   ]
 }
