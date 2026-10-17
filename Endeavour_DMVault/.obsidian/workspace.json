@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Furorfaust.md",
+                "file": "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Tobi - Schurke.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Furorfaust"
+              "title": "Tobi - Schurke"
+            }
+          },
+          {
+            "id": "89333171ac2ee369",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Spezialfähigkeiten.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Ideen für Spezialfähigkeiten"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,7 +239,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 648.5
+    "width": 648.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,38 +258,38 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "263d1a2ac2e2271f",
+  "active": "89333171ac2ee369",
   "lastOpenFiles": [
+    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Encounter.md",
+    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Spezialfähigkeiten.md",
+    "02 - Spielleiterbereich/WIP/_Ideensammlung/Creator's Kit/Average Hero Stats.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Zäher Wille.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Trunkener Takt.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Instinktive Parade.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Schwung nutzen.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Pfad des Trunkenen Meisters.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Konter.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Fließende Abwehr.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Instinktive Parade.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Elemente.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/_Pfad der Gnade.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/DeeKay - Paladin.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Frank - Tilda de la Cruz.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Michi - Eldran Thale.md",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Tobi - Schurke.md",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Sancho - Mönch.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Zusammentreffen.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md",
-    "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
-    "01 - Spielerbereich/Regeln/Kampf/Reaktionen/Parieren.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Technik der Eisenfaust.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Nachhallende Schläge.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Michi - Eldran Thale.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Frank - Tilda de la Cruz.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/DeeKay - Paladin.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Gruppe.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Furorfaust.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Berührung des Todes.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Elemente.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/_Pfad der Gnade.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Zusammentreffen.md",
+    "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust",
     "_Attachments/falcon_the_hunter.webp",
-    "02 - Spielleiterbereich/Kampagne/Gruppe/Zusammentreffen.md",
     "02 - Spielleiterbereich/Kampagne/Gruppe",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md.tmp.32184.721dbb0d5171",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md.tmp.32184.29a5b24be4f3",

@@ -42,6 +42,7 @@
 - Ki Nachschub der Basisklasse: [[Kampfbereitschaft]] (Stufe 8, Initiative), ersetzt durch [[Verbesserte Kampfbereitschaft]] (Stufe 14, 2 Ki)
 - Weiterer Ki Nachschub kommt aus den Subklassen und aus Techniken. Verbesserungen erfolgen durch Ersatzmerkmale
 - Standhafter Geist (Wunde gibt Ki) wandert zum [[Pfad des Trunkenen Meisters]], ist als Nachschub zu selten
+- Karma: Tue anderen Gutes damit dir Gutes wiederfährt
 
 ## Subklassen
 - ![[_Klassen#Mönch]]
