@@ -8,12 +8,12 @@ Ki Gewinn: [[Trunkener Takt]]
 
 ## Merkmale
 
-| Stufe | Merkmal |
-| ----: | ------- |
-| 3 | [[Trunkener Takt]], [[Konter]] |
-| 7 | [[Fließende Abwehr]], [[Instinktive Parade]] |
-| 11 | [[Schwung nutzen]] |
-| 15 | [[Zäher Wille]] |
+| Stufe | Merkmal                                      |
+| -----:| -------------------------------------------- |
+|     3 | [[Trunkener Takt]], [[Konter]]               |
+|     7 | [[Fließende Abwehr]], [[Instinktive Parade]] |
+|    11 | [[Schwung nutzen]]                           |
+|    15 | [[Zäher Wille]]                              |
 
 ## Offen
 - Trunkener Takt: Obergrenze 1 pro Runde prüfen

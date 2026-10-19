@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Spezialfähigkeiten.md",
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Pfad des Trunkenen Meisters.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ideen für Spezialfähigkeiten"
+              "title": "Pfad des Trunkenen Meisters"
             }
           }
         ],
@@ -239,8 +239,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 648.5,
-    "collapsed": true
+    "width": 648.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -260,8 +259,10 @@
   },
   "active": "89333171ac2ee369",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Encounter.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
+    "01 - Spielerbereich/Regeln/Kampf/Angriff/Angriffsarten.md",
     "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Spezialfähigkeiten.md",
+    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Encounter.md",
     "02 - Spielleiterbereich/WIP/_Ideensammlung/Creator's Kit/Average Hero Stats.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
@@ -283,10 +284,8 @@
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Furorfaust.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Elemente.md",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/_Pfad der Gnade.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Zusammentreffen.md",
     "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust",
     "_Attachments/falcon_the_hunter.webp",

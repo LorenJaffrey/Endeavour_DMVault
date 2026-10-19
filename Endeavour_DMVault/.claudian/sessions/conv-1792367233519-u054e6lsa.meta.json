@@ -1,0 +1,23 @@
+{
+  "id": "conv-1792367233519-u054e6lsa",
+  "providerId": "claude",
+  "title": "Integriere Demon Slayer als Kampfklasse",
+  "titleGenerationStatus": "success",
+  "createdAt": 1792367233522,
+  "updatedAt": 1792367285767,
+  "lastResponseAt": 1792367285767,
+  "sessionId": "beb2b594-3312-4fcf-8dbf-81e2d1f97c1a",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "beb2b594-3312-4fcf-8dbf-81e2d1f97c1a"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 2,
+    "cacheCreationInputTokens": 3957,
+    "cacheReadInputTokens": 27413,
+    "contextWindow": 1000000,
+    "contextTokens": 31372,
+    "percentage": 3
+  }
+}
