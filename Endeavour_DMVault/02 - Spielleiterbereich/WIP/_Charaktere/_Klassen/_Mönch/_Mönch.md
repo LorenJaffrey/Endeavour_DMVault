@@ -31,7 +31,7 @@
 # Ideen
 
 ## Allgemein
-- Parieren ohne Nachteil (Instinktive Parade) liegt beim [[Pfad des Trunkenen Meisters]]
+- Instinktive Parade und Geschosse abwehren sind Techniken (siehe [[Techniken]])
 - Nachhallende Schläge liegt bei der [[Pfad der Eisenfaust|Eisenfaust]]
 - Instinktives Ausweichen (+EN auf Ausweichwert) gestrichen: EN wäre dreifach belegt (Ki, Rettungswürfe, Ausweichwert)
 - Ungerüstete Verteidigung gestrichen: Ausweichwert 10 + BW gilt ohne Rüstung ohnehin voll

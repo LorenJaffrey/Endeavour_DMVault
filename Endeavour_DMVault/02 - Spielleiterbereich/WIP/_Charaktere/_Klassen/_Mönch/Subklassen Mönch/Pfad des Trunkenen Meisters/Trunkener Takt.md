@@ -5,5 +5,8 @@ aliases:
 Einsatz: Passiv
 ---
 # `=this.file.name`
-Setzt du [[Ausweichen]] oder [[Parieren]] ein und der [[Angriff]] verursacht dadurch keinen Schaden, erhältst du 1 [[Ki|Ki-Punkt]].
+Setzt du [[Ausweichen]] oder [[Parieren]] ein und der [[Angriff]] verursacht dadurch keinen Schaden, erhältst du:
+- 1 [[Ki|Ki-Punkt]]
+- [[Temporäre Trefferpunkte]] in Höhe eines Wurfs mit deinem Mönchswürfel
+
 Einmal pro [[Runde]].

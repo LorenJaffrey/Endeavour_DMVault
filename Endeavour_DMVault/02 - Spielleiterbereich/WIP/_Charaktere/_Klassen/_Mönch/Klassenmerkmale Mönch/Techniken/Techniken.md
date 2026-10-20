@@ -22,3 +22,9 @@ Wenn du in einem Zug zum ersten Mal Heilung erhältst, kannst du eine andere Kre
 
 **Gesammelter Geist**
 Einmal pro [[Begegnung]] kannst du 1 [[Aktionspunkte|AP]] ausgeben, um 1 [[Ki|Ki-Punkt]] zu erhalten.
+
+**Instinktive Parade**
+Beim [[Parieren]] führst du den [[Angriffswurf]] ohne den Modifikator -2 aus.
+
+**Geschosse abwehren**
+Du kannst [[Parieren]] auch gegen [[Fernkampfangriff|Fernkampfangriffe]] einsetzen.
