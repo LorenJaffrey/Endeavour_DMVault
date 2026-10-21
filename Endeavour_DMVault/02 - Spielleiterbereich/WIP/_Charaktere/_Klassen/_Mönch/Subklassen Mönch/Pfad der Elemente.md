@@ -1,3 +1,12 @@
+---
+tags:
+  - Regeln/Endeavour/Charakter/Subklasse/Mönch
+aliases:
+Klasse: "[[Mönch]]"
+Beschreibung: "Lande Schläge und Explosionen von elementarer Macht."
+Rolle: Nahkampf DD/Control
+Kernattribut: "[[Geschick]]"
+---
 # KRIEGER DER ELEMENTE
 *Lande Schläge und Explosionen von elementarer Macht*
 

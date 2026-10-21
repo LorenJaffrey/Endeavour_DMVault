@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
-                "mode": "source",
+                "file": "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md",
+                "mode": "preview",
                 "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -52,7 +52,17 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Pfad der Eisenfaust"
+              "title": "Mönch"
+            }
+          },
+          {
+            "id": "001308e4648e0059",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ],
@@ -90,7 +100,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Erkundung",
+                "query": "tag:#Merkmal/Klasse",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -218,7 +228,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md"
+                "file": "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -259,44 +269,44 @@
   },
   "active": "89333171ac2ee369",
   "lastOpenFiles": [
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Pfad des Trunkenen Meisters.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken/Techniken Ideenpool.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Nachgeben.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Umlenken.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ki.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Durchdringender Schlag.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Selbstbeherrschung.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki/Ausweichschritt.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Merkmale.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Gauner/Klassenmerkmale Gauner/Ablenkung.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Fluchwirker/Anrufungen/Geringe Anrufungen/Abscheuliche Rede.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Beseelte Schläge.md",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
-    "01 - Spielerbereich/Regeln/Kampf/Angriff/Angriffsarten.md",
-    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Spezialfähigkeiten.md",
-    "02 - Spielleiterbereich/DM Tips/Ideen/Ideen für Encounter.md",
-    "02 - Spielleiterbereich/WIP/_Ideensammlung/Creator's Kit/Average Hero Stats.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Zäher Wille.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Trunkener Takt.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Instinktive Parade.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Schwung nutzen.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Konter.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Fließende Abwehr.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Außerweltliche Präsenz.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Aggressiv.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Mehrfachangriff/Mehrfachangriff 2.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Bestienmeister.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Blitzladung.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Blutmücken Vetrauter.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Chthonisches Erbe.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Vielseitige Zaubertricks.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Zusätzlicher Angriff.md",
+    "02 - Spielleiterbereich/WIP/Merkmale/Attributswerterhöhung.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Primäre Attributswerterhöhung.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Sekundäre Attributswerterhöhung.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Subklassen Mönch.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Zäher Wille.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Umlenken.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Trunkener Takt.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Pfad des Trunkenen Meisters.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad der Eisenfaust",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Ki",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Tobi - Schurke.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Sancho - Mönch.md",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Michi - Eldran Thale.md",
     "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust",
     "_Attachments/falcon_the_hunter.webp",
     "02 - Spielleiterbereich/Kampagne/Gruppe",
     "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md.tmp.32184.721dbb0d5171",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md.tmp.32184.29a5b24be4f3",
     "_Attachments/Half-Giant.png",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Schnelle Fäuste.md.tmp.15918.9ff41d05f572",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Ki",
-    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md.tmp.22841.20c777353cab",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Tiefling 1.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Halbling.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Gnom.png",

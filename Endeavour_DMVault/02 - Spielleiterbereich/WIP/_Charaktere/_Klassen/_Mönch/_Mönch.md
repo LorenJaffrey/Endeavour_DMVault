@@ -62,17 +62,13 @@ Verb: Investieren und halten.
 
 ### [[Pfad des Trunkenen Meisters]]
 Verb: Reagieren.
-- Gewinn: Wunde erhalten (ehemals Kinetischer Schwung), ausweichen, parieren. Obergrenze pro Runde nötig
-- Einsatz: Konter, Umlenken, Fernkampfangriffe ausweichen oder parieren
-- Attribut: GE
+- Ki Gewinn: [[Trunkener Takt]]
 
 ### [[Pfad der Eisenfaust]]
 Verb: Aufbauen und entladen.
-- Merken: Furorfäuste (gebündelter Schlag, 1 Angriffswurf, 3 Würfel + Attribut, RK wirkt nur einmal, ca. 3 AP oder 2 AP + 1 Ki)
-- Gewinn: Treffer in Folge (Zähler), keine zweite Ressource
-- Einsatz: Finisher, Kombo entladen
-- Waffenloser Kampf
-- Attribut: ST
+- Ki Gewinn: [[Kombo]]
+- Funkenschlag (Arbeitsname): Ein kritischer Treffer gibt dir 1 [[Ki|Ki-Punkt]] (1/Runde)
+- Kinetisches Trommelfeuer: Verfehlst du einen Angriff, erhältst du für den Rest der Begegnung einen kumulativen Bonus in Höhe deiner ST auf deinen Schaden
 
 ### Ideenpools für spätere Subklassen
 - [[_Pfad der Gnade]]
@@ -82,3 +78,16 @@ Verb: Aufbauen und entladen.
 - Stufe 19: [[Windgeboren]], nur +1 AP pro Runde
 - Stufe 20: [[Körper und Geist]], +1 BW und +1 EN (Maximum 6) und mindestens 3 Ki bei Initiative
 - Fließender Körper (erste Ki Aktion pro Runde gratis) ist verworfen, zusammen mit +1 AP zu stark
+
+# Playtest
+
+## [[Pfad der Eisenfaust]]
+- Berührung des Todes: Untote sind bei Schattenschaden vermutlich resistent oder immun
+- Furorfaust: Name und Stärke im Playtest prüfen
+- Berührung des Todes: Stärke prüfen, Alternative 2 AP, 1 Ki gegen 3 AP, 2 Ki und doppelte Max TP bei Misserfolg
+
+## [[Pfad des Trunkenen Meisters]]
+- Provoziert ist nur ein Nachteil auf Angriffe gegen andere Ziele. Im Playtest prüfen, ob die Wirkung als Spott reicht
+- Trunkener Takt: Obergrenze 1 pro Runde prüfen
+- Fließende Abwehr: Stärke prüfen (eine Reaktion pro Runde ohne AP)
+- Zäher Wille: Stärke prüfen

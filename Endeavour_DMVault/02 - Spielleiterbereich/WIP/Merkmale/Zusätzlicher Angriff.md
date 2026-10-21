@@ -1,6 +1,6 @@
 ---
 tags:
-  - Merkmal/Klasse
+  - Merkmal
   - Regeln/PHB2024
 Einsatz: Passiv
 ---
