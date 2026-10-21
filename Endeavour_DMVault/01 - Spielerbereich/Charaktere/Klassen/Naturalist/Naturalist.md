@@ -38,9 +38,4 @@ Wanderer berichten von Begegnungen mit solchen Wesen, manche weise und wohlwolle
 
 ---
 
-## Startausrüstung
-
-
----
-
 ## Klassentabelle

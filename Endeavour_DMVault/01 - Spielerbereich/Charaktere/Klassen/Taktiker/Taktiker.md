@@ -42,12 +42,4 @@ Kommandanten zeichnen sich aus durch:
 
 ---
 
-## Startausrüstung
-- [[Kurzschwert]]
-- [[Kettenhemd]]
-- 5 [[Ration|Rationen]]
-- 15 GM
-
----
-
 ## Klassentabelle

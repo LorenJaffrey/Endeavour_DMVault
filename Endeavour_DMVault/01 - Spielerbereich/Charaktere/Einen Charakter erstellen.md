@@ -74,8 +74,8 @@ Diese errechnen sich aus dem Basiswert der [[Klassen|Klasse]] plus eventueller B
 Auf Stufe 1 erhältst du maximale [[Resilienzpunkte]] in Höhe der [[Resilienzpunkte]] pro Stufe mal zwei.
 
 ## 4. Ausrüstung & Geld
-Helden beginnen auf Stufe 1 mit der für ihre [[Klassen|Klasse]] und ihren [[Hintergründe|Hintergrund]] vorgeschriebenen Ausrüstung oder mit **50 GM**, um ihre Startausrüstung zu kaufen. 
-Wenn du auf höherer Stufe beginnst, multipliziere den Betrag mit deiner Startstufe.
+Du bestimmst deine Startausrüstung gemeinsam mit dem SL passend zu deinem Charakterkonzept.
+Zusätzlich beginnst du mit **10 GM**.
 
 > [!faq]- Aber mein Charakter ist ein wohlhabender Adliger!  
 > Kein Problem – dein Charakter hat momentan nur Zugang zu diesem Goldbetrag. 

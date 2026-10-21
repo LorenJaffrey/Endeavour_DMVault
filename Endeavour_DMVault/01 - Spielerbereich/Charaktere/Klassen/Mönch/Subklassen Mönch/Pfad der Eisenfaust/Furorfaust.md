@@ -11,6 +11,6 @@ Stufe: 7
 ---
 # `=this.file.name`
 Du setzt [[Schlaghagel]] ein und gibst zusätzlich 1 [[Ki|Ki-Punkt]] aus.
-Statt mehrerer [[Angriff|Angriffe]] führst du einen einzigen [[Angriff]] aus.
+Statt mehrerer [[Angriff|Angriffe]] führst du einen einzigen [[Waffenloser Angriff|Waffenlosen Angriff]] aus.
 Trifft er, verursacht er den Schaden aller [[Angriff|Angriffe]] des Schlaghagels zusammen.
 Die [[Rüstungsklasse]] des Ziels wird nur einmal abgezogen.

@@ -36,7 +36,427 @@ __export(main_exports, {
 
 module.exports = __toCommonJS(main_exports);
 
-var _a, _b, import_obsidian8 = require("obsidian"), enumShowListIn = {
+var import_obsidian12 = require("obsidian");
+
+function invalidResponse(request, detail) {
+  const id = void 0 === request.interactionId ? "" : ` (${request.interactionId})`;
+  throw new TypeError(`Invalid automated response for ${request.kind}${id}: ${detail}`);
+}
+
+function unavailable(request) {
+  const id = void 0 === request.interactionId ? "" : ` (${request.interactionId})`;
+  throw new Error(`No UI fallback is available for ${request.kind}${id}`);
+}
+
+var DrivenUiInteractions = class {
+  constructor(options = {}) {
+    __publicField(this, "driver");
+    __publicField(this, "fallback");
+    this.driver = options.driver;
+    this.fallback = options.fallback;
+  }
+  async promptText(options, interactionId) {
+    const request = {
+      kind: "promptText",
+      interactionId,
+      options
+    }, automated = await this.handle(request);
+    if (!automated.handled) {
+      if (void 0 === this.fallback) unavailable(request);
+      return this.fallback.promptText(options, interactionId);
+    }
+    if (null !== automated.value && "string" != typeof automated.value) invalidResponse(request, "expected a string or null");
+    return automated.value;
+  }
+  async promptPassword(options, interactionId) {
+    const request = {
+      kind: "promptPassword",
+      interactionId,
+      options
+    }, automated = await this.handle(request);
+    if (!automated.handled) {
+      if (void 0 === this.fallback) unavailable(request);
+      return this.fallback.promptPassword(options, interactionId);
+    }
+    if (null !== automated.value && "string" != typeof automated.value) invalidResponse(request, "expected a string or null");
+    return automated.value;
+  }
+  async pickOne(options, interactionId) {
+    const request = {
+      kind: "pickOne",
+      interactionId,
+      options
+    }, automated = await this.handle(request);
+    if (!automated.handled) {
+      if (void 0 === this.fallback) unavailable(request);
+      return this.fallback.pickOne(options, interactionId);
+    }
+    if (null !== automated.value && !options.items.includes(automated.value)) invalidResponse(request, "expected null or one of the supplied items");
+    return automated.value;
+  }
+  async confirmAction(options, interactionId) {
+    const request = {
+      kind: "confirmAction",
+      interactionId,
+      options
+    }, automated = await this.handle(request);
+    if (!automated.handled) {
+      if (void 0 === this.fallback) unavailable(request);
+      return this.fallback.confirmAction(options, interactionId);
+    }
+    if (null !== automated.value && !options.actions.includes(automated.value)) invalidResponse(request, "expected null or one of the supplied actions");
+    return automated.value;
+  }
+  async showMessage(options, interactionId) {
+    const request = {
+      kind: "showMessage",
+      interactionId,
+      options
+    }, automated = await this.handle(request);
+    if (automated.handled) {
+      if (void 0 !== automated.value) invalidResponse(request, "expected no response value");
+    } else {
+      if (void 0 === this.fallback) unavailable(request);
+      await this.fallback.showMessage(options, interactionId);
+    }
+  }
+  async handle(request) {
+    if (void 0 === this.driver) return {
+      handled: false
+    }; else return this.driver.handle(request);
+  }
+}, import_obsidian = require("obsidian"), TextPromptModal = class extends import_obsidian.Modal {
+  constructor(app, options, resolveResult) {
+    var _a5;
+    super(app);
+    __publicField(this, "options");
+    __publicField(this, "resolveResult");
+    __publicField(this, "value");
+    __publicField(this, "input");
+    this.options = options;
+    this.resolveResult = resolveResult;
+    this.value = null != (_a5 = options.initialValue) ? _a5 : "";
+  }
+  onOpen() {
+    var _a5, _b3;
+    this.setTitle(this.options.title);
+    const inputSetting = new import_obsidian.Setting(this.contentEl);
+    if (void 0 !== this.options.label) inputSetting.setName(this.options.label);
+    if (void 0 !== this.options.description) inputSetting.setDesc(this.options.description);
+    inputSetting.addText(input => {
+      var _a6;
+      this.input = input;
+      input.setValue(this.value);
+      input.setPlaceholder(null != (_a6 = this.options.placeholder) ? _a6 : "");
+      input.inputEl.type = this.options.password ? "password" : "text";
+      input.onChange(value => {
+        this.value = value;
+      });
+      input.inputEl.addEventListener("keydown", event2 => {
+        if ("Enter" === event2.key && !event2.isComposing) {
+          event2.preventDefault();
+          this.submit();
+        }
+      });
+    });
+    new import_obsidian.Setting(this.contentEl).addButton(button => {
+      var _a6;
+      return button.setButtonText(null != (_a6 = this.options.submitLabel) ? _a6 : "OK").setCta().onClick(() => this.submit());
+    }).addButton(button => {
+      var _a6;
+      return button.setButtonText(null != (_a6 = this.options.cancelLabel) ? _a6 : "Cancel").onClick(() => this.close());
+    });
+    null == (_a5 = this.input) || _a5.inputEl.focus();
+    if (this.options.selectInitialValue && this.value.length > 0) null == (_b3 = this.input) || _b3.inputEl.select();
+  }
+  onClose() {
+    this.settle(null);
+    this.input = void 0;
+    this.contentEl.empty();
+  }
+  submit() {
+    this.settle(this.value);
+    this.close();
+  }
+  settle(result) {
+    const resolve = this.resolveResult;
+    if (void 0 !== resolve) {
+      this.resolveResult = void 0;
+      resolve(result);
+    }
+  }
+};
+
+function promptText(app, options) {
+  return new Promise(resolve => {
+    new TextPromptModal(app, {
+      ...options,
+      password: false
+    }, resolve).open();
+  });
+}
+
+function promptPassword(app, options) {
+  return new Promise(resolve => {
+    new TextPromptModal(app, {
+      ...options,
+      password: true
+    }, resolve).open();
+  });
+}
+
+var PickOneModal = class extends import_obsidian.FuzzySuggestModal {
+  constructor(app, options, resolveResult) {
+    var _a5;
+    super(app);
+    __publicField(this, "items");
+    __publicField(this, "itemText");
+    __publicField(this, "itemDescription");
+    __publicField(this, "resolveResult");
+    this.items = options.items;
+    this.itemText = options.getText;
+    this.itemDescription = options.getDescription;
+    this.resolveResult = resolveResult;
+    this.setPlaceholder(null != (_a5 = options.placeholder) ? _a5 : "Select an item");
+  }
+  getItems() {
+    return [ ...this.items ];
+  }
+  getItemText(item) {
+    return this.itemText(item);
+  }
+  renderSuggestion(match, element2) {
+    var _a5;
+    super.renderSuggestion(match, element2);
+    const description = null == (_a5 = this.itemDescription) ? void 0 : _a5.call(this, match.item);
+    if (void 0 !== description && "" !== description) element2.createDiv({
+      text: description,
+      cls: "suggestion-note"
+    });
+  }
+  onChooseItem(item, _event) {
+    this.settle(item);
+  }
+  onClose() {
+    globalThis.setTimeout(() => this.settle(null), 0);
+  }
+  settle(result) {
+    const resolve = this.resolveResult;
+    if (void 0 !== resolve) {
+      this.resolveResult = void 0;
+      resolve(result);
+    }
+  }
+};
+
+function pickOne(app, options) {
+  return new Promise(resolve => {
+    new PickOneModal(app, options, resolve).open();
+  });
+}
+
+var ActionDialog = class extends import_obsidian.Modal {
+  constructor(app, options, resolveResult) {
+    super(app);
+    __publicField(this, "options");
+    __publicField(this, "renderer", new import_obsidian.Component);
+    __publicField(this, "resolveResult");
+    __publicField(this, "timeout");
+    this.options = options;
+    this.resolveResult = resolveResult;
+  }
+  onOpen() {
+    var _a5;
+    this.setTitle(this.options.title);
+    this.renderer.load();
+    const messageEl = this.contentEl.createDiv();
+    import_obsidian.MarkdownRenderer.render(this.app, this.options.message, messageEl, null != (_a5 = this.options.sourcePath) ? _a5 : "", this.renderer);
+    const actions = new import_obsidian.Setting(this.contentEl);
+    for (const action2 of this.options.actions) actions.addButton(button => {
+      var _a6, _b3;
+      button.setButtonText(null != (_b3 = null == (_a6 = this.options.labels) ? void 0 : _a6[action2]) ? _b3 : action2).onClick(() => this.choose(action2));
+      if (action2 === this.options.defaultAction) button.setCta();
+    });
+    if (void 0 !== this.options.timeoutMs && void 0 !== this.options.defaultAction) this.timeout = globalThis.setTimeout(() => this.choose(this.options.defaultAction), this.options.timeoutMs);
+  }
+  onClose() {
+    this.clearTimeout();
+    this.renderer.unload();
+    this.settle(null);
+    this.contentEl.empty();
+  }
+  choose(action2) {
+    this.settle(action2);
+    this.close();
+  }
+  settle(result) {
+    const resolve = this.resolveResult;
+    if (void 0 !== resolve) {
+      this.resolveResult = void 0;
+      resolve(result);
+    }
+  }
+  clearTimeout() {
+    if (void 0 !== this.timeout) {
+      globalThis.clearTimeout(this.timeout);
+      this.timeout = void 0;
+    }
+  }
+};
+
+function confirmAction(app, options) {
+  return new Promise(resolve => {
+    new ActionDialog(app, options, resolve).open();
+  });
+}
+
+async function showMessage(app, options) {
+  var _a5;
+  const close = "close";
+  await confirmAction(app, {
+    title: options.title,
+    message: options.message,
+    actions: [ "close" ],
+    labels: {
+      [close]: null != (_a5 = options.closeLabel) ? _a5 : "Close"
+    },
+    defaultAction: "close",
+    sourcePath: options.sourcePath
+  });
+}
+
+function createObsidianFallback(app) {
+  return {
+    promptText: options => promptText(app, options),
+    promptPassword: options => promptPassword(app, options),
+    pickOne: options => pickOne(app, options),
+    confirmAction: options => confirmAction(app, options),
+    showMessage: options => showMessage(app, options)
+  };
+}
+
+var UiContext = class extends DrivenUiInteractions {
+  constructor(app, options = {}) {
+    super({
+      driver: options.driver,
+      fallback: createObsidianFallback(app)
+    });
+    __publicField(this, "app");
+    this.app = app;
+  }
+};
+
+function createObsidianUi(app, options = {}) {
+  return new UiContext(app, options);
+}
+
+var _vault, import_obsidian2 = require("obsidian"), VaultTextFileNotFoundError = class extends Error {
+  constructor(path) {
+    super(`Vault text file was not found: ${path}`);
+    __publicField(this, "path");
+    this.name = "VaultTextFileNotFoundError";
+    this.path = path;
+  }
+}, VaultTextFileExistsError = class extends Error {
+  constructor(path) {
+    super(`Vault path already exists: ${path}`);
+    __publicField(this, "path");
+    this.name = "VaultTextFileExistsError";
+    this.path = path;
+  }
+}, VaultFrontmatterFileNotFoundError = class extends Error {
+  constructor(path) {
+    super(`Vault frontmatter file was not found: ${path}`);
+    __publicField(this, "path");
+    this.name = "VaultFrontmatterFileNotFoundError";
+    this.path = path;
+  }
+}, VaultFrontmatterUnsupportedFileError = class extends Error {
+  constructor(path) {
+    super(`Vault frontmatter requires a Markdown file: ${path}`);
+    __publicField(this, "path");
+    this.name = "VaultFrontmatterUnsupportedFileError";
+    this.path = path;
+  }
+}, VaultFrontmatterAsyncUpdaterError = class extends Error {
+  constructor(path) {
+    super(`Vault frontmatter updater must be synchronous: ${path}`);
+    __publicField(this, "path");
+    this.name = "VaultFrontmatterAsyncUpdaterError";
+    this.path = path;
+  }
+};
+
+function isThenable(value) {
+  return ("object" == typeof value && null !== value || "function" == typeof value) && "then" in value && "function" == typeof value.then;
+}
+
+function invokeVaultFrontmatterUpdater(path, updater, frontmatter) {
+  const result = updater(frontmatter);
+  if (isThenable(result)) {
+    Promise.resolve(result).catch(() => {});
+    throw new VaultFrontmatterAsyncUpdaterError(path);
+  }
+}
+
+function requireTextFile(vault, path) {
+  const file = vault.getAbstractFileByPath(path);
+  if (!(file instanceof import_obsidian2.TFile)) throw new VaultTextFileNotFoundError(path);
+  return file;
+}
+
+var _host, ObsidianVaultTextAccess = class {
+  constructor(vault) {
+    __privateAdd(this, _vault);
+    __privateSet(this, _vault, vault);
+  }
+  async readText(path) {
+    const normalisedPath = (0, import_obsidian2.normalizePath)(path);
+    return await __privateGet(this, _vault).read(requireTextFile(__privateGet(this, _vault), normalisedPath));
+  }
+  async createText(path, content) {
+    const normalisedPath = (0, import_obsidian2.normalizePath)(path);
+    if (null !== __privateGet(this, _vault).getAbstractFileByPath(normalisedPath)) throw new VaultTextFileExistsError(normalisedPath);
+    await __privateGet(this, _vault).create(normalisedPath, content);
+  }
+  async modifyText(path, content) {
+    const normalisedPath = (0, import_obsidian2.normalizePath)(path);
+    await __privateGet(this, _vault).modify(requireTextFile(__privateGet(this, _vault), normalisedPath), content);
+  }
+  async appendText(path, content) {
+    const normalisedPath = (0, import_obsidian2.normalizePath)(path);
+    await __privateGet(this, _vault).append(requireTextFile(__privateGet(this, _vault), normalisedPath), content);
+  }
+};
+
+_vault = new WeakMap;
+
+function createObsidianVaultTextAccess(vault) {
+  return new ObsidianVaultTextAccess(vault);
+}
+
+var ObsidianVaultFrontmatterAccess = class {
+  constructor(host) {
+    __privateAdd(this, _host);
+    __privateSet(this, _host, host);
+  }
+  async updateFrontmatter(path, updater) {
+    const normalisedPath = (0, import_obsidian2.normalizePath)(path), file = __privateGet(this, _host).vault.getAbstractFileByPath(normalisedPath);
+    if (!(file instanceof import_obsidian2.TFile)) throw new VaultFrontmatterFileNotFoundError(normalisedPath);
+    if ("md" !== file.extension.toLowerCase()) throw new VaultFrontmatterUnsupportedFileError(normalisedPath);
+    await __privateGet(this, _host).fileManager.processFrontMatter(file, frontmatter => {
+      invokeVaultFrontmatterUpdater(normalisedPath, updater, frontmatter);
+    });
+  }
+};
+
+_host = new WeakMap;
+
+function createObsidianVaultFrontmatterAccess(host) {
+  return new ObsidianVaultFrontmatterAccess(host);
+}
+
+var _a, _b, enumShowListIn = {
   "": "Sidebar",
   CURRENT_PANE: "Current pane",
   SPLIT_PANE: "New pane"
@@ -84,7 +504,8 @@ var _a, _b, import_obsidian8 = require("obsidian"), enumShowListIn = {
   linkShowOnlyFDR: true,
   linkCombineOtherTree: true,
   showListIn: "",
-  displayFolderAsTag: false
+  displayFolderAsTag: false,
+  uiLanguage: "auto"
 }, VIEW_TYPE_SCROLL = "tagfolder-view-scroll", EPOCH_MINUTE = 60, EPOCH_HOUR = 60 * EPOCH_MINUTE, EPOCH_DAY = 24 * EPOCH_HOUR, FRESHNESS_1 = "FRESHNESS_01", FRESHNESS_2 = "FRESHNESS_02", FRESHNESS_3 = "FRESHNESS_03", FRESHNESS_4 = "FRESHNESS_04", FRESHNESS_5 = "FRESHNESS_05", tagDispDict = {
   FRESHNESS_01: "🕐",
   FRESHNESS_02: "📖",
@@ -103,6 +524,7 @@ var _a, _b, import_obsidian8 = require("obsidian"), enumShowListIn = {
 }, OrderKeyItem = {
   DISPNAME: "Displaying name",
   NAME: "File name",
+  TAGGROUP: "Tag grouping",
   MTIME: "Modified time",
   CTIME: "Created time",
   FULLPATH: "Fullpath of the file"
@@ -135,7 +557,7 @@ function to_array(value, n) {
   return array;
 }
 
-var _a2, DERIVED = 2, EFFECT = 4, RENDER_EFFECT = 8, MANAGED_EFFECT = 1 << 24, BLOCK_EFFECT = 16, BRANCH_EFFECT = 32, ROOT_EFFECT = 64, BOUNDARY_EFFECT = 128, CONNECTED = 512, CLEAN = 1024, DIRTY = 2048, MAYBE_DIRTY = 4096, INERT = 8192, DESTROYED = 16384, REACTION_RAN = 32768, DESTROYING = 1 << 25, EFFECT_TRANSPARENT = 65536, EAGER_EFFECT = 1 << 17, HEAD_EFFECT = 1 << 18, EFFECT_PRESERVED = 1 << 19, USER_EFFECT = 1 << 20, EFFECT_OFFSCREEN = 1 << 25, WAS_MARKED = 65536, REACTION_IS_UPDATING = 1 << 21, ASYNC = 1 << 22, ERROR_VALUE = 1 << 23, STATE_SYMBOL = Symbol("$state"), LEGACY_PROPS = Symbol("legacy props"), LOADING_ATTR_SYMBOL = Symbol(""), PROXY_PATH_SYMBOL = Symbol("proxy path"), ATTRIBUTES_CACHE = Symbol("attributes"), CLASS_CACHE = Symbol("class"), STYLE_CACHE = Symbol("style"), TEXT_CACHE = Symbol("text"), FORM_RESET_HANDLER = Symbol("form reset"), HMR_ANCHOR = Symbol("hmr anchor"), STALE_REACTION = new class StaleReactionError extends Error {
+var _a2, DERIVED = 2, EFFECT = 4, RENDER_EFFECT = 8, MANAGED_EFFECT = 1 << 24, BLOCK_EFFECT = 16, BRANCH_EFFECT = 32, ROOT_EFFECT = 64, BOUNDARY_EFFECT = 128, PAUSED = 256, CONNECTED = 512, CLEAN = 1024, DIRTY = 2048, MAYBE_DIRTY = 4096, INERT = 8192, DESTROYED = 16384, REACTION_RAN = 32768, DESTROYING = 1 << 25, EFFECT_TRANSPARENT = 65536, EAGER_EFFECT = 1 << 17, HEAD_EFFECT = 1 << 18, EFFECT_PRESERVED = 1 << 19, USER_EFFECT = 1 << 20, EFFECT_OFFSCREEN = 1 << 25, REACTION_IS_UPDATING = 1 << 21, ASYNC = 1 << 22, ERROR_VALUE = 1 << 23, STATE_SYMBOL = Symbol("$state"), COMPONENT_SYMBOL = Symbol("component"), LEGACY_PROPS = Symbol("legacy props"), LOADING_ATTR_SYMBOL = Symbol(""), PROXY_PATH_SYMBOL = Symbol("proxy path"), ATTRIBUTES_CACHE = Symbol("attributes"), CLASS_CACHE = Symbol("class"), STYLE_CACHE = Symbol("style"), TEXT_CACHE = Symbol("text"), FORM_RESET_HANDLER = Symbol("form reset"), HMR_ANCHOR = Symbol("hmr anchor"), STALE_REACTION = new class StaleReactionError extends Error {
   constructor() {
     super(...arguments);
     __publicField(this, "name", "StaleReactionError");
@@ -169,6 +591,14 @@ function lifecycle_outside_component(name) {
     error.name = "Svelte error";
     throw error;
   } else throw new Error("https://svelte.dev/e/lifecycle_outside_component");
+}
+
+function set_context_after_init() {
+  if (dev_fallback_default) {
+    const error = new Error("set_context_after_init\n`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression\nhttps://svelte.dev/e/set_context_after_init");
+    error.name = "Svelte error";
+    throw error;
+  } else throw new Error("https://svelte.dev/e/set_context_after_init");
 }
 
 function async_derived_orphan() {
@@ -275,14 +705,6 @@ function rune_outside_svelte(rune) {
   } else throw new Error("https://svelte.dev/e/rune_outside_svelte");
 }
 
-function set_context_after_init() {
-  if (dev_fallback_default) {
-    const error = new Error("set_context_after_init\n`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression\nhttps://svelte.dev/e/set_context_after_init");
-    error.name = "Svelte error";
-    throw error;
-  } else throw new Error("https://svelte.dev/e/set_context_after_init");
-}
-
 function state_descriptors_fixed() {
   if (dev_fallback_default) {
     const error = new Error("state_descriptors_fixed\nProperty descriptors defined on `$state` objects must contain `value` and always be `enumerable`, `configurable` and `writable`.\nhttps://svelte.dev/e/state_descriptors_fixed");
@@ -364,6 +786,19 @@ function invariant(condition, message) {
   if (!condition) invariant_violation(message);
 }
 
+function get_parent_context(context) {
+  var _a5;
+  let parent = context.p;
+  for (;null !== parent && null === parent.c; ) parent = parent.p;
+  return null != (_a5 = null == parent ? void 0 : parent.c) ? _a5 : null;
+}
+
+function get_or_init_context_map(context, name) {
+  var _a5;
+  if (null === context) lifecycle_outside_component(name);
+  return null != (_a5 = context.c) ? _a5 : context.c = new Map(get_parent_context(context) || void 0);
+}
+
 var component_context = null;
 
 function set_component_context(context) {
@@ -383,11 +818,11 @@ function set_dev_current_component_function(fn) {
 }
 
 function getContext(key2) {
-  return get_or_init_context_map("getContext").get(key2);
+  return get_or_init_context_map(component_context, "getContext").get(key2);
 }
 
 function setContext(key2, context) {
-  const context_map = get_or_init_context_map("setContext");
+  const context_map = get_or_init_context_map(component_context, "setContext");
   if (async_mode_flag) {
     var flags2 = active_effect.f;
     if (!(!active_reaction && 0 !== (flags2 & BRANCH_EFFECT) && !component_context.i)) set_context_after_init();
@@ -427,27 +862,18 @@ function pop(component2) {
   context.i = true;
   component_context = context.p;
   if (dev_fallback_default) dev_current_component_function = null != (_a5 = null == component_context ? void 0 : component_context.function) ? _a5 : null;
-  return null != component2 ? component2 : {};
+  return mark_as_component(component2);
+}
+
+function mark_as_component(component2 = {}) {
+  define_property(component2, COMPONENT_SYMBOL, {
+    value: true
+  });
+  return component2;
 }
 
 function is_runes() {
   return !legacy_mode_flag || null !== component_context && null === component_context.l;
-}
-
-function get_or_init_context_map(name) {
-  var _a5;
-  if (null === component_context) lifecycle_outside_component(name);
-  return null != (_a5 = component_context.c) ? _a5 : component_context.c = new Map(get_parent_context(component_context) || void 0);
-}
-
-function get_parent_context(component_context2) {
-  let parent = component_context2.p;
-  for (;null !== parent; ) {
-    const context_map = parent.c;
-    if (null !== context_map) return context_map;
-    parent = parent.p;
-  }
-  return null;
 }
 
 var micro_tasks = [];
@@ -504,10 +930,6 @@ function lifecycle_double_unmount() {
 
 function state_proxy_equality_mismatch(operator) {
   if (dev_fallback_default) console.warn(`%c[svelte] state_proxy_equality_mismatch\n%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${operator}\` will produce unexpected results\nhttps://svelte.dev/e/state_proxy_equality_mismatch`, bold, normal); else console.warn("https://svelte.dev/e/state_proxy_equality_mismatch");
-}
-
-function state_proxy_unmount() {
-  if (dev_fallback_default) console.warn("%c[svelte] state_proxy_unmount\n%cTried to unmount a state proxy, rather than a component\nhttps://svelte.dev/e/state_proxy_unmount", bold, normal); else console.warn("https://svelte.dev/e/state_proxy_unmount");
 }
 
 function svelte_boundary_reset_noop() {
@@ -575,7 +997,7 @@ function read_hydration_instruction(node) {
 var regex_is_valid_identifier = /^[a-zA-Z_$][a-zA-Z_$0-9]*$/;
 
 function proxy(value) {
-  if ("object" != typeof value || null === value || STATE_SYMBOL in value) return value;
+  if ("object" != typeof value || null === value || STATE_SYMBOL in value || COMPONENT_SYMBOL in value) return value;
   const prototype = get_prototype_of(value);
   if (prototype !== object_prototype && prototype !== array_prototype) return value;
   var sources = new Map, is_proxied_array = is_array(value), version = state(0), stack2 = dev_fallback_default && tracing_mode_flag ? get_error("created at") : null, parent_version = update_version, with_parent = fn => {
@@ -649,13 +1071,13 @@ function proxy(value) {
       return Reflect.get(target, prop2, receiver);
     },
     getOwnPropertyDescriptor(target, prop2) {
-      var descriptor = Reflect.getOwnPropertyDescriptor(target, prop2);
-      if (descriptor && "value" in descriptor) {
-        var s = sources.get(prop2);
-        if (s) descriptor.value = get(s);
-      } else if (void 0 === descriptor) {
-        var source2 = sources.get(prop2), value2 = null == source2 ? void 0 : source2.v;
-        if (void 0 !== source2 && value2 !== UNINITIALIZED) return {
+      var _a5;
+      null == (_a5 = this.has) || _a5.call(this, target, prop2);
+      var descriptor = Reflect.getOwnPropertyDescriptor(target, prop2), s = sources.get(prop2);
+      if (void 0 !== s) {
+        var value2 = get(s);
+        if (value2 === UNINITIALIZED) return;
+        if (descriptor && "value" in descriptor) descriptor.value = value2; else return {
           enumerable: true,
           configurable: true,
           value: value2,
@@ -858,6 +1280,13 @@ function first_child(node, is_text = false) {
   return hydrate_node;
 }
 
+function only_child(node, is_text = false) {
+  if (!hydrating) return get_first_child(node);
+  var first = child(node, is_text);
+  reset(node);
+  return first;
+}
+
 function sibling(node, count = 1, is_text = false) {
   let next_sibling = hydrating ? hydrate_node : node;
   for (var last_sibling; count--; ) {
@@ -922,9 +1351,10 @@ function handle_error(error) {
 }
 
 function invoke_error_boundary(error, effect2) {
+  if (error === HYDRATION_ERROR) throw error;
   if (null === effect2 || 0 === (effect2.f & DESTROYED)) {
     for (;null !== effect2; ) {
-      if (0 !== (effect2.f & BOUNDARY_EFFECT)) {
+      if (0 !== (effect2.f & BOUNDARY_EFFECT) && 0 === (effect2.f & (DESTROYED | DESTROYING))) {
         if (0 === (effect2.f & REACTION_RAN)) throw error;
         try {
           effect2.b.error(error);
@@ -977,456 +1407,48 @@ function update_derived_status(derived3) {
   if (0 !== (derived3.f & CONNECTED) || null === derived3.deps) set_signal_status(derived3, CLEAN); else set_signal_status(derived3, MAYBE_DIRTY);
 }
 
-function clear_marked(deps) {
-  if (null !== deps) for (const dep of deps) if (0 !== (dep.f & DERIVED) && 0 !== (dep.f & WAS_MARKED)) {
-    dep.f ^= WAS_MARKED;
-    clear_marked(dep.deps);
-  }
-}
-
 function defer_effect(effect2, dirty_effects, maybe_dirty_effects) {
   if (0 !== (effect2.f & DIRTY)) dirty_effects.add(effect2); else if (0 !== (effect2.f & MAYBE_DIRTY)) maybe_dirty_effects.add(effect2);
-  clear_marked(effect2.deps);
   set_signal_status(effect2, CLEAN);
 }
 
-function subscribe_to_store(store, run3, invalidate) {
-  if (null == store) {
-    run3(void 0);
-    if (invalidate) invalidate(void 0);
-    return noop;
-  }
-  const unsub = untrack(() => store.subscribe(run3, invalidate));
-  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-}
+var listening_to_form_reset = false;
 
-var subscriber_queue = [];
-
-function writable(value, start = noop) {
-  let stop = null;
-  const subscribers = new Set;
-  function set2(new_value) {
-    if (safe_not_equal(value, new_value)) {
-      value = new_value;
-      if (stop) {
-        const run_queue = !subscriber_queue.length;
-        for (const subscriber of subscribers) {
-          subscriber[1]();
-          subscriber_queue.push(subscriber, value);
-        }
-        if (run_queue) {
-          for (let i = 0; i < subscriber_queue.length; i += 2) subscriber_queue[i][0](subscriber_queue[i + 1]);
-          subscriber_queue.length = 0;
-        }
-      }
-    }
-  }
-  function update2(fn) {
-    set2(fn(value));
-  }
-  return {
-    set: set2,
-    update: update2,
-    subscribe: function subscribe(run3, invalidate = noop) {
-      const subscriber = [ run3, invalidate ];
-      subscribers.add(subscriber);
-      if (1 === subscribers.size) stop = start(set2, update2) || noop;
-      run3(value);
-      return () => {
-        subscribers.delete(subscriber);
-        if (0 === subscribers.size && stop) {
-          stop();
-          stop = null;
-        }
-      };
-    }
-  };
-}
-
-function get2(store) {
-  let value;
-  subscribe_to_store(store, _ => value = _)();
-  return value;
-}
-
-var legacy_is_updating_store = false, is_store_binding = false, IS_UNMOUNTED = Symbol("unmounted");
-
-function store_get(store, store_name, stores) {
-  var _a5;
-  const entry = null != (_a5 = stores[store_name]) ? _a5 : stores[store_name] = {
-    store: null,
-    source: mutable_source(void 0),
-    unsubscribe: noop
-  };
-  if (dev_fallback_default) entry.source.label = store_name;
-  if (entry.store !== store && !(IS_UNMOUNTED in stores)) {
-    entry.unsubscribe();
-    entry.store = null != store ? store : null;
-    if (null == store) {
-      entry.source.v = void 0;
-      entry.unsubscribe = noop;
-    } else {
-      var is_synchronous_callback = true;
-      entry.unsubscribe = subscribe_to_store(store, v => {
-        if (is_synchronous_callback) entry.source.v = v; else set(entry.source, v);
+function add_form_reset_listener() {
+  if (!listening_to_form_reset) {
+    listening_to_form_reset = true;
+    document.addEventListener("reset", evt => {
+      Promise.resolve().then(() => {
+        var _a5;
+        if (!evt.defaultPrevented) for (const e of evt.target.elements) null == (_a5 = e[FORM_RESET_HANDLER]) || _a5.call(e);
       });
-      is_synchronous_callback = false;
-    }
-  }
-  if (store && IS_UNMOUNTED in stores) return get2(store); else return get(entry.source);
-}
-
-function store_set(store, value) {
-  update_with_flag(store, value);
-  return value;
-}
-
-function setup_stores() {
-  const stores = {};
-  return [ stores, function cleanup() {
-    teardown(() => {
-      for (var store_name in stores) stores[store_name].unsubscribe();
-      define_property(stores, IS_UNMOUNTED, {
-        enumerable: false,
-        value: true
-      });
-    });
-  } ];
-}
-
-function update_with_flag(store, value) {
-  legacy_is_updating_store = true;
-  try {
-    store.set(value);
-  } finally {
-    legacy_is_updating_store = false;
-  }
-}
-
-function capture_store_binding(fn) {
-  var previous_is_store_binding = is_store_binding;
-  try {
-    is_store_binding = false;
-    return [ fn(), is_store_binding ];
-  } finally {
-    is_store_binding = previous_is_store_binding;
-  }
-}
-
-function createSubscriber(start) {
-  let stop, subscribers = 0, version = source(0);
-  if (dev_fallback_default) tag(version, "createSubscriber version");
-  return () => {
-    if (effect_tracking()) {
-      get(version);
-      render_effect(() => {
-        if (0 === subscribers) stop = untrack(() => start(() => increment(version)));
-        subscribers += 1;
-        return () => {
-          queue_micro_task(() => {
-            subscribers -= 1;
-            if (0 === subscribers) {
-              null == stop || stop();
-              stop = void 0;
-              increment(version);
-            }
-          });
-        };
-      });
-    }
-  };
-}
-
-var _anchor, _hydrate_open, _props, _children, _effect, _main_effect, _pending_effect, _failed_effect, _offscreen_fragment, _local_pending_count, _pending_count, _pending_count_update_queued, _dirty_effects, _maybe_dirty_effects, _effect_pending, _effect_pending_subscriber, _Boundary_instances, hydrate_resolved_content_fn, hydrate_failed_content_fn, hydrate_pending_content_fn, render_fn, resolve_fn, run_fn, update_pending_count_fn, handle_error_fn, flags = EFFECT_TRANSPARENT | EFFECT_PRESERVED;
-
-function boundary(node, props, children, transform_error) {
-  new Boundary(node, props, children, transform_error);
-}
-
-var Boundary = class {
-  constructor(node, props, children, transform_error) {
-    __privateAdd(this, _Boundary_instances);
-    __publicField(this, "parent");
-    __publicField(this, "is_pending", false);
-    __publicField(this, "transform_error");
-    __privateAdd(this, _anchor);
-    __privateAdd(this, _hydrate_open, hydrating ? hydrate_node : null);
-    __privateAdd(this, _props);
-    __privateAdd(this, _children);
-    __privateAdd(this, _effect);
-    __privateAdd(this, _main_effect, null);
-    __privateAdd(this, _pending_effect, null);
-    __privateAdd(this, _failed_effect, null);
-    __privateAdd(this, _offscreen_fragment, null);
-    __privateAdd(this, _local_pending_count, 0);
-    __privateAdd(this, _pending_count, 0);
-    __privateAdd(this, _pending_count_update_queued, false);
-    __privateAdd(this, _dirty_effects, new Set);
-    __privateAdd(this, _maybe_dirty_effects, new Set);
-    __privateAdd(this, _effect_pending, null);
-    __privateAdd(this, _effect_pending_subscriber, createSubscriber(() => {
-      __privateSet(this, _effect_pending, source(__privateGet(this, _local_pending_count)));
-      if (dev_fallback_default) tag(__privateGet(this, _effect_pending), "$effect.pending()");
-      return () => {
-        __privateSet(this, _effect_pending, null);
-      };
-    }));
-    var _a5, _b3;
-    __privateSet(this, _anchor, node);
-    __privateSet(this, _props, props);
-    __privateSet(this, _children, anchor => {
-      var effect2 = active_effect;
-      effect2.b = this;
-      effect2.f |= BOUNDARY_EFFECT;
-      children(anchor);
-    });
-    this.parent = active_effect.b;
-    this.transform_error = null != (_b3 = null != transform_error ? transform_error : null == (_a5 = this.parent) ? void 0 : _a5.transform_error) ? _b3 : e => e;
-    __privateSet(this, _effect, block(() => {
-      if (hydrating) {
-        const comment2 = __privateGet(this, _hydrate_open);
-        hydrate_next();
-        const server_rendered_pending = comment2.data === HYDRATION_START_ELSE;
-        if (comment2.data.startsWith(HYDRATION_START_FAILED)) {
-          const serialized_error = JSON.parse(comment2.data.slice(HYDRATION_START_FAILED.length));
-          __privateMethod(this, _Boundary_instances, hydrate_failed_content_fn).call(this, serialized_error);
-        } else if (server_rendered_pending) __privateMethod(this, _Boundary_instances, hydrate_pending_content_fn).call(this); else __privateMethod(this, _Boundary_instances, hydrate_resolved_content_fn).call(this);
-      } else __privateMethod(this, _Boundary_instances, render_fn).call(this);
-    }, flags));
-    if (hydrating) __privateSet(this, _anchor, hydrate_node);
-  }
-  defer_effect(effect2) {
-    defer_effect(effect2, __privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
-  }
-  is_rendered() {
-    return !this.is_pending && (!this.parent || this.parent.is_rendered());
-  }
-  has_pending_snippet() {
-    return !!__privateGet(this, _props).pending;
-  }
-  update_pending_count(d, batch) {
-    __privateMethod(this, _Boundary_instances, update_pending_count_fn).call(this, d, batch);
-    __privateSet(this, _local_pending_count, __privateGet(this, _local_pending_count) + d);
-    if (__privateGet(this, _effect_pending) && !__privateGet(this, _pending_count_update_queued)) {
-      __privateSet(this, _pending_count_update_queued, true);
-      queue_micro_task(() => {
-        __privateSet(this, _pending_count_update_queued, false);
-        if (__privateGet(this, _effect_pending)) internal_set(__privateGet(this, _effect_pending), __privateGet(this, _local_pending_count));
-      });
-    }
-  }
-  get_effect_pending() {
-    __privateGet(this, _effect_pending_subscriber).call(this);
-    return get(__privateGet(this, _effect_pending));
-  }
-  error(error) {
-    var _a5;
-    if (!__privateGet(this, _props).onerror && !__privateGet(this, _props).failed) throw error;
-    if (null == (_a5 = current_batch) ? void 0 : _a5.is_fork) {
-      if (__privateGet(this, _main_effect)) current_batch.skip_effect(__privateGet(this, _main_effect));
-      if (__privateGet(this, _pending_effect)) current_batch.skip_effect(__privateGet(this, _pending_effect));
-      if (__privateGet(this, _failed_effect)) current_batch.skip_effect(__privateGet(this, _failed_effect));
-      current_batch.oncommit(() => {
-        __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
-      });
-    } else __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
-  }
-};
-
-_anchor = new WeakMap;
-
-_hydrate_open = new WeakMap;
-
-_props = new WeakMap;
-
-_children = new WeakMap;
-
-_effect = new WeakMap;
-
-_main_effect = new WeakMap;
-
-_pending_effect = new WeakMap;
-
-_failed_effect = new WeakMap;
-
-_offscreen_fragment = new WeakMap;
-
-_local_pending_count = new WeakMap;
-
-_pending_count = new WeakMap;
-
-_pending_count_update_queued = new WeakMap;
-
-_dirty_effects = new WeakMap;
-
-_maybe_dirty_effects = new WeakMap;
-
-_effect_pending = new WeakMap;
-
-_effect_pending_subscriber = new WeakMap;
-
-_Boundary_instances = new WeakSet;
-
-hydrate_resolved_content_fn = function() {
-  try {
-    __privateSet(this, _main_effect, branch(() => __privateGet(this, _children).call(this, __privateGet(this, _anchor))));
-  } catch (error) {
-    this.error(error);
-  }
-};
-
-hydrate_failed_content_fn = function(error) {
-  const failed = __privateGet(this, _props).failed;
-  if (failed) __privateSet(this, _failed_effect, branch(() => {
-    failed(__privateGet(this, _anchor), () => error, () => () => {});
-  }));
-};
-
-hydrate_pending_content_fn = function() {
-  const pending2 = __privateGet(this, _props).pending;
-  if (pending2) {
-    this.is_pending = true;
-    __privateSet(this, _pending_effect, branch(() => pending2(__privateGet(this, _anchor))));
-    queue_micro_task(() => {
-      var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment()), anchor = create_text();
-      fragment.append(anchor);
-      __privateSet(this, _main_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => branch(() => __privateGet(this, _children).call(this, anchor))));
-      if (0 === __privateGet(this, _pending_count)) {
-        __privateGet(this, _anchor).before(fragment);
-        __privateSet(this, _offscreen_fragment, null);
-        pause_effect(__privateGet(this, _pending_effect), () => {
-          __privateSet(this, _pending_effect, null);
-        });
-        __privateMethod(this, _Boundary_instances, resolve_fn).call(this, current_batch);
-      }
+    }, {
+      capture: true
     });
   }
-};
+}
 
-render_fn = function() {
+function without_reactive_context(fn) {
+  var previous_reaction = active_reaction, previous_effect = active_effect;
+  set_active_reaction(null);
+  set_active_effect(null);
   try {
-    this.is_pending = this.has_pending_snippet();
-    __privateSet(this, _pending_count, 0);
-    __privateSet(this, _local_pending_count, 0);
-    __privateSet(this, _main_effect, branch(() => {
-      __privateGet(this, _children).call(this, __privateGet(this, _anchor));
-    }));
-    if (__privateGet(this, _pending_count) > 0) {
-      var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
-      move_effect(__privateGet(this, _main_effect), fragment);
-      const pending2 = __privateGet(this, _props).pending;
-      __privateSet(this, _pending_effect, branch(() => pending2(__privateGet(this, _anchor))));
-    } else __privateMethod(this, _Boundary_instances, resolve_fn).call(this, current_batch);
-  } catch (error) {
-    this.error(error);
-  }
-};
-
-resolve_fn = function(batch) {
-  this.is_pending = false;
-  batch.transfer_effects(__privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
-};
-
-run_fn = function(fn) {
-  var previous_effect = active_effect, previous_reaction = active_reaction, previous_ctx = component_context;
-  set_active_effect(__privateGet(this, _effect));
-  set_active_reaction(__privateGet(this, _effect));
-  set_component_context(__privateGet(this, _effect).ctx);
-  try {
-    Batch.ensure();
     return fn();
-  } catch (e) {
-    handle_error(e);
-    return null;
   } finally {
-    set_active_effect(previous_effect);
     set_active_reaction(previous_reaction);
-    set_component_context(previous_ctx);
+    set_active_effect(previous_effect);
   }
-};
+}
 
-update_pending_count_fn = function(d, batch) {
-  var _a5;
-  if (this.has_pending_snippet()) {
-    __privateSet(this, _pending_count, __privateGet(this, _pending_count) + d);
-    if (0 === __privateGet(this, _pending_count)) {
-      __privateMethod(this, _Boundary_instances, resolve_fn).call(this, batch);
-      if (__privateGet(this, _pending_effect)) pause_effect(__privateGet(this, _pending_effect), () => {
-        __privateSet(this, _pending_effect, null);
-      });
-      if (__privateGet(this, _offscreen_fragment)) {
-        __privateGet(this, _anchor).before(__privateGet(this, _offscreen_fragment));
-        __privateSet(this, _offscreen_fragment, null);
-      }
-    }
-  } else if (this.parent) __privateMethod(_a5 = this.parent, _Boundary_instances, update_pending_count_fn).call(_a5, d, batch);
-};
-
-handle_error_fn = function(error) {
-  if (__privateGet(this, _main_effect)) {
-    destroy_effect(__privateGet(this, _main_effect));
-    __privateSet(this, _main_effect, null);
-  }
-  if (__privateGet(this, _pending_effect)) {
-    destroy_effect(__privateGet(this, _pending_effect));
-    __privateSet(this, _pending_effect, null);
-  }
-  if (__privateGet(this, _failed_effect)) {
-    destroy_effect(__privateGet(this, _failed_effect));
-    __privateSet(this, _failed_effect, null);
-  }
-  if (hydrating) {
-    set_hydrate_node(__privateGet(this, _hydrate_open));
-    next();
-    set_hydrate_node(skip_nodes());
-  }
-  var onerror = __privateGet(this, _props).onerror;
-  let failed = __privateGet(this, _props).failed;
-  var did_reset = false, calling_on_error = false;
-  const reset2 = () => {
-    if (!did_reset) {
-      did_reset = true;
-      if (calling_on_error) svelte_boundary_reset_onerror();
-      if (null !== __privateGet(this, _failed_effect)) pause_effect(__privateGet(this, _failed_effect), () => {
-        __privateSet(this, _failed_effect, null);
-      });
-      __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
-        __privateMethod(this, _Boundary_instances, render_fn).call(this);
-      });
-    } else svelte_boundary_reset_noop();
-  }, handle_error_result = transformed_error => {
-    try {
-      calling_on_error = true;
-      null == onerror || onerror(transformed_error, reset2);
-      calling_on_error = false;
-    } catch (error2) {
-      invoke_error_boundary(error2, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
-    }
-    if (failed) __privateSet(this, _failed_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
-      try {
-        return branch(() => {
-          var effect2 = active_effect;
-          effect2.b = this;
-          effect2.f |= BOUNDARY_EFFECT;
-          failed(__privateGet(this, _anchor), () => transformed_error, () => reset2);
-        });
-      } catch (error2) {
-        invoke_error_boundary(error2, __privateGet(this, _effect).parent);
-        return null;
-      }
-    }));
-  };
-  queue_micro_task(() => {
-    var result;
-    try {
-      result = this.transform_error(error);
-    } catch (e) {
-      invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
-      return;
-    }
-    if (null !== result && "object" == typeof result && "function" == typeof result.then) result.then(handle_error_result, e => invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent)); else handle_error_result(result);
-  });
-};
+function listen_to_event_and_reset_event(element2, event2, handler, on_reset = handler) {
+  element2.addEventListener(event2, () => without_reactive_context(handler));
+  const prev = element2[FORM_RESET_HANDLER];
+  if (prev) element2[FORM_RESET_HANDLER] = () => {
+    prev();
+    on_reset(true);
+  }; else element2[FORM_RESET_HANDLER] = () => on_reset(true);
+  add_form_reset_listener();
+}
 
 function flatten(blockers, sync, async2, fn) {
   const d = is_runes() ? derived : derived_safe_equal;
@@ -1437,9 +1459,11 @@ function flatten(blockers, sync, async2, fn) {
   if (0 !== async2.length || 0 !== pending2.length) {
     var parent = active_effect, restore = capture(), blocker_promise = 1 === pending2.length ? pending2[0].promise : pending2.length > 1 ? Promise.all(pending2.map(b => b.promise)) : null, decrement_pending = increment_pending();
     if (0 !== async2.length) if (blocker_promise) blocker_promise.then(() => {
-      restore();
-      run3();
-      unset_context();
+      if (0 === (parent.f & DESTROYED)) {
+        restore();
+        run3();
+        unset_context();
+      } else decrement_pending();
     }); else run3(); else blocker_promise.then(() => finish([])).finally(decrement_pending);
   } else fn(deriveds);
   function finish(async3) {
@@ -1476,8 +1500,11 @@ function capture() {
   };
 }
 
+var restored = false;
+
 function unset_context(deactivate_batch = true) {
   var _a5;
+  restored = false;
   set_active_effect(null);
   set_active_reaction(null);
   set_component_context(null);
@@ -1642,7 +1669,6 @@ function execute_derived(derived3) {
     try {
       if (includes.call(stack, derived3)) derived_references_self();
       stack.push(derived3);
-      derived3.f &= ~WAS_MARKED;
       destroy_derived_effects(derived3);
       value = update_reaction(derived3);
     } finally {
@@ -1651,7 +1677,6 @@ function execute_derived(derived3) {
       stack.pop();
     }
   } else try {
-    derived3.f &= ~WAS_MARKED;
     destroy_derived_effects(derived3);
     value = update_reaction(derived3);
   } finally {
@@ -1681,12 +1706,14 @@ function update_derived(derived3) {
 }
 
 function freeze_derived_effects(derived3) {
-  var _a5, _b3;
+  var _a5;
   if (null !== derived3.effects) for (const e of derived3.effects) if (e.teardown || e.ac) {
     null == (_a5 = e.teardown) || _a5.call(e);
-    null == (_b3 = e.ac) || _b3.abort(STALE_REACTION);
+    if (null !== e.ac) without_reactive_context(() => {
+      e.ac.abort(STALE_REACTION);
+      e.ac = null;
+    });
     if (null !== e.fn) e.teardown = noop;
-    e.ac = null;
     remove_reactions(e, 0);
     destroy_effect_children(e);
   }
@@ -1696,7 +1723,7 @@ function unfreeze_derived_effects(derived3) {
   if (null !== derived3.effects) for (const e of derived3.effects) if (e.teardown && null !== e.fn) update_effect(e);
 }
 
-var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _blocking_pending, _deferred, _roots, _new_effects, _dirty_effects2, _maybe_dirty_effects2, _skipped_branches, _unskipped_branches, _decrement_queued, _Batch_instances, is_deferred_fn, process_fn, traverse_fn, find_earlier_batch_fn, merge_fn, defer_effects_fn, commit_fn, unlink_fn, first_batch = null, last_batch = null, current_batch = null, previous_batch = null, batch_values = null, last_scheduled_effect = null, is_flushing_sync = false, is_processing = false, collected_effects = null, legacy_updates = null, flush_count = 0, source_stacks = new Set, uid = 1, _Batch = class _Batch {
+var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _blocking_pending, _deferred, _scheduled, _new_effects, _dirty_effects, _maybe_dirty_effects, _skipped_branches, _unskipped_branches, _decrement_queued, _Batch_instances, is_deferred_fn, resolve_fn, process_fn, traverse_fn, find_earlier_batch_fn, merge_fn, defer_effects_fn, commit_fn, unlink_fn, first_batch = null, last_batch = null, current_batch = null, previous_batch = null, batch_values = null, last_scheduled_effect = null, is_flushing_sync = false, is_processing = false, collected_effects = null, legacy_updates = null, flush_count = 0, source_stacks = new Set, uid = 1, _Batch = class _Batch {
   constructor() {
     __privateAdd(this, _Batch_instances);
     __publicField(this, "id", uid++);
@@ -1712,10 +1739,10 @@ var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _bl
     __privateAdd(this, _pending, 0);
     __privateAdd(this, _blocking_pending, new Map);
     __privateAdd(this, _deferred, null);
-    __privateAdd(this, _roots, []);
+    __privateAdd(this, _scheduled, []);
     __privateAdd(this, _new_effects, []);
-    __privateAdd(this, _dirty_effects2, new Set);
-    __privateAdd(this, _maybe_dirty_effects2, new Set);
+    __privateAdd(this, _dirty_effects, new Set);
+    __privateAdd(this, _maybe_dirty_effects, new Set);
     __privateAdd(this, _skipped_branches, new Map);
     __privateAdd(this, _unskipped_branches, new Set);
     __publicField(this, "is_fork", false);
@@ -1816,8 +1843,8 @@ var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _bl
     }
   }
   transfer_effects(dirty_effects, maybe_dirty_effects) {
-    for (const e of dirty_effects) __privateGet(this, _dirty_effects2).add(e);
-    for (const e of maybe_dirty_effects) __privateGet(this, _maybe_dirty_effects2).add(e);
+    for (const e of dirty_effects) __privateGet(this, _dirty_effects).add(e);
+    for (const e of maybe_dirty_effects) __privateGet(this, _maybe_dirty_effects).add(e);
     dirty_effects.clear();
     maybe_dirty_effects.clear();
   }
@@ -1857,20 +1884,7 @@ var _started, _prev, _next, _commit_callbacks, _discard_callbacks, _pending, _bl
   schedule(effect2) {
     var _a5;
     last_scheduled_effect = effect2;
-    if (!(null == (_a5 = effect2.b) ? void 0 : _a5.is_pending) || 0 === (effect2.f & (EFFECT | RENDER_EFFECT | MANAGED_EFFECT)) || 0 !== (effect2.f & REACTION_RAN)) {
-      for (var e = effect2; null !== e.parent; ) {
-        var flags2 = (e = e.parent).f;
-        if (null !== collected_effects && e === active_effect) {
-          if (async_mode_flag) return;
-          if ((null === active_reaction || 0 === (active_reaction.f & DERIVED)) && !legacy_is_updating_store) return;
-        }
-        if (0 !== (flags2 & (ROOT_EFFECT | BRANCH_EFFECT))) {
-          if (0 === (flags2 & CLEAN)) return;
-          e.f ^= CLEAN;
-        }
-      }
-      __privateGet(this, _roots).push(e);
-    } else effect2.b.defer_effect(effect2);
+    if (!(null == (_a5 = effect2.b) ? void 0 : _a5.is_pending) || 0 === (effect2.f & (EFFECT | RENDER_EFFECT | MANAGED_EFFECT)) || 0 !== (effect2.f & REACTION_RAN)) __privateGet(this, _scheduled).push(effect2); else effect2.b.defer_effect(effect2);
   }
 };
 
@@ -1890,13 +1904,13 @@ _blocking_pending = new WeakMap;
 
 _deferred = new WeakMap;
 
-_roots = new WeakMap;
+_scheduled = new WeakMap;
 
 _new_effects = new WeakMap;
 
-_dirty_effects2 = new WeakMap;
+_dirty_effects = new WeakMap;
 
-_maybe_dirty_effects2 = new WeakMap;
+_maybe_dirty_effects = new WeakMap;
 
 _skipped_branches = new WeakMap;
 
@@ -1921,33 +1935,51 @@ is_deferred_fn = function() {
   return false;
 };
 
+resolve_fn = function() {
+  var roots = [];
+  for (const effect2 of __privateGet(this, _scheduled)) if (0 === (effect2.f & DESTROYED) && 0 !== (effect2.f & (DIRTY | MAYBE_DIRTY))) {
+    for (var e = effect2, covered = false; null !== e.parent; ) {
+      var flags2 = (e = e.parent).f;
+      if (0 !== (flags2 & (ROOT_EFFECT | BRANCH_EFFECT))) {
+        if (0 === (flags2 & CLEAN)) {
+          covered = true;
+          break;
+        }
+        e.f ^= CLEAN;
+      }
+    }
+    if (!covered) roots.push(e);
+  }
+  __privateSet(this, _scheduled, []);
+  return roots;
+};
+
 process_fn = function() {
   var _a5, _b3, _c2, _d;
   __privateSet(this, _started, true);
-  if (flush_count++ > 1e3) {
-    __privateMethod(this, _Batch_instances, unlink_fn).call(this);
-    infinite_loop_guard();
-  }
   if (dev_fallback_default) for (const value of this.current.keys()) source_stacks.add(value);
-  for (const e of __privateGet(this, _dirty_effects2)) {
-    __privateGet(this, _maybe_dirty_effects2).delete(e);
+  for (const e of __privateGet(this, _dirty_effects)) {
+    __privateGet(this, _maybe_dirty_effects).delete(e);
     set_signal_status(e, DIRTY);
     this.schedule(e);
   }
-  for (const e of __privateGet(this, _maybe_dirty_effects2)) {
+  for (const e of __privateGet(this, _maybe_dirty_effects)) {
     set_signal_status(e, MAYBE_DIRTY);
     this.schedule(e);
   }
-  const roots = __privateGet(this, _roots);
-  __privateSet(this, _roots, []);
   this.apply();
-  var effects = collected_effects = [], render_effects = [], updates = legacy_updates = [];
-  for (const root7 of roots) try {
-    __privateMethod(this, _Batch_instances, traverse_fn).call(this, root7, effects, render_effects);
-  } catch (e) {
-    reset_all(root7);
-    if (!__privateMethod(this, _Batch_instances, is_deferred_fn).call(this)) this.discard();
-    throw e;
+  for (var effects = collected_effects = [], render_effects = [], updates = legacy_updates = []; __privateGet(this, _scheduled).length > 0; ) {
+    if (flush_count++ > 1e3) {
+      __privateMethod(this, _Batch_instances, unlink_fn).call(this);
+      infinite_loop_guard();
+    }
+    for (const root8 of __privateMethod(this, _Batch_instances, resolve_fn).call(this)) try {
+      __privateMethod(this, _Batch_instances, traverse_fn).call(this, root8, effects, render_effects);
+    } catch (e) {
+      reset_all(root8);
+      if (!__privateMethod(this, _Batch_instances, is_deferred_fn).call(this)) this.discard();
+      throw e;
+    }
   }
   current_batch = null;
   if (updates.length > 0) {
@@ -1959,14 +1991,14 @@ process_fn = function() {
   if (__privateMethod(this, _Batch_instances, is_deferred_fn).call(this)) {
     __privateMethod(this, _Batch_instances, defer_effects_fn).call(this, render_effects);
     __privateMethod(this, _Batch_instances, defer_effects_fn).call(this, effects);
-    for (const [e, t] of __privateGet(this, _skipped_branches)) reset_branch(e, t);
+    for (const [e, t2] of __privateGet(this, _skipped_branches)) reset_branch(e, t2);
     if (updates.length > 0) __privateMethod(_a5 = current_batch, _Batch_instances, process_fn).call(_a5);
     return;
   }
   const earlier_batch = __privateMethod(this, _Batch_instances, find_earlier_batch_fn).call(this);
   if (!earlier_batch) {
-    __privateGet(this, _dirty_effects2).clear();
-    __privateGet(this, _maybe_dirty_effects2).clear();
+    __privateGet(this, _dirty_effects).clear();
+    __privateGet(this, _maybe_dirty_effects).clear();
     for (const fn of __privateGet(this, _commit_callbacks)) fn(this);
     __privateGet(this, _commit_callbacks).clear();
     previous_batch = this;
@@ -1975,18 +2007,21 @@ process_fn = function() {
     previous_batch = null;
     null == (_c2 = __privateGet(this, _deferred)) || _c2.resolve();
     var next_batch = current_batch;
-    if (0 === __privateGet(this, _pending) && (0 === __privateGet(this, _roots).length || null !== next_batch)) {
+    if (0 === __privateGet(this, _pending) && (0 === __privateGet(this, _scheduled).length || null !== next_batch)) {
       __privateMethod(this, _Batch_instances, unlink_fn).call(this);
       if (async_mode_flag) {
         __privateMethod(this, _Batch_instances, commit_fn).call(this);
         current_batch = next_batch;
       }
     }
-    if (__privateGet(this, _roots).length > 0) if (null !== next_batch) {
-      const batch2 = next_batch;
-      __privateGet(batch2, _roots).push(...__privateGet(this, _roots).filter(r2 => !__privateGet(batch2, _roots).includes(r2)));
+    if (__privateGet(this, _scheduled).length > 0) if (null !== next_batch) {
+      for (const e of __privateGet(this, _scheduled)) __privateGet(next_batch, _scheduled).push(e);
+      __privateSet(this, _scheduled, []);
     } else next_batch = this;
-    if (null !== next_batch) __privateMethod(_d = next_batch, _Batch_instances, process_fn).call(_d);
+    if (null !== next_batch) {
+      old_values.clear();
+      __privateMethod(_d = next_batch, _Batch_instances, process_fn).call(_d);
+    }
   } else {
     __privateMethod(this, _Batch_instances, defer_effects_fn).call(this, render_effects);
     __privateMethod(this, _Batch_instances, defer_effects_fn).call(this, effects);
@@ -1994,13 +2029,13 @@ process_fn = function() {
   }
 };
 
-traverse_fn = function(root7, effects, render_effects) {
-  root7.f ^= CLEAN;
-  for (var effect2 = root7.first; null !== effect2; ) {
+traverse_fn = function(root8, effects, render_effects) {
+  root8.f ^= CLEAN;
+  for (var effect2 = root8.first; null !== effect2; ) {
     var flags2 = effect2.f, is_branch = 0 !== (flags2 & (BRANCH_EFFECT | ROOT_EFFECT));
     if (!(is_branch && 0 !== (flags2 & CLEAN) || 0 !== (flags2 & INERT) || __privateGet(this, _skipped_branches).has(effect2)) && null !== effect2.fn) {
       if (is_branch) effect2.f ^= CLEAN; else if (0 !== (flags2 & EFFECT)) effects.push(effect2); else if (async_mode_flag && 0 !== (flags2 & (RENDER_EFFECT | MANAGED_EFFECT))) render_effects.push(effect2); else if (is_dirty(effect2)) {
-        if (0 !== (flags2 & BLOCK_EFFECT)) __privateGet(this, _maybe_dirty_effects2).add(effect2);
+        if (0 !== (flags2 & BLOCK_EFFECT)) __privateGet(this, _maybe_dirty_effects).add(effect2);
         update_effect(effect2);
       }
       var child2 = effect2.first;
@@ -2039,15 +2074,15 @@ merge_fn = function(batch) {
     if (d) deferred2.promise.then(d.resolve).catch(d.reject);
   }
   batch.async_deriveds.clear();
-  this.transfer_effects(__privateGet(batch, _dirty_effects2), __privateGet(batch, _maybe_dirty_effects2));
+  this.transfer_effects(__privateGet(batch, _dirty_effects), __privateGet(batch, _maybe_dirty_effects));
   const mark = value => {
     var reactions = value.reactions;
-    if (null !== reactions) for (const reaction of reactions) {
+    if (null !== reactions) if (0 === (value.f & DERIVED) || 0 !== (value.f & (DIRTY | MAYBE_DIRTY))) for (const reaction of reactions) {
       var flags2 = reaction.f;
       if (0 !== (flags2 & DERIVED)) mark(reaction); else {
         var effect2 = reaction;
         if (flags2 & (ASYNC | BLOCK_EFFECT) && !this.async_deriveds.has(effect2)) {
-          __privateGet(this, _maybe_dirty_effects2).delete(effect2);
+          __privateGet(this, _maybe_dirty_effects).delete(effect2);
           set_signal_status(effect2, DIRTY);
           this.schedule(effect2);
         }
@@ -2062,11 +2097,11 @@ merge_fn = function(batch) {
 };
 
 defer_effects_fn = function(effects) {
-  for (var i = 0; i < effects.length; i += 1) defer_effect(effects[i], __privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+  for (var i = 0; i < effects.length; i += 1) defer_effect(effects[i], __privateGet(this, _dirty_effects), __privateGet(this, _maybe_dirty_effects));
 };
 
 commit_fn = function() {
-  var _a5;
+  var _a5, _b3;
   for (let batch = first_batch; null !== batch; batch = __privateGet(batch, _next)) {
     var is_earlier = batch.id < this.id, sources = [];
     for (const [source3, [value, is_derived]] of this.current) {
@@ -2086,7 +2121,7 @@ commit_fn = function() {
       if (0 === others.length) {
         if (is_earlier) batch.discard();
       } else if (sources.length > 0) {
-        if (dev_fallback_default && !__privateGet(batch, _decrement_queued)) invariant(0 === __privateGet(batch, _roots).length, "Batch has scheduled roots");
+        if (dev_fallback_default && !__privateGet(batch, _decrement_queued)) invariant(0 === __privateGet(batch, _scheduled).length, "Batch has scheduled effects");
         if (is_earlier) for (const unskipped of __privateGet(this, _unskipped_branches)) batch.unskip_effect(unskipped, e => {
           var _a6;
           if (0 !== (e.f & (BLOCK_EFFECT | ASYNC))) batch.schedule(e); else __privateMethod(_a6 = batch, _Batch_instances, defer_effects_fn).call(_a6, [ e ]);
@@ -2102,11 +2137,10 @@ commit_fn = function() {
         if (current_unequal.length > 0) for (const effect2 of __privateGet(this, _new_effects)) if (0 === (effect2.f & (DESTROYED | INERT | EAGER_EFFECT)) && depends_on(effect2, current_unequal, checked)) if (0 !== (effect2.f & (ASYNC | BLOCK_EFFECT))) {
           set_signal_status(effect2, DIRTY);
           batch.schedule(effect2);
-        } else __privateGet(batch, _dirty_effects2).add(effect2);
-        if (__privateGet(batch, _roots).length > 0 && !__privateGet(batch, _decrement_queued)) {
+        } else __privateGet(batch, _dirty_effects).add(effect2);
+        if (__privateGet(batch, _scheduled).length > 0 && !__privateGet(batch, _decrement_queued)) {
           batch.apply();
-          for (var root7 of __privateGet(batch, _roots)) __privateMethod(_a5 = batch, _Batch_instances, traverse_fn).call(_a5, root7, [], []);
-          __privateSet(batch, _roots, []);
+          for (var root8 of __privateMethod(_a5 = batch, _Batch_instances, resolve_fn).call(_a5)) __privateMethod(_b3 = batch, _Batch_instances, traverse_fn).call(_b3, root8, [], []);
         }
         batch.deactivate();
       }
@@ -2126,12 +2160,13 @@ unlink_fn = function() {
 var Batch = _Batch;
 
 function flushSync(fn) {
-  var was_flushing_sync = is_flushing_sync;
+  var was_flushing_sync = is_flushing_sync, prev_previous_batch = previous_batch;
+  previous_batch = null;
   is_flushing_sync = true;
   try {
     var result;
     if (fn) {
-      if (null !== current_batch && !current_batch.is_fork) current_batch.flush();
+      flushSync();
       result = fn();
     }
     for (;;) {
@@ -2141,6 +2176,7 @@ function flushSync(fn) {
     }
   } finally {
     is_flushing_sync = was_flushing_sync;
+    previous_batch = prev_previous_batch;
   }
 }
 
@@ -2309,10 +2345,12 @@ function set(source2, value, should_proxy = false) {
   return internal_set(source2, new_value, legacy_updates);
 }
 
+var seen = null, count_deps = 0;
+
 function internal_set(source2, value, updated_during_traversal = null) {
   var _b3, _c2;
   if (!source2.equals(value)) {
-    old_values.set(source2, is_destroying_effect ? value : source2.v);
+    if (is_destroying_effect) old_values.set(source2, value); else if (!old_values.has(source2)) old_values.set(source2, source2.v);
     var batch = Batch.ensure();
     batch.capture(source2, value);
     if (dev_fallback_default) {
@@ -2346,7 +2384,10 @@ function internal_set(source2, value, updated_during_traversal = null) {
       if (null === batch_values) update_derived_status(derived3);
     }
     source2.wv = increment_write_version();
+    seen = null;
+    count_deps = 0;
     mark_reactions(source2, DIRTY, updated_during_traversal);
+    seen = null;
     if (is_runes() && null !== active_effect && 0 !== (active_effect.f & CLEAN) && 0 === (active_effect.f & (BRANCH_EFFECT | ROOT_EFFECT))) if (null === untracked_writes) set_untracked_writes([ source2 ]); else untracked_writes.push(source2);
     if (!batch.is_fork && eager_effects.size > 0 && !eager_effects_deferred) flush_eager_effects();
   }
@@ -2374,66 +2415,33 @@ function increment(source2) {
 
 function mark_reactions(signal, status, updated_during_traversal) {
   var _a5, reactions = signal.reactions;
-  if (null !== reactions) for (var runes = is_runes(), length = reactions.length, i = 0; i < length; i++) {
-    var reaction = reactions[i], flags2 = reaction.f;
-    if (runes || reaction !== active_effect) {
-      var not_dirty = 0 === (flags2 & DIRTY);
-      if (not_dirty) set_signal_status(reaction, status);
-      if (0 !== (flags2 & EAGER_EFFECT)) eager_effects.add(reaction); else if (0 !== (flags2 & DERIVED)) {
-        var derived3 = reaction;
-        null == (_a5 = batch_values) || _a5.delete(derived3);
-        if (0 === (flags2 & WAS_MARKED)) {
-          if (flags2 & CONNECTED && (null === active_effect || 0 === (active_effect.f & REACTION_IS_UPDATING))) reaction.f |= WAS_MARKED;
+  if (null !== reactions) {
+    var runes = is_runes(), length = reactions.length;
+    if ((count_deps += length) > 1e5 && null === seen) seen = new Set;
+    if (null !== seen) {
+      if (seen.has(signal)) return;
+      seen.add(signal);
+    }
+    for (var i = 0; i < length; i++) {
+      var reaction = reactions[i], flags2 = reaction.f;
+      if (runes || reaction !== active_effect) {
+        var not_dirty = 0 === (flags2 & DIRTY);
+        if (not_dirty) set_signal_status(reaction, status);
+        if (0 !== (flags2 & EAGER_EFFECT)) eager_effects.add(reaction); else if (0 !== (flags2 & DERIVED)) {
+          var derived3 = reaction;
+          null == (_a5 = batch_values) || _a5.delete(derived3);
           mark_reactions(derived3, MAYBE_DIRTY, updated_during_traversal);
+        } else if (not_dirty) {
+          var effect2 = reaction;
+          if (0 !== (flags2 & BLOCK_EFFECT) && null !== eager_block_effects) eager_block_effects.add(effect2);
+          if (null !== updated_during_traversal) updated_during_traversal.push(effect2); else schedule_effect(effect2);
         }
-      } else if (not_dirty) {
-        var effect2 = reaction;
-        if (0 !== (flags2 & BLOCK_EFFECT) && null !== eager_block_effects) eager_block_effects.add(effect2);
-        if (null !== updated_during_traversal) updated_during_traversal.push(effect2); else schedule_effect(effect2);
       }
     }
   }
 }
 
-var captured_signals = null, listening_to_form_reset = false;
-
-function add_form_reset_listener() {
-  if (!listening_to_form_reset) {
-    listening_to_form_reset = true;
-    document.addEventListener("reset", evt => {
-      Promise.resolve().then(() => {
-        var _a5;
-        if (!evt.defaultPrevented) for (const e of evt.target.elements) null == (_a5 = e[FORM_RESET_HANDLER]) || _a5.call(e);
-      });
-    }, {
-      capture: true
-    });
-  }
-}
-
-function without_reactive_context(fn) {
-  var previous_reaction = active_reaction, previous_effect = active_effect;
-  set_active_reaction(null);
-  set_active_effect(null);
-  try {
-    return fn();
-  } finally {
-    set_active_reaction(previous_reaction);
-    set_active_effect(previous_effect);
-  }
-}
-
-function listen_to_event_and_reset_event(element2, event2, handler, on_reset = handler) {
-  element2.addEventListener(event2, () => without_reactive_context(handler));
-  const prev = element2[FORM_RESET_HANDLER];
-  if (prev) element2[FORM_RESET_HANDLER] = () => {
-    prev();
-    on_reset(true);
-  }; else element2[FORM_RESET_HANDLER] = () => on_reset(true);
-  add_form_reset_listener();
-}
-
-var is_updating_effect = false, is_destroying_effect = false;
+var captured_signals = null, is_destroying_effect = false;
 
 function set_is_destroying_effect(value) {
   is_destroying_effect = value;
@@ -2454,7 +2462,7 @@ function set_active_effect(effect2) {
 var current_sources = null;
 
 function push_reaction_value(value) {
-  if (null !== active_reaction && (!async_mode_flag || 0 !== (active_reaction.f & DERIVED))) (null != current_sources ? current_sources : current_sources = new Set).add(value);
+  if (null !== active_reaction && (!async_mode_flag && 0 !== (active_reaction.f & REACTION_IS_UPDATING) || 0 !== (active_reaction.f & DERIVED))) (null != current_sources ? current_sources : current_sources = new Set).add(value);
 }
 
 var new_deps = null, skipped_deps = 0, untracked_writes = null;
@@ -2476,7 +2484,6 @@ function increment_write_version() {
 function is_dirty(reaction) {
   var flags2 = reaction.f;
   if (0 !== (flags2 & DIRTY)) return true;
-  if (flags2 & DERIVED) reaction.f &= ~WAS_MARKED;
   if (0 !== (flags2 & MAYBE_DIRTY)) {
     for (var dependencies = reaction.deps, length = dependencies.length, i = 0; i < length; i++) {
       var dependency = dependencies[i];
@@ -2488,19 +2495,19 @@ function is_dirty(reaction) {
   return false;
 }
 
-function schedule_possible_effect_self_invalidation(signal, effect2, root7 = true) {
+function schedule_possible_effect_self_invalidation(signal, effect2, root8 = true) {
   var reactions = signal.reactions;
   if (null !== reactions) if (async_mode_flag || null === current_sources || !current_sources.has(signal)) for (var i = 0; i < reactions.length; i++) {
     var reaction = reactions[i];
     if (0 !== (reaction.f & DERIVED)) schedule_possible_effect_self_invalidation(reaction, effect2, false); else if (effect2 === reaction) {
-      if (root7) set_signal_status(reaction, DIRTY); else if (0 !== (reaction.f & CLEAN)) set_signal_status(reaction, MAYBE_DIRTY);
+      if (root8) set_signal_status(reaction, DIRTY); else if (0 !== (reaction.f & CLEAN)) set_signal_status(reaction, MAYBE_DIRTY);
       schedule_effect(reaction);
     }
   }
 }
 
 function update_reaction(reaction) {
-  var _a5, _b3, _c2, previous_deps = new_deps, previous_skipped_deps = skipped_deps, previous_untracked_writes = untracked_writes, previous_reaction = active_reaction, previous_sources = current_sources, previous_component_context = component_context, previous_untracking = untracking, previous_update_version = update_version, flags2 = reaction.f;
+  var previous_deps = new_deps, previous_skipped_deps = skipped_deps, previous_untracked_writes = untracked_writes, previous_reaction = active_reaction, previous_sources = current_sources, previous_component_context = component_context, previous_untracking = untracking, previous_update_version = update_version, flags2 = reaction.f;
   new_deps = null;
   skipped_deps = 0;
   untracked_writes = null;
@@ -2519,20 +2526,8 @@ function update_reaction(reaction) {
     reaction.f |= REACTION_IS_UPDATING;
     var result = (0, reaction.fn)();
     reaction.f |= REACTION_RAN;
-    var deps = reaction.deps, is_fork = null == (_a5 = current_batch) ? void 0 : _a5.is_fork;
-    if (null !== new_deps) {
-      var i;
-      if (!is_fork) remove_reactions(reaction, skipped_deps);
-      if (null !== deps && skipped_deps > 0) {
-        deps.length = skipped_deps + new_deps.length;
-        for (i = 0; i < new_deps.length; i++) deps[skipped_deps + i] = new_deps[i];
-      } else reaction.deps = deps = new_deps;
-      if (effect_tracking() && 0 !== (reaction.f & CONNECTED)) for (i = skipped_deps; i < deps.length; i++) (null != (_c2 = (_b3 = deps[i]).reactions) ? _c2 : _b3.reactions = []).push(reaction);
-    } else if (!is_fork && null !== deps && skipped_deps < deps.length) {
-      remove_reactions(reaction, skipped_deps);
-      deps.length = skipped_deps;
-    }
-    if (is_runes() && null !== untracked_writes && !untracking && null !== deps && 0 === (reaction.f & (DERIVED | MAYBE_DIRTY | DIRTY))) for (i = 0; i < untracked_writes.length; i++) schedule_possible_effect_self_invalidation(untracked_writes[i], reaction);
+    var deps = update_dependencies(reaction);
+    if (is_runes() && null !== untracked_writes && !untracking && null !== deps && 0 === (reaction.f & (DERIVED | MAYBE_DIRTY | DIRTY))) for (var i = 0; i < untracked_writes.length; i++) schedule_possible_effect_self_invalidation(untracked_writes[i], reaction);
     if (null !== previous_reaction && previous_reaction !== reaction) {
       read_version++;
       if (null !== previous_reaction.deps) for (let i2 = 0; i2 < previous_skipped_deps; i2 += 1) previous_reaction.deps[i2].rv = read_version;
@@ -2542,6 +2537,7 @@ function update_reaction(reaction) {
     if (0 !== (reaction.f & ERROR_VALUE)) reaction.f ^= ERROR_VALUE;
     return result;
   } catch (error) {
+    update_dependencies(reaction);
     return handle_error(error);
   } finally {
     reaction.f ^= REACTION_IS_UPDATING;
@@ -2554,6 +2550,23 @@ function update_reaction(reaction) {
     untracking = previous_untracking;
     update_version = previous_update_version;
   }
+}
+
+function update_dependencies(reaction) {
+  var _a5, _b3, _c2, deps = reaction.deps, is_fork = null == (_a5 = current_batch) ? void 0 : _a5.is_fork;
+  if (null !== new_deps) {
+    var i;
+    if (!is_fork) remove_reactions(reaction, skipped_deps);
+    if (null !== deps && skipped_deps > 0) {
+      deps.length = skipped_deps + new_deps.length;
+      for (i = 0; i < new_deps.length; i++) deps[skipped_deps + i] = new_deps[i];
+    } else reaction.deps = deps = new_deps;
+    if (effect_tracking() && 0 !== (reaction.f & CONNECTED)) for (i = skipped_deps; i < deps.length; i++) (null != (_c2 = (_b3 = deps[i]).reactions) ? _c2 : _b3.reactions = []).push(reaction);
+  } else if (!is_fork && null !== deps && skipped_deps < deps.length) {
+    remove_reactions(reaction, skipped_deps);
+    deps.length = skipped_deps;
+  }
+  return deps;
 }
 
 function remove_reaction(signal, dependency) {
@@ -2570,11 +2583,13 @@ function remove_reaction(signal, dependency) {
   }
   if (null === reactions && 0 !== (dependency.f & DERIVED) && (null === new_deps || !includes.call(new_deps, dependency))) {
     var derived3 = dependency;
-    if (0 !== (derived3.f & CONNECTED)) {
-      derived3.f ^= CONNECTED;
-      derived3.f &= ~WAS_MARKED;
-    }
+    if (0 !== (derived3.f & CONNECTED)) derived3.f ^= CONNECTED;
     if (derived3.v !== UNINITIALIZED) update_derived_status(derived3);
+    if (null !== derived3.ac) without_reactive_context(() => {
+      derived3.ac.abort(STALE_REACTION);
+      derived3.ac = null;
+      set_signal_status(derived3, DIRTY);
+    });
     freeze_derived_effects(derived3);
     remove_reactions(derived3, 0);
   }
@@ -2589,9 +2604,8 @@ function update_effect(effect2) {
   var _a5, flags2 = effect2.f;
   if (0 === (flags2 & DESTROYED)) {
     set_signal_status(effect2, CLEAN);
-    var previous_effect = active_effect, was_updating_effect = is_updating_effect;
+    var previous_effect = active_effect;
     active_effect = effect2;
-    is_updating_effect = true;
     if (dev_fallback_default) {
       var previous_component_fn = dev_current_component_function;
       set_dev_current_component_function(effect2.component_function);
@@ -2609,7 +2623,6 @@ function update_effect(effect2) {
         dep.set_during_effect = false;
       }
     } finally {
-      is_updating_effect = was_updating_effect;
       active_effect = previous_effect;
       if (dev_fallback_default) {
         set_dev_current_component_function(previous_component_fn);
@@ -2674,7 +2687,7 @@ function get(signal) {
       old_values.set(derived3, value);
       return value;
     }
-    var should_connect = 0 === (derived3.f & CONNECTED) && !untracking && null !== active_reaction && (is_updating_effect || 0 !== (active_reaction.f & CONNECTED)), is_new = 0 === (derived3.f & REACTION_RAN);
+    var should_connect = 0 === (derived3.f & CONNECTED) && !untracking && null !== active_reaction && 0 !== (active_reaction.f & CONNECTED), is_new = 0 === (derived3.f & REACTION_RAN);
     if (is_dirty(derived3)) {
       if (should_connect) derived3.f |= CONNECTED;
       update_derived(derived3);
@@ -2690,10 +2703,10 @@ function get(signal) {
 }
 
 function reconnect(derived3) {
-  var _a5;
   derived3.f |= CONNECTED;
   if (null !== derived3.deps) for (const dep of derived3.deps) {
-    (null != (_a5 = dep.reactions) ? _a5 : dep.reactions = []).push(derived3);
+    var reactions = dep.reactions;
+    if (null === reactions) dep.reactions = [ derived3 ]; else if (!includes.call(reactions, derived3)) reactions.push(derived3);
     if (0 !== (dep.f & DERIVED) && 0 === (dep.f & CONNECTED)) {
       unfreeze_derived_effects(dep);
       reconnect(dep);
@@ -2872,6 +2885,8 @@ function execute_effect_teardown(effect2) {
     set_active_reaction(null);
     try {
       teardown2.call(null);
+    } catch (error) {
+      invoke_error_boundary(error, effect2.parent);
     } finally {
       set_is_destroying_effect(previously_destroying_effect);
       set_active_reaction(previous_reaction);
@@ -2941,6 +2956,7 @@ function unlink_effect(effect2) {
 
 function pause_effect(effect2, callback, destroy = true) {
   var transitions = [];
+  effect2.f |= PAUSED;
   pause_children(effect2, transitions, true);
   var fn = () => {
     if (destroy) destroy_effect(effect2);
@@ -2955,8 +2971,8 @@ function pause_effect(effect2, callback, destroy = true) {
 function pause_children(effect2, transitions, local) {
   if (0 === (effect2.f & INERT)) {
     effect2.f ^= INERT;
-    var t = effect2.nodes && effect2.nodes.t;
-    if (null !== t) for (const transition2 of t) if (transition2.is_global || local) transitions.push(transition2);
+    var t2 = effect2.nodes && effect2.nodes.t;
+    if (null !== t2) for (const transition2 of t2) if (transition2.is_global || local) transitions.push(transition2);
     for (var child2 = effect2.first; null !== child2; ) {
       var sibling2 = child2.next;
       if (0 === (child2.f & ROOT_EFFECT)) pause_children(child2, transitions, 0 !== (child2.f & EFFECT_TRANSPARENT) || 0 !== (child2.f & BRANCH_EFFECT) && 0 !== (effect2.f & BLOCK_EFFECT) ? local : false);
@@ -2966,11 +2982,12 @@ function pause_children(effect2, transitions, local) {
 }
 
 function resume_effect(effect2) {
+  effect2.f &= ~PAUSED;
   resume_children(effect2, true);
 }
 
 function resume_children(effect2, local) {
-  if (0 !== (effect2.f & INERT)) {
+  if (0 === (effect2.f & PAUSED)) if (0 !== (effect2.f & INERT)) {
     effect2.f ^= INERT;
     if (0 === (effect2.f & CLEAN)) {
       set_signal_status(effect2, DIRTY);
@@ -2981,8 +2998,8 @@ function resume_children(effect2, local) {
       resume_children(child2, 0 !== (child2.f & EFFECT_TRANSPARENT) || 0 !== (child2.f & BRANCH_EFFECT) ? local : false);
       child2 = sibling2;
     }
-    var t = effect2.nodes && effect2.nodes.t;
-    if (null !== t) for (const transition2 of t) if (transition2.is_global || local) transition2.in();
+    var t2 = effect2.nodes && effect2.nodes.t;
+    if (null !== t2) for (const transition2 of t2) if (transition2.is_global || local) transition2.in();
   }
 }
 
@@ -2994,7 +3011,400 @@ function move_effect(effect2, fragment) {
   }
 }
 
-var currentFile = writable(""), maxDepth = writable(0), searchString = writable(""), tagInfo = writable({}), tagFolderSetting = writable(DEFAULT_SETTINGS), selectedTags = writable(), allViewItems = writable(), allViewItemsByLink = writable(), appliedFiles = writable(), v2expandedTags = writable(new Set), performHide = writable(0), pluginInstance = writable(void 0);
+function subscribe_to_store(store, run3, invalidate) {
+  if (null == store) {
+    run3(void 0);
+    if (invalidate) invalidate(void 0);
+    return noop;
+  }
+  const unsub = untrack(() => store.subscribe(run3, invalidate));
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+
+var subscriber_queue = [];
+
+function readable(value, start) {
+  return {
+    subscribe: writable(value, start).subscribe
+  };
+}
+
+function writable(value, start = noop) {
+  let stop = null;
+  const subscribers = new Set;
+  function set2(new_value) {
+    if (safe_not_equal(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) subscriber_queue[i][0](subscriber_queue[i + 1]);
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update2(fn) {
+    set2(fn(value));
+  }
+  return {
+    set: set2,
+    update: update2,
+    subscribe: function subscribe(run3, invalidate = noop) {
+      const subscriber = [ run3, invalidate ];
+      subscribers.add(subscriber);
+      if (1 === subscribers.size) stop = start(set2, update2) || noop;
+      run3(value);
+      return () => {
+        subscribers.delete(subscriber);
+        if (0 === subscribers.size && stop) {
+          stop();
+          stop = null;
+        }
+      };
+    }
+  };
+}
+
+function derived2(stores, fn, initial_value) {
+  const single = !Array.isArray(stores), stores_array = single ? [ stores ] : stores;
+  if (!stores_array.every(Boolean)) throw new Error("derived() expects stores as input, got a falsy value");
+  const auto = fn.length < 2;
+  return readable(initial_value, (set2, update2) => {
+    let started = false;
+    const values = [];
+    let pending2 = 0, cleanup = noop;
+    const sync = () => {
+      if (pending2) return;
+      cleanup();
+      const result = fn(single ? values[0] : values, set2, update2);
+      if (auto) set2(result); else cleanup = "function" == typeof result ? result : noop;
+    }, unsubscribers = stores_array.map((store, i) => subscribe_to_store(store, value => {
+      values[i] = value;
+      pending2 &= ~(1 << i);
+      if (started) sync();
+    }, () => {
+      pending2 |= 1 << i;
+    }));
+    started = true;
+    sync();
+    return function stop() {
+      run_all(unsubscribers);
+      cleanup();
+      started = false;
+    };
+  });
+}
+
+function get2(store) {
+  let value;
+  subscribe_to_store(store, _ => value = _)();
+  return value;
+}
+
+function createSubscriber(start) {
+  let stop, subscribers = 0, version = source(0);
+  if (dev_fallback_default) tag(version, "createSubscriber version");
+  return () => {
+    if (effect_tracking()) {
+      get(version);
+      render_effect(() => {
+        if (0 === subscribers) stop = untrack(() => start(() => increment(version)));
+        subscribers += 1;
+        return () => {
+          queue_micro_task(() => {
+            subscribers -= 1;
+            if (0 === subscribers) {
+              null == stop || stop();
+              stop = void 0;
+              increment(version);
+            }
+          });
+        };
+      });
+    }
+  };
+}
+
+var currentFile = writable(""), maxDepth = writable(0), searchString = writable(""), tagInfo = writable({}), tagFolderSetting = writable(DEFAULT_SETTINGS), selectedTags = writable(), allViewItems = writable(), allViewItemsByLink = writable(), appliedFiles = writable(), v2expandedTags = writable(new Set), performHide = writable(0), pluginInstance = writable(void 0), appLanguage = "en", comparators = new Map;
+
+function normaliseLanguage(value) {
+  if ("string" == typeof value && "" !== value.trim()) try {
+    const language = value.trim().replace(/_/g, "-");
+    return Intl.getCanonicalLocales("kh" === language.toLowerCase() ? "km" : language)[0];
+  } catch (e) {
+    return;
+  }
+}
+
+function detectAppLanguage(sources) {
+  var _a5, _b3;
+  try {
+    return null != (_b3 = normaliseLanguage(null == (_a5 = sources.getLanguage) ? void 0 : _a5.call(sources))) ? _b3 : "en";
+  } catch (e) {
+    return "en";
+  }
+}
+
+function setAppLanguage(language) {
+  var _a5;
+  appLanguage = null != (_a5 = normaliseLanguage(language)) ? _a5 : "en";
+  comparators.clear();
+}
+
+function getAppLanguage() {
+  return appLanguage;
+}
+
+function createStringComparator(language = appLanguage, options = {}) {
+  var _a5, _b3;
+  const locale = null != (_a5 = normaliseLanguage(language)) ? _a5 : "en", supported = null != (_b3 = Intl.Collator.supportedLocalesOf(locale)[0]) ? _b3 : "en", collator = new Intl.Collator(supported, {
+    numeric: true,
+    ...options
+  });
+  return (left, right) => collator.compare(left, right);
+}
+
+function compareStrings(left, right, options = {}) {
+  const key2 = JSON.stringify(options);
+  let compare2 = comparators.get(key2);
+  if (!compare2) {
+    compare2 = createStringComparator(appLanguage, options);
+    comparators.set(key2, compare2);
+  }
+  return compare2(left, right);
+}
+
+var dict = {
+  "Show Tag Folder": "显示标签文件夹",
+  "Show Link Folder": "显示链接文件夹",
+  "Force Rebuild": "强制重建",
+  "Create a new note with the same tags": "创建包含相同标签的新笔记",
+  "Open note by tags": "按标签打开笔记",
+  "Open note with similar tags": "按相似标签打开笔记",
+  "No templates found. Add a template, then try again.": "未找到模板。请先添加模板，然后重试。",
+  "Template not found: {path}": "未找到模板：{path}",
+  "Copied to clipboard": "已复制到剪贴板",
+  "Applied '{name}' settings.": "已应用「{name}」的设置。",
+  "Hide nothing": "不隐藏",
+  "Only intermediates of nested tags": "仅嵌套标签的中间层级",
+  "All intermediates": "所有中间层级",
+  Behavior: "行为",
+  Files: "文件",
+  Tags: "标签",
+  Actions: "操作",
+  Arrangements: "排列",
+  "Link Folder": "链接文件夹",
+  Filters: "筛选",
+  Misc: "杂项",
+  Utilities: "工具",
+  Language: "语言",
+  "UI language. 'Auto' follows the Obsidian interface language and falls back to English when unmatched.": "界面语言。选择「Auto」时跟随 Obsidian 界面语言，无法匹配时回退为英文。",
+  "Always Open": "始终打开",
+  "Place TagFolder on the left pane and activate it at every Obsidian launch": "将标签文件夹放置在左侧窗格，并在每次启动 Obsidian 时自动激活",
+  "Use pinning": "使用置顶",
+  "When this feature is enabled, the pin information is saved in the file set in the next configuration.": "启用此功能后，置顶信息将保存在下一项配置所设置的文件中。",
+  "Pin information file": "置顶信息文件",
+  "Disable narrowing down": "禁用层级收窄",
+  "When this feature is enabled, relevant tags will be shown with the title instead of making a sub-structure.": "启用此功能后，相关标签将连同标题并列显示，而不再生成子结构。",
+  "Display method": "显示方式",
+  "How to show a title of files": "如何显示文件标题",
+  "Order method": "排序方式",
+  "how to order items": "条目的排序方式",
+  "how to order tags": "标签的排序方式",
+  "Prioritize items which are not contained in sub-folder": "优先显示不包含在子文件夹中的条目",
+  "If this has been enabled, the items which have no more extra tags are first.": "启用后，没有更多额外标签的条目将排在前面。",
+  "Use title": "使用标题",
+  "Use value in the frontmatter or first level one heading for `NAME`.": "「NAME」显示方式将使用 frontmatter 中的值或第一个一级标题。",
+  "Frontmatter path": "Frontmatter 路径",
+  "Suggested tag tree style": "推荐标签树样式",
+  "Apply a suggested combination of tag tree settings.": "应用一组推荐的标签树设置组合。",
+  "Select a style": "选择样式",
+  Apply: "应用",
+  "Use virtual tags": "使用虚拟标签",
+  "Display folder as tag": "将文件夹显示为标签",
+  "Store tags in frontmatter for new notes": "将新笔记的标签存入 frontmatter",
+  "When enabled, tags are written to the note Properties. If no new-note template is selected, TagFolder still creates the note and stores tags here instead of as #hashtags.": "启用后，标签将写入笔记的属性（Properties）。如果未选择新笔记模板，TagFolder 仍会创建笔记，并把标签存到这里，而不是作为 #hashtags 写入正文。",
+  "Template for new notes": "新笔记模板",
+  "When set to a valid markdown file path, new notes use this template without opening the template picker. The .md extension is optional.": "设置为有效的 Markdown 文件路径后，新笔记将直接使用该模板，而不再打开模板选择器。.md 扩展名可省略。",
+  "Search tags inside TagFolder when clicking tags": "点击标签时在标签文件夹内搜索该标签",
+  "List files in a separated pane": "在独立窗格中列出文件",
+  "Show list in": "列表显示位置",
+  "This option applies to the newly opened list": "此选项应用于新打开的列表",
+  "Hide Items": "隐藏条目",
+  "Hide items on the landing or nested tags": "隐藏位于着陆标签或嵌套标签下的条目",
+  "Merge redundant combinations": "合并冗余组合",
+  "When this feature is enabled, a/b and b/a are merged into a/b if there is no intermediates.": "启用此功能后，若无中间层级，a/b 与 b/a 将合并为 a/b。",
+  "Do not simplify empty folders": "不简化空文件夹",
+  "Keep empty folders, even if they can be simplified.": "保留空文件夹，即使其可被简化。",
+  "Do not treat nested tags as dedicated levels": "不将嵌套标签视为独立层级",
+  "Treat nested tags as normal tags": "将嵌套标签视为普通标签",
+  "Reduce duplicated parents in nested tags": "减少嵌套标签中的重复父级",
+  "If enabled, #web/css, #web/javascript will merged into web -> css -> javascript": "启用后，#web/css、#web/javascript 将合并为 web -> css -> javascript",
+  "Keep untagged items on the root": "将未打标签的条目保留在根目录",
+  "Use Incoming": "使用入链",
+  "Use Outgoing": "使用出链",
+  "Hide indirectly linked notes": "隐藏间接链接的笔记",
+  "Connect linked tree": "连接链接树",
+  "Target Folders": "目标文件夹",
+  "If configured, the plugin will only target files in it.": "配置后，插件将只处理其中的文件。",
+  "Ignore Folders": "忽略文件夹",
+  "Ignore documents in specific folders.": "忽略特定文件夹中的文档。",
+  "Ignore note Tag": "忽略笔记标签",
+  "If the note has the tag listed below, the note would be treated as there was not.": "若笔记带有下列标签，则视同该笔记没有这些标签。",
+  "Ignore Tag": "忽略标签",
+  "Tags in the list would be treated as there were not.": "列表中的标签将被视同不存在。",
+  "Archive tags": "归档标签",
+  "If configured, notes with these tags will be moved under the tag.": "配置后，带有这些标签的笔记将被归入该标签之下。",
+  "Tag scanning delay": "标签扫描延迟",
+  "Sets the delay for reflecting metadata changes to the tag tree. (Plugin reload is required.)": "设置元数据变更反映到标签树的延迟。（需要重新加载插件。）",
+  "Disable dragging tags": "禁用拖拽标签",
+  "The `Dragging tags` is using internal APIs. If something happens, please disable this once and try again.": "「拖拽标签」功能使用了内部 API。如果出现问题，请临时禁用后重试。",
+  "Dumping tags for reporting bugs": "导出标签用于报告 Bug",
+  "If you want to open an issue to the GitHub, this information can be useful. and, also if you want to keep secrets about names of tags, you can use `disguised`.": "若要向 GitHub 提交 issue，这些信息会很有用。另外，若不想公开标签名称，可以使用「disguised」。",
+  "Copy tags": "复制标签",
+  "Copy disguised tags": "复制伪装标签"
+}, main_default = dict, dict2 = {
+  Tags: "标签",
+  Items: "条目",
+  "Level {n}": "层级 {n}",
+  "No limit": "无限制",
+  "Copy tags:{tags}": "复制标签：{tags}",
+  Copied: "已复制",
+  "New note in here": "在此新建笔记",
+  "New note as like this": "照此新建笔记",
+  "Rename #{tag}": "重命名 #{tag}",
+  Unpin: "取消置顶",
+  Pin: "置顶",
+  "Set an alternative label": "设置替代标签名",
+  "Change the mark": "更改标记",
+  "Redirect this tag to ...": "将此标签重定向到…",
+  "Open scroll view": "打开滚动视图",
+  "Open list": "打开列表",
+  "Open in new tab": "在新标签页中打开",
+  "Open to the right": "在右侧打开",
+  "Tag Folder": "标签文件夹",
+  "Link Folder": "链接文件夹",
+  "Files with {title}": "包含 {title} 的文件",
+  "Tags scroll": "标签滚动视图"
+}, views_default = dict2, dict3 = {
+  "New note": "新建笔记",
+  "Change sort order": "更改排序方式",
+  "Expand limit": "展开层级限制",
+  Search: "搜索",
+  "Switch List/Tree": "切换列表/树",
+  "Toggle Incoming": "切换入链",
+  "Toggle Outgoing": "切换出链",
+  "Toggle Incoming&Outgoing": "切换入链与出链",
+  "Toggle Hide indirect notes": "切换隐藏间接笔记",
+  "Collapse all": "全部折叠",
+  "Clear search": "清除搜索",
+  "Type to start search...": "输入以开始搜索…",
+  Tags: "标签",
+  Links: "链接",
+  "Items: {title}": "条目：{title}",
+  "Files with {tagPath}": "包含 {tagPath} 的文件",
+  "Linked to {filename}": "链接到 {filename}"
+}, components_default = dict3, dict4 = {
+  Tags: "标签",
+  Note: "笔记",
+  "Type a tag…": "输入标签…",
+  "Add a tag…": "添加标签…",
+  "Type a file name or path…": "输入文件名或路径…",
+  "Tag conditions": "标签条件",
+  "Tag completions": "标签补全",
+  "Note name or path": "笔记名称或路径",
+  "Matching notes": "匹配的笔记",
+  "Remove tag {tag}": "移除标签 {tag}",
+  "Remove excluded tag {tag}": "移除排除标签 {tag}",
+  "Added tag {tag}": "已添加标签 {tag}",
+  "Excluded tag {tag}": "已排除标签 {tag}",
+  "Removed tag {tag}": "已移除标签 {tag}",
+  "{count} note": "{count} 个笔记",
+  "{count} notes": "{count} 个笔记",
+  "Tab: switch field · ↑↓: select · Enter: open": "Tab：切换输入框 · ↑↓：选择 · Enter：打开",
+  "No matching notes": "没有匹配的笔记",
+  "Note lookup": "笔记查找",
+  "Type to search templates...": "输入以搜索模板…",
+  "Simple list": "简单列表",
+  "Drill-down": "逐层下钻",
+  "Full tree": "完整树形",
+  "Show notes directly beneath each tag and display their other tags as labels.": "在每个标签下直接显示笔记，并将其余标签以标签形式显示。",
+  "Use other tags as additional folders and show notes at the deepest matching level.": "将其他标签用作附加文件夹，并在最深的匹配层级显示笔记。",
+  "Show notes at intermediate levels as well as within combinations of their tags.": "在中间层级以及各标签组合内也显示笔记。",
+  "Sample notes": "示例笔记",
+  "Rendered project branch": "渲染后的 project 分支"
+}, modals_default = dict4, dict5 = {
+  "Tag name": "标签名",
+  "Count of items": "条目数",
+  "Displaying name": "显示名",
+  "File name": "文件名",
+  "Modified time": "修改时间",
+  "Created time": "创建时间",
+  "Fullpath of the file": "文件完整路径",
+  Ascending: "升序",
+  Descending: "降序",
+  Sidebar: "侧边栏",
+  "Current pane": "当前窗格",
+  "New pane": "新窗格",
+  "📋 Canvas": "📋 画布"
+}, types_default = dict5, dictionaries = {
+  ...main_default,
+  ...views_default,
+  ...components_default,
+  ...modals_default,
+  ...types_default
+};
+
+function localeToResolved(value) {
+  const [language, ...subtags] = value.toLowerCase().split("-");
+  if ("zh" !== language) return "en";
+  const script = subtags.find(part => 4 === part.length);
+  if (script) return "hans" === script ? "zh-CN" : "en"; else return subtags.some(part => [ "tw", "hk", "mo" ].includes(part)) ? "en" : "zh-CN";
+}
+
+function detectObsidianLocale() {
+  return localeToResolved(getAppLanguage());
+}
+
+function applyLanguagePreference(pref) {
+  resolvedLocale.set("auto" === pref ? detectObsidianLocale() : pref);
+}
+
+var resolvedLocale = writable("en");
+
+function interpolate(template, vars) {
+  if (!vars) return template;
+  let result = template;
+  for (const name of Object.keys(vars)) result = result.split(`{${name}}`).join(String(vars[name]));
+  return result;
+}
+
+function translate(locale, key2, vars) {
+  const localized = "zh-CN" === locale ? dictionaries[key2] : void 0;
+  if (void 0 !== localized) return interpolate(localized, vars); else return interpolate(key2, vars);
+}
+
+var t = derived2(resolvedLocale, locale => (key2, vars) => translate(locale, key2, vars));
+
+function tr(key2, vars) {
+  return translate(get2(resolvedLocale), key2, vars);
+}
+
+var LANGUAGE_OPTIONS = [ {
+  value: "auto",
+  label: "Auto (follow Obsidian)"
+}, {
+  value: "en",
+  label: "English"
+}, {
+  value: "zh-CN",
+  label: "简体中文"
+} ];
 
 function unique(items) {
   return [ ...new Set([ ...items ]) ];
@@ -3028,9 +3438,7 @@ function isSpecialTag(tagSrc) {
 var tagDispAlternativeDict = {};
 
 tagInfo.subscribe(tagInfo2 => {
-  tagDispAlternativeDict = {
-    ...tagDispDict
-  };
+  tagDispAlternativeDict = {};
   if (null == tagInfo2) return;
   const items = Object.entries(tagInfo2);
   for (const [key2, info] of items) if (null == info ? void 0 : info.alt) tagDispAlternativeDict[key2] = info.alt;
@@ -3038,7 +3446,7 @@ tagInfo.subscribe(tagInfo2 => {
 
 function renderSpecialTag(tagSrc) {
   const tag2 = trimSlash(tagSrc);
-  return tag2 in tagDispAlternativeDict ? tagDispAlternativeDict[tag2] : tagSrc;
+  if (tag2 in tagDispAlternativeDict) return tagDispAlternativeDict[tag2]; else return tag2 in tagDispDict ? tr(tagDispDict[tag2]) : tagSrc;
 }
 
 function secondsToFreshness(totalAsMSec) {
@@ -3092,9 +3500,7 @@ var doEvents = () => new Promise(res => {
 });
 
 function compare(x, y) {
-  return `${x || ""}`.localeCompare(y, void 0, {
-    numeric: true
-  });
+  return compareStrings(`${x || ""}`, y);
 }
 
 function getTagName(tagName, subtreePrefix, tagInfo2, invert) {
@@ -3161,6 +3567,33 @@ function selectCompareMethodTags(settings, tagInfo2) {
   }
 }
 
+function getEffectiveTags(item, trail, reduceNestedParent) {
+  return uniqueCaseIntensive([ ...getExtraTags(item.tags, [ ...trail ], reduceNestedParent), ...item.extraTags ].map(e => trimSlash(trimSlash(e, true, false), false, true)).filter(e => "" != e && !isSpecialTag(e) && !isSpecialTag(e.split("/")[0])));
+}
+
+function getTagGroups(item, trail, reduceNestedParent) {
+  return getEffectiveTags(item, trail, reduceNestedParent);
+}
+
+function selectCompareMethodItemsByTagGroup(settings) {
+  const invert = settings.sortType.contains("_DESC") ? -1 : 1, compareTags = createStringComparator(), cache = new WeakMap, groups = item => {
+    let key2 = cache.get(item);
+    if (!key2) {
+      key2 = getTagGroups(item, [], settings.reduceNestedParent);
+      cache.set(item, key2);
+    }
+    return key2;
+  };
+  return (a, b) => {
+    const aGroups = groups(a), bGroups = groups(b);
+    for (let i = 0; i < Math.min(aGroups.length, bGroups.length); i++) {
+      const byTag = compareTags(aGroups[i], bGroups[i]) * invert;
+      if (0 != byTag) return byTag;
+    }
+    return (aGroups.length - bGroups.length) * invert;
+  };
+}
+
 function uniqueCaseIntensive(pieces) {
   const delMap = new Set, ret = [];
   for (const piece of pieces) if (!delMap.has(piece.toLowerCase())) {
@@ -3178,10 +3611,10 @@ function _sorterTagLength(a, b, invert) {
 function getExtraTags(tags, trail, reduceNestedParent) {
   let tagsLeft = uniqueCaseIntensive(tags), removeTrailItems = [];
   if (reduceNestedParent) removeTrailItems = trail.sort((a, b) => _sorterTagLength(a, b, true)); else removeTrailItems = removeIntermediatePath(trail);
-  for (const t of removeTrailItems) {
-    const trimLength = t.endsWith("/") ? t.length : t.length;
-    if (reduceNestedParent) tagsLeft = tagsLeft.map(e => (e + "/").toLowerCase().startsWith(t.toLowerCase()) ? e.substring(trimLength) : e); else {
-      const f = tagsLeft.findIndex(e => (e + "/").toLowerCase().startsWith(t.toLowerCase()));
+  for (const t2 of removeTrailItems) {
+    const trimLength = t2.endsWith("/") ? t2.length : t2.length;
+    if (reduceNestedParent) tagsLeft = tagsLeft.map(e => (e + "/").toLowerCase().startsWith(t2.toLowerCase()) ? e.substring(trimLength) : e); else {
+      const f = tagsLeft.findIndex(e => (e + "/").toLowerCase().startsWith(t2.toLowerCase()));
       if (-1 !== f) tagsLeft[f] = tagsLeft[f].substring(trimLength);
     }
   }
@@ -3316,6 +3749,38 @@ function isSameAny(a, b) {
   }
 }
 
+function normalizeTagFilterValue(value) {
+  return value.trim().toLowerCase().replace(/^#/, "").replace(/^\/|\/$/g, "");
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function parseTagFilterPatterns(value) {
+  return value.replace(/[\n ]/g, "").split(",").map(normalizeTagFilterValue).filter(pattern => "" != pattern).map(pattern => ({
+    pattern,
+    regExp: pattern.includes("*") ? new RegExp(`^${pattern.split("*").map(escapeRegExp).join(".*")}$`, "u") : void 0
+  }));
+}
+
+function tagMatchesFilterPatterns(tag2, patterns) {
+  const normalizedTag = normalizeTagFilterValue(tag2);
+  return patterns.some(filter => filter.regExp ? filter.regExp.test(normalizedTag) : filter.pattern == normalizedTag);
+}
+
+function isVisibleInArchiveBranch(tags, branch2, patterns) {
+  const normalizedBranch = normalizeTagFilterValue(branch2);
+  let archived = false;
+  for (const tag2 of tags) {
+    if (!tagMatchesFilterPatterns(tag2, patterns)) continue;
+    archived = true;
+    const normalizedTag = normalizeTagFilterValue(tag2);
+    if ("" != normalizedBranch && (normalizedTag == normalizedBranch || normalizedTag.startsWith(`${normalizedBranch}/`))) return true;
+  }
+  return !archived;
+}
+
 function renderTagFolderTemplateVariables(template, expandedTagsAll, expandedTags) {
   var _a5;
   const plainTags = expandedTagsAll.filter(e => !isSpecialTag(e)), replacements = {
@@ -3330,7 +3795,36 @@ function renderTagFolderTemplateVariables(template, expandedTagsAll, expandedTag
   return template.replace(/\{\{(expandedTags|tags|tagList|tagPath|tagName|tagsJson|tagsYaml)\}\}/g, (_, key2) => replacements[key2]);
 }
 
-var _a3, _b2, _c, import_obsidian2 = require("obsidian"), PUBLIC_VERSION = "5";
+var NEW_NOTE_TEMPLATE_INTERACTION_ID = "new-note-template";
+
+function filterNewNoteTemplateChoices(templates, query) {
+  const normalizedQuery = query.toLowerCase();
+  return templates.filter(template => template.path.toLowerCase().includes(normalizedQuery) || template.name.toLowerCase().includes(normalizedQuery));
+}
+
+async function chooseNewNoteTemplate(ui, templates) {
+  if (0 != templates.length) return await ui.pickOne({
+    items: templates,
+    getText: template => template.name,
+    getDescription: template => template.path,
+    placeholder: tr("Type to search templates...")
+  }, NEW_NOTE_TEMPLATE_INTERACTION_ID);
+}
+
+async function populateNewNote(options) {
+  if (null !== options.template) {
+    const renderedTemplate = renderTagFolderTemplateVariables(await options.vault.readText(options.template.path), [ ...options.expandedTagsAll ], options.expandedTags);
+    if ("" != renderedTemplate.trim()) await options.vault.modifyText(options.notePath, renderedTemplate);
+    return;
+  }
+  if (!options.useFrontmatterTags) await options.vault.appendText(options.notePath, options.expandedTags); else await options.frontmatter.updateFrontmatter(options.notePath, value => {
+    var _a5;
+    const currentTags = null != (_a5 = value.tags) ? _a5 : [];
+    value.tags = options.frontmatterTags.filter(tag2 => currentTags.indexOf(tag2) < 0).concat(currentTags);
+  });
+}
+
+var _a3, _b2, _c, import_obsidian4 = require("obsidian"), PUBLIC_VERSION = "5";
 
 if ("undefined" != typeof window) (null != (_c = (_b2 = null != (_a3 = window.__svelte) ? _a3 : window.__svelte = {}).v) ? _c : _b2.v = new Set).add(PUBLIC_VERSION);
 
@@ -3341,9 +3835,12 @@ function create_event(event_name, dom, handler, options = {}) {
     if (!options.capture) handle_event_propagation.call(dom, event2);
     if (!event2.cancelBubble) return without_reactive_context(() => null == handler ? void 0 : handler.call(this, event2));
   }
-  if (event_name.startsWith("pointer") || event_name.startsWith("touch") || "wheel" === event_name) queue_micro_task(() => {
-    dom.addEventListener(event_name, target_handler, options);
-  }); else dom.addEventListener(event_name, target_handler, options);
+  if (event_name.startsWith("pointer") || event_name.startsWith("touch") || "wheel" === event_name) {
+    target_handler.__removed = false;
+    queue_micro_task(() => {
+      if (!target_handler.__removed) dom.addEventListener(event_name, target_handler, options);
+    });
+  } else dom.addEventListener(event_name, target_handler, options);
   return target_handler;
 }
 
@@ -3353,6 +3850,7 @@ function event(event_name, dom, handler, capture2, passive2) {
     passive: passive2
   }, target_handler = create_event(event_name, dom, handler, options);
   if (dom === document.body || dom === window || dom === document || dom instanceof HTMLMediaElement) teardown(() => {
+    target_handler.__removed = true;
     dom.removeEventListener(event_name, target_handler, options);
   });
 }
@@ -3367,10 +3865,19 @@ function delegate(events) {
   for (var fn of root_event_handles) fn(events);
 }
 
-var _a4, last_propagated_event = null;
+var _a4, last_propagated_event = null, last_propagated_event_clear_scheduled = false;
 
 function handle_event_propagation(event2) {
-  var _a5, _b3, owner_document = this.ownerDocument, event_name = event2.type, path = (null == (_a5 = event2.composedPath) ? void 0 : _a5.call(event2)) || [], current_target = path[0] || event2.target, path_idx = 0, handled_at = (last_propagated_event = event2) === event2 && event2[event_symbol];
+  var _a5, _b3, owner_document = this.ownerDocument, event_name = event2.type, path = (null == (_a5 = event2.composedPath) ? void 0 : _a5.call(event2)) || [], current_target = path[0] || event2.target;
+  last_propagated_event = event2;
+  if (!last_propagated_event_clear_scheduled) {
+    last_propagated_event_clear_scheduled = true;
+    setTimeout(() => {
+      last_propagated_event_clear_scheduled = false;
+      last_propagated_event = null;
+    });
+  }
+  var path_idx = 0, handled_at = last_propagated_event === event2 && event2[event_symbol];
   if (handled_at) {
     var at_idx = path.indexOf(handled_at);
     if (-1 !== at_idx && (this === document || this === window)) {
@@ -3466,11 +3973,11 @@ function from_namespace(content, flags2, ns = "svg") {
       return hydrate_node;
     }
     if (!node) {
-      var root7 = get_first_child(create_fragment_from_html(wrapped));
+      var root8 = get_first_child(create_fragment_from_html(wrapped));
       if (is_fragment) {
         node = document.createDocumentFragment();
-        for (;get_first_child(root7); ) node.appendChild(get_first_child(root7));
-      } else node = get_first_child(root7);
+        for (;get_first_child(root8); ) node.appendChild(get_first_child(root8));
+      } else node = get_first_child(root8);
     }
     var clone = node.cloneNode(true);
     if (is_fragment) assign_nodes(get_first_child(clone), clone.lastChild); else assign_nodes(clone, clone);
@@ -3523,6 +4030,333 @@ function sanitize_location(location) {
   return null == location ? void 0 : location.replace(/\//g, "/​");
 }
 
+var _anchor, _hydrate_open, _props, _children, _effect, _main_effect, _pending_effect, _failed_effect, _offscreen_fragment, _local_pending_count, _pending_count, _pending_count_update_queued, _dirty_effects2, _maybe_dirty_effects2, _effect_pending, _effect_pending_subscriber, _Boundary_instances, hydrate_resolved_content_fn, hydrate_failed_content_fn, create_reset_fn, is_destroyed_fn, hydrate_pending_content_fn, render_fn, resolve_fn2, run_fn, update_pending_count_fn, handle_error_fn, flags = EFFECT_TRANSPARENT | EFFECT_PRESERVED;
+
+function boundary(node, props, children, transform_error) {
+  new Boundary(node, props, children, transform_error);
+}
+
+var Boundary = class {
+  constructor(node, props, children, transform_error) {
+    __privateAdd(this, _Boundary_instances);
+    __publicField(this, "parent");
+    __publicField(this, "is_pending", false);
+    __publicField(this, "transform_error");
+    __privateAdd(this, _anchor);
+    __privateAdd(this, _hydrate_open, hydrating ? hydrate_node : null);
+    __privateAdd(this, _props);
+    __privateAdd(this, _children);
+    __privateAdd(this, _effect);
+    __privateAdd(this, _main_effect, null);
+    __privateAdd(this, _pending_effect, null);
+    __privateAdd(this, _failed_effect, null);
+    __privateAdd(this, _offscreen_fragment, null);
+    __privateAdd(this, _local_pending_count, 0);
+    __privateAdd(this, _pending_count, 0);
+    __privateAdd(this, _pending_count_update_queued, false);
+    __privateAdd(this, _dirty_effects2, new Set);
+    __privateAdd(this, _maybe_dirty_effects2, new Set);
+    __privateAdd(this, _effect_pending, null);
+    __privateAdd(this, _effect_pending_subscriber, createSubscriber(() => {
+      __privateSet(this, _effect_pending, source(__privateGet(this, _local_pending_count)));
+      if (dev_fallback_default) tag(__privateGet(this, _effect_pending), "$effect.pending()");
+      return () => {
+        __privateSet(this, _effect_pending, null);
+      };
+    }));
+    var _a5, _b3;
+    __privateSet(this, _anchor, node);
+    __privateSet(this, _props, props);
+    __privateSet(this, _children, anchor => {
+      var effect2 = active_effect;
+      effect2.b = this;
+      effect2.f |= BOUNDARY_EFFECT;
+      children(anchor);
+    });
+    this.parent = active_effect.b;
+    this.transform_error = null != (_b3 = null != transform_error ? transform_error : null == (_a5 = this.parent) ? void 0 : _a5.transform_error) ? _b3 : e => e;
+    __privateSet(this, _effect, block(() => {
+      if (hydrating) {
+        const comment_data = read_hydration_instruction(__privateGet(this, _hydrate_open));
+        hydrate_next();
+        const server_rendered_pending = comment_data === HYDRATION_START_ELSE;
+        if (comment_data.startsWith(HYDRATION_START_FAILED)) {
+          const serialized_error = JSON.parse(comment_data.slice(HYDRATION_START_FAILED.length));
+          __privateMethod(this, _Boundary_instances, hydrate_failed_content_fn).call(this, serialized_error);
+        } else if (server_rendered_pending) __privateMethod(this, _Boundary_instances, hydrate_pending_content_fn).call(this); else __privateMethod(this, _Boundary_instances, hydrate_resolved_content_fn).call(this);
+      } else __privateMethod(this, _Boundary_instances, render_fn).call(this);
+    }, flags));
+    if (hydrating) __privateSet(this, _anchor, hydrate_node);
+  }
+  defer_effect(effect2) {
+    defer_effect(effect2, __privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+  }
+  is_rendered() {
+    return !this.is_pending && (!this.parent || this.parent.is_rendered());
+  }
+  has_pending_snippet() {
+    return !!__privateGet(this, _props).pending;
+  }
+  update_pending_count(d, batch) {
+    __privateMethod(this, _Boundary_instances, update_pending_count_fn).call(this, d, batch);
+    __privateSet(this, _local_pending_count, __privateGet(this, _local_pending_count) + d);
+    if (__privateGet(this, _effect_pending) && !__privateGet(this, _pending_count_update_queued)) {
+      __privateSet(this, _pending_count_update_queued, true);
+      queue_micro_task(() => {
+        __privateSet(this, _pending_count_update_queued, false);
+        if (__privateGet(this, _effect_pending)) internal_set(__privateGet(this, _effect_pending), __privateGet(this, _local_pending_count));
+      });
+    }
+  }
+  get_effect_pending() {
+    __privateGet(this, _effect_pending_subscriber).call(this);
+    return get(__privateGet(this, _effect_pending));
+  }
+  error(error) {
+    var _a5;
+    if (error === HYDRATION_ERROR) throw error;
+    if (!__privateGet(this, _props).onerror && !__privateGet(this, _props).failed) throw error;
+    if (null == (_a5 = current_batch) ? void 0 : _a5.is_fork) {
+      if (__privateGet(this, _main_effect)) current_batch.skip_effect(__privateGet(this, _main_effect));
+      if (__privateGet(this, _pending_effect)) current_batch.skip_effect(__privateGet(this, _pending_effect));
+      if (__privateGet(this, _failed_effect)) current_batch.skip_effect(__privateGet(this, _failed_effect));
+      current_batch.oncommit(() => {
+        if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
+      });
+    } else __privateMethod(this, _Boundary_instances, handle_error_fn).call(this, error);
+  }
+};
+
+_anchor = new WeakMap;
+
+_hydrate_open = new WeakMap;
+
+_props = new WeakMap;
+
+_children = new WeakMap;
+
+_effect = new WeakMap;
+
+_main_effect = new WeakMap;
+
+_pending_effect = new WeakMap;
+
+_failed_effect = new WeakMap;
+
+_offscreen_fragment = new WeakMap;
+
+_local_pending_count = new WeakMap;
+
+_pending_count = new WeakMap;
+
+_pending_count_update_queued = new WeakMap;
+
+_dirty_effects2 = new WeakMap;
+
+_maybe_dirty_effects2 = new WeakMap;
+
+_effect_pending = new WeakMap;
+
+_effect_pending_subscriber = new WeakMap;
+
+_Boundary_instances = new WeakSet;
+
+hydrate_resolved_content_fn = function() {
+  try {
+    __privateSet(this, _main_effect, branch(() => __privateGet(this, _children).call(this, __privateGet(this, _anchor))));
+  } catch (error) {
+    this.error(error);
+  }
+};
+
+hydrate_failed_content_fn = function(error) {
+  const failed = __privateGet(this, _props).failed, {reset: reset2, invoke_onerror} = __privateMethod(this, _Boundary_instances, create_reset_fn).call(this, error);
+  queue_micro_task(invoke_onerror);
+  if (failed) __privateSet(this, _failed_effect, branch(() => {
+    failed(__privateGet(this, _anchor), () => error, () => reset2);
+  }));
+};
+
+create_reset_fn = function(error) {
+  var did_reset = false, calling_on_error = false;
+  const reset2 = () => {
+    if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) if (!did_reset) {
+      did_reset = true;
+      if (calling_on_error) svelte_boundary_reset_onerror();
+      if (null !== __privateGet(this, _failed_effect)) pause_effect(__privateGet(this, _failed_effect), () => {
+        __privateSet(this, _failed_effect, null);
+      });
+      __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+        __privateMethod(this, _Boundary_instances, render_fn).call(this);
+      });
+    } else svelte_boundary_reset_noop();
+  };
+  return {
+    reset: reset2,
+    invoke_onerror: () => {
+      var _a5, _b3;
+      if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) try {
+        calling_on_error = true;
+        null == (_b3 = (_a5 = __privateGet(this, _props)).onerror) || _b3.call(_a5, error, reset2);
+        calling_on_error = false;
+      } catch (err) {
+        invoke_error_boundary(err, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
+      }
+    }
+  };
+};
+
+is_destroyed_fn = function() {
+  return 0 !== (__privateGet(this, _effect).f & (DESTROYED | DESTROYING));
+};
+
+hydrate_pending_content_fn = function() {
+  const pending2 = __privateGet(this, _props).pending;
+  if (pending2) {
+    this.is_pending = true;
+    __privateSet(this, _pending_effect, branch(() => pending2(__privateGet(this, _anchor))));
+    queue_micro_task(() => {
+      if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) {
+        var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment()), anchor = create_text(), handled = false;
+        fragment.append(anchor);
+        __privateSet(this, _main_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+          try {
+            return branch(() => __privateGet(this, _children).call(this, anchor));
+          } catch (error) {
+            try {
+              this.error(error);
+              handled = true;
+            } catch (error2) {
+              invoke_error_boundary(error2, __privateGet(this, _effect).parent);
+            }
+            return null;
+          }
+        }));
+        if (null !== __privateGet(this, _main_effect)) {
+          if (0 === __privateGet(this, _pending_count)) {
+            __privateGet(this, _anchor).before(fragment);
+            __privateSet(this, _offscreen_fragment, null);
+            pause_effect(__privateGet(this, _pending_effect), () => {
+              __privateSet(this, _pending_effect, null);
+            });
+            __privateMethod(this, _Boundary_instances, resolve_fn2).call(this, current_batch);
+          }
+        } else {
+          __privateSet(this, _offscreen_fragment, null);
+          if (handled) __privateMethod(this, _Boundary_instances, resolve_fn2).call(this, current_batch);
+        }
+      }
+    });
+  }
+};
+
+render_fn = function() {
+  try {
+    this.is_pending = this.has_pending_snippet();
+    __privateSet(this, _pending_count, 0);
+    __privateSet(this, _local_pending_count, 0);
+    __privateSet(this, _main_effect, branch(() => {
+      __privateGet(this, _children).call(this, __privateGet(this, _anchor));
+    }));
+    if (__privateGet(this, _pending_count) > 0) {
+      var fragment = __privateSet(this, _offscreen_fragment, document.createDocumentFragment());
+      move_effect(__privateGet(this, _main_effect), fragment);
+      const pending2 = __privateGet(this, _props).pending;
+      __privateSet(this, _pending_effect, branch(() => pending2(__privateGet(this, _anchor))));
+    } else __privateMethod(this, _Boundary_instances, resolve_fn2).call(this, current_batch);
+  } catch (error) {
+    this.error(error);
+  }
+};
+
+resolve_fn2 = function(batch) {
+  this.is_pending = false;
+  batch.transfer_effects(__privateGet(this, _dirty_effects2), __privateGet(this, _maybe_dirty_effects2));
+};
+
+run_fn = function(fn) {
+  var previous_effect = active_effect, previous_reaction = active_reaction, previous_ctx = component_context;
+  set_active_effect(__privateGet(this, _effect));
+  set_active_reaction(__privateGet(this, _effect));
+  set_component_context(__privateGet(this, _effect).ctx);
+  try {
+    Batch.ensure();
+    return fn();
+  } finally {
+    set_active_effect(previous_effect);
+    set_active_reaction(previous_reaction);
+    set_component_context(previous_ctx);
+  }
+};
+
+update_pending_count_fn = function(d, batch) {
+  var _a5;
+  if (this.has_pending_snippet()) {
+    __privateSet(this, _pending_count, __privateGet(this, _pending_count) + d);
+    if (0 === __privateGet(this, _pending_count)) {
+      __privateMethod(this, _Boundary_instances, resolve_fn2).call(this, batch);
+      if (__privateGet(this, _pending_effect)) pause_effect(__privateGet(this, _pending_effect), () => {
+        __privateSet(this, _pending_effect, null);
+      });
+      if (__privateGet(this, _offscreen_fragment)) {
+        __privateGet(this, _anchor).before(__privateGet(this, _offscreen_fragment));
+        __privateSet(this, _offscreen_fragment, null);
+      }
+    }
+  } else if (this.parent) __privateMethod(_a5 = this.parent, _Boundary_instances, update_pending_count_fn).call(_a5, d, batch);
+};
+
+handle_error_fn = function(error) {
+  if (__privateGet(this, _main_effect)) {
+    destroy_effect(__privateGet(this, _main_effect));
+    __privateSet(this, _main_effect, null);
+  }
+  if (__privateGet(this, _pending_effect)) {
+    destroy_effect(__privateGet(this, _pending_effect));
+    __privateSet(this, _pending_effect, null);
+  }
+  if (__privateGet(this, _failed_effect)) {
+    destroy_effect(__privateGet(this, _failed_effect));
+    __privateSet(this, _failed_effect, null);
+  }
+  if (hydrating) {
+    set_hydrate_node(__privateGet(this, _hydrate_open));
+    next();
+    set_hydrate_node(skip_nodes());
+  }
+  let failed = __privateGet(this, _props).failed;
+  const handle_error_result = transformed_error => {
+    if (__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) return;
+    const {reset: reset2, invoke_onerror} = __privateMethod(this, _Boundary_instances, create_reset_fn).call(this, transformed_error);
+    invoke_onerror();
+    if (failed && !__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) __privateSet(this, _failed_effect, __privateMethod(this, _Boundary_instances, run_fn).call(this, () => {
+      try {
+        return branch(() => {
+          var effect2 = active_effect;
+          effect2.b = this;
+          effect2.f |= BOUNDARY_EFFECT;
+          failed(__privateGet(this, _anchor), () => transformed_error, () => reset2);
+        });
+      } catch (error2) {
+        invoke_error_boundary(error2, __privateGet(this, _effect).parent);
+        return null;
+      }
+    }));
+  };
+  queue_micro_task(() => {
+    if (!__privateMethod(this, _Boundary_instances, is_destroyed_fn).call(this)) {
+      var result;
+      try {
+        result = this.transform_error(error);
+      } catch (e) {
+        invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent);
+        return;
+      }
+      if (null !== result && "object" == typeof result && "function" == typeof result.then) result.then(handle_error_result, e => invoke_error_boundary(e, __privateGet(this, _effect) && __privateGet(this, _effect).parent)); else handle_error_result(result);
+    }
+  });
+};
+
 var should_intro = true;
 
 function set_text(text2, value) {
@@ -3569,7 +4403,7 @@ function hydrate(component2, options) {
 
 var listeners = new Map;
 
-function _mount(Component, {target, anchor, props = {}, events, context, intro = true, transformError}) {
+function _mount(Component2, {target, anchor, props = {}, events, context, intro = true, transformError}) {
   init_operations();
   var component2 = void 0, unmount2 = component_root(() => {
     var anchor_node = null != anchor ? anchor : target.appendChild(create_text());
@@ -3581,7 +4415,7 @@ function _mount(Component, {target, anchor, props = {}, events, context, intro =
       if (events) props.$$events = events;
       if (hydrating) assign_nodes(anchor_node2, null);
       should_intro = intro;
-      component2 = Component(anchor_node2, props) || {};
+      component2 = Component2(anchor_node2, props) || mark_as_component();
       should_intro = true;
       if (hydrating) {
         active_effect.nodes.end = hydrate_node;
@@ -3643,7 +4477,7 @@ function unmount(component2, options) {
     mounted_components.delete(component2);
     return fn(options);
   }
-  if (dev_fallback_default) if (STATE_SYMBOL in component2) state_proxy_unmount(); else lifecycle_double_unmount();
+  if (dev_fallback_default) lifecycle_double_unmount();
   return Promise.resolve();
 }
 
@@ -3872,7 +4706,7 @@ function pause_effects(state2, to_destroy, controlled_anchor) {
     }, false);
   }
   if (0 === remaining) {
-    var fast_path = null !== controlled_anchor;
+    var fast_path = null !== controlled_anchor && 0 === state2.pending.size;
     if (fast_path) {
       var anchor = controlled_anchor, parent_node = anchor.parentNode;
       clear_text_content(parent_node);
@@ -3911,7 +4745,7 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
     anchor = hydrating ? set_hydrate_node(get_first_child(parent_node)) : parent_node.appendChild(create_text());
   }
   if (hydrating) hydrate_next();
-  var array, fallback2 = null, each_array = derived_safe_equal(() => {
+  var fallback2 = null, each_array = derived_safe_equal(() => {
     var collection = get_collection();
     return is_array(collection) ? collection : null == collection ? [] : array_from(collection);
   });
@@ -3920,6 +4754,7 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
   function commit(batch) {
     if (0 === (state2.effect.f & DESTROYED)) {
       state2.pending.delete(batch);
+      var array = get(each_array);
       state2.fallback = fallback2;
       reconcile(state2, array, anchor, flags2, get_key);
       if (null !== fallback2) if (0 === array.length) if (0 === (fallback2.f & EFFECT_OFFSCREEN)) resume_effect(fallback2); else {
@@ -3935,7 +4770,7 @@ function each(node, flags2, get_collection, get_key, render_fn2, fallback_fn = n
   }
   var state2 = {
     effect: block(() => {
-      var length = (array = get(each_array)).length;
+      var array = get(each_array), length = array.length;
       let mismatch = false;
       if (hydrating) if (read_hydration_instruction(anchor) === HYDRATION_START_ELSE != (0 === length)) {
         set_hydrate_node(anchor = skip_nodes());
@@ -3995,7 +4830,7 @@ function skip_to_branch(effect2) {
 }
 
 function reconcile(state2, array, anchor, flags2, get_key) {
-  var _a5, _b3, _c2, _d, _e, _f, _g, _h, _i, seen, to_animate, key2, effect2, i, is_animated = 0 !== (flags2 & EACH_IS_ANIMATED), length = array.length, items = state2.items, current = skip_to_branch(state2.effect.first), prev = null, matched = [], stashed = [];
+  var _a5, _b3, _c2, _d, _e, _f, _g, _h, _i, seen2, to_animate, key2, effect2, i, is_animated = 0 !== (flags2 & EACH_IS_ANIMATED), length = array.length, items = state2.items, current = skip_to_branch(state2.effect.first), prev = null, matched = [], stashed = [];
   if (is_animated) for (i = 0; i < length; i += 1) {
     key2 = get_key(array[i], i);
     if (0 === ((effect2 = items.get(key2).e).f & EFFECT_OFFSCREEN)) {
@@ -4034,13 +4869,13 @@ function reconcile(state2, array, anchor, flags2, get_key) {
       }
     }
     if (effect2 !== current) {
-      if (void 0 !== seen && seen.has(effect2)) {
+      if (void 0 !== seen2 && seen2.has(effect2)) {
         if (matched.length < stashed.length) {
           var j, start = stashed[0];
           prev = start.prev;
           var a = matched[0], b = matched[matched.length - 1];
           for (j = 0; j < matched.length; j += 1) move(matched[j], start, anchor);
-          for (j = 0; j < stashed.length; j += 1) seen.delete(stashed[j]);
+          for (j = 0; j < stashed.length; j += 1) seen2.delete(stashed[j]);
           link(state2, a.prev, b.next);
           link(state2, prev, a);
           link(state2, b, start);
@@ -4050,7 +4885,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
           matched = [];
           stashed = [];
         } else {
-          seen.delete(effect2);
+          seen2.delete(effect2);
           move(effect2, current, anchor);
           link(state2, effect2.prev, effect2.next);
           link(state2, effect2, null === prev ? state2.effect.first : prev.next);
@@ -4062,7 +4897,7 @@ function reconcile(state2, array, anchor, flags2, get_key) {
       matched = [];
       stashed = [];
       for (;null !== current && current !== effect2; ) {
-        (null != seen ? seen : seen = new Set).add(current);
+        (null != seen2 ? seen2 : seen2 = new Set).add(current);
         stashed.push(current);
         current = skip_to_branch(current.next);
       }
@@ -4079,9 +4914,9 @@ function reconcile(state2, array, anchor, flags2, get_key) {
     }
     if (0 === state2.outrogroups.size) state2.outrogroups = null;
   }
-  if (null !== current || void 0 !== seen) {
+  if (null !== current || void 0 !== seen2) {
     var to_destroy = [];
-    if (void 0 !== seen) for (effect2 of seen) if (0 === (effect2.f & INERT)) to_destroy.push(effect2);
+    if (void 0 !== seen2) for (effect2 of seen2) if (0 === (effect2.f & INERT)) to_destroy.push(effect2);
     for (;null !== current; ) {
       if (0 === (current.f & INERT) && current !== state2.fallback) to_destroy.push(current);
       current = skip_to_branch(current.next);
@@ -4199,7 +5034,7 @@ function html(node, get_value, is_controlled = false, svg = false, mathml = fals
 
 function append_styles(anchor, css) {
   effect(() => {
-    var _a5, root7 = anchor.getRootNode(), target = root7.host ? root7 : null != (_a5 = root7.head) ? _a5 : root7.ownerDocument.head;
+    var _a5, _b3, _c2, _d, _e, root8 = (anchor = null != (_d = null == (_c2 = null == (_b3 = null == (_a5 = active_effect) ? void 0 : _a5.parent) ? void 0 : _b3.nodes) ? void 0 : _c2.start) ? _d : anchor).getRootNode(), target = root8.host ? root8 : null != (_e = root8.head) ? _e : root8.ownerDocument.head;
     if (!target.querySelector("#" + css.hash)) {
       const style = create_element("style");
       style.id = css.hash;
@@ -4211,17 +5046,17 @@ function append_styles(anchor, css) {
 }
 
 function r(e) {
-  var t, f, n = "";
+  var t2, f, n = "";
   if ("string" == typeof e || "number" == typeof e) n += e; else if ("object" == typeof e) if (Array.isArray(e)) {
     var o = e.length;
-    for (t = 0; t < o; t++) e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
+    for (t2 = 0; t2 < o; t2++) e[t2] && (f = r(e[t2])) && (n && (n += " "), n += f);
   } else for (f in e) e[f] && (n && (n += " "), n += f);
   return n;
 }
 
 function clsx() {
-  for (var e, t, f = 0, n = "", o = arguments.length; f < o; f++) (e = arguments[f]) && (t = r(e)) && (n && (n += " "), 
-  n += t);
+  for (var e, t2, f = 0, n = "", o = arguments.length; f < o; f++) (e = arguments[f]) && (t2 = r(e)) && (n && (n += " "), 
+  n += t2);
   return n;
 }
 
@@ -4262,7 +5097,7 @@ function to_style(value, styles) {
       important_styles = styles[1];
     } else normal_styles = styles;
     if (value) {
-      value = String(value).replaceAll(/\s*\/\*.*?\*\/\s*/g, "").trim();
+      value = String(value).replaceAll(/\/\*.*?\*\//g, "").trim();
       var in_str = false, in_apo = 0, in_comment = false, reserved_names = [];
       if (normal_styles) reserved_names.push(...Object.keys(normal_styles).map(to_css_name));
       if (important_styles) reserved_names.push(...Object.keys(important_styles).map(to_css_name));
@@ -4364,7 +5199,7 @@ function set_attribute2(element2, attribute, value, skip_warning) {
   }
   if (attributes[attribute] !== (attributes[attribute] = value)) {
     if ("loading" === attribute) element2[LOADING_ATTR_SYMBOL] = value;
-    if (null == value) element2.removeAttribute(attribute); else if ("string" != typeof value && get_setters(element2).includes(attribute)) element2[attribute] = value; else element2.setAttribute(attribute, value);
+    if (null == value) element2.removeAttribute(attribute); else if ("string" != typeof value && get_setters(element2).has(attribute)) element2[attribute] = value; else element2.setAttribute(attribute, value);
   }
 }
 
@@ -4376,15 +5211,15 @@ function get_attributes(element2) {
   };
 }
 
-var _events, _instance, setters_cache = new Map;
+var setters_cache = new Map;
 
 function get_setters(element2) {
   var descriptors, cache_key = element2.getAttribute("is") || element2.nodeName, setters = setters_cache.get(cache_key);
   if (setters) return setters;
-  setters_cache.set(cache_key, setters = []);
+  setters_cache.set(cache_key, setters = new Set);
   for (var proto = element2, element_proto = Element.prototype; element_proto !== proto; ) {
     descriptors = get_descriptors(proto);
-    for (var key2 in descriptors) if (descriptors[key2].set && "innerHTML" !== key2 && "textContent" !== key2 && "innerText" !== key2) setters.push(key2);
+    for (var key2 in descriptors) if (descriptors[key2].set && "innerHTML" !== key2 && "textContent" !== key2 && "innerText" !== key2) setters.add(key2);
     proto = get_prototype_of(proto);
   }
   return setters;
@@ -4460,7 +5295,7 @@ function is_bound_this(bound_value, element_or_component) {
   return bound_value === element_or_component || (null == bound_value ? void 0 : bound_value[STATE_SYMBOL]) === element_or_component;
 }
 
-function bind_this(element_or_component = {}, update2, get_value, get_parts) {
+function bind_this(element_or_component = mark_as_component(), update2, get_value, get_parts) {
   var component_effect = component_context.r, parent = active_effect;
   effect(() => {
     var old_parts, parts;
@@ -4487,6 +5322,70 @@ function bind_this(element_or_component = {}, update2, get_value, get_parts) {
     };
   });
   return element_or_component;
+}
+
+var _events, _instance, legacy_is_updating_store = false, is_store_binding = false, IS_UNMOUNTED = Symbol("unmounted");
+
+function store_get(store, store_name, stores) {
+  var _a5;
+  const entry = null != (_a5 = stores[store_name]) ? _a5 : stores[store_name] = {
+    store: null,
+    source: mutable_source(void 0),
+    unsubscribe: noop
+  };
+  if (dev_fallback_default) entry.source.label = store_name;
+  if (entry.store !== store && !(IS_UNMOUNTED in stores)) {
+    entry.unsubscribe();
+    entry.store = null != store ? store : null;
+    if (null == store) {
+      entry.source.v = void 0;
+      entry.unsubscribe = noop;
+    } else {
+      var is_synchronous_callback = true;
+      entry.unsubscribe = subscribe_to_store(store, v => {
+        if (is_synchronous_callback) entry.source.v = v; else set(entry.source, v);
+      });
+      is_synchronous_callback = false;
+    }
+  }
+  if (store && IS_UNMOUNTED in stores) return get2(store); else return get(entry.source);
+}
+
+function store_set(store, value) {
+  update_with_flag(store, value);
+  return value;
+}
+
+function setup_stores() {
+  const stores = {};
+  return [ stores, function cleanup() {
+    teardown(() => {
+      for (var store_name in stores) stores[store_name].unsubscribe();
+      define_property(stores, IS_UNMOUNTED, {
+        enumerable: false,
+        value: true
+      });
+    });
+  } ];
+}
+
+function update_with_flag(store, value) {
+  legacy_is_updating_store = true;
+  try {
+    store.set(value);
+  } finally {
+    legacy_is_updating_store = false;
+  }
+}
+
+function capture_store_binding(fn) {
+  var previous_is_store_binding = is_store_binding;
+  try {
+    is_store_binding = false;
+    return [ fn(), is_store_binding ];
+  } finally {
+    is_store_binding = previous_is_store_binding;
+  }
 }
 
 function prop(props, key2, flags2, fallback2) {
@@ -4792,7 +5691,7 @@ function get_custom_elements_slots(element2) {
   return result;
 }
 
-var import_obsidian = require("obsidian"), root = from_html('<div class="markdownBody svelte-164rifk" style="min-height: 1em;"></div>'), $$css = {
+var import_obsidian3 = require("obsidian"), root = from_html('<div class="markdownBody svelte-164rifk" style="min-height: 1em;"></div>'), $$css = {
   hash: "svelte-164rifk",
   code: ".markdownBody.svelte-164rifk {user-select:text;-webkit-user-select:text;}"
 };
@@ -4805,7 +5704,7 @@ function ScrollViewMarkdownComponent($$anchor, $$props) {
   })), el = state(void 0), renderedContent = state("");
   function onAppearing(_) {
     if (file().content && get(el) && get(renderedContent) != file().content) {
-      import_obsidian.MarkdownRenderer.render($$props.plugin.app, file().content, get(el), file().path, $$props.plugin);
+      import_obsidian3.MarkdownRenderer.render($$props.plugin.app, file().content, get(el), file().path, $$props.plugin);
       set(renderedContent, file().content, true);
     }
   }
@@ -4825,7 +5724,7 @@ function ScrollViewMarkdownComponent($$anchor, $$props) {
     if (get(renderedContent) && file() && file().content && get(el) && get(renderedContent) != file().content) {
       get(el).style.minHeight = `${get(el).clientHeight}px`;
       get(el).innerHTML = "";
-      import_obsidian.MarkdownRenderer.render($$props.plugin.app, file().content, get(el), file().path, $$props.plugin);
+      import_obsidian3.MarkdownRenderer.render($$props.plugin.app, file().content, get(el), file().path, $$props.plugin);
       set(renderedContent, file().content, true);
       get(el).style.minHeight = "20px";
     }
@@ -4852,7 +5751,10 @@ function ScrollViewComponent($$anchor, $$props) {
   }));
   const _state = user_derived(() => store_get(store(), "$store", $$stores));
   let files = user_derived(() => get(_state).files);
-  const tagPath = user_derived(() => get(_state).tagPath.split(", ").map(e => "#" + trimTrailingSlash(e).split("/").map(e2 => renderSpecialTag(e2.trim())).join("/")).join(", "));
+  const tagPath = user_derived(() => {
+    store_get(resolvedLocale, "$resolvedLocale", $$stores);
+    return get(_state).tagPath.split(", ").map(e => "#" + trimTrailingSlash(e).split("/").map(e2 => renderSpecialTag(e2.trim())).join("/")).join(", ");
+  });
   let scrollEl = state(void 0), observer = state(void 0);
   const onAppearing = new CustomEvent("appearing", {
     detail: {}
@@ -4870,13 +5772,9 @@ function ScrollViewComponent($$anchor, $$props) {
   onDestroy(() => {
     null === get(observer) || void 0 === get(observer) || get(observer).disconnect();
   });
-  var div = root_1(), div_1 = child(div), text2 = child(div_1);
-  reset(div_1);
+  var div = root_1(), div_1 = child(div), text2 = only_child(div_1, true);
   each(sibling(div_1, 4), 17, () => get(files), index, ($$anchor2, file) => {
-    var div_2 = root2(), div_3 = child(div_2), span = child(div_3), text_1 = child(span, true);
-    reset(span);
-    var span_1 = sibling(span, 2), text_2 = child(span_1);
-    reset(span_1);
+    var div_2 = root2(), div_3 = child(div_2), span = child(div_3), text_1 = only_child(span, true), text_2 = only_child(sibling(span, 2));
     reset(div_3);
     ScrollViewMarkdownComponent(sibling(div_3, 2), {
       get file() {
@@ -4904,10 +5802,9 @@ function ScrollViewComponent($$anchor, $$props) {
     append($$anchor2, div_2);
   });
   reset(div);
-  template_effect(() => {
-    var _a5;
-    return set_text(text2, `Files with ${null != (_a5 = get(tagPath)) ? _a5 : ""}`);
-  });
+  template_effect($0 => set_text(text2, $0), [ () => store_get(t, "$t", $$stores)("Files with {tagPath}", {
+    tagPath: get(tagPath)
+  }) ]);
   append($$anchor, div);
   pop();
   $$cleanup();
@@ -4915,7 +5812,7 @@ function ScrollViewComponent($$anchor, $$props) {
 
 delegate([ "click" ]);
 
-var ScrollView = class extends import_obsidian2.ItemView {
+var ScrollView = class extends import_obsidian4.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.icon = "sheets-in-box";
@@ -4940,7 +5837,7 @@ var ScrollView = class extends import_obsidian2.ItemView {
     return VIEW_TYPE_SCROLL;
   }
   getDisplayText() {
-    return this.state.tagPath || "Tags scroll";
+    return this.state.tagPath || tr("Tags scroll");
   }
   async setFile(filenames) {
     this.state = {
@@ -4969,8 +5866,8 @@ var ScrollView = class extends import_obsidian2.ItemView {
     const items = [];
     for (const item of this.state.files) if (item.content) items.push(item); else {
       const f = this.app.vault.getAbstractFileByPath(item.path);
-      if (null == f || !(f instanceof import_obsidian2.TFile)) {
-        console.log(`File not found:${item.path}`);
+      if (null == f || !(f instanceof import_obsidian4.TFile)) {
+        console.debug(`File not found:${item.path}`);
         items.push(item);
         continue;
       }
@@ -5005,7 +5902,7 @@ var ScrollView = class extends import_obsidian2.ItemView {
     }
     return await Promise.resolve();
   }
-}, import_obsidian6 = require("obsidian");
+}, import_obsidian8 = require("obsidian");
 
 function performSortExactFirst(_items, children, leftOverItems) {
   const childrenPathsArr = children.map(e => e[V2FI_IDX_CHILDREN].map(ee => ee.path)).flat(), childrenPaths = new Set(childrenPathsArr), exactHerePaths = new Set(_items.map(e => e.path));
@@ -5071,11 +5968,8 @@ async function collectTreeChildren({key: key2, expandLimit, depth, tags, trailLo
         wChildren = out;
       }
       if (isMainTree && isRoot) {
-        const archiveTags = _setting.archiveTags.toLowerCase().replace(/[\n ]/g, "").split(",");
-        wChildren = wChildren.map(e => {
-          const childTagPath = `${trimTrailingSlash(e[V2FI_IDX_TAG].toLowerCase())}/`;
-          return archiveTags.some(aTag => `${trimTrailingSlash(aTag)}/`.startsWith(childTagPath)) ? e : [ e[V2FI_IDX_TAG], e[V2FI_IDX_TAGNAME], e[V2FI_IDX_TAGDISP], e[V2FI_IDX_CHILDREN].filter(items => !items.tags.some(e2 => archiveTags.contains(e2.toLowerCase()))) ];
-        }).filter(child2 => 0 != child2[V2FI_IDX_CHILDREN].length);
+        const archiveTags = parseTagFilterPatterns(_setting.archiveTags);
+        wChildren = wChildren.map(e => [ e[V2FI_IDX_TAG], e[V2FI_IDX_TAGNAME], e[V2FI_IDX_TAGDISP], e[V2FI_IDX_CHILDREN].filter(item => isVisibleInArchiveBranch(item.tags, e[V2FI_IDX_TAG], archiveTags)) ]).filter(child2 => 0 != child2[V2FI_IDX_CHILDREN].length);
       }
     }
     wChildren = wChildren.sort(sortFunc);
@@ -5136,7 +6030,10 @@ function V2TreeItemComponent($$anchor, $$props) {
   push($$props, true);
   const $pluginInstance = () => store_get(pluginInstance, "$pluginInstance", $$stores), [$$stores, $$cleanup] = setup_stores(), _setting = user_derived(() => store_get(tagFolderSetting, "$tagFolderSetting", $$stores)), _currentActiveFilePath = user_derived(() => store_get(currentFile, "$currentFile", $$stores));
   let isActive = user_derived(() => $$props.item.path == get(_currentActiveFilePath)), isItemVisible = state(false);
-  const tagsLeft = user_derived(() => get(isItemVisible) ? uniqueCaseIntensive([ ...getExtraTags($$props.item.tags, [ ...$$props.trail ], get(_setting).reduceNestedParent), ...$$props.item.extraTags ].map(e => trimSlash(e, false, true)).map(e => e.split("/").map(ee => renderSpecialTag(ee)).join("/")).filter(e => "" != e)) : []), extraTagsHtml = user_derived(() => `${get(tagsLeft).map(e => `<span class="tf-tag">${escapeStringToHTML(e)}</span>`).join("")}`), draggable = user_derived(() => !get(_setting).disableDragging), app = user_derived(() => null === $pluginInstance() || void 0 === $pluginInstance() ? void 0 : $pluginInstance().app), dm = user_derived(() => null === get(app) || void 0 === get(app) ? void 0 : get(app).dragManager);
+  const tagsLeft = user_derived(() => {
+    store_get(resolvedLocale, "$resolvedLocale", $$stores);
+    return get(isItemVisible) ? uniqueCaseIntensive([ ...getExtraTags($$props.item.tags, [ ...$$props.trail ], get(_setting).reduceNestedParent), ...$$props.item.extraTags ].map(e => trimSlash(e, false, true)).map(e => e.split("/").map(ee => renderSpecialTag(ee)).join("/")).filter(e => "" != e)) : [];
+  }), extraTagsHtml = user_derived(() => `${get(tagsLeft).map(e => `<span class="tf-tag">${escapeStringToHTML(e)}</span>`).join("")}`), draggable = user_derived(() => !get(_setting).disableDragging), app = user_derived(() => null === $pluginInstance() || void 0 === $pluginInstance() ? void 0 : $pluginInstance().app), dm = user_derived(() => null === get(app) || void 0 === get(app) ? void 0 : get(app).dragManager);
   function dragStartFile(args) {
     if (!get(draggable)) return;
     const file = get(app).vault.getAbstractFileByPath($$props.item.path), param = get(dm).dragFile(args, file);
@@ -5144,12 +6041,10 @@ function V2TreeItemComponent($$anchor, $$props) {
   }
   {
     const children = ($$anchor2, $$arg0) => {
-      let isVisible = () => null == $$arg0 ? void 0 : $$arg0().isVisible;
+      let isVisible = () => (null == $$arg0 ? void 0 : $$arg0()).isVisible;
       var div = root_12();
       let classes;
-      var div_1 = child(div), text2 = child(div_1, true);
-      reset(div_1);
-      var node = sibling(div_1, 2), consequent = $$anchor3 => {
+      var div_1 = child(div), text2 = only_child(div_1, true), node = sibling(div_1, 2), consequent = $$anchor3 => {
         var div_2 = root4();
         html(div_2, () => get(extraTagsHtml), true);
         reset(div_2);
@@ -5381,7 +6276,10 @@ function V2TreeFolderComponent_1($$anchor, $$props) {
     if ("tags" == viewType()) if ("NONE" == get(_setting).hideItems) return get(_items); else if ("DEDICATED_INTERMIDIATES" == get(_setting).hideItems && get(isInDedicatedTag) || "ALL_EXCEPT_BOTTOM" == get(_setting).hideItems) return get(_items).filter(e => !get(children).map(e2 => e2[V2FI_IDX_CHILDREN]).flat().find(ee => e.path == ee.path)); else return get(_items); else return get(leftOverItemsSrc);
   }), leftOverItems = user_derived(() => get(_setting).sortExactFirst ? performSortExactFirst(get(_items), get(children), get(leftOverItemsUnsorted)) : get(leftOverItemsUnsorted));
   let isActive = user_derived(() => get(_items) && get(_items).some(e => e.path == get(_currentActiveFilePath)) || "links" == viewType() && (thisName() == get(_currentActiveFilePath) || get(tags).contains(get(_currentActiveFilePath)) || get(leftOverItems).some(e => e.path == get(_currentActiveFilePath))));
-  const tagsDisp = user_derived(() => get(isSuppressibleLevel) && get(isInDedicatedTag) ? [ [ ...tagNameDisp(), ...get(suppressLevels).flatMap(e => e.split("/").map(e2 => renderSpecialTag(e2))) ] ] : get(isSuppressibleLevel) ? [ tagNameDisp(), ...get(suppressLevels).map(e => e.split("/").map(e2 => renderSpecialTag(e2))) ] : [ tagNameDisp() ]), classKey = user_derived(() => "links" == viewType() ? " tf-link" : " tf-tag"), tagsDispHtml = user_derived(() => get(isFolderVisible) ? get(tagsDisp).map(e => `<span class="tagfolder-tag tag-tag${get(classKey)}">${e.map(ee => `<span class="tf-tag-each">${escapeStringToHTML(ee)}</span>`).join("")}</span>`).join("") : ""), itemCount = user_derived(() => "tags" == viewType() ? null !== (_c2 = null === get(_items) || void 0 === get(_items) ? void 0 : get(_items).length) && void 0 !== _c2 ? _c2 : 0 : get(tags).length + get(leftOverItems).length), leftOverItemsDisp = user_derived(() => splitArrayToBatch(get(leftOverItems))), childrenDisp = user_derived(() => splitArrayToBatch(get(children))), draggable = user_derived(() => !get(_setting).disableDragging), app = user_derived(() => store_get(pluginInstance, "$pluginInstance", $$stores).app), dm = user_derived(() => null === get(app) || void 0 === get(app) ? void 0 : get(app).dragManager);
+  const tagsDisp = user_derived(() => {
+    store_get(resolvedLocale, "$resolvedLocale", $$stores);
+    return get(isSuppressibleLevel) && get(isInDedicatedTag) ? [ [ ...tagNameDisp(), ...get(suppressLevels).flatMap(e => e.split("/").map(e2 => renderSpecialTag(e2))) ] ] : get(isSuppressibleLevel) ? [ tagNameDisp(), ...get(suppressLevels).map(e => e.split("/").map(e2 => renderSpecialTag(e2))) ] : [ tagNameDisp() ];
+  }), classKey = user_derived(() => "links" == viewType() ? " tf-link" : " tf-tag"), tagsDispHtml = user_derived(() => get(isFolderVisible) ? get(tagsDisp).map(e => `<span class="tagfolder-tag tag-tag${get(classKey)}">${e.map(ee => `<span class="tf-tag-each">${escapeStringToHTML(ee)}</span>`).join("")}</span>`).join("") : ""), itemCount = user_derived(() => "tags" == viewType() ? null !== (_c2 = null === get(_items) || void 0 === get(_items) ? void 0 : get(_items).length) && void 0 !== _c2 ? _c2 : 0 : get(tags).length + get(leftOverItems).length), leftOverItemsDisp = user_derived(() => splitArrayToBatch(get(leftOverItems))), childrenDisp = user_derived(() => splitArrayToBatch(get(children))), draggable = user_derived(() => !get(_setting).disableDragging), app = user_derived(() => store_get(pluginInstance, "$pluginInstance", $$stores).app), dm = user_derived(() => null === get(app) || void 0 === get(app) ? void 0 : get(app).dragManager);
   user_effect(() => {
     const key2 = get(trailKey) + ($$props.isRoot ? "-r" : "-x") + viewContextID, sortFunc = selectCompareMethodTags(get(_setting), "links" == viewType() ? {} : get(_tagInfo));
     (function updateX(param) {
@@ -5418,8 +6316,7 @@ function V2TreeFolderComponent_1($$anchor, $$props) {
   });
   var div = root_7(), node = child(div), consequent_1 = $$anchor2 => {
     var fragment = comment(), node_1 = first_child(fragment), consequent = $$anchor3 => {
-      var div_1 = root5(), div_2 = child(div_1), text2 = child(div_2, true);
-      reset(div_2);
+      var div_1 = root5(), text2 = only_child(child(div_1), true);
       reset(div_1);
       template_effect(() => set_text(text2, headerTitle()));
       append($$anchor3, div_1);
@@ -5468,8 +6365,7 @@ function V2TreeFolderComponent_1($$anchor, $$props) {
           if_block(node_4, $$render => {
             if (get(isFolderVisible)) $$render(consequent_3); else $$render(alternate_1, -1);
           });
-          var div_7 = sibling(node_4, 2), span = child(div_7), text_1 = child(span, true);
-          reset(span);
+          var div_7 = sibling(node_4, 2), span = child(div_7), text_1 = only_child(span, true);
           reset(div_7);
           reset(div_4);
           template_effect(() => {
@@ -5482,7 +6378,9 @@ function V2TreeFolderComponent_1($$anchor, $$props) {
           delegated("click", div_3, toggleFolder);
           delegated("click", div_4, handleOpenItem);
           delegated("click", div_7, e => function handleOpenScroll(e, trails, filePaths) {
-            if ("tags" == viewType()) $$props.openScrollView(void 0, "", joinPartialPath(removeIntermediatePath(trails)).join(", "), filePaths); else if ("links" == viewType()) $$props.openScrollView(void 0, "", `Linked to ${get(filename)}`, filePaths);
+            if ("tags" == viewType()) $$props.openScrollView(void 0, "", joinPartialPath(removeIntermediatePath(trails)).join(", "), filePaths); else if ("links" == viewType()) $$props.openScrollView(void 0, "", store_get(t, "$t", $$stores)("Linked to {filename}", {
+              filename: get(filename)
+            }), filePaths);
             e.preventDefault();
           }(e, trail(), get(_items).map(e2 => e2.path)));
           event("dragstart", span, dragStartFiles);
@@ -5611,7 +6509,7 @@ function V2TreeFolderComponent_1($$anchor, $$props) {
 
 delegate([ "click", "contextmenu" ]);
 
-var import_obsidian3 = require("obsidian"), root6 = from_html('<div class="clickable-icon nav-action-button" aria-label="Change sort order"></div>  <div class="clickable-icon nav-action-button" aria-label="Expand limit"></div>  <div aria-label="Search"></div>', 1), root_14 = from_html('<div class="clickable-icon nav-action-button" aria-label="Switch List/Tree"></div>'), root_22 = from_html('<div aria-label="Toggle Incoming"></div>  <div aria-label="Toggle Outgoing"></div>  <div aria-label="Toggle Incoming&amp;Outgoing"></div>  <div aria-label="Toggle Hide indirect notes"></div>', 1), root_32 = from_html('<div class="clickable-icon nav-action-button" aria-label="Collapse all"></div>'), root_42 = from_html('<div class="search-row"><div class="search-input-container global-search-input-container"><input type="search" spellcheck="false" placeholder="Type to start search..."/>  <div class="search-input-clear-button" aria-label="Clear search"></div></div></div>'), root_52 = from_html('<div hidden=""></div> <div class="nav-header"><div class="nav-buttons-container tagfolder-buttons-container"><div class="clickable-icon nav-action-button" aria-label="New note"></div> <!> <!> <!> <!></div></div> <!> <div class="nav-files-container node-insert-event svelte-10n2ssk"><!></div>', 1), $$css3 = {
+var import_obsidian5 = require("obsidian"), root6 = from_html('<div class="clickable-icon nav-action-button"></div>  <div></div>', 1), root_14 = from_html('<div class="clickable-icon nav-action-button"></div>'), root_22 = from_html("<div></div>  <div></div>  <div></div>  <div></div>", 1), root_32 = from_html('<div class="search-row"><div class="search-input-container global-search-input-container"><input type="search" spellcheck="false"/>  <div class="search-input-clear-button"></div></div></div>'), root_42 = from_html('<div hidden=""></div> <div class="nav-header"><div class="nav-buttons-container tagfolder-buttons-container"><div class="clickable-icon nav-action-button"></div>  <div class="clickable-icon nav-action-button"></div> <!> <!> <!> <!></div></div> <!> <div class="nav-files-container node-insert-event svelte-10n2ssk"><!></div>', 1), $$css3 = {
   hash: "svelte-10n2ssk",
   code: ".nav-files-container.svelte-10n2ssk {height:100%;}"
 };
@@ -5619,7 +6517,7 @@ var import_obsidian3 = require("obsidian"), root6 = from_html('<div class="click
 function TagFolderViewComponent($$anchor, $$props) {
   push($$props, true);
   append_styles($$anchor, $$css3);
-  const $searchString = () => store_get(searchString, "$searchString", $$stores), [$$stores, $$cleanup] = setup_stores();
+  const $searchString = () => store_get(searchString, "$searchString", $$stores), $t = () => store_get(t, "$t", $$stores), [$$stores, $$cleanup] = setup_stores();
   let vaultName = prop($$props, "vaultName", 3, ""), title = prop($$props, "title", 15, ""), tags = prop($$props, "tags", 31, () => proxy([])), viewType = prop($$props, "viewType", 3, "tags");
   const isMainTree = user_derived(() => 0 == tags().length);
   user_effect(() => {
@@ -5661,6 +6559,9 @@ function TagFolderViewComponent($$anchor, $$props) {
     set(onlyFDREnabled, get(_setting).linkShowOnlyFDR, true);
   });
   let showSearch = state(false);
+  user_effect(() => {
+    if ("" !== $searchString().trim()) set(showSearch, true);
+  });
   function toggleSearch() {
     set(showSearch, !get(showSearch));
     if (!get(showSearch)) store_set(searchString, "");
@@ -5744,31 +6645,31 @@ function TagFolderViewComponent($$anchor, $$props) {
     });
     observeAllQueued();
     if (get(iconDivEl)) {
-      (0, import_obsidian3.setIcon)(get(iconDivEl), "right-triangle");
+      (0, import_obsidian5.setIcon)(get(iconDivEl), "right-triangle");
       set(folderIcon, `${get(iconDivEl).innerHTML}`);
-      (0, import_obsidian3.setIcon)(get(iconDivEl), "lucide-edit");
+      (0, import_obsidian5.setIcon)(get(iconDivEl), "lucide-edit");
       set(newNoteIcon, `${get(iconDivEl).innerHTML}`);
+      (0, import_obsidian5.setIcon)(get(iconDivEl), "lucide-sort-asc");
+      set(upAndDownArrowsIcon, get(iconDivEl).innerHTML, true);
       if (get(isMainTree)) {
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "lucide-sort-asc");
-        set(upAndDownArrowsIcon, get(iconDivEl).innerHTML, true);
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "stacked-levels");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "stacked-levels");
         set(stackedLevels, get(iconDivEl).innerHTML, true);
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "search");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "search");
         set(searchIcon, get(iconDivEl).innerHTML, true);
       }
       if ("links" == viewType()) {
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "links-coming-in");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "links-coming-in");
         set(incomingIcon, get(iconDivEl).innerHTML, true);
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "links-going-out");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "links-going-out");
         set(outgoingIcon, get(iconDivEl).innerHTML, true);
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "link");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "link");
         set(linkIcon, get(iconDivEl).innerHTML, true);
-        (0, import_obsidian3.setIcon)(get(iconDivEl), "lucide-link-2");
+        (0, import_obsidian5.setIcon)(get(iconDivEl), "lucide-link-2");
         set(bothIcon, get(iconDivEl).innerHTML, true);
       }
-      (0, import_obsidian3.setIcon)(get(iconDivEl), "lucide-arrow-left-right");
+      (0, import_obsidian5.setIcon)(get(iconDivEl), "lucide-arrow-left-right");
       set(switchIcon, get(iconDivEl).innerHTML, true);
-      (0, import_obsidian3.setIcon)(get(iconDivEl), "lucide-chevrons-down-up");
+      (0, import_obsidian5.setIcon)(get(iconDivEl), "lucide-chevrons-down-up");
       set(closeAllIcon, get(iconDivEl).innerHTML, true);
     }
     const int = window.setInterval(() => {
@@ -5781,7 +6682,9 @@ function TagFolderViewComponent($$anchor, $$props) {
   onDestroy(() => {
     null == observer || observer.disconnect();
   });
-  let headerTitle = user_derived(() => "" == title() ? `${"tags" == viewType() ? "Tags" : "Links"}: ${vaultName()}` : `Items: ${title()}`);
+  let headerTitle = user_derived(() => "" == title() ? `${$t()("tags" == viewType() ? "Tags" : "Links")}: ${vaultName()}` : $t()("Items: {title}", {
+    title: title()
+  }));
   const viewItems = user_derived(() => {
     var _a5;
     if (!get(viewItemsSrc)) return [];
@@ -5789,9 +6692,8 @@ function TagFolderViewComponent($$anchor, $$props) {
     let items = get(viewItemsSrc);
     const lowerTags = tags().map(e => e.toLowerCase());
     for (const tag2 of lowerTags) items = items.filter(e => e.tags.some(e2 => (e2.toLowerCase() + "/").startsWith(tag2)));
-    const firstLevel = trimTrailingSlash(null !== (_a5 = tags().first()) && void 0 !== _a5 ? _a5 : "").toLowerCase(), archiveTags = get(_setting).archiveTags.toLowerCase().replace(/[\n ]/g, "").split(",");
-    if (!archiveTags.contains(firstLevel)) items = items.filter(item => !item.tags.some(e => archiveTags.contains(e.toLowerCase())));
-    return items;
+    const firstLevel = trimTrailingSlash(null !== (_a5 = tags().first()) && void 0 !== _a5 ? _a5 : "").toLowerCase(), archiveTags = parseTagFilterPatterns(get(_setting).archiveTags);
+    return items.filter(item => isVisibleInArchiveBranch(item.tags, firstLevel, archiveTags));
   });
   setContext("viewID", `${Math.random()}`);
   function closeAllOpenedFolders() {
@@ -5800,26 +6702,26 @@ function TagFolderViewComponent($$anchor, $$props) {
       return prev;
     });
   }
-  var fragment = root_52(), div = first_child(fragment);
+  var fragment = root_42(), div = first_child(fragment);
   bind_this(div, $$value => set(iconDivEl, $$value), () => get(iconDivEl));
   var div_1 = sibling(div, 2), div_2 = child(div_1), div_3 = child(div_2);
   html(div_3, () => get(newNoteIcon), true);
   reset(div_3);
-  var node = sibling(div_3, 2), consequent = $$anchor2 => {
-    var fragment_1 = root6(), div_4 = first_child(fragment_1);
-    html(div_4, () => get(upAndDownArrowsIcon), true);
-    reset(div_4);
-    var div_5 = sibling(div_4, 2);
+  var div_4 = sibling(div_3, 2);
+  html(div_4, () => get(upAndDownArrowsIcon), true);
+  reset(div_4);
+  var node = sibling(div_4, 2), consequent = $$anchor2 => {
+    var fragment_1 = root6(), div_5 = first_child(fragment_1);
     html(div_5, () => get(stackedLevels), true);
     reset(div_5);
     var div_6 = sibling(div_5, 2);
     html(div_6, () => get(searchIcon), true);
     reset(div_6);
-    template_effect(() => set_class(div_6, 1, "clickable-icon nav-action-button " + (get(showSearch) ? " is-active" : ""), "svelte-10n2ssk"));
-    delegated("click", div_4, function(...$$args) {
-      var _a5;
-      null == (_a5 = $$props.showOrder) || _a5.apply(this, $$args);
-    });
+    template_effect(($0, $1) => {
+      set_attribute2(div_5, "aria-label", $0);
+      set_class(div_6, 1, "clickable-icon nav-action-button " + (get(showSearch) ? " is-active" : ""), "svelte-10n2ssk");
+      set_attribute2(div_6, "aria-label", $1);
+    }, [ () => $t()("Expand limit"), () => $t()("Search") ]);
     delegated("click", div_5, function(...$$args) {
       var _a5;
       null == (_a5 = $$props.showLevelSelect) || _a5.apply(this, $$args);
@@ -5834,6 +6736,7 @@ function TagFolderViewComponent($$anchor, $$props) {
     var div_7 = root_14();
     html(div_7, () => get(switchIcon), true);
     reset(div_7);
+    template_effect($0 => set_attribute2(div_7, "aria-label", $0), [ () => $t()("Switch List/Tree") ]);
     delegated("click", div_7, doSwitch);
     append($$anchor2, div_7);
   };
@@ -5857,20 +6760,24 @@ function TagFolderViewComponent($$anchor, $$props) {
     let classes_3;
     html(div_11, () => get(linkIcon), true);
     reset(div_11);
-    template_effect(() => {
+    template_effect(($0, $1, $2, $3) => {
       classes = set_class(div_8, 1, "clickable-icon nav-action-button", null, classes, {
         "is-active": get(incomingEnabled)
       });
+      set_attribute2(div_8, "aria-label", $0);
       classes_1 = set_class(div_9, 1, "clickable-icon nav-action-button", null, classes_1, {
         "is-active": get(outgoingEnabled)
       });
+      set_attribute2(div_9, "aria-label", $1);
       classes_2 = set_class(div_10, 1, "clickable-icon nav-action-button", null, classes_2, {
         "is-active": get(bothEnabled)
       });
+      set_attribute2(div_10, "aria-label", $2);
       classes_3 = set_class(div_11, 1, "clickable-icon nav-action-button", null, classes_3, {
         "is-active": get(onlyFDREnabled)
       });
-    });
+      set_attribute2(div_11, "aria-label", $3);
+    }, [ () => $t()("Toggle Incoming"), () => $t()("Toggle Outgoing"), () => $t()("Toggle Incoming&Outgoing"), () => $t()("Toggle Hide indirect notes") ]);
     delegated("click", div_8, switchIncoming);
     delegated("click", div_9, switchOutgoing);
     delegated("click", div_10, switchBoth);
@@ -5881,9 +6788,10 @@ function TagFolderViewComponent($$anchor, $$props) {
     if ("links" == viewType()) $$render(consequent_2);
   });
   var node_3 = sibling(node_2, 2), consequent_3 = $$anchor2 => {
-    var div_12 = root_32();
+    var div_12 = root_14();
     html(div_12, () => get(closeAllIcon), true);
     reset(div_12);
+    template_effect($0 => set_attribute2(div_12, "aria-label", $0), [ () => $t()("Collapse all") ]);
     delegated("click", div_12, closeAllOpenedFolders);
     append($$anchor2, div_12);
   };
@@ -5893,12 +6801,16 @@ function TagFolderViewComponent($$anchor, $$props) {
   reset(div_2);
   reset(div_1);
   var node_4 = sibling(div_1, 2), consequent_4 = $$anchor2 => {
-    var div_13 = root_42(), div_14 = child(div_13), input = child(div_14);
+    var div_13 = root_32(), div_14 = child(div_13), input = child(div_14);
     remove_input_defaults(input);
     var div_15 = sibling(input, 2);
     reset(div_14);
     reset(div_13);
-    template_effect($0 => set_style(div_15, `display:${null != $0 ? $0 : ""};`), [ () => "" == $searchString().trim() ? "none" : "" ]);
+    template_effect(($0, $1, $2) => {
+      set_attribute2(input, "placeholder", $0);
+      set_attribute2(div_15, "aria-label", $1);
+      set_style(div_15, `display:${null != $2 ? $2 : ""};`);
+    }, [ () => $t()("Type to start search..."), () => $t()("Clear search"), () => "" == $searchString().trim() ? "none" : "" ]);
     bind_value(input, $searchString, $$value => store_set(searchString, $$value));
     delegated("click", div_15, clearSearch);
     append($$anchor2, div_13);
@@ -5941,9 +6853,17 @@ function TagFolderViewComponent($$anchor, $$props) {
   });
   reset(div_16);
   bind_this(div_16, $$value => scrollParent = $$value, () => scrollParent);
+  template_effect(($0, $1) => {
+    set_attribute2(div_3, "aria-label", $0);
+    set_attribute2(div_4, "aria-label", $1);
+  }, [ () => $t()("New note"), () => $t()("Change sort order") ]);
   delegated("click", div_3, function(...$$args) {
     var _a5;
     null == (_a5 = $$props.newNote) || _a5.apply(this, $$args);
+  });
+  delegated("click", div_4, function(...$$args) {
+    var _a5;
+    null == (_a5 = $$props.showOrder) || _a5.apply(this, $$args);
   });
   append($$anchor, fragment);
   pop();
@@ -5952,9 +6872,9 @@ function TagFolderViewComponent($$anchor, $$props) {
 
 delegate([ "click" ]);
 
-var import_obsidian5 = require("obsidian"), import_obsidian4 = require("obsidian"), askString = (app, title, placeholder, initialText) => new Promise(res => {
+var import_obsidian7 = require("obsidian"), import_obsidian6 = require("obsidian"), askString = (app, title, placeholder, initialText) => new Promise(res => {
   new PopoverSelectString(app, title, placeholder, initialText, result => res(result)).open();
-}), PopoverSelectString = class extends import_obsidian4.SuggestModal {
+}), PopoverSelectString = class extends import_obsidian6.SuggestModal {
   constructor(app, title, placeholder, initialText, callback) {
     super(app);
     this.callback = () => {};
@@ -6011,7 +6931,7 @@ function getRenameTargetTag(expandedTagsAll) {
   if (0 != tagParts.length && !tagParts.some(part => isSpecialTag(part))) return tagParts.join("/");
 }
 
-var TagFolderViewBase = class extends import_obsidian5.ItemView {
+var TagFolderViewBase = class extends import_obsidian7.ItemView {
   constructor() {
     super(...arguments);
     this.navigation = false;
@@ -6025,13 +6945,23 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     this.plugin.updateFileCaches();
   }
   showOrder(evt) {
-    const menu = new import_obsidian5.Menu;
-    menu.addItem(item => {
-      item.setTitle("Tags").setIcon("hashtag").onClick(evt2 => {
-        const menu2 = new import_obsidian5.Menu;
+    const menu = new import_obsidian7.Menu, addItemOrders = targetMenu => {
+      for (const key2 in OrderKeyItem) for (const direction in OrderDirection) targetMenu.addItem(item => {
+        const newSetting = `${key2}_${direction}`;
+        item.setTitle(tr(OrderKeyItem[key2]) + " " + tr(OrderDirection[direction])).onClick(async () => {
+          this.plugin.settings.sortType = newSetting;
+          await this.plugin.saveSettings();
+        });
+        if (newSetting == this.plugin.settings.sortType) item.setIcon("checkmark");
+        return item;
+      });
+    }, isListView = this.getViewType() == VIEW_TYPE_TAGFOLDER_LIST;
+    if (!isListView) menu.addItem(item => {
+      item.setTitle(tr("Tags")).setIcon("hashtag").onClick(evt2 => {
+        const menu2 = new import_obsidian7.Menu;
         for (const key2 in OrderKeyTag) for (const direction in OrderDirection) menu2.addItem(item2 => {
           const newSetting = `${key2}_${direction}`;
-          item2.setTitle(OrderKeyTag[key2] + " " + OrderDirection[direction]).onClick(async () => {
+          item2.setTitle(tr(OrderKeyTag[key2]) + " " + tr(OrderDirection[direction])).onClick(async () => {
             this.plugin.settings.sortTypeTag = newSetting;
             await this.plugin.saveSettings();
           });
@@ -6045,18 +6975,10 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
       });
       return item;
     });
-    menu.addItem(item => {
-      item.setTitle("Items").setIcon("document").onClick(evt2 => {
-        const menu2 = new import_obsidian5.Menu;
-        for (const key2 in OrderKeyItem) for (const direction in OrderDirection) menu2.addItem(item2 => {
-          const newSetting = `${key2}_${direction}`;
-          item2.setTitle(OrderKeyItem[key2] + " " + OrderDirection[direction]).onClick(async () => {
-            this.plugin.settings.sortType = newSetting;
-            await this.plugin.saveSettings();
-          });
-          if (newSetting == this.plugin.settings.sortType) item2.setIcon("checkmark");
-          return item2;
-        });
+    if (isListView) addItemOrders(menu); else menu.addItem(item => {
+      item.setTitle(tr("Items")).setIcon("document").onClick(evt2 => {
+        const menu2 = new import_obsidian7.Menu;
+        addItemOrders(menu2);
         menu2.showAtPosition({
           x: evt.x,
           y: evt.y
@@ -6067,20 +6989,22 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     menu.showAtMouseEvent(evt);
   }
   showLevelSelect(evt) {
-    const menu = new import_obsidian5.Menu, setLevel = async level => {
+    const menu = new import_obsidian7.Menu, setLevel = async level => {
       this.plugin.settings.expandLimit = level;
       await this.plugin.saveSettings();
       maxDepth.set(level);
     };
     for (const level of [ 2, 3, 4, 5 ]) menu.addItem(item => {
-      item.setTitle("Level " + (level - 1)).onClick(() => {
+      item.setTitle(tr("Level {n}", {
+        n: level - 1
+      })).onClick(() => {
         setLevel(level);
       });
       if (this.plugin.settings.expandLimit == level) item.setIcon("checkmark");
       return item;
     });
     menu.addItem(item => {
-      item.setTitle("No limit").onClick(() => {
+      item.setTitle(tr("No limit")).onClick(() => {
         setLevel(0);
       });
       if (0 == this.plugin.settings.expandLimit) item.setIcon("checkmark");
@@ -6089,35 +7013,39 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     menu.showAtMouseEvent(evt);
   }
   showMenu(evt, trail, targetTag, targetItems) {
-    const isTagTree = this.getViewType() == VIEW_TYPE_TAGFOLDER, menu = new import_obsidian5.Menu;
+    const isTagTree = this.getViewType() == VIEW_TYPE_TAGFOLDER, menu = new import_obsidian7.Menu;
     if (isTagTree) {
       const expandedTagsAll = ancestorToLongestTag(ancestorToTags(joinPartialPath(removeIntermediatePath(trail)))).map(e => trimTrailingSlash(e)), expandedTags = expandedTagsAll.map(e => e.split("/").filter(ee => !isSpecialTag(ee)).join("/")).filter(e => "" != e).map(e => "#" + e).join(" ").trim(), displayExpandedTags = expandedTagsAll.map(e => e.split("/").filter(ee => renderSpecialTag(ee)).join("/")).filter(e => "" != e).map(e => "#" + e).join(" ").trim();
-      if (navigator && navigator.clipboard) menu.addItem(item => item.setTitle(`Copy tags:${expandedTags}`).setIcon("hashtag").onClick(async () => {
+      if (navigator && navigator.clipboard) menu.addItem(item => item.setTitle(tr("Copy tags:{tags}", {
+        tags: expandedTags
+      })).setIcon("hashtag").onClick(async () => {
         await navigator.clipboard.writeText(expandedTags);
-        new import_obsidian5.Notice("Copied");
+        new import_obsidian7.Notice(tr("Copied"));
       }));
-      menu.addItem(item => item.setTitle("New note " + (targetTag ? "in here" : "as like this")).setIcon("create-new").onClick(async () => {
+      menu.addItem(item => item.setTitle(tr(targetTag ? "New note in here" : "New note as like this")).setIcon("create-new").onClick(async () => {
         await this.plugin.createNewNote(trail);
       }));
       const renameTargetTag = targetTag ? getRenameTargetTag(expandedTagsAll) : void 0, tagWrangler = renameTargetTag ? getTagWranglerPlugin(this.app) : void 0;
-      if (renameTargetTag && tagWrangler) menu.addItem(item => item.setTitle(`Rename #${renameTargetTag}`).setIcon("pencil").onClick(async () => {
+      if (renameTargetTag && tagWrangler) menu.addItem(item => item.setTitle(tr("Rename #{tag}", {
+        tag: renameTargetTag
+      })).setIcon("pencil").onClick(async () => {
         await tagWrangler.rename(renameTargetTag);
       }));
       if (targetTag) if (this.plugin.settings.useTagInfo && null != this.plugin.tagInfo) {
         const tag2 = targetTag;
-        if (tag2 in this.plugin.tagInfo && "key" in this.plugin.tagInfo[tag2]) menu.addItem(item => item.setTitle("Unpin").setIcon("pin").onClick(async () => {
+        if (tag2 in this.plugin.tagInfo && "key" in this.plugin.tagInfo[tag2]) menu.addItem(item => item.setTitle(tr("Unpin")).setIcon("pin").onClick(async () => {
           this.plugin.tagInfo[tag2] = toggleObjectProp(this.plugin.tagInfo[tag2], "key", false);
           this.plugin.applyTagInfo();
           await this.plugin.saveTagInfo();
         })); else menu.addItem(item => {
-          item.setTitle("Pin").setIcon("pin").onClick(async () => {
+          item.setTitle(tr("Pin")).setIcon("pin").onClick(async () => {
             this.plugin.tagInfo[tag2] = toggleObjectProp(this.plugin.tagInfo[tag2], "key", "");
             this.plugin.applyTagInfo();
             await this.plugin.saveTagInfo();
           });
         });
         menu.addItem(item => {
-          item.setTitle("Set an alternative label").setIcon("pencil").onClick(async () => {
+          item.setTitle(tr("Set an alternative label")).setIcon("pencil").onClick(async () => {
             var _a5;
             const oldAlt = tag2 in this.plugin.tagInfo ? null != (_a5 = this.plugin.tagInfo[tag2].alt) ? _a5 : "" : "", label = await askString(this.app, "", "", oldAlt);
             if (false !== label) {
@@ -6128,7 +7056,7 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
           });
         });
         menu.addItem(item => {
-          item.setTitle("Change the mark").setIcon("pencil").onClick(async () => {
+          item.setTitle(tr("Change the mark")).setIcon("pencil").onClick(async () => {
             var _a5;
             const oldMark = tag2 in this.plugin.tagInfo ? null != (_a5 = this.plugin.tagInfo[tag2].mark) ? _a5 : "" : "", mark = await askString(this.app, "", "", oldMark);
             if (false !== mark) {
@@ -6139,7 +7067,7 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
           });
         });
         menu.addItem(item => {
-          item.setTitle("Redirect this tag to ...").setIcon("pencil").onClick(async () => {
+          item.setTitle(tr("Redirect this tag to ...")).setIcon("pencil").onClick(async () => {
             var _a5;
             const oldRedirect = tag2 in this.plugin.tagInfo ? null != (_a5 = this.plugin.tagInfo[tag2].redirect) ? _a5 : "" : "", redirect = await askString(this.app, "", "", oldRedirect);
             if (false !== redirect) {
@@ -6151,13 +7079,13 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
         });
         if (targetItems) {
           menu.addItem(item => {
-            item.setTitle("Open scroll view").setIcon("sheets-in-box").onClick(async () => {
+            item.setTitle(tr("Open scroll view")).setIcon("sheets-in-box").onClick(async () => {
               const files = targetItems.map(e => e.path);
               await this.plugin.openScrollView(void 0, displayExpandedTags, expandedTagsAll.join(", "), files);
             });
           });
           menu.addItem(item => {
-            item.setTitle("Open list").setIcon("sheets-in-box").onClick(() => {
+            item.setTitle(tr("Open list")).setIcon("sheets-in-box").onClick(() => {
               selectedTags.set(expandedTagsAll);
             });
           });
@@ -6168,20 +7096,20 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
       const path = targetItems[0].path, file = this.app.vault.getAbstractFileByPath(path);
       this.app.workspace.trigger("file-menu", menu, file, "file-explorer");
       menu.addSeparator();
-      menu.addItem(item => item.setTitle("Open in new tab").setSection("open").setIcon("lucide-file-plus").onClick(async () => {
+      menu.addItem(item => item.setTitle(tr("Open in new tab")).setSection("open").setIcon("lucide-file-plus").onClick(async () => {
         await this.app.workspace.openLinkText(path, path, "tab");
       }));
-      menu.addItem(item => item.setTitle("Open to the right").setSection("open").setIcon("lucide-separator-vertical").onClick(async () => {
+      menu.addItem(item => item.setTitle(tr("Open to the right")).setSection("open").setIcon("lucide-separator-vertical").onClick(async () => {
         await this.app.workspace.openLinkText(path, path, "split");
       }));
     } else if (!isTagTree && targetTag) {
       const path = targetTag, file = this.app.vault.getAbstractFileByPath(path);
       this.app.workspace.trigger("file-menu", menu, file, "file-explorer");
       menu.addSeparator();
-      menu.addItem(item => item.setTitle("Open in new tab").setSection("open").setIcon("lucide-file-plus").onClick(async () => {
+      menu.addItem(item => item.setTitle(tr("Open in new tab")).setSection("open").setIcon("lucide-file-plus").onClick(async () => {
         await this.app.workspace.openLinkText(path, path, "tab");
       }));
-      menu.addItem(item => item.setTitle("Open to the right").setSection("open").setIcon("lucide-separator-vertical").onClick(async () => {
+      menu.addItem(item => item.setTitle(tr("Open to the right")).setSection("open").setIcon("lucide-separator-vertical").onClick(async () => {
         await this.app.workspace.openLinkText(path, path, "split");
       }));
     }
@@ -6223,7 +7151,7 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     return "tags" == this.treeViewType ? VIEW_TYPE_TAGFOLDER : VIEW_TYPE_TAGFOLDER_LINK;
   }
   getDisplayText() {
-    return "tags" == this.treeViewType ? "Tag Folder" : "Link Folder";
+    return "tags" == this.treeViewType ? tr("Tag Folder") : tr("Link Folder");
   }
   async onOpen() {
     this.containerEl.empty();
@@ -6252,7 +7180,7 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     this.component = void 0;
     return await Promise.resolve();
   }
-}, import_obsidian7 = require("obsidian"), TagFolderList = class extends TagFolderViewBase {
+}, import_obsidian9 = require("obsidian"), TagFolderList = class extends TagFolderViewBase {
   constructor(leaf, plugin) {
     super(leaf);
     this.icon = "stacked-levels";
@@ -6272,7 +7200,7 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
   onPaneMenu(menu, source2) {
     super.onPaneMenu(menu, source2);
     menu.addItem(item => {
-      item.setIcon("pin").setTitle("Pin").onClick(() => {
+      item.setIcon("pin").setTitle(tr("Pin")).onClick(() => {
         this.leaf.togglePinned();
       });
     });
@@ -6299,7 +7227,9 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     return VIEW_TYPE_TAGFOLDER_LIST;
   }
   getDisplayText() {
-    return `Files with ${this.state.title}`;
+    return tr("Files with {title}", {
+      title: this.state.title
+    });
   }
   async onOpen() {
     this.containerEl.empty();
@@ -6329,11 +7259,755 @@ var TagFolderViewBase = class extends import_obsidian5.ItemView {
     }
     return await Promise.resolve();
   }
-}, HideItemsType = {
-  NONE: "Hide nothing",
-  DEDICATED_INTERMIDIATES: "Only intermediates of nested tags",
-  ALL_EXCEPT_BOTTOM: "All intermediates"
 };
+
+function normaliseTag(tag2) {
+  return tag2.trim().replace(/^#/, "").replace(/\/+$/, "");
+}
+
+function uniqueCaseInsensitive(values) {
+  const seen2 = new Set, result = [];
+  for (const value of values) {
+    const key2 = value.toLowerCase();
+    if ("" != value && !seen2.has(key2)) {
+      seen2.add(key2);
+      result.push(value);
+    }
+  }
+  return result;
+}
+
+function folderMatches(path, folder) {
+  const pathLower = path.toLowerCase(), folderLower = folder.trim().replace(/^\/+|\/+$/g, "").toLowerCase();
+  if ("" == folderLower) return false; else return pathLower == folderLower || pathLower.startsWith(`${folderLower}/`);
+}
+
+function normaliseLookupTags(rawTags, policy2) {
+  const redirects = new Map(Object.entries(policy2.redirects).map(([tag2, redirect]) => [ normaliseTag(tag2).toLowerCase(), normaliseTag(redirect) ]).filter(([tag2, redirect]) => "" != tag2 && "" != redirect)), redirected = rawTags.map(normaliseTag).filter(Boolean).map(tag2 => {
+    var _a5;
+    return null != (_a5 = redirects.get(tag2.toLowerCase())) ? _a5 : tag2;
+  });
+  return uniqueCaseInsensitive((policy2.splitNestedTags ? redirected.flatMap(tag2 => tag2.split("/").map(part => part.trim()).filter(Boolean)) : redirected).map(tag2 => {
+    var _a5;
+    return null != (_a5 = redirects.get(tag2.toLowerCase())) ? _a5 : tag2;
+  }));
+}
+
+function buildNoteLookupItems(sources, policy2) {
+  const ignoredDocumentTags = parseTagFilterPatterns(policy2.ignoreDocumentTags.join(",")), ignoredTags = parseTagFilterPatterns(policy2.ignoreTags.join(","));
+  return sources.flatMap(source2 => {
+    if (policy2.targetFolders.length > 0 && !policy2.targetFolders.some(folder => folderMatches(source2.path, folder))) return [];
+    if (policy2.ignoreFolders.some(folder => folderMatches(source2.path, folder))) return [];
+    const tags = normaliseLookupTags(source2.tags, policy2);
+    if (tags.some(tag2 => tagMatchesFilterPatterns(tag2, ignoredDocumentTags))) return []; else return [ {
+      path: source2.path,
+      title: source2.title,
+      tags: tags.filter(tag2 => !tagMatchesFilterPatterns(tag2, ignoredTags)),
+      mtime: source2.mtime
+    } ];
+  });
+}
+
+function parseTagInput(input) {
+  let query = input.trim();
+  const excluded = query.startsWith("-");
+  if (excluded) query = query.substring(1);
+  query = query.replace(/^#/, "").trim();
+  return {
+    excluded,
+    query
+  };
+}
+
+function tagMatchesCondition(noteTag, conditionTag) {
+  const tag2 = normaliseTag(noteTag).toLowerCase(), condition = normaliseTag(conditionTag).toLowerCase();
+  if ("" == tag2 || "" == condition) return false; else return tag2 == condition || tag2.startsWith(`${condition}/`);
+}
+
+function tagAncestors(tag2) {
+  const parts = normaliseTag(tag2).split("/").filter(Boolean);
+  return parts.map((_, index2) => parts.slice(0, index2 + 1).join("/"));
+}
+
+function getTagCompletions(items, conditions, input) {
+  var _a5;
+  const {excluded, query} = parseTagInput(input), queryLower = query.toLowerCase(), selected = new Set(conditions.map(condition => normaliseTag(condition.tag).toLowerCase())), counts = new Map;
+  for (const item of items) for (const tag2 of uniqueCaseInsensitive(item.tags.flatMap(tagAncestors))) {
+    const key2 = tag2.toLowerCase();
+    if (selected.has(key2)) continue;
+    const entry = null != (_a5 = counts.get(key2)) ? _a5 : {
+      tag: tag2,
+      paths: new Set
+    };
+    entry.paths.add(item.path);
+    counts.set(key2, entry);
+  }
+  return [ ...counts.values() ].filter(({tag: tag2}) => "" == queryLower || tag2.toLowerCase().includes(queryLower)).sort((left, right) => {
+    const leftPrefix = left.tag.toLowerCase().startsWith(queryLower) ? 1 : 0, rightPrefix = right.tag.toLowerCase().startsWith(queryLower) ? 1 : 0;
+    if (leftPrefix != rightPrefix) return rightPrefix - leftPrefix;
+    if (left.paths.size != right.paths.size) return right.paths.size - left.paths.size; else return compareStrings(left.tag, right.tag, {
+      sensitivity: "base"
+    });
+  }).map(({tag: tag2, paths}) => ({
+    tag: tag2,
+    excluded,
+    noteCount: paths.size
+  }));
+}
+
+function scoreSubsequence(needle, haystack) {
+  var _a5;
+  const exactIndex = haystack.indexOf(needle);
+  if (exactIndex >= 0) return 2e3 + (0 == exactIndex ? 500 : 0) - exactIndex - (haystack.length - needle.length) / 100;
+  let position = -1, score = 0;
+  for (const character of needle) {
+    const next2 = haystack.indexOf(character, position + 1);
+    if (next2 < 0) return null;
+    const gap = next2 - position - 1;
+    score += 20 - Math.min(gap, 19);
+    if (0 == next2 || "/-_ ".includes(null != (_a5 = haystack[next2 - 1]) ? _a5 : "")) score += 10;
+    position = next2;
+  }
+  return score;
+}
+
+function scoreNoteQuery(item, query) {
+  const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  if (0 == words.length) return 0;
+  const title = item.title.toLowerCase(), path = item.path.toLowerCase();
+  let total = 0;
+  for (const word of words) {
+    const titleScore = scoreSubsequence(word, title), pathScore = scoreSubsequence(word, path);
+    if (null == titleScore && null == pathScore) return null;
+    total += Math.max(null == titleScore ? -1 / 0 : titleScore + 200, null != pathScore ? pathScore : -1 / 0);
+  }
+  return total;
+}
+
+function uniqueConditions(conditions) {
+  const seen2 = new Set;
+  return conditions.filter(condition => {
+    const tag2 = normaliseTag(condition.tag), key2 = `${condition.excluded ? "-" : "+"}${tag2.toLowerCase()}`;
+    if ("" == tag2 || seen2.has(key2)) return false;
+    seen2.add(key2);
+    return true;
+  }).map(condition => ({
+    ...condition,
+    tag: normaliseTag(condition.tag)
+  }));
+}
+
+function rankNoteLookupItems(items, conditions, noteQuery, options = {}) {
+  const normalisedConditions = uniqueConditions(conditions), positive = normalisedConditions.filter(condition => !condition.excluded), excluded = normalisedConditions.filter(condition => condition.excluded);
+  return items.flatMap(item => {
+    if (null != options.excludedPath && item.path == options.excludedPath) return [];
+    if (excluded.some(condition => item.tags.some(tag2 => tagMatchesCondition(tag2, condition.tag)))) return [];
+    const matchedTags = positive.filter(condition => item.tags.some(tag2 => tagMatchesCondition(tag2, condition.tag))).map(condition => condition.tag);
+    if (positive.length > 0 && 0 == matchedTags.length) return [];
+    const queryScore = scoreNoteQuery(item, noteQuery);
+    if (null == queryScore) return []; else return [ {
+      ...item,
+      matchedTags,
+      matchCount: matchedTags.length,
+      queryScore
+    } ];
+  }).sort((left, right) => {
+    if (left.matchCount != right.matchCount) return right.matchCount - left.matchCount;
+    if (left.queryScore != right.queryScore) return right.queryScore - left.queryScore;
+    if (left.mtime != right.mtime) return right.mtime - left.mtime; else return compareStrings(left.path, right.path, {
+      sensitivity: "base"
+    });
+  });
+}
+
+var import_obsidian10 = require("obsidian"), root7 = from_html('<button type="button" tabindex="-1"><span class="multi-select-pill-content svelte-kazjep"> </span> <span class="multi-select-pill-remove-button" aria-hidden="true">×</span></button>'), root_15 = from_html('<button type="button" role="option" tabindex="-1"><span> </span> <span class="count svelte-kazjep"> </span></button>'), root_23 = from_html('<div class="completions suggestion-container svelte-kazjep"><div class="suggestion svelte-kazjep" id="tagfolder-note-lookup-completions" role="listbox"></div></div>'), root_33 = from_html('<span class="note-parent-path svelte-kazjep"> </span>'), root_43 = from_html('<span class="note-alternative-title svelte-kazjep"> </span>'), root_52 = from_html("<span> </span>"), root_62 = from_html('<span class="suggestion-aux match-count svelte-kazjep"> </span>'), root_72 = from_html('<button type="button" role="option" tabindex="-1"><div class="suggestion-content svelte-kazjep"><span class="note-location svelte-kazjep"><span class="note-file-name svelte-kazjep"> </span> <!></span> <div class="note-detail-row svelte-kazjep"><!> <span class="note-tags svelte-kazjep"></span></div></div> <!></button>'), root_8 = from_html('<div class="empty-result svelte-kazjep"> </div>'), root_9 = from_html('<div class="note-lookup svelte-kazjep"><div class="tag-field svelte-kazjep"><label for="tagfolder-note-lookup-tag-input" class="svelte-kazjep"> </label> <div class="tag-input-shell svelte-kazjep"><div class="tag-chips svelte-kazjep" id="tagfolder-note-lookup-selected-tags"><!> <input id="tagfolder-note-lookup-tag-input" type="text" role="combobox" spellcheck="false" autocomplete="off" aria-controls="tagfolder-note-lookup-completions tagfolder-note-lookup-notes tagfolder-note-lookup-selected-tags" class="svelte-kazjep"/></div></div> <!></div> <label for="tagfolder-note-lookup-note-input" class="svelte-kazjep"> </label> <input id="tagfolder-note-lookup-note-input" class="note-input svelte-kazjep" type="text" role="combobox" spellcheck="false" autocomplete="off" aria-controls="tagfolder-note-lookup-notes" aria-expanded="true"/> <div class="result-summary svelte-kazjep" aria-hidden="true"><span class="svelte-kazjep"> </span> <span class="svelte-kazjep"> </span></div> <div class="notes prompt-results svelte-kazjep" id="tagfolder-note-lookup-notes" role="listbox"><!> <!></div> <div class="sr-only svelte-kazjep" aria-live="polite"> </div></div>'), $$css4 = {
+  hash: "svelte-kazjep",
+  code: '.note-lookup.svelte-kazjep {display:flex;flex-direction:column;gap:0.45rem;flex:1;width:100%;min-width:0;min-height:0;}.tagfolder-note-lookup-modal {width:min(46rem, 90vw);max-width:90vw;height:min(46rem, calc(100dvh - 2rem));max-height:calc(100dvh - 2rem);}.tagfolder-note-lookup-modal .modal-content {display:flex;flex:1;min-height:0;}label.svelte-kazjep {color:var(--text-muted);font-size:var(--font-ui-smaller);font-weight:var(--font-semibold);}.tag-input-shell.svelte-kazjep,\n\t.note-input.svelte-kazjep {background:var(--background-modifier-form-field);border:var(--input-border-width) solid var(--background-modifier-border);border-radius:var(--input-radius);box-shadow:var(--input-shadow);}.tag-input-shell.svelte-kazjep {width:100%;max-width:100%;min-width:0;overflow:hidden;border-radius:var(--radius-s);}.tag-input-shell.svelte-kazjep:focus-within,\n\t.note-input.svelte-kazjep:focus {border-color:var(--interactive-accent);box-shadow:0 0 0 2px var(--background-modifier-border-focus);}.tag-field.svelte-kazjep {position:relative;display:flex;flex-direction:column;gap:0.45rem;z-index:2;}.tag-chips.svelte-kazjep {display:flex;align-items:center;flex-wrap:wrap;gap:0.3rem;width:100%;max-width:100%;min-width:0;min-height:2.25rem;padding:0.3rem 0.45rem;}.tag-chips.svelte-kazjep input:where(.svelte-kazjep) {flex:1 1 9rem;min-width:7rem;border:0;box-shadow:none;background:transparent;padding:0.2rem;}.tag-chips.svelte-kazjep input:where(.svelte-kazjep):focus {border:0;box-shadow:none;}.tag-chip.svelte-kazjep {--pill-color: var(--tag-color);--pill-color-hover: var(--tag-color-hover);--pill-color-remove: var(--tag-color);--pill-color-remove-hover: var(--tag-color-hover);--pill-decoration: var(--tag-decoration);--pill-decoration-hover: var(--tag-decoration-hover);--pill-background: var(--tag-background);--pill-background-hover: var(--tag-background-hover);--pill-border-color: var(--tag-border-color);--pill-border-color-hover: var(--tag-border-color-hover);--pill-border-width: var(--tag-border-width);--pill-padding-x: var(--tag-padding-x);--pill-padding-y: var(--tag-padding-y);--pill-radius: var(--tag-radius);--pill-corner-shape: var(--tag-corner-shape);--pill-weight: var(--tag-weight);font-size:var(--tag-size);min-width:0;max-width:100%;height:auto;box-shadow:none;}.tag-chip.svelte-kazjep .multi-select-pill-content:where(.svelte-kazjep) {min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.tag-chip.excluded.svelte-kazjep {--pill-color: var(--text-error);--pill-color-hover: var(--text-error);--pill-color-remove: var(--text-error);--pill-color-remove-hover: var(--text-error);--pill-background: transparent;--pill-background-hover: var(--background-modifier-hover);--pill-border-color: var(--text-error);--pill-border-color-hover: var(--text-error);--pill-border-width: var(--border-width);border-style:dashed;}.tag-chip.active.svelte-kazjep::after {content:"";display:block;position:absolute;pointer-events:none;border-radius:var(--pill-radius);inset:0;box-shadow:0 0 0 1px var(--background-modifier-border-focus), inset 0 0 0 1px var(--background-modifier-border-focus);}.completions.svelte-kazjep {top:calc(100% + 0.25rem);left:0;right:0;max-width:none;max-height:14rem;}.completions.svelte-kazjep .suggestion:where(.svelte-kazjep) {overflow-y:auto;padding:var(--size-2-3);}.completion.svelte-kazjep,\n\t.note-result.svelte-kazjep {width:100%;border:0;background:transparent;box-shadow:none;color:var(--text-normal);text-align:left;}.completion.svelte-kazjep {display:flex;justify-content:space-between;}.completion.is-selected.svelte-kazjep,\n\t.note-result.is-selected.svelte-kazjep {background-color:var(--background-modifier-hover);}.count.svelte-kazjep,\n\t.result-summary.svelte-kazjep,\n\t.match-count.svelte-kazjep {color:var(--text-muted);font-size:var(--font-ui-smaller);}.note-input.svelte-kazjep {width:100%;padding:0.55rem 0.7rem;}.result-summary.svelte-kazjep {display:flex;justify-content:space-between;gap:1rem;}.notes.svelte-kazjep {flex:1;min-height:5rem;overflow-y:auto;border-top:1px solid var(--background-modifier-border);padding:var(--size-2-3) 0 0;}.note-result.svelte-kazjep {align-items:center;padding:var(--size-2-2) var(--size-4-2);}.note-result.svelte-kazjep .suggestion-content:where(.svelte-kazjep) {flex:1 1 auto;min-width:0;width:auto;overflow:hidden;}.note-detail-row.svelte-kazjep {display:flex;justify-content:space-between;gap:1rem;width:100%;min-width:0;}.note-result.svelte-kazjep .suggestion-aux:where(.svelte-kazjep) {flex:0 0 auto;align-self:center;}.note-location.svelte-kazjep {display:flex;align-items:baseline;gap:0.5rem;width:100%;min-width:0;overflow:hidden;}.note-file-name.svelte-kazjep {flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--font-ui-small);font-weight:var(--font-semibold);}.note-parent-path.svelte-kazjep,\n\t.note-alternative-title.svelte-kazjep {color:var(--text-muted);font-size:var(--font-ui-smaller);}.note-parent-path.svelte-kazjep,\n\t.note-alternative-title.svelte-kazjep {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.note-parent-path.svelte-kazjep {flex:0 10 auto;min-width:0;max-width:40%;}.match-count.svelte-kazjep {white-space:nowrap;}.note-alternative-title.svelte-kazjep {min-width:0;}.note-tags.svelte-kazjep {display:flex;gap:0.4rem;flex-shrink:0;color:var(--text-accent);font-size:var(--font-ui-smaller);}.empty-result.svelte-kazjep {padding:2rem;text-align:center;color:var(--text-muted);}.sr-only.svelte-kazjep {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;}\n\t@media (max-width: 600px) {.tagfolder-note-lookup-modal {width:calc(100vw - 0.75rem);max-width:calc(100vw - 0.75rem);height:calc(100dvh - 0.75rem);max-height:calc(100dvh - 0.75rem);}body.is-phone .tagfolder-note-lookup-modal {width:var(--dialog-width);max-width:var(--dialog-max-width);height:100%;max-height:var(--dialog-max-height);margin-top:auto;}.note-lookup.svelte-kazjep,\n\t\t.tag-field.svelte-kazjep {gap:0.3rem;}.tag-chips.svelte-kazjep {padding:0.2rem 0.3rem;max-height:min(calc(var(--input-height) * 1.5), 15dvh);overflow-x:hidden;overflow-y:auto;align-content:flex-start;}.note-input.svelte-kazjep {padding:0.4rem 0.55rem;}.note-result.svelte-kazjep {padding:var(--size-2-2) var(--size-4-2);}.note-location.svelte-kazjep {gap:0.35rem;}.result-summary.svelte-kazjep span:where(.svelte-kazjep):last-child,\n\t\t.note-tags.svelte-kazjep {display:none;}\n\t}'
+};
+
+function NoteLookupModal($$anchor, $$props) {
+  push($$props, true);
+  append_styles($$anchor, $$css4);
+  const $t = () => store_get(t, "$t", $$stores), [$$stores, $$cleanup] = setup_stores();
+  let initialConditions = prop($$props, "initialConditions", 19, () => []), conditions = state(proxy(untrack(() => initialConditions().map(condition => ({
+    ...condition
+  }))))), tagQuery = state(""), noteQuery = state(""), activeCompletionIndex = state(0), activeNoteIndex = state(0), activeChipIndex = state(-1), tagInputFocused = state(false), announcement = state(""), tagInputEl = state(void 0), noteInputEl = state(void 0);
+  const completions = user_derived(() => getTagCompletions($$props.notes, get(conditions), get(tagQuery)).slice(0, 12)), rankedNotes = user_derived(() => rankNoteLookupItems($$props.notes, get(conditions), get(noteQuery), {
+    excludedPath: $$props.excludedPath
+  })), visibleNotes = user_derived(() => get(rankedNotes).slice(0, 100)), positiveConditionCount = user_derived(() => get(conditions).filter(condition => !condition.excluded).length), showCompletions = user_derived(() => get(tagInputFocused) && "" != get(tagQuery).trim() && get(completions).length > 0), tagActiveDescendant = user_derived(() => {
+    if (get(activeChipIndex) >= 0) return `tagfolder-note-lookup-chip-${get(activeChipIndex)}`;
+    if (get(showCompletions)) return `tagfolder-note-lookup-completion-${get(activeCompletionIndex)}`;
+    if (get(visibleNotes).length > 0) return `tagfolder-note-lookup-note-${get(activeNoteIndex)}`;
+  }), noteActiveDescendant = user_derived(() => get(visibleNotes).length > 0 ? `tagfolder-note-lookup-note-${get(activeNoteIndex)}` : void 0);
+  user_effect(() => {
+    if (get(activeCompletionIndex) >= get(completions).length) set(activeCompletionIndex, Math.max(0, get(completions).length - 1), true);
+  });
+  user_effect(() => {
+    if (get(activeNoteIndex) >= get(visibleNotes).length) set(activeNoteIndex, Math.max(0, get(visibleNotes).length - 1), true);
+  });
+  user_effect(() => {
+    if (get(activeChipIndex) >= get(conditions).length) set(activeChipIndex, get(conditions).length - 1);
+  });
+  onMount(() => {
+    null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).focus();
+  });
+  user_effect(() => {
+    const index2 = get(activeNoteIndex);
+    if (0 != get(visibleNotes).length) null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).win.requestAnimationFrame(() => {
+      var _a5;
+      null === (_a5 = null === get(tagInputEl) || void 0 === get(tagInputEl) ? void 0 : get(tagInputEl).ownerDocument.getElementById(`tagfolder-note-lookup-note-${index2}`)) || void 0 === _a5 || _a5.scrollIntoView({
+        block: "nearest"
+      });
+    });
+  });
+  user_effect(() => {
+    const index2 = get(activeCompletionIndex);
+    if (get(showCompletions)) null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).win.requestAnimationFrame(() => {
+      var _a5;
+      null === (_a5 = null === get(tagInputEl) || void 0 === get(tagInputEl) ? void 0 : get(tagInputEl).ownerDocument.getElementById(`tagfolder-note-lookup-completion-${index2}`)) || void 0 === _a5 || _a5.scrollIntoView({
+        block: "nearest"
+      });
+    });
+  });
+  function moveIndex(current, length, delta) {
+    if (0 == length) return 0; else return (current + delta + length) % length;
+  }
+  function addCompletion(completion) {
+    set(conditions, [ ...get(conditions), {
+      tag: completion.tag,
+      excluded: completion.excluded
+    } ], true);
+    set(tagQuery, "");
+    set(activeCompletionIndex, 0);
+    set(activeNoteIndex, 0);
+    set(activeChipIndex, -1);
+    set(announcement, completion.excluded ? $t()("Excluded tag {tag}", {
+      tag: completion.tag
+    }) : $t()("Added tag {tag}", {
+      tag: completion.tag
+    }), true);
+    null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).focus();
+  }
+  function removeCondition(index2) {
+    const removed = get(conditions)[index2];
+    if (removed) {
+      set(conditions, get(conditions).filter((_, conditionIndex) => conditionIndex != index2), true);
+      set(activeNoteIndex, 0);
+      if (0 == get(conditions).length) set(activeChipIndex, -1); else if (get(activeChipIndex) >= 0) set(activeChipIndex, Math.min(index2, get(conditions).length - 1), true);
+      set(announcement, $t()("Removed tag {tag}", {
+        tag: removed.tag
+      }), true);
+      null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).focus();
+    }
+  }
+  function chooseActiveNote(newTab) {
+    const item = get(visibleNotes)[get(activeNoteIndex)];
+    if (item) $$props.openNote(item.path, newTab);
+  }
+  function noteFileName(item) {
+    var _a5;
+    return null !== (_a5 = item.path.split("/").pop()) && void 0 !== _a5 ? _a5 : item.path;
+  }
+  function noteParentPath(item) {
+    const separator = item.path.lastIndexOf("/");
+    return separator < 0 ? "" : item.path.substring(0, separator + 1);
+  }
+  function handleCommonKey(event2, current) {
+    if ("Tab" == event2.key) {
+      event2.preventDefault();
+      (function focusOtherInput(current) {
+        set(activeChipIndex, -1);
+        if ("tag" == current) null === get(noteInputEl) || void 0 === get(noteInputEl) || get(noteInputEl).focus(); else null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).focus();
+      })(current);
+      return true;
+    }
+    if ("Escape" == event2.key) {
+      event2.preventDefault();
+      if (get(activeChipIndex) >= 0) {
+        set(activeChipIndex, -1);
+        null === get(tagInputEl) || void 0 === get(tagInputEl) || get(tagInputEl).focus();
+      } else $$props.close();
+      return true;
+    }
+    return false;
+  }
+  var div = root_9(), div_1 = child(div), label = child(div_1), text2 = only_child(label, true), div_2 = sibling(label, 2), div_3 = child(div_2), node = child(div_3);
+  each(node, 19, () => get(conditions), condition => `${condition.excluded ? "-" : "+"}${condition.tag}`, ($$anchor2, condition, index2) => {
+    var button = root7();
+    let classes;
+    var text_1 = only_child(child(button));
+    next(2);
+    reset(button);
+    template_effect($0 => {
+      var _a5;
+      set_attribute2(button, "id", `tagfolder-note-lookup-chip-${get(index2)}`);
+      classes = set_class(button, 1, "tag-chip multi-select-pill svelte-kazjep", null, classes, {
+        excluded: get(condition).excluded,
+        active: get(activeChipIndex) == get(index2)
+      });
+      set_attribute2(button, "aria-label", $0);
+      set_text(text_1, `${get(condition).excluded ? "- " : ""}#${null != (_a5 = get(condition).tag) ? _a5 : ""}`);
+    }, [ () => get(condition).excluded ? $t()("Remove excluded tag {tag}", {
+      tag: get(condition).tag
+    }) : $t()("Remove tag {tag}", {
+      tag: get(condition).tag
+    }) ]);
+    delegated("click", button, () => removeCondition(get(index2)));
+    append($$anchor2, button);
+  });
+  var input = sibling(node, 2);
+  remove_input_defaults(input);
+  bind_this(input, $$value => set(tagInputEl, $$value), () => get(tagInputEl));
+  reset(div_3);
+  reset(div_2);
+  var node_1 = sibling(div_2, 2), consequent = $$anchor2 => {
+    var div_4 = root_23(), div_5 = child(div_4);
+    each(div_5, 23, () => get(completions), completion => completion.tag, ($$anchor3, completion, index2) => {
+      var button_1 = root_15();
+      let classes_1;
+      var span_1 = child(button_1), text_2 = only_child(span_1), text_3 = only_child(sibling(span_1, 2), true);
+      reset(button_1);
+      template_effect($0 => {
+        var _a5;
+        set_attribute2(button_1, "id", `tagfolder-note-lookup-completion-${get(index2)}`);
+        classes_1 = set_class(button_1, 1, "completion suggestion-item mod-complex svelte-kazjep", null, classes_1, {
+          "is-selected": get(activeCompletionIndex) == get(index2)
+        });
+        set_attribute2(button_1, "aria-selected", get(activeCompletionIndex) == get(index2));
+        set_text(text_2, `${get(completion).excluded ? "-" : ""}#${null != (_a5 = get(completion).tag) ? _a5 : ""}`);
+        set_text(text_3, $0);
+      }, [ () => 1 == get(completion).noteCount ? $t()("{count} note", {
+        count: get(completion).noteCount
+      }) : $t()("{count} notes", {
+        count: get(completion).noteCount
+      }) ]);
+      delegated("mousedown", button_1, event2 => event2.preventDefault());
+      event("mouseenter", button_1, () => set(activeCompletionIndex, get(index2), true));
+      delegated("click", button_1, () => addCompletion(get(completion)));
+      append($$anchor3, button_1);
+    });
+    reset(div_5);
+    reset(div_4);
+    template_effect($0 => set_attribute2(div_5, "aria-label", $0), [ () => $t()("Tag completions") ]);
+    append($$anchor2, div_4);
+  };
+  if_block(node_1, $$render => {
+    if (get(showCompletions)) $$render(consequent);
+  });
+  reset(div_1);
+  var label_1 = sibling(div_1, 2), text_4 = only_child(label_1, true), input_1 = sibling(label_1, 2);
+  remove_input_defaults(input_1);
+  bind_this(input_1, $$value => set(noteInputEl, $$value), () => get(noteInputEl));
+  var div_6 = sibling(input_1, 2), span_3 = child(div_6), text_5 = only_child(span_3, true), text_6 = only_child(sibling(span_3, 2), true);
+  reset(div_6);
+  var div_7 = sibling(div_6, 2), node_2 = child(div_7);
+  each(node_2, 19, () => get(visibleNotes), item => item.path, ($$anchor2, item, index2) => {
+    var button_2 = root_72();
+    let classes_2;
+    var div_8 = child(button_2), span_5 = child(div_8), span_6 = child(span_5), text_7 = only_child(span_6, true), node_3 = sibling(span_6, 2), consequent_1 = $$anchor3 => {
+      var span_7 = root_33(), text_8 = only_child(span_7, true);
+      template_effect($0 => set_text(text_8, $0), [ () => noteParentPath(get(item)) ]);
+      append($$anchor3, span_7);
+    }, d = user_derived(() => noteParentPath(get(item)));
+    if_block(node_3, $$render => {
+      if (get(d)) $$render(consequent_1);
+    });
+    reset(span_5);
+    var div_9 = sibling(span_5, 2), node_4 = child(div_9), consequent_2 = $$anchor3 => {
+      var span_8 = root_43(), text_9 = only_child(span_8, true);
+      template_effect(() => set_text(text_9, get(item).title));
+      append($$anchor3, span_8);
+    }, d_1 = user_derived(() => function hasAlternativeTitle(item) {
+      return item.title != noteFileName(item).replace(/\.md$/i, "");
+    }(get(item)));
+    if_block(node_4, $$render => {
+      if (get(d_1)) $$render(consequent_2);
+    });
+    var span_9 = sibling(node_4, 2);
+    each(span_9, 21, () => function displayTags(item) {
+      const positive = get(conditions).filter(condition => !condition.excluded);
+      return (0 == positive.length ? [ ...item.tags ] : item.tags.filter(tag2 => positive.some(condition => tagMatchesCondition(tag2, condition.tag)))).slice(0, 5);
+    }(get(item)), index, ($$anchor3, tag2) => {
+      var span_10 = root_52(), text_10 = only_child(span_10);
+      template_effect(() => {
+        var _a5;
+        return set_text(text_10, `#${null != (_a5 = get(tag2)) ? _a5 : ""}`);
+      });
+      append($$anchor3, span_10);
+    });
+    reset(span_9);
+    reset(div_9);
+    reset(div_8);
+    var node_5 = sibling(div_8, 2), consequent_3 = $$anchor3 => {
+      var span_11 = root_62(), text_11 = only_child(span_11);
+      template_effect(() => {
+        var _a5, _b3;
+        return set_text(text_11, `${null != (_a5 = get(item).matchCount) ? _a5 : ""}/${null != (_b3 = get(positiveConditionCount)) ? _b3 : ""}`);
+      });
+      append($$anchor3, span_11);
+    };
+    if_block(node_5, $$render => {
+      if (get(positiveConditionCount) > 0) $$render(consequent_3);
+    });
+    reset(button_2);
+    template_effect($0 => {
+      set_attribute2(button_2, "id", `tagfolder-note-lookup-note-${get(index2)}`);
+      classes_2 = set_class(button_2, 1, "note-result suggestion-item mod-complex search-suggest-item svelte-kazjep", null, classes_2, {
+        "is-selected": get(activeNoteIndex) == get(index2)
+      });
+      set_attribute2(button_2, "aria-selected", get(activeNoteIndex) == get(index2));
+      set_text(text_7, $0);
+    }, [ () => noteFileName(get(item)) ]);
+    delegated("mousedown", button_2, event2 => event2.preventDefault());
+    event("mouseenter", button_2, () => set(activeNoteIndex, get(index2), true));
+    delegated("click", button_2, event2 => $$props.openNote(get(item).path, event2.ctrlKey || event2.metaKey));
+    append($$anchor2, button_2);
+  });
+  var node_6 = sibling(node_2, 2), consequent_4 = $$anchor2 => {
+    var div_10 = root_8(), text_12 = only_child(div_10, true);
+    template_effect($0 => set_text(text_12, $0), [ () => $t()("No matching notes") ]);
+    append($$anchor2, div_10);
+  };
+  if_block(node_6, $$render => {
+    if (0 == get(visibleNotes).length) $$render(consequent_4);
+  });
+  reset(div_7);
+  var text_13 = only_child(sibling(div_7, 2), true);
+  reset(div);
+  template_effect(($0, $1, $2, $3, $4, $5, $6, $7, $8) => {
+    set_text(text2, $0);
+    set_attribute2(input, "placeholder", $1);
+    set_attribute2(input, "aria-label", $2);
+    set_attribute2(input, "aria-expanded", get(showCompletions));
+    set_attribute2(input, "aria-activedescendant", get(tagActiveDescendant));
+    set_text(text_4, $3);
+    set_attribute2(input_1, "placeholder", $4);
+    set_attribute2(input_1, "aria-label", $5);
+    set_attribute2(input_1, "aria-activedescendant", get(noteActiveDescendant));
+    set_text(text_5, $6);
+    set_text(text_6, $7);
+    set_attribute2(div_7, "aria-label", $8);
+    set_text(text_13, get(announcement));
+  }, [ () => $t()("Tags"), () => 0 == get(conditions).length ? $t()("Type a tag…") : $t()("Add a tag…"), () => $t()("Tag conditions"), () => $t()("Note"), () => $t()("Type a file name or path…"), () => $t()("Note name or path"), () => 1 == get(rankedNotes).length ? $t()("{count} note", {
+    count: get(rankedNotes).length
+  }) : $t()("{count} notes", {
+    count: get(rankedNotes).length
+  }), () => $t()("Tab: switch field · ↑↓: select · Enter: open"), () => $t()("Matching notes") ]);
+  delegated("input", input, () => {
+    set(activeCompletionIndex, 0);
+    set(activeChipIndex, -1);
+  });
+  event("focus", input, () => set(tagInputFocused, true));
+  event("blur", input, () => set(tagInputFocused, false));
+  delegated("keydown", input, function handleTagKey(event2) {
+    if (!event2.isComposing) if (!handleCommonKey(event2, "tag")) {
+      if (get(activeChipIndex) >= 0) {
+        if ("ArrowLeft" == event2.key || "ArrowRight" == event2.key) {
+          event2.preventDefault();
+          const delta = "ArrowLeft" == event2.key ? -1 : 1, next2 = get(activeChipIndex) + delta;
+          if (next2 >= get(conditions).length) set(activeChipIndex, -1); else set(activeChipIndex, Math.max(0, next2), true);
+          return;
+        }
+        if ("Backspace" == event2.key || "Delete" == event2.key) {
+          event2.preventDefault();
+          removeCondition(get(activeChipIndex));
+          return;
+        }
+        if (1 == event2.key.length && !event2.ctrlKey && !event2.metaKey && !event2.altKey) set(activeChipIndex, -1);
+      }
+      if ("" == get(tagQuery)) if (!("ArrowLeft" == event2.key && get(conditions).length > 0)) if (!("Backspace" == event2.key && get(conditions).length > 0)) if ("ArrowUp" != event2.key && "ArrowDown" != event2.key) if ("Enter" != event2.key) {
+        if (" " == event2.key) event2.preventDefault();
+      } else {
+        event2.preventDefault();
+        chooseActiveNote(event2.ctrlKey || event2.metaKey);
+      } else {
+        event2.preventDefault();
+        set(activeNoteIndex, moveIndex(get(activeNoteIndex), get(visibleNotes).length, "ArrowUp" == event2.key ? -1 : 1), true);
+      } else {
+        event2.preventDefault();
+        removeCondition(get(conditions).length - 1);
+      } else {
+        event2.preventDefault();
+        set(activeChipIndex, get(conditions).length - 1);
+      } else {
+        if ("ArrowUp" == event2.key || "ArrowDown" == event2.key) {
+          event2.preventDefault();
+          set(activeCompletionIndex, moveIndex(get(activeCompletionIndex), get(completions).length, "ArrowUp" == event2.key ? -1 : 1), true);
+          return;
+        }
+        if ("Enter" == event2.key || " " == event2.key) {
+          event2.preventDefault();
+          const completion = get(completions)[get(activeCompletionIndex)];
+          if (completion) addCompletion(completion);
+        }
+      }
+    }
+  });
+  bind_value(input, () => get(tagQuery), $$value => set(tagQuery, $$value));
+  delegated("input", input_1, () => set(activeNoteIndex, 0));
+  delegated("keydown", input_1, function handleNoteKey(event2) {
+    if (!event2.isComposing) if (!handleCommonKey(event2, "note")) if ("ArrowUp" != event2.key && "ArrowDown" != event2.key) {
+      if ("Enter" == event2.key) {
+        event2.preventDefault();
+        chooseActiveNote(event2.ctrlKey || event2.metaKey);
+      }
+    } else {
+      event2.preventDefault();
+      set(activeNoteIndex, moveIndex(get(activeNoteIndex), get(visibleNotes).length, "ArrowUp" == event2.key ? -1 : 1), true);
+    }
+  });
+  bind_value(input_1, () => get(noteQuery), $$value => set(noteQuery, $$value));
+  append($$anchor, div);
+  pop();
+  $$cleanup();
+}
+
+delegate([ "click", "input", "keydown", "mousedown" ]);
+
+var NoteLookupModal2 = class extends import_obsidian10.Modal {
+  constructor(app, options) {
+    super(app);
+    this.options = options;
+  }
+  onOpen() {
+    this.setTitle(tr("Note lookup"));
+    this.modalEl.addClass("tagfolder-note-lookup-modal");
+    this.contentEl.empty();
+    this.component = mount(NoteLookupModal, {
+      target: this.contentEl,
+      props: {
+        notes: this.options.notes,
+        initialConditions: this.options.initialConditions,
+        excludedPath: this.options.excludedPath,
+        openNote: (path, newTab) => {
+          this.options.openNote(path, newTab);
+          this.close();
+        },
+        close: () => this.close()
+      }
+    });
+  }
+  onClose() {
+    if (this.component) {
+      unmount(this.component);
+      this.component = void 0;
+    }
+    this.contentEl.empty();
+  }
+};
+
+function openNoteLookup(app, options) {
+  new NoteLookupModal2(app, options).open();
+}
+
+var import_obsidian11 = require("obsidian");
+
+function configureAppLocale() {
+  setAppLanguage(detectAppLanguage({
+    getLanguage: () => (0, import_obsidian11.requireApiVersion)("1.8.7") && "function" == typeof import_obsidian11.getLanguage ? (0, 
+    import_obsidian11.getLanguage)() : void 0
+  }));
+}
+
+var SAMPLE_NOTES = [ {
+  name: "Roadmap",
+  tags: [ "project/atlas", "status/active" ]
+}, {
+  name: "Release note",
+  tags: [ "project/atlas", "status/done" ]
+} ], projectTag = children => ({
+  label: "project",
+  kind: "tag",
+  children: [ {
+    label: "atlas",
+    kind: "tag",
+    children
+  } ]
+}), TAG_TREE_STYLE_SUGGESTIONS = [ {
+  id: "simple-list",
+  name: "Simple list",
+  description: "Show notes directly beneath each tag and display their other tags as labels.",
+  settings: {
+    disableNarrowingDown: true,
+    disableNestedTags: false,
+    hideItems: "DEDICATED_INTERMIDIATES",
+    reduceNestedParent: true,
+    mergeRedundantCombination: false,
+    doNotSimplifyTags: false
+  },
+  preview: [ projectTag([ {
+    label: "Roadmap",
+    kind: "note",
+    chips: [ "status/active" ]
+  }, {
+    label: "Release note",
+    kind: "note",
+    chips: [ "status/done" ]
+  } ]) ]
+}, {
+  id: "drill-down",
+  name: "Drill-down",
+  description: "Use other tags as additional folders and show notes at the deepest matching level.",
+  settings: {
+    disableNarrowingDown: false,
+    disableNestedTags: false,
+    hideItems: "ALL_EXCEPT_BOTTOM",
+    reduceNestedParent: true,
+    mergeRedundantCombination: false,
+    doNotSimplifyTags: false
+  },
+  preview: [ projectTag([ {
+    label: "status",
+    kind: "tag",
+    children: [ {
+      label: "active",
+      kind: "tag",
+      children: [ {
+        label: "Roadmap",
+        kind: "note"
+      } ]
+    }, {
+      label: "done",
+      kind: "tag",
+      children: [ {
+        label: "Release note",
+        kind: "note"
+      } ]
+    } ]
+  } ]) ]
+}, {
+  id: "full-tree",
+  name: "Full tree",
+  description: "Show notes at intermediate levels as well as within combinations of their tags.",
+  settings: {
+    disableNarrowingDown: false,
+    disableNestedTags: false,
+    hideItems: "NONE",
+    reduceNestedParent: true,
+    mergeRedundantCombination: false,
+    doNotSimplifyTags: false
+  },
+  preview: [ projectTag([ {
+    label: "Roadmap",
+    kind: "note"
+  }, {
+    label: "Release note",
+    kind: "note"
+  }, {
+    label: "status",
+    kind: "tag",
+    children: [ {
+      label: "active",
+      kind: "tag",
+      children: [ {
+        label: "Roadmap",
+        kind: "note"
+      } ]
+    }, {
+      label: "done",
+      kind: "tag",
+      children: [ {
+        label: "Release note",
+        kind: "note"
+      } ]
+    } ]
+  } ]) ]
+} ];
+
+function findTagTreeStyleSuggestion(id) {
+  return TAG_TREE_STYLE_SUGGESTIONS.find(suggestion => suggestion.id === id);
+}
+
+function applyTagTreeStyleSuggestion(settings, suggestion) {
+  return {
+    ...settings,
+    ...suggestion.settings
+  };
+}
+
+function appendPreviewNodes(container, nodes) {
+  var _a5, _b3;
+  for (const node of nodes) {
+    const nodeEl = container.createDiv({
+      cls: `tagfolder-style-preview-node is-${node.kind}`
+    });
+    nodeEl.setAttribute("role", "treeitem");
+    const rowEl = nodeEl.createDiv({
+      cls: "tagfolder-style-preview-row"
+    }), markerEl = rowEl.createSpan({
+      cls: "tagfolder-style-preview-marker"
+    });
+    markerEl.setAttribute("aria-hidden", "true");
+    markerEl.textContent = "tag" === node.kind ? "▾" : "•";
+    rowEl.createSpan({
+      cls: "tagfolder-style-preview-node-label",
+      text: node.label
+    });
+    for (const chip of null != (_a5 = node.chips) ? _a5 : []) rowEl.createSpan({
+      cls: "tagfolder-style-preview-chip",
+      text: chip
+    });
+    if (null == (_b3 = node.children) ? void 0 : _b3.length) {
+      nodeEl.setAttribute("aria-expanded", "true");
+      const childrenEl = nodeEl.createDiv({
+        cls: "tagfolder-style-preview-children"
+      });
+      childrenEl.setAttribute("role", "group");
+      appendPreviewNodes(childrenEl, node.children);
+    }
+  }
+}
+
+function renderTagTreeStylePreview(container, suggestion) {
+  container.replaceChildren();
+  container.hidden = !suggestion;
+  container.setAttribute("aria-live", "polite");
+  if (!suggestion) return;
+  container.createDiv({
+    cls: "tagfolder-style-preview-description",
+    text: tr(suggestion.description)
+  });
+  container.createDiv({
+    cls: "tagfolder-style-preview-label",
+    text: tr("Sample notes")
+  });
+  const sampleEl = container.createDiv({
+    cls: "tagfolder-style-preview-sample"
+  });
+  for (const note of SAMPLE_NOTES) {
+    const noteEl = sampleEl.createDiv({
+      cls: "tagfolder-style-preview-sample-note"
+    });
+    noteEl.createSpan({
+      cls: "tagfolder-style-preview-sample-name",
+      text: note.name
+    });
+    const tagsEl = noteEl.createSpan({
+      cls: "tagfolder-style-preview-sample-tags"
+    });
+    for (const tag2 of note.tags) tagsEl.createSpan({
+      cls: "tagfolder-style-preview-sample-tag",
+      text: `#${tag2}`
+    });
+  }
+  container.createDiv({
+    cls: "tagfolder-style-preview-label",
+    text: tr("Rendered project branch")
+  });
+  const treeEl = container.createDiv({
+    cls: "tagfolder-style-preview-tree"
+  });
+  treeEl.setAttribute("role", "tree");
+  appendPreviewNodes(treeEl, suggestion.preview);
+}
+
+function HideItemsType() {
+  return {
+    NONE: tr("Hide nothing"),
+    DEDICATED_INTERMIDIATES: tr("Only intermediates of nested tags"),
+    ALL_EXCEPT_BOTTOM: tr("All intermediates")
+  };
+}
 
 function dotted(object, notation) {
   return notation.split(".").reduce((a, b) => a && "object" == typeof a && b in a ? a[b] : null, object);
@@ -6342,6 +8016,10 @@ function dotted(object, notation) {
 function getCompareMethodItems(settings) {
   const invert = settings.sortType.contains("_DESC") ? -1 : 1;
   switch (settings.sortType) {
+   case "TAGGROUP_ASC":
+   case "TAGGROUP_DESC":
+    return selectCompareMethodItemsByTagGroup(settings);
+
    case "DISPNAME_ASC":
    case "DISPNAME_DESC":
     return (a, b) => compare(a.displayName, b.displayName) * invert;
@@ -6372,63 +8050,37 @@ function getCoreTemplatesFolder(app) {
   var _a5, _b3, _c2, _d, _e, _f;
   const internalPlugins = app.internalPlugins, templatesPlugin = null == (_a5 = null == internalPlugins ? void 0 : internalPlugins.getPluginById) ? void 0 : _a5.call(internalPlugins, "templates"), folder = null != (_f = null == (_c2 = null == (_b3 = null == templatesPlugin ? void 0 : templatesPlugin.instance) ? void 0 : _b3.options) ? void 0 : _c2.folder) ? _f : null == (_e = null == (_d = null == templatesPlugin ? void 0 : templatesPlugin.instance) ? void 0 : _d.options) ? void 0 : _e.templateFolder;
   if (!folder) return null;
-  const normalizedFolder = (0, import_obsidian8.normalizePath)(folder);
+  const normalizedFolder = (0, import_obsidian12.normalizePath)(folder);
   return "/" == normalizedFolder ? "" : normalizedFolder;
 }
 
 function getTemplateFiles(app) {
   const templateFolder = getCoreTemplatesFolder(app), markdownFiles = app.vault.getMarkdownFiles();
   return (null == templateFolder || "" == templateFolder ? markdownFiles : markdownFiles.filter(file => {
-    const path = (0, import_obsidian8.normalizePath)(file.path);
+    const path = (0, import_obsidian12.normalizePath)(file.path);
     return path == templateFolder || path.startsWith(`${templateFolder}/`);
   })).sort((a, b) => compare(a.path, b.path));
 }
 
-var NewNoteTemplateSuggestModal = class extends import_obsidian8.SuggestModal {
-  constructor(app, templates, callback) {
-    super(app);
+function captureNewNoteTemplates(app) {
+  return getTemplateFiles(app).map(file => ({
+    path: file.path,
+    name: file.basename
+  }));
+}
+
+var NewNoteTemplateInputSuggest = class extends import_obsidian12.AbstractInputSuggest {
+  constructor(app, inputEl, templates, callback) {
+    super(app, inputEl);
     this.templates = templates;
     this.callback = callback;
-    this.setPlaceholder("Type to search templates...");
   }
   getSuggestions(query) {
-    const normalizedQuery = query.toLowerCase();
-    return this.templates.filter(file => file.path.toLowerCase().contains(normalizedQuery));
+    return filterNewNoteTemplateChoices(this.templates, query);
   }
   renderSuggestion(template, el) {
     el.createDiv({
-      text: template.basename
-    });
-    el.createDiv({
-      text: template.path,
-      cls: "suggestion-note"
-    });
-  }
-  onChooseSuggestion(template) {
-    var _a5;
-    null == (_a5 = this.callback) || _a5.call(this, template);
-    this.callback = void 0;
-  }
-  onClose() {
-    window.setTimeout(() => {
-      if (this.callback) {
-        this.callback(false);
-        this.callback = void 0;
-      }
-    }, 100);
-  }
-}, NewNoteTemplateInputSuggest = class extends import_obsidian8.AbstractInputSuggest {
-  constructor(app, inputEl, callback) {
-    super(app, inputEl);
-    this.callback = callback;
-  }
-  getSuggestions(query) {
-    const normalizedQuery = query.toLowerCase();
-    return getTemplateFiles(this.app).filter(file => file.path.toLowerCase().contains(normalizedQuery) || file.basename.toLowerCase().contains(normalizedQuery));
-  }
-  renderSuggestion(template, el) {
-    el.createDiv({
-      text: template.basename
+      text: template.name
     });
     el.createDiv({
       text: template.path,
@@ -6442,14 +8094,10 @@ var NewNoteTemplateSuggestModal = class extends import_obsidian8.SuggestModal {
   }
 };
 
-function askNewNoteTemplate(app) {
-  return new Promise(resolve => {
-    const templates = getTemplateFiles(app);
-    if (0 != templates.length) new NewNoteTemplateSuggestModal(app, templates, resolve).open(); else {
-      new import_obsidian8.Notice("No templates found");
-      resolve(false);
-    }
-  });
+async function askNewNoteTemplate(ui, app) {
+  const templates = captureNewNoteTemplates(app), selectedTemplate = await chooseNewNoteTemplate(ui, templates);
+  if (void 0 === selectedTemplate) new import_obsidian12.Notice(tr("No templates found. Add a template, then try again."));
+  return selectedTemplate;
 }
 
 function getConfiguredNewNoteTemplate(app, templatePath) {
@@ -6457,19 +8105,28 @@ function getConfiguredNewNoteTemplate(app, templatePath) {
   if ("" == inputPath) return null;
   const templateFolder = getCoreTemplatesFolder(app), candidatePaths = [ inputPath, inputPath.endsWith(".md") ? inputPath : `${inputPath}.md` ];
   if (null != templateFolder && "" != templateFolder && !inputPath.startsWith(`${templateFolder}/`)) candidatePaths.push(`${templateFolder}/${inputPath}`, inputPath.endsWith(".md") ? `${templateFolder}/${inputPath}` : `${templateFolder}/${inputPath}.md`);
-  const file = unique(candidatePaths).map(path => app.vault.getAbstractFileByPath(path)).find(file2 => file2 instanceof import_obsidian8.TFile && "md" == file2.extension);
+  const file = unique(candidatePaths).map(path => app.vault.getAbstractFileByPath(path)).find(file2 => file2 instanceof import_obsidian12.TFile && "md" == file2.extension);
   if (null == file) {
-    new import_obsidian8.Notice(`Template not found: ${inputPath}`);
+    new import_obsidian12.Notice(tr("Template not found: {path}", {
+      path: inputPath
+    }));
     return null;
   }
-  return file;
+  return {
+    path: file.path,
+    name: file.basename
+  };
 }
 
 function normalizeNewNoteTemplatePath(templatePath) {
   const inputPath = templatePath.trim().replace(/^\[\[/, "").replace(/\]\]$/, "");
   if ("" == inputPath) return "";
-  const normalizedPath = (0, import_obsidian8.normalizePath)(inputPath);
+  const normalizedPath = (0, import_obsidian12.normalizePath)(inputPath);
   return "/" == normalizedPath ? "" : normalizedPath;
+}
+
+function splitSettingList(value) {
+  return value.split(/[\n,]/).map(entry => entry.trim()).filter(entry => "" != entry);
 }
 
 function onElement(el, event2, selector, callback, options) {
@@ -6477,7 +8134,7 @@ function onElement(el, event2, selector, callback, options) {
   return () => el.off(event2, selector, callback, options);
 }
 
-var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
+var TagFolderPlugin5 = class extends import_obsidian12.Plugin {
   constructor() {
     super(...arguments);
     this.settings = {
@@ -6491,7 +8148,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     this.compareItems = (_, __) => 0;
     this.focusFile = (path, specialKey) => {
       if (this.currentOpeningFile == path) return;
-      const _targetFile = this.app.vault.getAbstractFileByPath(path), targetFile = _targetFile instanceof import_obsidian8.TFile ? _targetFile : this.app.vault.getFiles().find(f => f.path === path);
+      const _targetFile = this.app.vault.getAbstractFileByPath(path), targetFile = _targetFile instanceof import_obsidian12.TFile ? _targetFile : this.app.vault.getFiles().find(f => f.path === path);
       if (targetFile) if (specialKey) this.app.workspace.openLinkText(targetFile.path, targetFile.path, "tab"); else this.app.workspace.openLinkText(targetFile.path, targetFile.path);
     };
     this.fileCaches = [];
@@ -6556,13 +8213,60 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     if ("NAME : PATH" == this.settings.displayMethod) return `${filename} : ${displayPath}`;
     if ("PATH/NAME" == this.settings.displayMethod) return `${displayPath}/${filename}`; else return filename;
   }
+  getNoteLookupPolicy() {
+    const redirects = {};
+    if (this.settings.useTagInfo && this.tagInfo) for (const [tag2, info] of Object.entries(this.tagInfo)) if (info.redirect) redirects[tag2] = info.redirect;
+    return {
+      targetFolders: splitSettingList(this.settings.targetFolders),
+      ignoreFolders: splitSettingList(this.settings.ignoreFolders),
+      ignoreDocumentTags: parseTagFilterPatterns(this.settings.ignoreDocTags).map(filter => filter.pattern),
+      ignoreTags: parseTagFilterPatterns(this.settings.ignoreTags).map(filter => filter.pattern),
+      redirects,
+      splitNestedTags: this.settings.disableNestedTags
+    };
+  }
+  captureNoteLookupItems(policy2) {
+    var _a5;
+    const sources = [];
+    for (const file of this.app.vault.getMarkdownFiles()) {
+      const metadata = this.app.metadataCache.getFileCache(file);
+      if (metadata) sources.push({
+        path: file.path,
+        title: this.getFileTitle(file),
+        tags: null != (_a5 = (0, import_obsidian12.getAllTags)(metadata)) ? _a5 : [],
+        mtime: file.stat.mtime
+      });
+    }
+    return buildNoteLookupItems(sources, policy2);
+  }
+  openNoteLookupDialog(sourceFile) {
+    var _a5;
+    const policy2 = this.getNoteLookupPolicy(), notes = this.captureNoteLookupItems(policy2);
+    let initialConditions = [];
+    if (sourceFile) {
+      const metadata = this.app.metadataCache.getFileCache(sourceFile), ignoredTags = parseTagFilterPatterns([ ...policy2.ignoreTags, ...policy2.ignoreDocumentTags ].join(","));
+      initialConditions = normaliseLookupTags(metadata ? null != (_a5 = (0, import_obsidian12.getAllTags)(metadata)) ? _a5 : [] : [], policy2).filter(tag2 => !tagMatchesFilterPatterns(tag2, ignoredTags)).map(tag2 => ({
+        tag: tag2,
+        excluded: false
+      }));
+    }
+    openNoteLookup(this.app, {
+      notes,
+      initialConditions,
+      excludedPath: null == sourceFile ? void 0 : sourceFile.path,
+      openNote: (path, newTab) => this.focusFile(path, newTab)
+    });
+  }
   async onload() {
     await this.loadSettings();
+    this.ui = createObsidianUi(this.app);
+    this.vaultText = createObsidianVaultTextAccess(this.app.vault);
+    this.vaultFrontmatter = createObsidianVaultFrontmatterAccess(this.app);
     this.hoverPreview = this.hoverPreview.bind(this);
     this.modifyFile = this.modifyFile.bind(this);
     this.setSearchString = this.setSearchString.bind(this);
     this.openScrollView = this.openScrollView.bind(this);
-    this.loadFileInfo = (0, import_obsidian8.debounce)(this.loadFileInfo.bind(this), this.settings.scanDelay, true);
+    this.loadFileInfo = (0, import_obsidian12.debounce)(this.loadFileInfo.bind(this), this.settings.scanDelay, true);
     pluginInstance.set(this);
     this.registerView(VIEW_TYPE_TAGFOLDER, leaf => new TagFolderView(leaf, this, "tags"));
     this.registerView(VIEW_TYPE_TAGFOLDER_LINK, leaf => new TagFolderView(leaf, this, "links"));
@@ -6578,36 +8282,51 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     });
     this.addCommand({
       id: "tagfolder-open",
-      name: "Show Tag Folder",
+      name: tr("Show Tag Folder"),
       callback: () => {
         this.activateView();
       }
     });
     this.addCommand({
       id: "tagfolder-link-open",
-      name: "Show Link Folder",
+      name: tr("Show Link Folder"),
       callback: () => {
         this.activateViewLink();
       }
     });
     this.addCommand({
       id: "tagfolder-rebuild-tree",
-      name: "Force Rebuild",
+      name: tr("Force Rebuild"),
       callback: () => {
         this.refreshAllTree();
       }
     });
     this.addCommand({
       id: "tagfolder-create-similar",
-      name: "Create a new note with the same tags",
+      name: tr("Create a new note with the same tags"),
       editorCallback: async (editor, view) => {
         var _a5;
         const file = null == view ? void 0 : view.file;
         if (!file) return;
         const cache = this.app.metadataCache.getFileCache(file);
         if (!cache) return;
-        const tagsWithoutPrefix = (null != (_a5 = (0, import_obsidian8.getAllTags)(cache)) ? _a5 : []).map(e => trimPrefix(e, "#"));
+        const tagsWithoutPrefix = (null != (_a5 = (0, import_obsidian12.getAllTags)(cache)) ? _a5 : []).map(e => trimPrefix(e, "#"));
         await this.createNewNote(tagsWithoutPrefix);
+      }
+    });
+    this.addCommand({
+      id: "tagfolder-open-note-by-tags",
+      name: tr("Open note by tags"),
+      callback: () => this.openNoteLookupDialog()
+    });
+    this.addCommand({
+      id: "tagfolder-open-note-with-similar-tags",
+      name: tr("Open note with similar tags"),
+      checkCallback: checking => {
+        const file = this.app.workspace.getActiveFile();
+        if (!(file instanceof import_obsidian12.TFile) || "md" != file.extension) return false;
+        if (!checking) this.openNoteLookupDialog(file);
+        return true;
       }
     });
     this.metadataCacheChanged = this.metadataCacheChanged.bind(this);
@@ -6696,7 +8415,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
       for (;!enumTags.classList.contains("cm-hashtag-begin"); ) {
         enumTags = enumTags.previousElementSibling;
         if (!enumTags) {
-          console.log("Error! start tag not found.");
+          console.debug("Error! start tag not found.");
           return;
         }
       }
@@ -6732,7 +8451,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     if (null != this.getLinkView()) ;
   }
   refreshTree(file, oldName) {
-    if (oldName) this.refreshAllTree(); else if (file instanceof import_obsidian8.TFile) this.loadFileInfo(file);
+    if (oldName) this.refreshAllTree(); else if (file instanceof import_obsidian12.TFile) this.loadFileInfo(file);
   }
   refreshAllTree() {
     this.loadFileInfo();
@@ -6746,7 +8465,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     if (!metadata) return false; else return {
       file,
       links: this.getFileCacheLinks(file),
-      tags: (0, import_obsidian8.getAllTags)(metadata) || []
+      tags: (0, import_obsidian12.getAllTags)(metadata) || []
     };
   }
   updateFileCachesAll() {
@@ -6784,7 +8503,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
             const oldLinks = (null == old ? void 0 : old.links) || [], newLinks = newCache.links, diffs2 = unique([ ...oldLinks, ...newLinks ]).filter(link2 => !oldLinks.contains(link2) || !newLinks.contains(link2));
             for (const filename of diffs2) {
               const file = this.app.vault.getAbstractFileByPath(filename);
-              if (file instanceof import_obsidian8.TFile) processDiffs.push(file);
+              if (file instanceof import_obsidian12.TFile) processDiffs.push(file);
             }
           }
           newCaches.push(newCache);
@@ -6797,7 +8516,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     return anyUpdated;
   }
   async getItemsList(mode) {
-    const items = [], ignoreDocTags = this.settings.ignoreDocTags.toLowerCase().replace(/[\n ]/g, "").split(","), ignoreTags = this.settings.ignoreTags.toLowerCase().replace(/[\n ]/g, "").split(","), ignoreFolders = this.settings.ignoreFolders.toLowerCase().replace(/\n/g, "").split(",").map(e => e.trim()).filter(e => !!e), targetFolders = this.settings.targetFolders.toLowerCase().replace(/\n/g, "").split(",").map(e => e.trim()).filter(e => !!e), searchItems = this.searchString.toLowerCase().split("|").map(ee => ee.split(" ").map(e => e.trim())), today = Date.now(), archiveTags = this.settings.archiveTags.toLowerCase().replace(/[\n ]/g, "").split(",");
+    const items = [], ignoreDocTags = parseTagFilterPatterns(this.settings.ignoreDocTags), ignoreTags = parseTagFilterPatterns(this.settings.ignoreTags), ignoreFolders = this.settings.ignoreFolders.toLowerCase().replace(/\n/g, "").split(",").map(e => e.trim()).filter(e => !!e), targetFolders = this.settings.targetFolders.toLowerCase().replace(/\n/g, "").split(",").map(e => e.trim()).filter(e => !!e), searchItems = this.searchString.toLowerCase().split("|").map(ee => ee.split(" ").map(e => e.trim())), today = Date.now(), archiveTags = parseTagFilterPatterns(this.settings.archiveTags);
     for (const fileCache of this.fileCaches) {
       if (targetFolders.length > 0 && !targetFolders.some(e => "" != e && fileCache.file.path.toLowerCase().startsWith(e))) continue;
       if (ignoreFolders.some(e => "" != e && fileCache.file.path.toLowerCase().startsWith(e))) continue;
@@ -6822,7 +8541,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
         if (path.length > 0) allTags.push(`${path.join("/")}`);
       }
       allTags = uniqueCaseIntensive(allTags.map(e => e in tagRedirectList ? tagRedirectList[e] : e));
-      if (allTags.some(tag2 => ignoreDocTags.contains(tag2.toLowerCase()))) continue;
+      if (allTags.some(tag2 => tagMatchesFilterPatterns(tag2, ignoreDocTags))) continue;
       if (searchItems.map(searchItem => {
         let bx = false;
         if (0 == allTags.length) return false;
@@ -6836,11 +8555,11 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
         }
         return bx;
       }).every(e => e)) continue;
-      allTags = allTags.filter(tag2 => !ignoreTags.contains(tag2.toLowerCase()));
+      allTags = allTags.filter(tag2 => !tagMatchesFilterPatterns(tag2, ignoreTags));
       const links = [ ...fileCache.links ];
       if (0 == links.length) links.push("_unlinked");
       if (this.settings.disableNarrowingDown && "tag" == mode) {
-        const archiveTagsMatched = allTags.filter(e => archiveTags.contains(e.toLowerCase())), targetTags = 0 == archiveTagsMatched.length ? allTags : archiveTagsMatched;
+        const archiveTagsMatched = allTags.filter(e => tagMatchesFilterPatterns(e, archiveTags)), targetTags = 0 == archiveTagsMatched.length ? allTags : archiveTagsMatched;
         for (const tags of targetTags) items.push({
           tags: [ tags ],
           extraTags: allTags.filter(e => e != tags),
@@ -7053,11 +8772,11 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     } else this.skipOnce = false;
   }
   getTagInfoFilename() {
-    return (0, import_obsidian8.normalizePath)(this.settings.tagInfo);
+    return (0, import_obsidian12.normalizePath)(this.settings.tagInfo);
   }
   getTagInfoFile() {
     const file = this.app.vault.getAbstractFileByPath(this.getTagInfoFilename());
-    if (file instanceof import_obsidian8.TFile) return file; else return null;
+    if (file instanceof import_obsidian12.TFile) return file; else return null;
   }
   applyTagInfo() {
     if (null != this.tagInfo) if (this.settings.useTagInfo) tagInfo.set(this.tagInfo);
@@ -7071,7 +8790,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     try {
       const bodyStartIndex = data.indexOf("\n---");
       if (!data.startsWith("---") || -1 === bodyStartIndex) return;
-      const yaml = data.substring(3, bodyStartIndex), yamlData = (0, import_obsidian8.parseYaml)(yaml), keys = Object.keys(yamlData);
+      const yaml = data.substring(3, bodyStartIndex), yamlData = (0, import_obsidian12.parseYaml)(yaml), keys = Object.keys(yamlData);
       this.tagInfoBody = data.substring(bodyStartIndex + 5);
       this.tagInfoFrontMatterBuffer = yamlData;
       const newTagInfo = {};
@@ -7085,7 +8804,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
       this.tagInfo = newTagInfo;
       this.applyTagInfo();
     } catch (ex) {
-      console.log(ex);
+      console.error("TagFolder: Could not load tag information.", ex);
     }
   }
   async saveTagInfo() {
@@ -7108,8 +8827,11 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     allViewItemsByLink.set(this.allViewItemsByLink);
   }
   async loadSettings() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    configureAppLocale();
+    const savedSettings = await this.loadData();
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, savedSettings);
     this.settings.newNoteTemplate = normalizeNewNoteTemplatePath(this.settings.newNoteTemplate);
+    applyLanguagePreference(this.settings.uiLanguage);
     await this.loadTagInfo();
     tagFolderSetting.set(this.settings);
     this.compareItems = getCompareMethodItems(this.settings);
@@ -7152,7 +8874,7 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
 
        case "":
        default:
-        if (!import_obsidian8.Platform.isMobile) theLeaf = this.app.workspace.createLeafBySplit(parent, "horizontal", false); else theLeaf = this.app.workspace.getLeftLeaf(false);
+        if (!import_obsidian12.Platform.isMobile) theLeaf = this.app.workspace.createLeafBySplit(parent, "horizontal", false); else theLeaf = this.app.workspace.getLeftLeaf(false);
         break;
       }
     }
@@ -7168,22 +8890,29 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     await this.app.workspace.revealLeaf(theLeaf);
   }
   async createNewNote(tags) {
-    var _a5;
-    const expandedTagsAll = ancestorToLongestTag(ancestorToTags(joinPartialPath(removeIntermediatePath(null != tags ? tags : [])))).map(e => trimTrailingSlash(e)), expandedTags = expandedTagsAll.map(e => e.split("/").filter(ee => !isSpecialTag(ee)).join("/")).filter(e => "" != e).map(e => "#" + e).join(" ").trim(), configuredTemplatePath = normalizeNewNoteTemplatePath(this.settings.newNoteTemplate), selectedTemplate = "" == configuredTemplatePath ? null : null != (_a5 = getConfiguredNewNoteTemplate(this.app, configuredTemplatePath)) ? _a5 : await askNewNoteTemplate(this.app), ww = await this.app.fileManager.createAndOpenMarkdownFile();
-    if (ww instanceof import_obsidian8.TFile) {
-      if (null != selectedTemplate && false !== selectedTemplate) {
-        const renderedTemplate = renderTagFolderTemplateVariables(await this.app.vault.read(selectedTemplate), expandedTagsAll, expandedTags);
-        if ("" != renderedTemplate.trim()) await this.app.vault.modify(ww, renderedTemplate);
-        return;
+    const expandedTagsAll = ancestorToLongestTag(ancestorToTags(joinPartialPath(removeIntermediatePath(null != tags ? tags : [])))).map(e => trimTrailingSlash(e)), expandedTags = expandedTagsAll.map(e => e.split("/").filter(ee => !isSpecialTag(ee)).join("/")).filter(e => "" != e).map(e => "#" + e).join(" ").trim(), configuredTemplatePath = normalizeNewNoteTemplatePath(this.settings.newNoteTemplate);
+    let selectedTemplate = null;
+    if ("" != configuredTemplatePath) {
+      const configuredTemplate = getConfiguredNewNoteTemplate(this.app, configuredTemplatePath);
+      if (null != configuredTemplate) selectedTemplate = configuredTemplate; else {
+        const promptedTemplate = await askNewNoteTemplate(this.ui, this.app);
+        if (void 0 === promptedTemplate) return;
+        selectedTemplate = promptedTemplate;
       }
-      if (this.settings.useFrontmatterTagsForNewNotes) await this.app.fileManager.processFrontMatter(ww, matter => {
-        var _a6;
-        matter.tags = null != (_a6 = matter.tags) ? _a6 : [];
-        matter.tags = expandedTagsAll.filter(e => !isSpecialTag(e)).filter(e => matter.tags.indexOf(e) < 0).concat(matter.tags);
-      }); else await this.app.vault.append(ww, expandedTags);
     }
+    const fileManager = this.app.fileManager, ww = await fileManager.createAndOpenMarkdownFile();
+    if (ww instanceof import_obsidian12.TFile) await populateNewNote({
+      vault: this.vaultText,
+      frontmatter: this.vaultFrontmatter,
+      notePath: ww.path,
+      template: selectedTemplate,
+      expandedTagsAll,
+      expandedTags,
+      frontmatterTags: expandedTagsAll.filter(e => !isSpecialTag(e)),
+      useFrontmatterTags: this.settings.useFrontmatterTagsForNewNotes
+    });
   }
-}, TagFolderSettingTab = class extends import_obsidian8.PluginSettingTab {
+}, TagFolderSettingTab = class extends import_obsidian12.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -7192,14 +8921,24 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
     this.plugin.loadFileInfo();
   }
   display() {
+    this.renderSettings();
+  }
+  renderSettings() {
     const {containerEl} = this;
     containerEl.empty();
-    new import_obsidian8.Setting(containerEl).setName("Behavior").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Always Open").setDesc("Place TagFolder on the left pane and activate it at every Obsidian launch").addToggle(toggle => toggle.setValue(this.plugin.settings.alwaysOpen).onChange(async value => {
+    const newNoteTemplates = captureNewNoteTemplates(this.app);
+    new import_obsidian12.Setting(containerEl).setName(tr("Language") + " / 语言").setDesc(tr("UI language. 'Auto' follows the Obsidian interface language and falls back to English when unmatched.")).addDropdown(dropdown => dropdown.addOptions(Object.fromEntries(LANGUAGE_OPTIONS.map(option => [ option.value, option.label ]))).setValue(this.plugin.settings.uiLanguage).onChange(async value => {
+      this.plugin.settings.uiLanguage = value;
+      await this.plugin.saveSettings();
+      applyLanguagePreference(this.plugin.settings.uiLanguage);
+      this.renderSettings();
+    }));
+    new import_obsidian12.Setting(containerEl).setName(tr("Behavior")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Always Open")).setDesc(tr("Place TagFolder on the left pane and activate it at every Obsidian launch")).addToggle(toggle => toggle.setValue(this.plugin.settings.alwaysOpen).onChange(async value => {
       this.plugin.settings.alwaysOpen = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Use pinning").setDesc("When this feature is enabled, the pin information is saved in the file set in the next configuration.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Use pinning")).setDesc(tr("When this feature is enabled, the pin information is saved in the file set in the next configuration.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.useTagInfo).onChange(async value => {
         this.plugin.settings.useTagInfo = value;
         if (this.plugin.settings.useTagInfo) await this.plugin.loadTagInfo();
@@ -7207,21 +8946,21 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
         pi.setDisabled(!value);
       });
     });
-    const pi = new import_obsidian8.Setting(containerEl).setName("Pin information file").setDisabled(!this.plugin.settings.useTagInfo).addText(text2 => {
+    const pi = new import_obsidian12.Setting(containerEl).setName(tr("Pin information file")).setDisabled(!this.plugin.settings.useTagInfo).addText(text2 => {
       text2.setValue(this.plugin.settings.tagInfo).onChange(async value => {
         this.plugin.settings.tagInfo = value;
         if (this.plugin.settings.useTagInfo) await this.plugin.loadTagInfo();
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Disable narrowing down").setDesc("When this feature is enabled, relevant tags will be shown with the title instead of making a sub-structure.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Disable narrowing down")).setDesc(tr("When this feature is enabled, relevant tags will be shown with the title instead of making a sub-structure.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.disableNarrowingDown).onChange(async value => {
         this.plugin.settings.disableNarrowingDown = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Files").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Display method").setDesc("How to show a title of files").addDropdown(dropdown => dropdown.addOptions({
+    new import_obsidian12.Setting(containerEl).setName(tr("Files")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Display method")).setDesc(tr("How to show a title of files")).addDropdown(dropdown => dropdown.addOptions({
       "PATH/NAME": "PATH/NAME",
       NAME: "NAME",
       "NAME : PATH": "NAME : PATH"
@@ -7237,31 +8976,60 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
       this.plugin.settings.sortType = `${key2}_${order}`;
       await this.plugin.saveSettings();
     };
-    new import_obsidian8.Setting(containerEl).setName("Order method").setDesc("how to order items").addDropdown(dd => {
-      dd.addOptions(OrderKeyItem).setValue(this.plugin.settings.sortType.split("_")[0]).onChange(key2 => setOrderMethod(key2, void 0));
+    new import_obsidian12.Setting(containerEl).setName(tr("Order method")).setDesc(tr("how to order items")).addDropdown(dd => {
+      dd.addOptions(Object.fromEntries(Object.entries(OrderKeyItem).map(([key2, label]) => [ key2, tr(label) ]))).setValue(this.plugin.settings.sortType.split("_")[0]).onChange(key2 => setOrderMethod(key2, void 0));
     }).addDropdown(dd => {
-      dd.addOptions(OrderDirection).setValue(this.plugin.settings.sortType.split("_")[1]).onChange(order => setOrderMethod(void 0, order));
+      dd.addOptions(Object.fromEntries(Object.entries(OrderDirection).map(([key2, label]) => [ key2, tr(label) ]))).setValue(this.plugin.settings.sortType.split("_")[1]).onChange(order => setOrderMethod(void 0, order));
     });
-    new import_obsidian8.Setting(containerEl).setName("Prioritize items which are not contained in sub-folder").setDesc("If this has been enabled, the items which have no more extra tags are first.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Prioritize items which are not contained in sub-folder")).setDesc(tr("If this has been enabled, the items which have no more extra tags are first.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.sortExactFirst).onChange(async value => {
         this.plugin.settings.sortExactFirst = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Use title").setDesc("Use value in the frontmatter or first level one heading for `NAME`.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Use title")).setDesc(tr("Use value in the frontmatter or first level one heading for `NAME`.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.useTitle).onChange(async value => {
         this.plugin.settings.useTitle = value;
         fpath.setDisabled(!value);
         await this.plugin.saveSettings();
       });
     });
-    const fpath = new import_obsidian8.Setting(containerEl).setName("Frontmatter path").setDisabled(!this.plugin.settings.useTitle).addText(text2 => {
+    const fpath = new import_obsidian12.Setting(containerEl).setName(tr("Frontmatter path")).setDisabled(!this.plugin.settings.useTitle).addText(text2 => {
       text2.setValue(this.plugin.settings.frontmatterKey).onChange(async value => {
         this.plugin.settings.frontmatterKey = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Tags").setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Tags")).setHeading();
+    let selectedTagTreeStyle, applyTagTreeStyleButton;
+    const tagTreeStyleSuggestionEl = containerEl.createDiv({
+      cls: "tagfolder-style-suggestion"
+    });
+    new import_obsidian12.Setting(tagTreeStyleSuggestionEl).setName(tr("Suggested tag tree style")).setDesc(tr("Apply a suggested combination of tag tree settings.")).addDropdown(dropdown => {
+      dropdown.addOption("", tr("Select a style"));
+      for (const suggestion of TAG_TREE_STYLE_SUGGESTIONS) dropdown.addOption(suggestion.id, tr(suggestion.name));
+      dropdown.setValue("").onChange(value => {
+        selectedTagTreeStyle = findTagTreeStyleSuggestion(value);
+        null == applyTagTreeStyleButton || applyTagTreeStyleButton.setDisabled(!selectedTagTreeStyle);
+        renderTagTreeStylePreview(tagTreeStylePreviewEl, selectedTagTreeStyle);
+      });
+    }).addButton(button => {
+      applyTagTreeStyleButton = button;
+      button.setButtonText(tr("Apply")).setDisabled(true).onClick(async () => {
+        if (!selectedTagTreeStyle) return;
+        const appliedStyleName = selectedTagTreeStyle.name;
+        this.plugin.settings = applyTagTreeStyleSuggestion(this.plugin.settings, selectedTagTreeStyle);
+        await this.plugin.saveSettings();
+        this.renderSettings();
+        new import_obsidian12.Notice(tr("Applied '{name}' settings.", {
+          name: appliedStyleName
+        }));
+      });
+    });
+    const tagTreeStylePreviewEl = tagTreeStyleSuggestionEl.createDiv({
+      cls: "tagfolder-style-preview"
+    });
+    renderTagTreeStylePreview(tagTreeStylePreviewEl);
     const setOrderMethodTag = async (key2, order) => {
       const oldSetting = this.plugin.settings.sortTypeTag.split("_");
       if (!key2) key2 = oldSetting[0];
@@ -7269,135 +9037,135 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
       this.plugin.settings.sortTypeTag = `${key2}_${order}`;
       await this.plugin.saveSettings();
     };
-    new import_obsidian8.Setting(containerEl).setName("Order method").setDesc("how to order tags").addDropdown(dd => {
-      dd.addOptions(OrderKeyTag).setValue(this.plugin.settings.sortTypeTag.split("_")[0]).onChange(key2 => setOrderMethodTag(key2, void 0));
+    new import_obsidian12.Setting(containerEl).setName(tr("Order method")).setDesc(tr("how to order tags")).addDropdown(dd => {
+      dd.addOptions(Object.fromEntries(Object.entries(OrderKeyTag).map(([key2, label]) => [ key2, tr(label) ]))).setValue(this.plugin.settings.sortTypeTag.split("_")[0]).onChange(key2 => setOrderMethodTag(key2, void 0));
     }).addDropdown(dd => {
-      dd.addOptions(OrderDirection).setValue(this.plugin.settings.sortTypeTag.split("_")[1]).onChange(order => setOrderMethodTag(void 0, order));
+      dd.addOptions(Object.fromEntries(Object.entries(OrderDirection).map(([key2, label]) => [ key2, tr(label) ]))).setValue(this.plugin.settings.sortTypeTag.split("_")[1]).onChange(order => setOrderMethodTag(void 0, order));
     });
-    new import_obsidian8.Setting(containerEl).setName("Use virtual tags").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Use virtual tags")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.useVirtualTag).onChange(async value => {
         this.plugin.settings.useVirtualTag = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Display folder as tag").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Display folder as tag")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.displayFolderAsTag).onChange(async value => {
         this.plugin.settings.displayFolderAsTag = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Store tags in frontmatter for new notes").setDesc("When enabled, tags are written to the note Properties. If no new-note template is selected, TagFolder still creates the note and stores tags here instead of as #hashtags.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Store tags in frontmatter for new notes")).setDesc(tr("When enabled, tags are written to the note Properties. If no new-note template is selected, TagFolder still creates the note and stores tags here instead of as #hashtags.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.useFrontmatterTagsForNewNotes).onChange(async value => {
         this.plugin.settings.useFrontmatterTagsForNewNotes = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Template for new notes").setDesc("When set to a valid markdown file path, new notes use this template without opening the template picker. The .md extension is optional.").addText(text2 => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Template for new notes")).setDesc(tr("When set to a valid markdown file path, new notes use this template without opening the template picker. The .md extension is optional.")).addText(text2 => {
       text2.setPlaceholder("Templates/New note").setValue(this.plugin.settings.newNoteTemplate).onChange(async value => {
         this.plugin.settings.newNoteTemplate = normalizeNewNoteTemplatePath(value);
         await this.plugin.saveSettings();
       });
-      new NewNoteTemplateInputSuggest(this.app, text2.inputEl, template => {
+      new NewNoteTemplateInputSuggest(this.app, text2.inputEl, newNoteTemplates, template => {
         this.plugin.settings.newNoteTemplate = template.path;
         this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Actions").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Search tags inside TagFolder when clicking tags").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Actions")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Search tags inside TagFolder when clicking tags")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.overrideTagClicking).onChange(async value => {
         this.plugin.settings.overrideTagClicking = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("List files in a separated pane").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("List files in a separated pane")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.useMultiPaneList).onChange(async value => {
         this.plugin.settings.useMultiPaneList = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Show list in").setDesc("This option applies to the newly opened list").addDropdown(dropdown => {
-      dropdown.addOptions(enumShowListIn).setValue(this.plugin.settings.showListIn).onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Show list in")).setDesc(tr("This option applies to the newly opened list")).addDropdown(dropdown => {
+      dropdown.addOptions(Object.fromEntries(Object.entries(enumShowListIn).map(([key2, label]) => [ key2, tr(label) ]))).setValue(this.plugin.settings.showListIn).onChange(async value => {
         this.plugin.settings.showListIn = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Arrangements").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Hide Items").setDesc("Hide items on the landing or nested tags").addDropdown(dd => {
-      dd.addOptions(HideItemsType).setValue(this.plugin.settings.hideItems).onChange(async key2 => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Arrangements")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Hide Items")).setDesc(tr("Hide items on the landing or nested tags")).addDropdown(dd => {
+      dd.addOptions(HideItemsType()).setValue(this.plugin.settings.hideItems).onChange(async key2 => {
         if ("NONE" == key2 || "DEDICATED_INTERMIDIATES" == key2 || "ALL_EXCEPT_BOTTOM" == key2) this.plugin.settings.hideItems = key2;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Merge redundant combinations").setDesc("When this feature is enabled, a/b and b/a are merged into a/b if there is no intermediates.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Merge redundant combinations")).setDesc(tr("When this feature is enabled, a/b and b/a are merged into a/b if there is no intermediates.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.mergeRedundantCombination).onChange(async value => {
         this.plugin.settings.mergeRedundantCombination = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Do not simplify empty folders").setDesc("Keep empty folders, even if they can be simplified.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Do not simplify empty folders")).setDesc(tr("Keep empty folders, even if they can be simplified.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.doNotSimplifyTags).onChange(async value => {
         this.plugin.settings.doNotSimplifyTags = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Do not treat nested tags as dedicated levels").setDesc("Treat nested tags as normal tags").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Do not treat nested tags as dedicated levels")).setDesc(tr("Treat nested tags as normal tags")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.disableNestedTags).onChange(async value => {
         this.plugin.settings.disableNestedTags = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Reduce duplicated parents in nested tags").setDesc("If enabled, #web/css, #web/javascript will merged into web -> css -> javascript").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Reduce duplicated parents in nested tags")).setDesc(tr("If enabled, #web/css, #web/javascript will merged into web -> css -> javascript")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.reduceNestedParent).onChange(async value => {
         this.plugin.settings.reduceNestedParent = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Keep untagged items on the root").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Keep untagged items on the root")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.expandUntaggedToRoot).onChange(async value => {
         this.plugin.settings.expandUntaggedToRoot = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Link Folder").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Use Incoming").setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkConfig.incoming.enabled).onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Link Folder")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Use Incoming")).setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkConfig.incoming.enabled).onChange(async value => {
       this.plugin.settings.linkConfig.incoming.enabled = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Use Outgoing").setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkConfig.outgoing.enabled).onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Use Outgoing")).setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkConfig.outgoing.enabled).onChange(async value => {
       this.plugin.settings.linkConfig.outgoing.enabled = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Hide indirectly linked notes").setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkShowOnlyFDR).onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Hide indirectly linked notes")).setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkShowOnlyFDR).onChange(async value => {
       this.plugin.settings.linkShowOnlyFDR = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Connect linked tree").setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkCombineOtherTree).onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Connect linked tree")).setDesc("").addToggle(toggle => toggle.setValue(this.plugin.settings.linkCombineOtherTree).onChange(async value => {
       this.plugin.settings.linkCombineOtherTree = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Filters").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Target Folders").setDesc("If configured, the plugin will only target files in it.").addTextArea(text2 => text2.setValue(this.plugin.settings.targetFolders).setPlaceholder("study,documents/summary").onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Filters")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Target Folders")).setDesc(tr("If configured, the plugin will only target files in it.")).addTextArea(text2 => text2.setValue(this.plugin.settings.targetFolders).setPlaceholder("study,documents/summary").onChange(async value => {
       this.plugin.settings.targetFolders = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Ignore Folders").setDesc("Ignore documents in specific folders.").addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreFolders).setPlaceholder("template,list/standard_tags").onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Ignore Folders")).setDesc(tr("Ignore documents in specific folders.")).addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreFolders).setPlaceholder("template,list/standard_tags").onChange(async value => {
       this.plugin.settings.ignoreFolders = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Ignore note Tag").setDesc("If the note has the tag listed below, the note would be treated as there was not.").addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreDocTags).setPlaceholder("test,test1,test2").onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Ignore note Tag")).setDesc(tr("If the note has a matching tag listed below, the note would be treated as there was not. Use * for glob matching.")).addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreDocTags).setPlaceholder("test,#tag1/*").onChange(async value => {
       this.plugin.settings.ignoreDocTags = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Ignore Tag").setDesc("Tags in the list would be treated as there were not.").addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreTags).setPlaceholder("test,test1,test2").onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Ignore Tag")).setDesc(tr("Matching tags in the list would be treated as there were not. Use * for glob matching.")).addTextArea(text2 => text2.setValue(this.plugin.settings.ignoreTags).setPlaceholder("test,#tag1/*").onChange(async value => {
       this.plugin.settings.ignoreTags = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Archive tags").setDesc("If configured, notes with these tags will be moved under the tag.").addTextArea(text2 => text2.setValue(this.plugin.settings.archiveTags).setPlaceholder("archived, discontinued").onChange(async value => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Archive tags")).setDesc(tr("If configured, notes with matching tags will be moved under the tag. Use * for glob matching.")).addTextArea(text2 => text2.setValue(this.plugin.settings.archiveTags).setPlaceholder("archived,#archive/*").onChange(async value => {
       this.plugin.settings.archiveTags = value;
       await this.plugin.saveSettings();
     }));
-    new import_obsidian8.Setting(containerEl).setName("Misc").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Tag scanning delay").setDesc("Sets the delay for reflecting metadata changes to the tag tree. (Plugin reload is required.)").addText(text2 => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Misc")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Tag scanning delay")).setDesc(tr("Sets the delay for reflecting metadata changes to the tag tree. (Plugin reload is required.)")).addText(text2 => {
       (text2 = text2.setValue(this.plugin.settings.scanDelay + "").onChange(async value => {
         const newDelay = Number.parseInt(value, 10);
         if (newDelay) {
@@ -7408,24 +9176,24 @@ var TagFolderPlugin5 = class extends import_obsidian8.Plugin {
       text2.inputEl.setAttribute("min", "250");
       return text2;
     });
-    new import_obsidian8.Setting(containerEl).setName("Disable dragging tags").setDesc("The `Dragging tags` is using internal APIs. If something happens, please disable this once and try again.").addToggle(toggle => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Disable dragging tags")).setDesc(tr("The `Dragging tags` is using internal APIs. If something happens, please disable this once and try again.")).addToggle(toggle => {
       toggle.setValue(this.plugin.settings.disableDragging).onChange(async value => {
         this.plugin.settings.disableDragging = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian8.Setting(containerEl).setName("Utilities").setHeading();
-    new import_obsidian8.Setting(containerEl).setName("Dumping tags for reporting bugs").setDesc("If you want to open an issue to the GitHub, this information can be useful. and, also if you want to keep secrets about names of tags, you can use `disguised`.").addButton(button => button.setButtonText("Copy tags").setDisabled(false).onClick(async () => {
+    new import_obsidian12.Setting(containerEl).setName(tr("Utilities")).setHeading();
+    new import_obsidian12.Setting(containerEl).setName(tr("Dumping tags for reporting bugs")).setDesc(tr("If you want to open an issue to the GitHub, this information can be useful. and, also if you want to keep secrets about names of tags, you can use `disguised`.")).addButton(button => button.setButtonText(tr("Copy tags")).setDisabled(false).onClick(async () => {
       const items = (await this.plugin.getItemsList("tag")).map(e => e.tags.filter(e2 => "_untagged" != e2)).filter(e => e.length);
       await navigator.clipboard.writeText(items.map(e => e.map(e2 => `#${e2}`).join(", ")).join("\n"));
-      new import_obsidian8.Notice("Copied to clipboard");
-    })).addButton(button => button.setButtonText("Copy disguised tags").setDisabled(false).onClick(async () => {
+      new import_obsidian12.Notice(tr("Copied to clipboard"));
+    })).addButton(button => button.setButtonText(tr("Copy disguised tags")).setDisabled(false).onClick(async () => {
       const x = new Map;
       let i = 0;
       const items = (await this.plugin.getItemsList("tag")).map(e => e.tags.filter(e2 => "_untagged" != e2).map(e2 => e2.split("/").map(e3 => e3.startsWith("_VIRTUAL") ? e3 : x.has(e3) ? x.get(e3) : (x.set(e3, "tag" + i++), 
       i)).join("/")).filter(e2 => e2.length));
       await navigator.clipboard.writeText(items.map(e => e.map(e2 => `#${e2}`).join(", ")).join("\n"));
-      new import_obsidian8.Notice("Copied to clipboard");
+      new import_obsidian12.Notice(tr("Copied to clipboard"));
     }));
   }
 };

@@ -43,13 +43,4 @@ Was einen Arkanisten ausmacht:
 
 ---
 
-## Startausrüstung
-- [[Kampfstab]]
-- [[Robe]]
-- 5 [[Ration|Rationen]]
-- [[Seife]]
-- 15 GM
-
----
-
 ## Klassentabelle

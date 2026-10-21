@@ -8,7 +8,7 @@ Subklasse: "[[Pfad der Eisenfaust]]"
 Stufe: 3
 ---
 # `=this.file.name`
-Triffst du mit dem [[Angriff]] von [[Schnellschlag]], wähle einen der folgenden Effekte:
+Triffst du mit einem [[Waffenloser Angriff|Waffenlosen Angriff]] von [[Schnellschlag]], wähle einen der folgenden Effekte:
 - **Stoßen:** Das Ziel muss einen [[Stärkerettungswürfe|ST-Rettungswurf]] bestehen, oder du stößt es bis zu 4,5 Meter von dir weg.
 - **Umstoßen:** Das Ziel muss einen [[Beweglichkeitsrettungswürfe|BW-Rettungswurf]] bestehen, oder es hat den Zustand [[Liegend]].
 - **Verdattern:** Das Ziel kann bis zum Beginn seines nächsten Zuges keine [[Gelegenheitsangriff|Gelegenheitsangriffe]] ausführen.

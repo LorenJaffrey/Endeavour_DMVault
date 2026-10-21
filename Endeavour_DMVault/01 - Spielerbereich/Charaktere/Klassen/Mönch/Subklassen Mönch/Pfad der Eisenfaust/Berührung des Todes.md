@@ -11,7 +11,7 @@ Stufe: 15
 ---
 # `=this.file.name`
 Einmal pro [[Begegnung]].
-Berühre eine Kreatur in Reichweite.
+Berühre mit einer freien Hand eine Kreatur in Reichweite.
 Sie muss einen [[Konstitutionsrettungswürfe|KO-Rettungswurf]] ausführen.
 Der [[Schwierigkeitsgrad|SG]] entspricht 10 plus deiner [[Entschlossenheit]].
 Bei einem [[Misserfolg]] erleidet sie [[Schattenschaden]] in Höhe deiner maximalen [[Trefferpunkte|TP]].

@@ -44,12 +44,4 @@ Als Berserker kannst du:
 
 ---
 
-## Startausrüstung
-- [[Streitaxt]]
-- 5 [[Ration|Rationen]]
-- [[Seil aus Hanf]] (15 Meter)
-- 15 GM
-
----
-
 ## Klassentabelle

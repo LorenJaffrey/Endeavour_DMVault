@@ -38,8 +38,4 @@ Waldläufer sind:
 
 ---
 
-## Startausrüstung
-
----
-
 ## Klassentabelle

@@ -36,8 +36,4 @@ Das wahre Zeichen eines Paladins ist jedoch seine Bereitschaft, für seine Gefä
 
 ---
 
-## Startausrüstung
-
----
-
 ## Klassentabelle

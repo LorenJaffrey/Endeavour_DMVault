@@ -46,14 +46,4 @@ Als [[Gauner]] kannst du:
 
 ---
 
-## Startausrüstung
-- 2[[Dolch|Dolche]]
-- 5 [[Ration|Rationen]]
-- [[Schleuder]]
-- [[Lederrüstung]]
-- [[Kreide]]
-- 15 GM
-
----
-
 ## Klassentabelle

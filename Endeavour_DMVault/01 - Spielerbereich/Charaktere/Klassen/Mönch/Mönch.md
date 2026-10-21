@@ -47,10 +47,6 @@ Der [[Mönch]] ist:
 
 ---
 
-## Startausrüstung
-
----
-
 ## Klassentabelle
 
 ```dataviewjs

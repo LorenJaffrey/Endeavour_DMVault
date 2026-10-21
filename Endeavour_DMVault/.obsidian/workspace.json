@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b468718eae223a6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Tobi - Schurke.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Tobi - Schurke"
-            }
-          },
-          {
             "id": "89333171ac2ee369",
             "type": "leaf",
             "state": {
@@ -56,17 +32,54 @@
             }
           },
           {
-            "id": "001308e4648e0059",
+            "id": "b9576e99b0e95e84",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 - Spielerbereich/Gegenstände/Waffen/Waffenlisten/Einfache Waffen.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Einfache Waffen"
+            }
+          },
+          {
+            "id": "d118cac1e7720f1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md",
+                "mode": "preview",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Klassenmerkmale Mönch DnD"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +113,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Merkmal/Klasse",
+                "query": "tag:#Erkundung",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,7 +128,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 436.5
   },
   "right": {
     "id": "ca898514eeb8a95e",
@@ -228,7 +241,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md"
+                "file": "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md"
               },
               "icon": "lucide-info",
               "title": "File properties"
@@ -239,7 +252,19 @@
             "type": "leaf",
             "state": {
               "type": "claudian-view",
-              "state": {},
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1792583849184-kcrxap7",
+                      "conversationId": "conv-1792583210934-c0kf7cxo0",
+                      "preview": true
+                    }
+                  ],
+                  "activeTabId": "tab-1792583849184-kcrxap7"
+                }
+              },
               "icon": "bot",
               "title": "Claudian"
             }
@@ -249,7 +274,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 648.5
+    "width": 757.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -269,43 +294,43 @@
   },
   "active": "89333171ac2ee369",
   "lastOpenFiles": [
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "01 - Spielerbereich/Charaktere/Merkmale/Merkmale.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Gauner/Klassenmerkmale Gauner/Ablenkung.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Fluchwirker/Anrufungen/Geringe Anrufungen/Abscheuliche Rede.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Beseelte Schläge.md",
+    "01 - Spielerbereich/Gegenstände/Waffen/Waffenlisten/Einfache Waffen.md",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Mönch.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Außerweltliche Präsenz.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Aggressiv.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Mehrfachangriff/Mehrfachangriff 2.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Bestienmeister.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Blitzladung.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Blutmücken Vetrauter.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Chthonisches Erbe.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Vielseitige Zaubertricks.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Zusätzlicher Angriff.md",
-    "02 - Spielleiterbereich/WIP/Merkmale/Attributswerterhöhung.md",
-    "01 - Spielerbereich/Charaktere/Merkmale/Primäre Attributswerterhöhung.md",
-    "01 - Spielerbereich/Charaktere/Merkmale/Sekundäre Attributswerterhöhung.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Subklassen Mönch.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Zäher Wille.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Umlenken.md",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Trunkener Takt.md",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters/Pfad des Trunkenen Meisters.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch DnD.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad der Eisenfaust/Pfad der Eisenfaust.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad der Eisenfaust/Technik der Eisenfaust.md.tmp.24960.84afcad43dae",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad der Eisenfaust/Kombo.md.tmp.24960.6ff2e5849d23",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Subklassen Mönch.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Klassenmerkmale Mönch.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/_Mönch.md",
+    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Gruppe/Tobi - Schurke.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Arkanist/Arkanist.md",
+    "01 - Spielerbereich/Charaktere/Einen Charakter erstellen.md.tmp.24960.e56f6b690d4f",
+    "01 - Spielerbereich/Charaktere/Klassen/Berserker/Berserker.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Fluchwirker/Fluchwirker.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Gauner/Gauner.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Kleriker/Kleriker.md",
+    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Klassenmerkmale Mönch/Techniken/Techniken.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Betäubender Schlag.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Kampfbereitschaft.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Kampfkunst.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Körper und Geist.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Beseelte Schläge.md",
+    "01 - Spielerbereich/Charaktere/Klassen/Klassen.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Sekundäre Attributswerterhöhung.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Primäre Attributswerterhöhung.md",
+    "01 - Spielerbereich/Charaktere/Merkmale/Merkmale.md",
+    "01 - Spielerbereich/Regeln/Kampf/Reaktionen/Reaktionen.md",
+    "01 - Spielerbereich/Regeln/Kampf/Aktionen/Aktionen.md",
+    "01 - Spielerbereich/Charaktere/Merkmale",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch/Pfad der Eisenfaust",
+    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch/Ki",
     "01 - Spielerbereich/Charaktere/Klassen/Mönch/Klassenmerkmale Mönch",
-    "01 - Spielerbereich/Charaktere/Klassen/Mönch/Subklassen Mönch",
     "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad des Trunkenen Meisters",
-    "_Attachments/D&D Forgotten Realms - Neverwinter Campaign Setting.pdf",
-    "02 - Spielleiterbereich/WIP/_Charaktere/_Klassen/_Mönch/Subklassen Mönch/Pfad der Eisenfaust",
     "_Attachments/falcon_the_hunter.webp",
-    "02 - Spielleiterbereich/Kampagne/Gruppe",
-    "02 - Spielleiterbereich/Kampagne/01 - Sturm über Niewinter/Kampagnenübersicht.md.tmp.32184.721dbb0d5171",
     "_Attachments/Half-Giant.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Tiefling 1.png",
     "01 - Spielerbereich/zHidden/_Attachments/Races/Halbling.png",

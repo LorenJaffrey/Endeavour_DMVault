@@ -47,11 +47,4 @@ Als [[Fluchwirker]] erwarten dich:
 
 ---
 
-## Startausrüstung
-- Abenteurerkleidung
-- Sichel
-- [[Schaufel]]
-
----
-
 ## Klassentabelle

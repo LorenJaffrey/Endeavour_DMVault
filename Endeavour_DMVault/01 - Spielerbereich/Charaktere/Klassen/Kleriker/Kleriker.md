@@ -35,8 +35,4 @@ Für viele ist der Weg des Dienens ein schwerer Pfad, doch in dieser Aufgabe sin
 
 ---
 
-## Startausrüstung
-
----
-
 ## Klassentabelle
